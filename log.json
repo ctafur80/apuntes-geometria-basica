@@ -1,0 +1,19 @@
+[
+    {
+        "type": "RunningFilter",
+        "verbosity": "INFO",
+        "path": "citeproc"
+    },
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
+        "for": "referencias.yaml",
+        "from": "referencias.yaml"
+    },
+    {
+        "type": "FilterCompleted",
+        "verbosity": "INFO",
+        "path": "citeproc",
+        "milliseconds": "33"
+    }
+]

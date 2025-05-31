@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-ES" xml:lang="es-ES">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Carlos E. Tafur Egido" />
+  <meta name="dcterms.date" content="2025-02-08" />
+  <meta name="keywords" content="matemáticas, geometría" />
+  <meta name="description" content="Apuntes de la asignatura Geometría Básica del Grado de Matemáticas de la Universidad Nacional de Educación a Distancia (UNED)." />
+  <title>Apuntes de la asignatura Geometría Básica</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    q { quotes: "“" "”" "‘" "’"; }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/variables/apuntes-asignaturas.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/base-mobile-first.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/tablas.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/codigo.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/matematicas.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/desktop.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Apuntes de la asignatura Geometría Básica</h1>
+<p class="author">Carlos E. Tafur Egido</p>
+<p class="date">02/08/2025</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#introducción" id="toc-introducción">Introducción</a></li>
+<li><a href="#contexto-general-de-la-asignatura"
+id="toc-contexto-general-de-la-asignatura">Contexto general de la
+asignatura</a></li>
+<li><a href="#notación" id="toc-notación">Notación</a></li>
+<li><a href="#anotaciones" id="toc-anotaciones">Anotaciones</a>
+<ul>
+<li><a href="#ch-espacios-metricos"
+id="toc-ch-espacios-metricos">Capítulo 1. Espacios métricos</a></li>
+<li><a href="#capítulo-2.-axiomas-del-plano-euclideo"
+id="toc-capítulo-2.-axiomas-del-plano-euclideo">Capítulo 2. Axiomas del
+plano euclideo</a></li>
+<li><a href="#capítulo-3.-isometrías-en-el-plano-euclideo"
+id="toc-capítulo-3.-isometrías-en-el-plano-euclideo">Capítulo 3.
+Isometrías en el plano euclideo</a></li>
+<li><a href="#capítulo-4.-ángulos" id="toc-capítulo-4.-ángulos">Capítulo
+4. Ángulos</a></li>
+<li><a href="#capítulo-5.-cuadriláteros-y-teorema-de-thales"
+id="toc-capítulo-5.-cuadriláteros-y-teorema-de-thales">Capítulo 5.
+Cuadriláteros y teorema de Thales</a></li>
+<li><a href="#capítulo-6.-teorema-de-pitágoras"
+id="toc-capítulo-6.-teorema-de-pitágoras">Capítulo 6. Teorema de
+Pitágoras</a></li>
+</ul></li>
+<li><a href="#erratas" id="toc-erratas">Erratas</a></li>
+<li><a href="#referencias" id="toc-referencias">Referencias</a></li>
+</ul>
+</nav>
+<section id="introducción" class="level1 unnumbered">
+<h1 class="unnumbered">Introducción</h1>
+<p>Algo que conviene hacer en esta asignatura es siempre dibujar la
+situación. Aunque se trate de un caso particular y, por tanto, no sirva
+como demostración ni como resolución de un ejercicio, dibujar la
+situación que se nos presenta nos saca en muchas ocasiones de la
+ofuscación en la que nos encontramos.</p>
+<p>Este repositorio es sobre los apuntes de la asignatura Geometría
+Básica impartida en el primer curso del Grado de Matemáticas de la
+Universidad Nacional de Educación a Distancia (UNED).</p>
+<p>El libro de texto que se usa como base de la asignatura es <span
+class="citation" data-cites="costa">Antonio F. Costa y Peter Buser (<a
+href="#ref-costa" role="doc-biblioref">2010</a>)</span>.</p>
+<p>Se tienen tres partes:</p>
+<ul>
+<li>Un artículo en el que se explica el contexto del contenido de la
+asignatura.</li>
+<li>Anotaciones que considero que se deben hacer, como explicaciones de
+partes de demostraciones que se omiten en el libro base de la
+asignatura.</li>
+<li>Lista de erratas del libro.</li>
+</ul>
+</section>
+<section id="contexto-general-de-la-asignatura"
+class="level1 unnumbered">
+<h1 class="unnumbered">Contexto general de la asignatura</h1>
+<p>Esta asignatura trata de la geometría tradicional desde un enfoque
+tradicional. Lo primero es porque se trata la <strong>geometría
+euclidea</strong>,<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> que es la primera que creó la
+humanidad, al ser la más <q>natural</q> para nuestra experiencia diaria
+física con el mundo.</p>
+<p>El mayor aporte a esta se debe al matemático Euclides de Alejandría,
+quien la compiló en el siglo III a.C. en su famosísimo libro titulado
+<em>Los Elementos</em>, donde se recogía todo el conocimiento sobre esta
+materia acumulado hasta su fecha tras ser estudiada durante varios
+siglos en algunas civilizaciones de la Antigüedad como el Antigüo Egipto
+y Babilonia.</p>
+<p>El gran logro de Euclides no fue únicamente hacer esa compilación,
+sino que fue a quien se le ocurrió el formalismo con el que se suele
+presentar el conocimiento matemático. Eso de presentar las matemáticas
+en una secuencia de axioma<a href="#fn2" class="footnote-ref"
+id="fnref2" role="doc-noteref"><sup>2</sup></a>, teorema y demostración.
+<em>Los Elementos</em> fue el primer libro en presentar de esta forma el
+conocimiento matemático. Desde entonces, este es el modo que se ha
+adoptado en todo el mundo para hacer matemáticas.</p>
+<p>En cuanto a lo del <q>enfoque tradicional</q>, me refiero a que se
+trata del que se seguía en esa época. Entonces se le conocía simplemente
+como <em>geometría</em>, a secas, pero actualmente se le acompaña de
+adjetivos para no confundirla con enfoques alternativos que surgieron
+posteriormente y que alcanzaron mucha aceptación, como la geometría
+analítica, inventada por el matemático y filósofo francés René Descartes
+en el siglo XVII,<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a> que, aunque trata la misma geometría
+que la de Euclides, usa un enfoque distinto, basado en coordenadas y
+gracias a esto se puede hacer uso del álgebra. En muchas situaciones,
+este otro enfoque permite resolver problemas o hacer demostraciones de
+modo más fácil que desde la de Euclides.</p>
+<p>Los adjetivos que recibe ahora la geometría al estilo de Euclides son
+<em>sintética</em>, <em>intrínseca</em>, <em>axiomática</em>,
+<em>conjuntista</em>, etc. Otras veces, hay quien simplemente la llama
+<em>geometría euclidea</em>.</p>
+<p>Esta asignatura trata, por tanto, tal y como he mencionado, de la
+geometría sintética. Aunque la tratamos desde un enfoque mixto, es
+decir, que también hacemos uso del álgebra de los números reales, no la
+usamos constantemente, como sí se hace en el enfoque analítico de esta
+misma geometría.</p>
+<p>Ignora deliberadamente el álgebra, que podríamos aplicar para llegar
+más fácilmente a muchos resultados, pero estaríamos entonces en la
+geometría analítica. Aunque usemos números, no lo haremos constantemente
+como se hace en la geometría analítica. Nos basaremos principalmente en
+objetos más elementales: los conjuntos. Estaremos más <q>cerca</q> de la
+base de las matemáticas. Debido a esto, se requiere cierta base en
+lógica y teoría de conjuntos.</p>
+<!-- ¿Está obsoleta actualmente la geometría sintética? -->
+<p>Debe ser consciente de que ambas geometrías (sintética y analítica)
+son la misma, de ahí que me refiera a que son <em>enfoques</em>
+diferentes. En <span class="citation" data-cites="venema">Gerard A.
+Venema (<a href="#ref-venema" role="doc-biblioref">2011</a>)</span>, en
+lugar de <em>enfoque</em> los califican de <em>modelos</em>
+(<em>models</em>). No obstante, también existen diversas geometrías no
+euclidianas, solo que no son intuitivas o naturales para nosotros y,
+debido a esto, se inventaron mucho más tarde. Estas otras usan una base
+axiomática ligeramente diferente a la euclidiana, cosa que produce
+cambios muy relevantes en el comportamiento de todo lo que se estudia en
+estas respecto a la euclidiana.</p>
+<p>De este otro tipo de geometrías, aquí tocaremos únicamente —y por
+encima— a la geometría hiperbólica. El conocimiento de espacios métricos
+en general y de la geometría euclidea sintética nos servirá para el
+estudio de la geometría hiperbólica, como verá.</p>
+<p>/* Esta geometría es algo distinta a la geometría analítica, es
+decir, la de las coordenadas. La geometría que vemos aquí hay quien la
+califica de <em>sintética</em>, <em>intrínseca</em> o
+<em>axiomática</em>, pero en sus orígenes era simplemente <em>la</em>
+geometría, ya que era la única que existía.</p>
+<p>Me refiero a la Grecia Antigua, principalmente, al compendio que hizo
+Euclides de Alejandría en su libro titulado <em>Los Elementos</em>.
+TKTK</p>
+<p>Al contrario de lo que sucede con la geometría analítica, en esta
+estamos muy en contacto con la teoría de conjuntos, por lo que creo que
+<em>conjuntista</em> sería un buen calificativo, al contrario que los
+que mencioné antes.</p>
+<p>En realidad, la analítica también surge de la teoría de conjuntos, al
+igual que todo en matemáticas, pero se trata de un área de las
+matemáticas a un nivel de abstracción muy elevado y, en lugar de
+manipular conjuntos, emplea constantemente números y sus
+operaciones.</p>
+<p>En el fondo la geometría sintética no es muy distinta a lo que se ve
+en asignaturas de dibujo técnico en educación primaria y en secundaria,
+en las que hace demostraciones auxiliándose de regla y compás. Aquí,
+también usaremos esas herramientas, pero mediante la teoría de
+conjuntos.</p>
+<p>En realidad, hay que precisar y calificarla de euclidiana, ya que
+posteriormente surgieron también otras TKTK.</p>
+<p>El concepto de espacio métrico, que se explica en el capítulo 1, se
+podría considerar que pertenece a todas las geometrías. Sin embargo,
+como verá, el libro trata básicamente de la geometría euclidiana. Tiene
+un capítulo dedicado a la geometría hiperbólica pero se puede considerar
+una extrañeza y, de hecho, es algo sobre lo que normalmente no se
+pregunta en los exámenes.</p>
+<!-- TODO Modelos etc. Según Venema, la geometría analítica es un modelo de
+la geometría euclidiana. -->
+<p>Esta asignatura es parecida a las asignaturas de geometría de la
+educación primaria y la secundaria, excluyendo a la geometría analítica.
+Muchas veces, se incluyen esos contenidos dentro de una asignatura de
+dibujo técnico, técnicas de representación geométrica, etc.</p>
+<p>Presenta un enfoque de hacer geometría distinto al de la geometría
+analítica (<em>analytic geometry</em>), que se basa en el uso de
+coordenadas, y, en última instancia, de números y sus operaciones.</p>
+<p>En realidad, esta asignatura trata ciertos conceptos generales de la
+geometría <em>sintética</em> (<em>synthetic geometry</em>), es decir, la
+geometría desde un punto de vista axiomático que avanza en su
+conocimiento por medio de deducciones haciendo uso de la lógica.
+También, hay quien la llama <em>geometría axiomática</em>, como se hace
+en <span class="citation" data-cites="venema">Gerard A. Venema (<a
+href="#ref-venema" role="doc-biblioref">2011</a>)</span>.</p>
+<p>Personalmente, no me convence llamarla <em>axiomática</em>, pues
+TKTK. En todo caso, la calificaría de <em>conjuntista</em>.</p>
+<p>También, se dice que es de naturaleza intrínseca. Se dice que una
+entidad matemática es intrínseca si no depende de las coordenadas desde
+las que se mida. Debido a esto, a la geometría sintética a veces se la
+llama <em>geometría intrínseca</em>.</p>
+<p>Como caso particular de geometría sintética o intrínseca, se tiene a
+la geometría euclidiana (<em>Euclidean geometry</em>), que fue la
+primera geometría en existir. Esta se presentó formalmente por el
+filósofo y matemático Euclides de Alejandría aproximadamente en el año
+300 a.C. en su famosísimo libro titulado <em>Los Elementos</em>, aunque
+en realidad lo que él hizo fue principalmente reunir en una obra el
+conocimiento de geometría que se tenía en algunas civilizaciones como el
+Antiguo Egipto y Babilonia.</p>
+<p>La geometría euclidiana es un caso particular de geometría sintética.
+Existen otras geometrías que también se podrían calificar de sintéticas,
+como la geometría hiperbólica y la geometría proyectiva.</p>
+<p>Hay que aclarar que el adjetivo <em>sintética</em> apareció después
+de que surgiese una geometría distinta a la geometría euclidiana;
+concretamente, la analítica. Antes de esto, la geometría sintética era
+simplemente <em>la</em> geometría. No estoy seguro del todo. Quizás la
+geometría era la euclidiana.</p>
+<p>Lo primero que veremos será el concepto de <em>métrica</em> o
+<em>distancia</em>, así como el de espacio métrico, que surge de forma
+natural de este. Se trata de un concepto transversal a las matemáticas;
+es decir, es muy abstracto y aparece en diversas áreas de las
+matemáticas.</p>
+<p>Luego pasamos a centrarnos en una geometría en concreto: la geometría
+euclidiana y esto nos llevará prácticamente toda la asignatura. Se
+comenzará por la geometría en el plano, es decir, de 2 dimensiones (2D),
+y, posteriormente, se pasará a la del espacio, 3 dimensiones (3D).</p>
+<p>La diferencia entre la geometría de esta asignatura y la analítica
+está en que son formalismos distintos que surgen inspirados por la misma
+realidad física. Así, la geometría analítica, tal y como hemos
+explicado, emplea coordenadas y, por tanto, números, mientras que la
+geometría sintética se basa en ciertas definiciones de las que luego
+haremos uso. Por ejemplo, el concepto de punto, recta, plano, ángulo,
+etc. Así, esto nos permite usar la regla y el compás, herramientas que
+conocerá de las asignaturas de dibujo técnico.</p>
+<p>La geometría analítica euclidiana es como la geometría euclidiana
+solo que sustituye algunos de sus axiomas por el formalismo de los
+números reales.</p>
+<p>No es exactamente una simple sustitución de axiomas, sino una
+reformulación de la geometría. La geometría euclidiana clásica se funda
+en una serie de axiomas, formulados en términos de conceptos geométricos
+básicos como puntos, rectas y ángulos. En cambio, la geometría analítica
+introduce un marco algebraico y el formalismo de los números reales para
+representar esos mismos conceptos.</p>
+<p>Al ser una forma distinta de abordar los problemas sobre geometría,
+es posible que un estudiante de educación secundaria logre resolver
+problemas con la geometría analítica que por medio de la geometría
+euclidiana resultasen casi imposibles a un geómetra muy experimentado,
+como, por ejemplo, el mismísimo Euclides.</p>
+<p>La geometría sintética ha influido en otras geometrías más modernas,
+como la geometría proyectiva (<em>projective geometry</em>) y la
+geometría diferencial (<em>differential geometry</em>).</p>
+<!--
+pero desde un punto de vista distinto al que suelen estar acostumbrados los
+estudiantes de la universidad. No se usarán coordenadas, como se hace en la
+geometría analítica, sino que se aborda la geometría de forma *sintética*
+(_synthetic_), que curiosamente es como se hacía en sus comienzos. Esta se
+basa en la aplicación directa de los axiomas de los que se parte.
+
+Es muy relevante hablar de un texto que fue el que asentó el conocimiento de
+la geometría hasta su época: los _Los Elementos_, del filósofo y matemático
+Euclides de Alejandría, sobre el siglo III a.C. Además de la geometría, es
+un texto enormemente relevante porque fue el primero que adoptó la forma de
+presentar el formalismo de las matemáticas que se ha seguido usando desde
+entonces. Me refiero a partir de unos axiomas (que en esa época solían
+llamar _postulados_) y deducir de estos unos teoremas, proposiciones, etc.
+
+Como seguramente sepa, el filósofo y matemático René Descartes creó en el
+siglo TKTK la geometría analítica (también conocida como geometría
+cartesiana),[^geom-analitica-fermat] que se basa en el uso de coordenadas, y
+esta alcanzo una gran aceptación y se puede decir que "desplazó" a la
+sintética. Además, en los siglos XVII y XIX la geometría perdió relevancia
+TKTK, pues las matemáticas encontraron un "filón" en el cálculo de Isaac
+Newton. Sin embargo, gracias a algunos matemáticos como TKTK Coxeter, se
+retomó el uso de la geometría TKTK.
+
+[^geom-analitica-fermat]: De forma análoga a como sucedió con el cálculo, la
+  geometría analítica también fue inventada o descubierta de forma
+  independiente por otro científico relevante en esa época. En este caso, se
+  trata de Pierre de Fermat.
+
+La geometría sintética tiene relación con lo que se conoce como las
+_técnicas de representación geométrica_, que sería como trasladar al dibujo
+en un papel esta geometría que estudiamos aquí. Sin embargo, no se
+estudiarán las técnicas para representar TKTK.
+
+Como se verá, aunque el grueso de la asignatura trata de la geometría de
+Euclides, se verán también otras de tipos distintos, como, por ejemplo, la
+hiperbólica, pero no se dedicará mucho tiempo a esto.
+-->
+<hr />
+<p>La geometría, aunque supuso, junto con la teoría de números,
+históricamente, los inicios de las matemáticas, después tuvo una época
+en la que se la relegó. TKTK.</p>
+<p>Coxeter se puede decir que la rescató. TKTK.</p>
+<p>Se suele enseñar en la educación primaria, principalmente, porque
+supone una forma de acostumbrar al alumno a hacer razonamientos
+matemáticos. Es decir, en lugar de aplicar algoritmos, que es lo que se
+suele hacer en las matemáticas de la educación primaria y secundaria, la
+geometría en esos cursos sí supone hacer matemáticas de verdad, es
+decir, en esta los alumnos sí hacen razonamientos lógico-deductivos, que
+es en lo que se basan en mayor medida las matemáticas. TKTK.</p>
+<p>Incluso en muchos grados universitarios de matemáticas se han
+eliminado asignaturas de geometría como esta. En todo caso, dan algunos
+de estos contenidos como parte de otras asignaturas TKTK.</p>
+<p>Tal y como se explica en la introducción de TKTK, este curso sirve
+como base para otros cursos de matemáticas, como los de geometría
+analítica, topología y geometría diferencial.</p>
+<p>Actualmente, la geometría sintética no es algo a lo que se le dé gran
+importancia en los currículos. De hecho, hay muchos profesores del grado
+universitario de matemáticas que son partidarios de eliminar este tipo
+de asignaturas de los planes de estudio, dejando únicamente, el
+contenido de geometría analítica.</p>
+<p>Vamos a hacer un repaso superficial de los contenidos de la
+asignatura. Se puede dividir en tres bloques.</p>
+<ul>
+<li><p><em>Bloque I</em>. Espacios métricos. De forma poco técnica, se
+podría definir como un lugar en el que se pueden medir distancias.</p>
+<p>En todas estas partes se estudian las aplicaciones (también llamadas
+funciones) entre los objetos. En concreto, un tipo de aplicación muy
+relevante son las isometrías, que son en las que se conserva algún
+aspecto TKTK.</p>
+<p>En realidad, esta asignatura, que consta de un solo tema, explica un
+concepto muy general y transversal a las matemáticas: el espacio métrico
+y la distancia. Las otras partes tratan sobre cosas más
+concretas.</p></li>
+<li><p><em>Bloque II</em>. Plano euclideo. Se estudian los axiomas de
+Euclides en los que se sustenta la geometría euclídea para dos
+dimensiones. Es interesante el quinto de estos axiomas, que, como
+veremos, tiene bastante <q>juego</q>.</p>
+<p>También se estudian las isometrías del plano euclideo, que, como
+hemos dicho antes, serán las aplicaciones (o transformaciones) en las
+que se preservan las distancias.</p>
+<p>También, se estudian los ángulos, y así se pone más interesante la
+cosa.</p>
+<p>También, se estudia el teorema de Tales, que es una propiedad muy
+interesante. Este nos conduce de forma natural al estudio de las razones
+trigonométricas, una parte muy importante de la geometría. Estas son las
+que ya habrá estudiado en trigonometría: seno, coseno, etc. También, se
+estudia aquí el teorema de Pitágoras; famosísimo.</p>
+<p>Muy importante será también el capítulo dedicado a las semejanzas,
+que son un tipo de aplicaciones. Al contrario de las isometrías, en
+estas las distancias no se conservan, pero sí se conservan otras cosas,
+como, por ejemplo, los ángulos. Además, como veremos, las distancias,
+aunque no se presenven, sí se encuentran en una relación constante, a la
+que se conoce como <em>razón</em>.</p>
+<p>También, se estudian las circunferencias. Se estudia aquí una
+operación relacionada con las circunferencias llamada
+<em>inversión</em>. Y será esta operación un preámbulo para la geometría
+hiperbólica, que también estudiaremos. Esta geometría, curiosamente, es
+como la geometría plana salvo porque no se cumple el quinto axioma, de
+ahí que dijéramos antes que ese axioma de bastante
+<q>juego</q>.</p></li>
+<li><p><em>Bloque III</em>. Geometría en el espacio. Se comienza por el
+estudio de los polígonos, que son figuras geométricas formadas por
+segmentos.</p>
+<p>También, se verán los axiomas de la geometría tridimensional, al
+igual que se hizo para la bidimensional. También, se estudiarán las
+isometrías para este espacio. También, se estudiará el concepto análogo
+a los polígonos pero para 3 dimensiones: los poliedros.</p></li>
+</ul>
+<p>Por lo que dice el tutor, esta asignatura suele costar bastante a los
+estudiantes.</p>
+<p>El término <q>analítica</q> en <q>geometría analítica</q> proviene de
+la idea de analizar o descomponer problemas geométricos en partes
+algebraicas mediante el uso de coordenadas y ecuaciones. Este enfoque
+fue desarrollado por René Descartes y Pierre de Fermat, simultáneamente
+y de forma independiente entre sí, quienes mostraron que se podía
+representar la geometría con expresiones algebraicas, permitiendo así
+<q>analizar</q> las relaciones geométricas de forma sistemática.</p>
+<p>Aunque hoy en día la palabra <q>análisis</q> se asocia mayormente a
+la rama del cálculo infinitesimal y el estudio de funciones, en el
+contexto de la geometría analítica se refiere a esta metodología de
+transformar problemas geométricos en problemas algebraicos. En esencia,
+la denominación resalta el método de <q>análisis</q> que permite abordar
+y resolver cuestiones geométricas utilizando herramientas del álgebra;
+no obstante, esto no implica una relación directa con el análisis
+matemático moderno.</p>
+<p>Existe bastante confusión sobre las formas de llamar a lo que
+conocemos previamente como <em>geometría</em>. Al final, la referencia
+con la que me he aclarado a este respecto es <span class="citation"
+data-cites="venema">Gerard A. Venema (<a href="#ref-venema"
+role="doc-biblioref">2011</a>)</span>. Tal y como explica en la pág. 19,
+la geometría analítica euclidiana es un <em>modelo</em> (<em>model</em>)
+de geometría euclidiana (axiomática). Además de esto, también es un
+modelo de la geometría de incidencia (<em>incidence geometry</em>),
+siendo esta última otra geometría axiomática, es decir, otro sistema
+formal constituido por ciertas definiciones y axiomas.</p>
+<p>En cualquier caso, Euclides mostró la geometría de las dos formas:
+tanto como un sistema axiomático (geometría axiomática) como un modelo
+de este, es decir, la aplicación de este sistema axiomático al mundo
+real.</p>
+<p>Así, tenemos como ejemplos de sistemas axiomáticos a la geometría de
+incidencia y la geometría euclidiana. Estos son, como decimos, sistemas
+axiomáticos. TKTK.</p>
+<p>Al hablar de los sistemas axiomáticos, y más concretamente de la
+geometría euclidiana axiomática, surge la cuestión de si las matemáticas
+surgen del mundo real o, si por el contrario, no son más que
+rompecabezas que se nos presentan partiendo de conjuntos arbitrarios de
+axiomas.</p>
+<p>Evidentemente, las matemáticas suelen partir de situaciones que se
+nos presentan en el mundo real.</p>
+<p>Sobre esta cuestión, también estaría bien consultar el concepto de
+<em>reverse mathematics</em>. John Stillwell escribió un libro sobre
+este tipo de matemáticas.</p>
+<p>Se podría decir que <em>la</em> geometría es la geometría axiomática.
+Luego, se tienen instancias de estas, es decir, casos particulares, que
+son geometrías, como la geometría euclidiana, la geometría de
+incidencia, la geometría analítica, etc. Creo que a estas, en <span
+class="citation" data-cites="venema">Gerard A. Venema (<a
+href="#ref-venema" role="doc-biblioref">2011</a>)</span>, las llaman
+<em>modelos</em> (<em>models</em>).</p>
+<p>Como ve, al estudiar la geometría axiomática se presentan cuestiones
+sobre qué es un sistema formal, paralelamente a lo que sucede al
+estudiar la teoría de conjuntos. Viene bien verlo desde estos dos puntos
+de vista. */</p>
+<hr />
+<p>La dificultad principal de esta asignatura está en que debemos
+demostrar, con las pocas herramientas de las que partimos, cosas que nos
+resultan intuitivas y naturales, por nuestra experiencia diaria con el
+mundo físico.</p>
+<p>Esas cosas son los axiomas y nuestro conocimiento de la lógica
+matemática y la teoría de conjuntos.</p>
+<hr />
+<p>El Axioma P3 (de la Regla Graduada) en cierto modo <q>contamina</q>
+nuestra geometría, al introducir el uso de los números reales y su
+operación suma.</p>
+</section>
+<section id="notación" class="level1 unnumbered">
+<h1 class="unnumbered">Notación</h1>
+<p>Suele usar el símbolo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊂</mo><annotation encoding="application/x-tex">\subset</annotation></semantics></math>
+para la inclusión, no necesariamente propia. La notación más usual
+actualmente es asemejarla a las desigualdades de números, es decir,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊆</mo><annotation encoding="application/x-tex">\subseteq</annotation></semantics></math>
+en general y, para el caso de subconjuntos propios,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊂</mo><annotation encoding="application/x-tex">\subset</annotation></semantics></math>.</p>
+<p>En cuanto a las notaciones con subíndices, también se podrían usar
+comas cuando constan de más de un argumento. Así, por ejemplo, la recta
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub><annotation encoding="application/x-tex">r_{AB}</annotation></semantics></math>
+podría ser
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></msub><annotation encoding="application/x-tex">r_{A, B}</annotation></semantics></math>.
+Es algo engorroso pero quizás sería más claro.</p>
+<p>Lo cierto es que hay veces en las que la notación se hace
+superengorrosa. Cuando se ven cosas como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow></msub><annotation encoding="application/x-tex">r_{g(A)g(B)}</annotation></semantics></math>,
+o en el Capítulo TKTK…</p>
+</section>
+<section id="anotaciones" class="level1">
+<h1>Anotaciones</h1>
+<section id="ch-espacios-metricos" class="level2">
+<h2>Capítulo 1. Espacios métricos</h2>
+<p>Este capítulo es algo distinto a los demás. Trata conceptos
+geométricos generales, válidos para todas las geometrías. En el
+siguiente ya nos introducimos en la geometría euclidiana, que será la
+que usemos a lo largo de todo el libro, con la excepción de una pequeña
+incursión que hacemos en la geometría hiperbólica en el Capítulo 9.</p>
+<p>En los capítulos de la geometría euclidiana, algunos de los conceptos
+que se dan son también generales para todas las geometrías, pero no se
+presentan todos en este capítulo porque de hacerlo sería enorme en
+relación a los demás. Se ha optado por ir introduciendo los conceptos no
+tan de golpe.</p>
+<hr />
+<p><strong>pág. 11</strong>. <strong>Definición 1.1</strong>. Creo que
+sería más elegante separar en dos al punto 1. Entonces constaría de 4
+puntos.</p>
+<p>Es más, hay definiciones alternativas, como la que da Andoni, el
+profesor del centro asociado de TKTK, que creo que es mejor pues no se
+repiten o corrigen cosas.</p>
+<p>Una aplicación
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>:</mo><mi>𝐏</mi><mo>×</mo><mi>𝐏</mi><mo>→</mo><msup><mi>ℝ</mi><mo>+</mo></msup><mo>∪</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">d: \mathbf{P} \times \mathbf{P} \longrightarrow \mathbb{R}^+
+\cup \{0\}</annotation></semantics></math> es una distancia o métrica
+si, para cualesquiera
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>∈</mo><mi>𝐏</mi></mrow><annotation encoding="application/x-tex">x, y, z \in
+\mathbf{P}</annotation></semantics></math>, se cumplen:</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">d(x, y) = 0</annotation></semantics></math>
+si y solo si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x = y</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">d(x, y) = d(y, x)</annotation></semantics></math>.
+(Simetría.)</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">d(x, y) \leq d(x, z) + d(z, y)</annotation></semantics></math>.
+(Desigualdad triangular.)</li>
+</ol>
+<hr />
+<p><strong>pág. 11</strong>. <strong>Ejemplo 1.2</strong>. No llega a
+demostrar, ni aquí ni en el <strong>Ejercicio 1.2</strong>, los dos
+primeros puntos. Aunque sea fácil, vamos a hacerlo aquí.</p>
+<p>Lo primero será ver que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^2</annotation></semantics></math>
+es no vacío, cosa que sabemos perfectamente, por tratarse de un conjunto
+que conocemos. Por ejemplo, contiene al elemento
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0, 0)</annotation></semantics></math>.</p>
+<p>Advierta que estamos usando una notación distinta a la que solemos
+usar para
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^2</annotation></semantics></math>.
+Lo normal habría sido usar algo como</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="1.0em"></mspace><mi>v</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> u = (x_1, y_1), \quad v = (x_2, y_2) </annotation></semantics></math></p>
+<p>pero aquí seguiremos con la misma con la que han planteado el
+ejemplo.</p>
+<p>Comprobemos que se cumplen las dos primeras condiciones de la
+<strong>Definición 1.1</strong> (métrica o distancia).</p>
+<p>Punto 1.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>E</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>2</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt><mo>=</mo><msqrt><mrow><msup><mn>0</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><msqrt><mn>0</mn></msqrt><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex"> d_E(x, x) = \sqrt{(x_1 - x_1)^2 + (x_2 - x_2)^2} = \sqrt{0^2 + 0^2} =
+\sqrt{0} = 0 </annotation></semantics></math></p>
+<p>Si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x \neq y</annotation></semantics></math>,
+tenemos una de las tres situaciones siguientes:</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">x_1 = y_1</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>≠</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_2 \neq y_2</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">x_1 \neq y_1</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_2 = y_2</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">x_1 \neq y_1</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>≠</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_2 \neq y_2</annotation></semantics></math>.</li>
+</ol>
+<p>En cualquiera de los casos, habrá, para algún
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">i = 1, 2</annotation></semantics></math>,
+un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><msub><mi>y</mi><mi>i</mi></msub><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x_i - y_i \neq
+0</annotation></semantics></math> y, por tanto, un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><msub><mi>y</mi><mi>i</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">(x_i - y_i)^2 &gt; 0</annotation></semantics></math>.
+Por tanto, en esos tres casos, se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>E</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">d_E (x, y) &gt; 0</annotation></semantics></math>.</p>
+<p>Punto 2.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>d</mi><mi>E</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>2</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mi>−</mi><mn>1</mn></mrow><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mrow><mi>−</mi><mn>1</mn></mrow><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>2</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">[</mo><mo stretchy="false" form="prefix">(</mo><mrow><mi>−</mi><mn>1</mn></mrow><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="postfix">]</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">[</mo><mo stretchy="false" form="prefix">(</mo><mrow><mi>−</mi><mn>1</mn></mrow><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="postfix">]</mo><mn>2</mn></msup></mrow></msqrt></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>2</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>d</mi><mi>E</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">
+  \begin{align*}
+    d_E (x, y)
+      &amp;= \sqrt{(x_1 - y_1)^2 + (x_2 - y_2)^2} \\
+      &amp;= \sqrt{({-1})^2 (x_1 - y_1)^2 + ({-1})^2 (x_2 - y_2)^2} \\
+      &amp;= \sqrt{[({-1}) (x_1 - y_1)]^2 + [({-1}) (x_2 - y_2)]^2} \\
+      &amp;= \sqrt{(y_1 - x_1)^2 + (y_2 - x_2)^2} \\
+      &amp;= d_E (y, x)
+  \end{align*}
+</annotation></semantics></math></p>
+<hr />
+<p><strong>pág. 12</strong></p>
+<p>La métrica inducida es lo mismo que el concepto de restricción de una
+aplicación, solo que para espacios métricos. Esto se estudia en
+asignaturas de lógica y teoría de conjuntos.</p>
+<p>Dado un conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>M</mi><mo>′</mo></msup><annotation encoding="application/x-tex">M&#39;</annotation></semantics></math>
+tal que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>M</mi><mo>′</mo></msup><mo>⊆</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">M&#39; \subseteq M</annotation></semantics></math>,
+la restricción de la aplicación
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>
+a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>M</mi><mo>′</mo></msup><mo>×</mo><msup><mi>M</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">M&#39; \times M&#39;</annotation></semantics></math>
+es la métrica inducida.</p>
+<p>En cuanto a la notación, se pueden usar cosas como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><msub><mo stretchy="false" form="prefix">|</mo><mrow><msup><mi>M</mi><mo>′</mo></msup><mo>×</mo><msup><mi>M</mi><mo>′</mo></msup></mrow></msub></mrow><annotation encoding="application/x-tex">\delta|_{M&#39; \times M&#39;}</annotation></semantics></math>.
+Suele ser usual usar esa notación para la restricción de las
+aplicaciones.</p>
+<p>La nueva función se comporta del mismo modo que la vieja, solo que en
+un dominio más restringido.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi>δ</mi><mo>:</mo></mtd><mtd columnalign="right" style="text-align: right"><mi>M</mi><mo>×</mo><mi>M</mi></mtd><mtd columnalign="center" style="text-align: center"><mo>→</mo></mtd><mtd columnalign="left" style="text-align: left"><mi>ℝ</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="right" style="text-align: right"><mi>x</mi><mo>,</mo><mi>y</mi></mtd><mtd columnalign="center" style="text-align: center"><mo>↦</mo></mtd><mtd columnalign="left" style="text-align: left"><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">
+  \begin{array}{rrcl}
+    \delta :  &amp; M \times M  &amp; \longrightarrow &amp; \mathbb{R} \\
+              &amp; x, y        &amp; \longmapsto     &amp; \delta(x, y)
+  \end{array}
+</annotation></semantics></math></p>
+<p>mientras que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi>δ</mi><msub><mo stretchy="false" form="prefix">|</mo><mrow><msup><mi>M</mi><mo>′</mo></msup><mo>×</mo><msup><mi>M</mi><mo>′</mo></msup></mrow></msub><mo>:</mo></mtd><mtd columnalign="right" style="text-align: right"><msup><mi>M</mi><mo>′</mo></msup><mo>×</mo><msup><mi>M</mi><mo>′</mo></msup></mtd><mtd columnalign="center" style="text-align: center"><mo>→</mo></mtd><mtd columnalign="left" style="text-align: left"><mi>ℝ</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="right" style="text-align: right"><mi>x</mi><mo>,</mo><mi>y</mi></mtd><mtd columnalign="center" style="text-align: center"><mo>↦</mo></mtd><mtd columnalign="left" style="text-align: left"><msub><mi>δ</mi><msub><mo stretchy="false" form="prefix">|</mo><mrow><msup><mi>M</mi><mo>′</mo></msup><mo>×</mo><msup><mi>M</mi><mo>′</mo></msup></mrow></msub></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">
+  \begin{array}{rrcl}
+    \delta|_{M&#39; \times M&#39;} :
+      &amp; M&#39; \times M&#39;  &amp; \longrightarrow &amp; \mathbb{R} \\
+      &amp; x, y          &amp; \longmapsto     &amp; \delta_|_{M&#39; \times M&#39;} (x, y) = \delta(x, y)
+  \end{array}
+</annotation></semantics></math></p>
+<hr />
+<p><strong>pág. 13</strong></p>
+<p><strong>Definición 1.5</strong>. Alternativamente a como se define el
+concepto de <em>isometría</em>, podríamos definirla como</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>:</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mo stretchy="false" form="prefix">(</mo><msup><mi>M</mi><mo>′</mo></msup><mo>,</mo><msup><mi>δ</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> g: \: (M, \delta) \longrightarrow (M&#39;, \delta&#39;) </annotation></semantics></math></p>
+<p>Y, de hecho, usa esta notación un poco después. En el fondo, la que
+usa el libro se refiere de forma implícita a esta. En su definición se
+entiende de forma tácita cuáles son las métricas en cada uno de los
+conjuntos.</p>
+<hr />
+<p><strong>pág. 13</strong></p>
+<p><strong>Teorema 1.7</strong>. En la demostración, hace uso de algunos
+resultados de la teoría de conjuntos. Puede consultarlo, entre otras
+referencias, en <span class="citation" data-cites="pineda">(<a
+href="#ref-pineda" role="doc-biblioref">Miguel Delgado Pineda y José
+María Muñoz Bouzo 2020, 104-5</a>)</span>. Concretamente, el
+<strong>Teorema 3.59</strong> (de Caracterización de una Aplicación
+Biyectiva) y <strong>Teorema 3.60</strong>.</p>
+<p>Al comienzo, se dice que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>∘</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">h \circ g</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>g</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">g^{-1}</annotation></semantics></math>
+son biyectivas, pero no se da nada de información. Concretamente, esto
+es consecuencia de que tanto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>
+como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+son aplicaciones biyectivas.</p>
+<p>Además, tampoco menciona que se dan las condiciones para que se pueda
+dar esa composición de aplicaciones, es decir,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>∘</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">h \circ g</annotation></semantics></math>.
+Lo primero que se debe cumplir para que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>∘</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">h \circ g</annotation></semantics></math>
+sea una aplicación es que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Dom</mi><mo>&#8289;</mo><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>Im</mi><mo>&#8289;</mo><mo stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> \operatorname{Dom}(h) = \operatorname{Im}(g) </annotation></semantics></math></p>
+<p>En la parte que demuestra que conservan las distancias, se están
+suponiendo algunas cosas que se cumplen por ser
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>g</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">g^{-1}</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>∘</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">h \circ g</annotation></semantics></math>
+aplicaciones biyectivas. Por ejemplo, que existe un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">x \in M</annotation></semantics></math>
+tal que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><msup><mi>M</mi><mo>″</mo></msup></mrow><annotation encoding="application/x-tex">h(g(x)) \in M&#39;&#39;</annotation></semantics></math>.</p>
+<p>Además, al ser biyectivas son inyectivas y esto hace que ese elemento
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">x \in
+M</annotation></semantics></math> sea único, condición que también se
+requiere aquí.</p>
+<hr />
+<p><strong>pág. 13</strong></p>
+<p>En la <strong>Definición 1.8</strong>, también se puede usar una
+notación más explícita, al igual que sucede con lo que dijimos antes
+sobre la definición de isometría. En este caso, sería
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Isom</mtext><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Isom}(M, \delta)</annotation></semantics></math>.</p>
+<hr />
+<p><strong>pág. 13</strong> (abajo)</p>
+<p>Al final de la página. Las propiedades 1 y 2 son casos particulares
+del Teorema 1.7. Por su parte, la demostración del punto 3 es
+trivial.</p>
+<hr />
+<p><strong>pág. 14</strong></p>
+<p><strong>Nota 1.9</strong>. También se la puede llamar <em>grupo de
+isometrías</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(M,
+\delta)</annotation></semantics></math>.</p>
+<hr />
+<p><strong>pág. 14</strong></p>
+<p>Demostración de que las isometrías con la composición cumplen las
+propiedades de grupo TKTK.</p>
+<hr />
+<p><strong>pág. 15</strong></p>
+<p><strong>Ejemplo 1.11</strong>. Algo interesante es demostrar también
+por qué la aplicación</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>δ</mi><mi>G</mi></msub><mo>=</mo><mrow><mrow><mtext mathvariant="normal">“Distancia máxima entre </mtext><mspace width="0.333em"></mspace></mrow><mi>p</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> y </mtext><mspace width="0.333em"></mspace></mrow><mi>q</mi><mtext mathvariant="normal">”</mtext></mrow></mrow><annotation encoding="application/x-tex"> \delta_G = \text{``Distancia máxima entre $p$ y $q$&#39;&#39;} </annotation></semantics></math></p>
+<p>no es una métrica.</p>
+<hr />
+<p><strong>pág. 16</strong></p>
+<p><strong>Definición. 1.12</strong>. Además de llamarlo <q>segmento de
+extremos
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math></q>
+también se le suele llamar <q>segmento
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math></q>.</p>
+<hr />
+<p><strong>pág. 16</strong></p>
+<p>En la definición de puntos alineados se podría explicar también que
+esto está relacionado con el concepto de <em>recta</em>, que se define
+en el capítulo siguiente.</p>
+<hr />
+</section>
+<section id="capítulo-2.-axiomas-del-plano-euclideo" class="level2">
+<h2>Capítulo 2. Axiomas del plano euclideo</h2>
+<p><strong>pág. 24</strong>.— En la <strong>Observación 2.4</strong>.
+Para mí, para demostrar la unicidad se necesita también hacer uso del
+punto (ii) de la definición de recta.</p>
+<hr />
+<p><strong>pág. 24</strong>.— <strong>Nota 2.5</strong>. Al ser única,
+la recta ya sería una aplicación y por tanto se puede usar la notación
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub><annotation encoding="application/x-tex">r_{AB}</annotation></semantics></math>.</p>
+<hr />
+<p><strong>pág. 24</strong>.— <strong>Teorema 2.7</strong>. En la
+demostración creo que hay un problema de lógica. En realidad, también
+habría que demostrar que no se puede dar que ni se cortan ni son
+paralelas.</p>
+<p>Es decir, lo que dice el teorema es que se da un operador disyunción
+excluyente; en las ciencias de la computación y la electrónica digital
+se le conoce más como <em>o</em>-exclusiva. Entonces, se deberían
+demostrar esas dos cosas.</p>
+<hr />
+<p><strong>pág. 25</strong>.— El Axioma P3 (de la Regla Graduada)
+tamibén puede expresarse como que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>:</mo><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mo stretchy="false" form="prefix">(</mo><mi>ℝ</mi><mo>,</mo><msub><mi>d</mi><mi>ℝ</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gamma : (r, d) \longrightarrow (\mathbb{R}, d_{\mathbb{R}})</annotation></semantics></math>
+es una isometría. Recuerde que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mi>ℝ</mi></msub><annotation encoding="application/x-tex">d_{\mathbb{R}}</annotation></semantics></math>
+se definió anteriormente como</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>ℝ</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo>−</mo><mi>y</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex"> d_{\mathbb{R}} (x, y) = |x - y| </annotation></semantics></math></p>
+<p>Esto concuerda con que, como se demostró en el Capítulo 1, que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mi>ℝ</mi></msub><annotation encoding="application/x-tex">d_{\mathbb{R}}</annotation></semantics></math>
+es una distancia.</p>
+<p>Advierta que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(r, d)</annotation></semantics></math>
+es un espacio métrico inducido de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>𝐏</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbf{P}, d)</annotation></semantics></math>.</p>
+<hr />
+<p><strong>pág. 26</strong>.— La parte que queda por completar del punto
+medio de un segmento, que sería cuando los extremos coinciden, se podría
+dar por convenio pero también puede ser una consecuencia de la
+definición. Esto dependerá de la definición que se dé del punto medio de
+un segmento.</p>
+<p>Si se hubiera dado en base a los puntos del segmento, en lugar de a
+los puntos de la (única) recta que los contiene, todo tendría más
+sentido, y no habría que hacer uso en este caso una excepción.</p>
+<hr />
+<p><strong>pág. 27</strong>.— Aunque podría parecerle que las
+demostraciones de la <strong>Observación 2.10</strong> y del
+<strong>Teorena 2.12</strong> están incompletas porque se hacen en uno
+solo de los dos condicionales, en realidad, si se fija, está usando
+símbolos de bicondicional, con lo que podría ir también de delante hacia
+atrás en la demostración.</p>
+<p>Creo que el libro, aunque está muy bien, es muy <q>telegráfico</q>.
+No estaría mal que diese algunas explicaciones más en algunas
+partes.</p>
+<hr />
+<p><strong>pág. 27</strong>.— Demostración del punto (6) del
+<strong>Teorema 2.12</strong>. En realidad, la última implicación se
+justifica, además de por el punto (ii), por el (i).</p>
+<hr />
+<p><strong>pág. 31</strong>.— En la demosrtación del <strong>Teorema
+2.18</strong>, no se llega a explicar el paso</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false" form="postfix">]</mo><mo>∩</mo><msub><mi>r</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub><mo>=</mo><mi>∅</mi><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="postfix">)</mo><mo>∩</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex"> [X, Y] \cap r_{AB} = \emptyset \quad \iff \quad g([X, Y]) \cap g(r_{AB})
+= \emptyset </annotation></semantics></math></p>
+<hr />
+</section>
+<section id="capítulo-3.-isometrías-en-el-plano-euclideo"
+class="level2">
+<h2>Capítulo 3. Isometrías en el plano euclideo</h2>
+<p><strong>pág. 47</strong> (abajo)</p>
+<p>En la demostración del <strong>Teorema 3.6</strong>, faltan algunas
+cosas por explicar. Concretamente, en la segunda línea, dice:</p>
+<p><q>En
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∈</mo><mi>𝐏</mi><mo>\</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">X \in \mathbf{P} \setminus r</annotation></semantics></math>,
+se sigue que la recta
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>⟂</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">l \perp r</annotation></semantics></math>
+pasando por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+satisface
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>l</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>l</mi></mrow><annotation encoding="application/x-tex">g(l) = l</annotation></semantics></math>.</q></p>
+<p>Pero no lo demuestra. Vamos a hacerlo aquí.</p>
+<p>Partimos de que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><msub><mo>⟂</mo><mi>P</mi></msub><mi>r</mi></mrow><annotation encoding="application/x-tex">l \perp_P r</annotation></semantics></math>,
+es decir,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+es ortogonal a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+y su punto de corte es
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>∈</mo><mi>𝐏</mi></mrow><annotation encoding="application/x-tex">P \in \mathbf{P}</annotation></semantics></math>.</p>
+<p>Como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>∈</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">P \in r</annotation></semantics></math>,
+se tiene, por lo que se dijo al comienzo, que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">g(P) = P</annotation></semantics></math>.
+Por tanto,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>∈</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>l</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P \in g(l)</annotation></semantics></math>.</p>
+<p>Por la <strong>Observación 2.24</strong>, se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>l</mi><mo stretchy="false" form="postfix">)</mo><mo>⟂</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(l) \perp g(r)</annotation></semantics></math>
+siendo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(P)</annotation></semantics></math>
+su punto de corte. Pero, por lo que ya sabemos, podemos también afirmar
+que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>l</mi><mo stretchy="false" form="postfix">)</mo><mo>⟂</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">g(l) \perp r</annotation></semantics></math>
+con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+como punto de corte.</p>
+<p>Entonces, como tenemos que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><msub><mo>⟂</mo><mi>P</mi></msub><mi>r</mi></mrow><annotation encoding="application/x-tex">l \perp_P r</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>l</mi><mo stretchy="false" form="postfix">)</mo><msub><mo>⟂</mo><mi>P</mi></msub><mi>r</mi></mrow><annotation encoding="application/x-tex">g(l) \perp_P r</annotation></semantics></math>,
+por el <strong>Teorema 2.29</strong> tendremos que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>l</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>l</mi></mrow><annotation encoding="application/x-tex">g(l) = l</annotation></semantics></math>.</p>
+<hr />
+</section>
+<section id="capítulo-4.-ángulos" class="level2">
+<h2>Capítulo 4. Ángulos</h2>
+</section>
+<section id="capítulo-5.-cuadriláteros-y-teorema-de-thales"
+class="level2">
+<h2>Capítulo 5. Cuadriláteros y teorema de Thales</h2>
+</section>
+<section id="capítulo-6.-teorema-de-pitágoras" class="level2">
+<h2>Capítulo 6. Teorema de Pitágoras</h2>
+</section>
+</section>
+<section id="erratas" class="level1 unnumbered">
+<h1 class="unnumbered">Erratas</h1>
+<p>A lo largo de todo el libro, suelen dejar muchas veces un espacio
+entre una palabra y el signo de dos puntos. Por ejemplo, en la pág. 16,
+por el medio, pone <q>siguiente :</q>. No referenciaré más en esta lista
+erratas como esta.</p>
+<hr />
+<p><strong>pág. 13</strong>.— <strong>Demostración.</strong> <q>Está
+claro que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>∘</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">h \circ g</annotation></semantics></math>
+y</q> &lt;– Parece que están demasiado juntos los operandos.</p>
+<hr />
+<p><strong>pág. 15</strong>.— <code>``disquitos ''</code> –&gt;
+<code>``disquitos''</code></p>
+<hr />
+<p><strong>pág. 17</strong> (medio).— <code>(Ejercicio dif'icil)</code>
+–&gt; <code>(Ejercicio dif\'icil)</code> o bien
+<code>(Ejercicio difícil)</code></p>
+<hr />
+<p><strong>pág. 21</strong>.— <code>aplicaciones ...</code> –&gt;
+<code>aplicaciones\ldots</code></p>
+<hr />
+<p><strong>pág. 21</strong>.— <q>caracterizan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐏</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math></q>
+–&gt; <q>caracterizan a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐏</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math></q></p>
+<hr />
+<p><strong>pág. 23</strong>.— <q><strong>(ii)</strong> para</q> –&gt;
+<q><strong>(ii)</strong> Para</q>. Por cierto, no sé por qué se ponen
+los números en negrita.</p>
+<hr />
+<p><strong>pág. 32</strong> (arriba).— <q><code>$P '$</code></q> –&gt;
+<q><code>$P'$</code></q>. Lo hace dos veces.</p>
+<hr />
+<p>También, hay una serie de cuestiones menores que no he incluido en la
+lista de erratas, porque en realidad no se trata de erratas. Me refiero
+a cuestiones más bien de estilo y de tipografía. Estas son más bien de
+gusto personal, aunque sí que existen convenios sobre algunas de
+estas.</p>
+<p>Por ejemplo, al hablar de <q>Geometría</q>, estamos adoptando la
+regla de capitalizar el nombre de una disciplina científica o, más
+generalmente, un área del conocimiento. Aunque es común verlo en muchos
+libros, en realidad, el acuerdo adoptado actualmente es no
+capitalizarlos; con lo que sería preferible hablar de la
+<q>geometría</q>.</p>
+<p>También, las asignaturas se capitalizan completamente, es decir,
+sería <q>Geometría Básica</q> y no <q>Geometría básica</q>. Por cierto,
+tampoco se pone en itálicas ni entre comillas ya que no es un
+título.</p>
+</section>
+<section id="referencias" class="level1 unnumbered">
+<h1 class="unnumbered">Referencias</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-costa" class="csl-entry" role="listitem">
+Antonio F. Costa, y Peter Buser. 2010. <em>Curso de geometría
+básica</em>. 1.ª ed. Sanz y Torres.
+</div>
+<div id="ref-venema" class="csl-entry" role="listitem">
+Gerard A. Venema. 2011. <em>Foundations of Geometry</em>. 2.ª ed.
+Pearson.
+</div>
+<div id="ref-pineda" class="csl-entry" role="listitem">
+Miguel Delgado Pineda, y José María Muñoz Bouzo. 2020. <em>Lenguaje
+matemático, conjuntos y números</em>. 2.ª ed. Sanz y Torres.
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>creo que también se puede usar el adjetivo
+<em>euclidiana</em><a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>en su día, los llamaban <em>postulados</em><a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>e independientemente por Pierre de Fermat<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
