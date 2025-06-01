@@ -1,0 +1,112 @@
+
+
+
+### Introducción
+
+Aumentando en cuanto a la complejidad de figuras, la siguiente que nos
+interesaría estudiar es la formada por dos rectas.
+
+<!--
+Lo lógico sería preguntarse por la congruencia, es decir, la igualdad de
+cierto aspecto relevante de este tipo de figuras, o, lo que es lo mismo,
+cuándo existe una isometría entre una figura que es un conjunto de dos
+rectas y otra que es otro conjunto de dos rectas.
+
+Para ello, vamos a dividir a esas rectas en su punto de corte, con lo que
+básicamente desechamos el caso de rectas paralelas y coincidentes. Bueno, no
+lo hacemos del todo, pero serán considerados casos extremos que no
+presentarán gran dificultad. Lo interesante viene cuando consideramos rectas
+secantes.
+-->
+
+A partir de dos rectas secantes, por su punto de corte podemos establecer,
+tal y como vimos antes, dos semirrectas. Usaremos normalmente la notación de
+poner una barra sobre el designador de una recta para representar a una de
+sus semirrectas. Así, para la recta $r$ tendríamos que $\bar{r}$ designaría
+a una de sus semirrectas.
+
+::: {.deffinition #def-angulo data-label="Definición de Ángulo"}
+Sean $r$ y $s$ dos rectas (pudiendo ser coincidentes) que tienen al menos un
+punto $V \in r \cap s$. Sea $\bar{r}$ una de las dos semirrectas
+determinadas por $V$ en $r$ y $\bar{s}$ lo análogo para $s$. El conjunto
+$\left\{\bar{r}, \bar{s}\right\}$ se denomina _ángulo_ (_angle_) $\bar{r}$
+$\bar{s}$, $\angle\left\{\bar{r}, \bar{s}\right\}$.
+
+Al punto $V$ se le conoce como el _vértice_ del ángulo y, a las semirrectas
+$\bar{r}$ y $\bar{s}$, sus _lados_.
+:::
+
+<!-- Ver lo que explican de las rectas paralelas en el libro al comienzo de
+este capítulo. -->
+
+Advierta que no todo par de semirrectas $\{\bar{r}, \bar{s}\}$ forma un
+ángulo. Para ello, han de formarse a partir del punto de corte de las rectas
+de las que "nacen".
+
+Quizás, esta definición no concuerde con lo que usted entendía por _ángulo_.
+Normalmente, en cursos previos de geometría se define un ángulo como una de
+las áreas que se forman a partir de esas dos semirrectas, o una medida de la
+apertura de esas dos semirrectas. En realidad, lo que más sentido tiene,
+como verá en este capítulo, es definirlo tal y como se ha hecho aquí. Esas
+otras nociones tienen también su definición correspondiente y se verán más
+adelante.
+
+Me gustaría subrayar que $\angle\left\{\bar{r}, \bar{l}\right\}$ no es una
+medida, es decir, un número, sino un objeto geométrico.
+
+Advierta que el extremo del ángulo, es decir, $V$, no pertenece al ángulo,
+aunque tenga una gran influencia en este.
+
+Evidentemente, hay 4 ángulos formados por dos rectas $r$ y $s$. Solo hay que
+aplicar la combinatoria a las semirrectas.
+
+Algo que también se deduce de forma directa de la definición de ángulo es
+que estos cumplen la simetría, es decir, dado un ángulo
+$\angle\left\{\bar{r}, \bar{l}\right\}$, este es lo mismo que
+$\angle\left\{\bar{l}, \bar{r}\right\}$.
+
+<!-- TODO Estudiar el caso en el que las rectas son paralelas.
+
+Sean $\{r, s\}$ y $\left\{r', s'\right\}$ conjuntos de dos rectas paralelas.
+Se tiene que $\{r, s\}$ será congruente con $\left\{r', s'\right\}$ si y
+solo si $d(R, S) = d\left(R', S'\right)$ (creo que por el
+[](#ax-p5-euclides){.nameref} TKTK). En particular, si $t$ es una recta
+distinta de $l$ y perpendicular a $r$ y $s$, y $\{R_t\} = t \cap r$ y
+$\{S_t\} = t \cap s$, entonces $d(R, S) = d(R_t, S_t)$. A $d(R, S)$ se le
+llama la distancia entre $r$ y $s$ y es fácil demostrar (usando por ejemplo
+el Teorema de Pitágoras, que se verá en un capítulo posterior) que es la
+distancia mínima entre los puntos de $r$ y los de $s$.
+-->
+
+<!-- Creo que los ángulos aquí son entre 0 y 180 grados. -->
+
+A veces, la notación $\angle\left\{\bar{r}, \bar{l}\right\}$ puede resultar
+bastante cargada. Por ello, y cuando no haya lugar a confusión,
+simplificaremos la escritura. Por ejemplo, notaremos por $\angle V$ si un
+ángulo está completamente identificado con el vértice $V$. Así suele suceder
+con los triángulos, pues en estos el ángulo al que nos referimos suele ser a
+las semirrectas que contienen a los segmentos del mismo.
+
+Por ejemplo, dado un triángulo $\triangle\{P, Q, R\}$, el ángulo $\angle P$,
+es el ángulo con vértice $P$ formado por las semirrectas con vértice $P$ que
+contienen a los lados $[P, Q]$ y $[P, R]$. De modo análogo se definen
+$\angle Q$ y $\angle R$. Se dice que los ángulos $\angle P, \angle Q$ y
+$\angle R$ son los ángulos del triángulo $\triangle\{P, Q, R\}$.
+
+<!-- ![Figura 4-1 Ángulo](attachment:angulo.png) -->
+
+Veamos ahora el caso en el que las rectas a partir de las que definimos un
+ángulo son coincidentes, pues, como puede ver en la definición, no es un
+caso que se descarte. Si $r$ y $s$ son rectas coincidentes, tomando un punto
+$V \in r \cap s$ cualquiera de ambas para tomar una semirrecta en cada una
+de ellas, se tienen dos posibilidades:
+
+  - Si las semirrectas son la misma, se tiene que se trata de un _ángulo
+    nulo_.
+  - Si se trata de semirrectas no coincidentes, se trata de un _ángulo
+    llano_.
+
+
+
+
+

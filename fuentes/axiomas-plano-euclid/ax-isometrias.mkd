@@ -1,0 +1,210 @@
+
+
+
+### Axiomas sobre isometrías
+
+El concepto de _igualdad_, tal y como mencionamos antes de pasada, a veces
+es bastante sutil en matemáticas y puede que no esté claro para todo el
+mundo, según el contexto. Así, en nuestro caso, estudiando figuras en el
+plano euclideo, ¿consideramos iguales a dos figuras si podemos mover a una
+de tal forma que pueda superponerse sobre la otra? En cierto aspecto, se
+trataría de figuras "iguales". Ese "movimiento" es el tipo de transformación
+que produce una isometría ya que conservar distancias es básicamente
+mantener su forma, aunque la figura pueda estar en otro lugar.
+
+Dejamos de momento esta noción de igualdad y la dejamos para más adelante.
+
+Con lo que sabemos hasta ahora, no hay nada que nos garantice que para
+cualquier movimiento de una figura tengamos una isometría que realice ese
+mismo efecto. Sin embargo, para una figura muy simple, como, por ejemplo,
+dos puntos, nuestra intuición geométrica nos dice que siempre se pueden
+mover a cualquier otro par de puntos que estén a una misma distancia. Esto
+es lo que formaliza el axioma siguiente.
+
+::: {.axiom #ax-p5-euclides data-label="Axioma P5 (de la Movilidad)"}
+En $(\mathbf{P}, d)$, dados cuatro puntos $A_1, A_2, B_1, B_2 \in
+\mathbf{P}$ para los que se cumple $d(A_1, A_2) = d(B_1, B_2)$, existe
+siempre alguna $f \in \isom(\mathbf{P}, d)$ tal que
+
+$$ f(A_1) = B_1 \quad \text{y} \quad f(A_2) = B_2 $$
+:::
+
+<!-- ![Axioma de movilidad](attachment:movilidad.png) -->
+
+A cualquier par de figuras en las que podamos hacer una transformación de
+ese tipo, cosa que no tiene por qué darse siempre, las calificamos de
+_congruentes_, tal y como se explica en la definición siguiente. Es como si
+la figura original, antes de transformarla mediante la isometría, fuese
+indeformable.[^indeformable]
+
+[^indeformable]: En física recibe muchos otros nombres: cuerpo rígido,
+  sólido, etc.
+
+::: {.deffinition #def-congruencia data-label="Definición de Congruencia"}
+Dos figuras (o conjuntos de puntos) $\mathcal{F}_1$ y $\mathcal{F}_2$ del
+plano euclideo se dicen _congruentes_ o _equivalentes_ si existe una
+isometría $f$ de modo que $f(\mathcal{F}_1) = \mathcal{F}_2$.
+:::
+
+La congruencia de figuras es, en cierto aspecto, un tipo de igualdad: la
+igualdad de su forma.
+
+Por cierto, aunque todos los movimientos de "figuras" indeformables (sólidos
+rígidos) del mundo físico macroscópico en 2 dimensiones se correspondan con
+isometrías del plano euclidiano, lo contrario no es cierto. Es decir, tal y
+como veremos, existen isometrías que no se corresponden con movimientos del
+tipo que digo. Es decir, no serían movimientos para la física; para la
+geometría sí se podrían llamar _movimientos_.
+
+El paso lógico siguiente sería, al igual que hicimos con las isometrías,
+tratar de extrapolar el concepto de congruencia a las figuras que conocemos
+hasta ahora. Lo que más nos interesa a este respecto es dar con las
+condiciones que hacen que una clase de figuras sean congruentes. Por
+ejemplo, cuándo son congruentes dos triángulos. Esto se estudiará en
+capítulos posteriores.
+
+<!-- No estoy seguro de lo siguiente. Quizás se debería cumplir para las
+distancias entre todos los pares de puntos del segmento. -->
+
+De momento, podemos verlo para los segmentos, que es consecuencia directa
+del [](#ax-p5-euclides){.nameref}. Según este, un segmento $[A_1, A_2]$ es
+congruente con otro $[B_1, B_2]$ si y solo si ambos tienen la misma
+longitud, es decir, si $d(A_1, A_2) = d(B_1, B_2)$.
+
+::: {.theorem #th-id-isometria data-label="Teorema"}
+La función identidad de dominio $\mathbf{P}$,
+
+$$
+\begin{array}{rrcl}
+  \operatorname{id}_{\mathbf{P}}: & \mathbf{P} & \longrightarrow &
+    \mathbf{P} \\
+    & X & \longmapsto & \operatorname{id}_{\mathbf{P}}(X) = X
+\end{array}
+$$
+
+es una isometría.
+:::
+
+Por comodidad, cuando no haya lugar a una posible confusión, designaremos
+por $\operatorname{id}$ a $\operatorname{id}_{\mathbf{P}}$.
+
+Es trivial demostrar que cumple las condiciones para ser una isometría.
+
+Un tipo de isometría de particular importancia es la reflexión, que conoce
+de su experiencia diaria. Es, por ejemplo, lo que sucede en los espejos.
+
+<!-- En el capítulo de las isometrías, la define de otra manera y estos
+puntos de aquí son simplemente propiedades. No lo tengo claro. -->
+
+::: {.deffinition #def-reflexion-axial data-label="Definición de Reflexión
+Axial"}
+En el plano euclideo, una $\sigma \in \isom(\mathbf{P})$ es una reflexión
+axial de eje la recta $r$ si:
+
+1.  Dado un $X \in \mathbf{P}$, se tiene que $\sigma(X) = X$ si y solo si $X
+    \in r$.
+2.  $\sigma \circ \sigma = \operatorname{id}_{\mathbf{P}}$.
+:::
+
+A esa recta $r$ se la conoce como _eje_ de la reflexión. Existen otros tipos
+de reflexiones, como veremos más adelante.
+
+Puede que el adjetivo _axial_ lo omitamos, en muchas ocasiones, si no es
+posible que haya confusión. O, simplemente, al decir "reflexión de eje..."
+ya se supone que es de tipo axial.
+
+Como es evidente, el punto 2 de la definicion viene a decir que, si se
+emplea la notación $X' = \sigma(X)$, para un $X \in \mathbf{P}$, se tiene
+que $\sigma(X') = X$, ya que
+
+$$ \sigma(X') = \sigma(\sigma(X)) = (\sigma \circ \sigma)(X) =
+\operatorname{id}(X) = X $$
+
+Es decir, en una reflexión axial los puntos se van alternando según se les
+compone, pasando de uno al reflejado y de vuelta a su posición original.
+
+::: {.axiom #ax-p6-euclides data-label="Axioma P6 (de la Reflexión)"}
+En el plano euclideo, para una recta cualquiera se tiene siempre una
+reflexión (axial) que la tiene por eje.
+:::
+
+Además, se demostrará en el corolario 2.28 TKTK que una reflexión axial
+tiene asociada siempre una _única_ recta como su eje de reflexión. Debido a
+esto y al [](#ax-p6-euclides){.nameref}, se puede usar una notación como
+$\sigma_r$, para expresar la reflexión axial determinada por la recta $r$.
+
+A partir de ahora, se usará la misma notación que hemos usado para las
+reflexiones, es decir, $\sigma$, o cualquiera de sus variantes, como, por
+ejemplo, poniéndole un subíndice, como $\sigma_r$ para indicar la reflexión
+axial de eje la recta $r$. A veces, ni se especificará con palabras, sino
+que se entenderá que, si se usa la letra sigma minúscula como su designador,
+se trata entonces de una reflexión axial.
+
+::: {.lemma #lema-reflexion data-label="Lema del Punto Medio en una
+Reflexión Axial"}
+En $(\mathbf{P}, d)$, dada una reflexión axial $\sigma$ de eje $r$, se tiene
+que para todo $X \in \mathbf{P}$ se cumple
+
+$$ \operatorname{medio}[X, \sigma(X)] \in r $$
+:::
+
+::: proof
+Vamos a ver los dos casos posibles. Por un lado, tenemos que $X \in r$. En
+dicho caso, según la [](#def-reflexion-axial){.nameref}, se tiene que
+$\sigma(X) = X$, con lo que se tiene que
+
+$$ \operatorname{medio}[X, \sigma(X)] = \operatorname{medio}[X, X] = X $$
+
+y, entonces, por hipótesis, se tiene que $\operatorname{medio}[X, \sigma(X)]
+\in r$.
+
+Ahora, veamos el caso de que $X \notin r$.
+
+Advierta que $\sigma(X') = X$, tal y como se explicó tras la
+[](#def-reflexion-axial){.nameref}. Ahora, simplemente, hay que aplicar el
+[](#th-isom-p-medio-segmento){.nameref} al segmento $[X, \sigma(X)]$, con lo
+que tenemos
+
+$$
+  \begin{align*}
+    \sigma(\operatorname{medio}[X, X'])
+      &= \operatorname{medio}[\sigma(X), \sigma(X')] \\
+      &= \operatorname{medio}[X', X] \\
+      &= \operatorname{medio}[X, X']
+  \end{align*}
+$$
+
+Finalmente, aplicandola [](#def-reflexion-axial){.nameref} se tiene que
+$\operatorname{medio}[X, \sigma(X)] \in r$.
+:::
+
+::: {.theorem #th-reflexion-semiplanos data-label="Teorema de la Reflexión
+de Semiplanos"}
+En $(\mathbf{P}, d)$, sean $\sigma$ una reflexión de eje $r$ y $H^1$ y $H^2$
+los semiplanos separados por $r$. En estas condiciones,
+
+$$ \sigma(H^1) = H^2 \quad \text{y} \quad \sigma(H^2) = H^1 $$
+:::
+
+::: proof
+Según el [](#th-isom-semiplanos){.nameref}, $\sigma(H^1)$ y $\sigma(H^2)$
+son los dos semiplanos separados por $\sigma(r)$. Al ser esa isometría una
+reflexión axial de eje $r$ y, por tanto, cumplirse para todo $X \in r$ la
+condición $\sigma(X) = X$, se tiene que $\sigma(r) = r$.
+
+Uniendo ambas afirmaciones, se tiene que los semiplanos $\sigma(H^1)$ y
+$\sigma(H^2)$, considerados en forma global, son los mismos que $H^1$ y
+$H^2$. Ahora bien, la reflexión podría dejarlos inamovibles o
+intercambiarlos. Aún no sabemos cuál de estas dos posibilidades se debe dar.
+
+Ahora, tomamos, sin pérdida de generalidad, un punto $A \in H^1$. Teniendo
+en cuenta el [](#lema-reflexion){.nameref}, el segmento de recta $[A,
+\sigma(A)]$ corta a $r$, luego, por el contrarrecíproco del punto 3 de las
+[](#propied-ax-p4-separacion){.nameref}, se tiene que $\sigma(A) \in H^2$.
+Por tanto, se tiene que $\sigma(H^1) = H^2$. Con un planteamiento análogo se
+concluye que $\sigma(H^2) = H^1$.
+:::
+
+
+
+

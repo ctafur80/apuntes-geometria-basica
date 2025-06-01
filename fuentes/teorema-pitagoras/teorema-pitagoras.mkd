@@ -1,0 +1,83 @@
+
+
+
+### El teorema de Pitágoras
+
+::: {.theorem data-label="Teorema de Pitágoras"}
+Para todo triángulo rectángulo $\triangle\{A, B, C\}$, donde $\angle A$ es
+el ángulo recto, se tiene
+
+$$ B C^2 = B A^2 + A C^2 $$
+:::
+
+<!-- ![Figura 6-1](attachment:figura-6-1.png) -->
+
+::: proof
+Consideremos el punto $S \in r_{B C}$ para el cual $r_{A S} \perp r_{B C}$.
+Aplicando el teorema 5.12 a los triángulos $\Delta\{S, A, C\}$ y $\Delta\{A,
+B, C\}$ obtenemos las desigualdades
+
+$$ S C < C A < B C $$
+
+Por la misma razón, $B S < B C$. Las dos desigualdades conjuntamente
+implican que $S \in[B, C]$, como se indica en la figura 6-2.
+:::
+
+<!-- ![Figura 6-2 Demostración del teorema de
+Pitágoras](attachment:figura-6-2.png) -->
+
+Podemos calcular el coseno del ángulo $\angle C$ usando el triángulo
+rectángulo $\Delta\{A, B, C\}$ y el triángulo rectángulo $\Delta\{A, S, C\}$
+y por el teorema 5.10 obtendremos el mismo valor:
+
+$$ \frac{C A}{C B} = \cos \angle C = \frac{C S}{C A} $$
+
+de donde se deduce la igualdad siguiente llamada primer teorema de Euclides
+o teorema del cateto:
+
+$$ C S \cdot C B = C A^{2} $$
+
+De manera análoga
+
+$$ B S \cdot B C = A B^{2} $$
+
+El teorema se obtiene ahora sumando las dos igualdades anteriores:
+
+$$ C S \cdot C B + B S \cdot B C = (C S + S B) B C = B C^{2} = B A^{2} + A
+C^{2} $$
+
+Con la terminología clásica el teorema de Pitágoras se reformula del
+siguiente modo:
+
+::: {.theorem data-label="Teorema"}
+El cuadrado de la medida de la hipotenusa de un triángulo rectángulo es
+igual a la suma de los cuadrados de las medidas de los catetos.
+:::
+
+Una consecuencia inmediata del teorema de Pitágoras:
+
+::: {.corollary data-label="Corolario"}
+Sea $\angle A$ un ángulo cualquiera. Entonces:
+
+$$ \cos ^{2} \angle A + \sin^{2} \angle A = 1 $$
+:::
+
+::: proof
+En primer lugar supongamos que $\angle A$ es un ángulo agudo. Construyamos
+un triángulo rectángulo de modo que $\angle A$ es uno de sus ángulos y cuya
+hipotenusa tenga medida 1. En un triángulo así construido la longitud de los
+catetos es $\cos \angle A$ y $\sin \angle A$, luego el teorema de Pitágoras
+nos da exactamente la fórmula que deseamos. Para un ángulo recto la fórmula
+es consecuencia de la propia definición de las razones trigonométricas para
+tal caso. Supongamos que $\angle A$ es un ángulo obtuso y $\overline{\angle
+A}$ es su suplementario. Como $\overline{\angle A}$ es agudo: $\cos ^2
+\overline{\angle A} + \sin^2 \overline{\angle A} = 1$, de donde: $({-\cos
+\overline{\angle A})^2} + (\sin \overline{\angle A})^2 = 1$, luego: $\cos ^2
+\angle A + \sin^2 \angle A = 1$.
+:::
+
+
+
+
+
+

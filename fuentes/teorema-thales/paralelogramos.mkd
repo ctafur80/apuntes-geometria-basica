@@ -1,0 +1,81 @@
+
+
+
+### Paralelogramos
+
+Dada una cuaterna ordenada de puntos de $\mathbf{P}$, $(P, Q, R, S)$, se
+dice que los segmentos $[P, Q], [Q, R], [R, S], [S, P]$ forman un
+cuadrilátero si dos cualquiera de ellos son disjuntos o bien tienen un único
+extremo en común, además supondremos que no hay tres de ellos que estén
+alineados. A los puntos $P$, $Q$, $R$ y $S$ se les llama _vértices_ del
+cuadrilátero y, a los segmentos $[P, Q], [Q, R], [R, S], [S, P]$, _lados_
+del cuadrilátero. A dos vértices que son extremos de un mismo lado se les
+califica de _adyacentes_ y, a dos que no son adyacentes, _opuestos_. Dos
+lados de un cuadrilátero con un extremo común se llaman adyacentes y si son
+disjuntos se llaman opuestos.
+
+<!-- ![Figura 5-1 Un cuadrilátero](attachment:figura-5-1.png) -->
+
+::: {.deffinition #def-paralelogramo data-label="Definición de
+Paralelogramo"}
+Un cuadrilátero $(P, A, B, C)$ en $\mathbf{P}$ es llamado un
+_paralelogramo_, (atención al orden de los puntos en esta definición) si
+
+$$ \operatorname{medio}[P, B] = \operatorname{medio}[A, C] $$
+:::
+
+Los segmentos de recta $[P, B]$ y $[A, C]$ se llaman las _diagonales_. Su
+punto medio común $M$ es el _centro_ del paralelogramo. Como para los
+cuadriláteros en general, los segmentos $[P, A]$, $[A, B]$, $[B, C]$ y $[C,
+P]$ son los lados, y, los puntos $P$, $A$, $B$ y $C$, los vértices del
+paralelogramo.
+
+<!-- ![Figura 5-2 Un paralelogramo](attachment:figura-5-2.png) -->
+
+::: {.theorem data-label="Teorema (Propiedades de los Paralelogramos)"}
+Sea un paralelogramo $(P, A, B, C)$ de centro $M$. Sea $\sigma_M \in
+\operatorname{Isom}(\mathbf{P})$ la reflexión central definida en el ejemplo
+3.12. Las propiedades de una reflexión con centro $M$ (ver 3.12(ii)) y la
+definición de un paralelogramo implican que $\sigma_M$ permuta los vértices
+opuestos:
+
+$$ \sigma_M(P) = B, \quad \sigma_M(B) = P, \quad \sigma_M(A) = C, \quad
+\sigma_M(C) = A $$
+
+Como $\sigma_M$ envía toda recta $r$ sobre una recta paralela a $r$ (teorema
+3.13) se sigue que las rectas pasando por los lados opuestos son paralelas:
+
+$$ r_{P A}\left|r_{C B}, \quad r_{P C}\right| r_{A B} $$
+
+de aquí le nombre de "paralelogramo". Se deduce igualmente de (i) que los
+lados opuestos tienen la misma longitud :
+
+$$ d(P, A) = d(C, B), \quad d(P, C) = d(A, B) $$
+
+Obsérvese que $\sigma_M$ es una simetría del paralelogramo. Más aún, un
+paralelogramo es un cuadrilátero que admite una simetría que es una media
+vuelta.
+:::
+
+Observación (Construcción de paralelogramos). Dados tres puntos no alineados
+$P, A, C$ existe un punto $B$ único tal que $(P, A, B, C)$ es un
+paralelogramo. Este punto se construye de dos formas. La primera consiste en
+aplicar la definición: se determina en primer lugar el punto medio $M$ del
+segmento $[A, C]$ y después se marca el punto $B$ sobre la recta $r_{P M}$
+tal que $M = \operatorname{medio}[P, B]$. La segunda construcción se sirve
+del axioma de las paralelas. Existe una recta única $a \st r_{P C}$ pasando
+por $A$ y una recta única $c \parallel r_{P A}$ pasando por $C$. Según el
+punto (ii) de la observación 5.2, debe ser $a = r_{A B}$ y $c = r_{C B}$. Se
+construye $B$ como el punto de intersección de $a$ y $c$. La construcción
+anterior también nos indica que otro medio de definir o caracterizar un
+paralelogramo es: $(P, A, B, C)$ es un paralelogramo si y solo si $r_{P A}
+\parallel r_{C B}$, $r_{P C} \parallel r_{A B}$.
+
+<!-- ![Figura 5-3 Construcción de un paralelogramo a partir de rectas
+paralelas](attachment:figura-5-3.png) -->
+
+
+
+
+
+

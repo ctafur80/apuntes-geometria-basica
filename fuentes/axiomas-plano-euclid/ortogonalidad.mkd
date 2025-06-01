@@ -1,0 +1,428 @@
+
+
+
+### Ortogonalidad
+
+<!-- Creo que también se la llama perpendicularidad. No sé por qué no lo
+menciona el libro. Quizás consideren ortogonal como una palabra más refinada
+y culta. -->
+
+El concepto de ortogonalidad es muy importante y se usará a lo largo de todo
+el curso.
+
+::: { .deffinition #def-ortogonalidad data-label="Definición de
+Ortogonalidad" }
+En $(\mathbf{P}, d)$, sean $r$ y $s$ dos rectas secantes que se cortan en un
+punto $M$. La recta $s$ se dice _ortogonal_ (o _perpendicular_) a $r$, $s
+\perp r$, si para todo $X \in s$ y todo $A, B \in r$ tales que $M =
+\operatorname{medio}[A, B]$, se tiene
+
+$$ d(X, A) = d(X, B) $$
+:::
+
+Escribimos $s \perp_M r$ para decir que $s$ es ortogonal a $r$ y que el
+punto de intersección es $M$.
+
+Algo que es evidente a primera vista es que la ortogonalidad entre rectas es
+simétrica, es decir, para dos rectas $r$ y $s$ tales que $r \perp s$, se
+tiene que $s \perp r$. Volveremos a esto un poco después.
+
+<!--![Recta ortogonal](attachment:ortogonal.png)-->
+
+<!-- Quizás, ponerla como un teorema y llamarlo Conservación de
+Ortogonalidad de Rectas o Conservación de Ortogonalidad por las Isometrías.
+-->
+
+Observación. Las isometrías también conservan la ortogonalidad de rectas. Es
+decir, dadas dos rectas $s$ y $r$ tales que $s \perp r$, para cualquier $f
+\in \isom(\mathbf{P})$ se cumple $f(s) \perp f(r)$.
+
+::: proof
+Nos basaremos en varios hechos que ya conocemos sobre las isometrías. Por un
+lado, tenemos que $f(s)$ y $f(r)$ son rectas, gracias al
+[](#th-isom-rectas){.nameref}. De hecho, de no serlo no tendría sentido
+hablar de que son perpendiculares.
+
+
+Ahora, tomemos un punto cualquiera $X \in s$. Como $s \perp_M r$, se tiene,
+por la [](#def-ortogonalidad){.nameref}, que para todo par de puntos $A, B
+\in r$ tales que $M = \operatorname{medio}[A, B]$, se cumple
+
+$$ d(X, A) = d(X, B) $$
+
+Aplicando ahora la [](#def-isometria){.nameref} a esos pares de puntos, se
+tiene
+
+$$
+  \begin{align*}
+    d(X, A) &= d(X', A') \\
+    d(X, B) &= d(X', B')
+  \end{align*}
+$$
+
+con lo que nos queda que
+
+$$ d(X', A') = d(X', B') $$
+
+Por otro lado, por el [](#th-isom-p-medio-segmento){.nameref} se tiene que
+
+$$ f(M) = f(\operatorname{medio}[A, B]) = \operatorname{medio}[A', B'] $$
+
+Usaremos la notación $M' := f(M)$.
+
+En lo que respecta a este punto $M'$, por un lado es evidente que $M' \in
+f(r)$, puesto que $M' \in [A', B']$ y por ese par de puntos solo puede pasar
+una recta, que será $f(r)$.
+
+Por el otro, al tratarse del punto medio de $[A', B']$, se tiene que se
+cumple
+
+$$ d(M', A') = d(M', B') $$
+
+con lo que $M' \in f(s)$.
+
+Por tanto, el punto de corte de las rectas $f(r)$ y $f(s)$ es $M'$.
+
+Por todo lo anterior, se tiene que, según la
+[](#def-ortogonalidad){.nameref}, $f(s) \perp_{M'} f(r)$, o, si lo prefiere
+sin concretar tanto, $f(s) \perp f(r)$.
+:::
+
+El teorema siguiente viene a decir que todos los puntos de una recta son
+equidistantes a un par de puntos cualesquiera de otra recta ortogonal siendo
+esos dos puntos equidistantes al punto de corte de ambas.
+
+::: {.theorem #th-caract-recta-ortogonal data-label="Teorema de la
+Caracterización de una Recta Ortogonal a Otra"}
+En $(\mathbf{P}, d)$, sean $s$ y $r$ dos rectas tales que $s \perp_{M} r$
+para un $M \in \mathbf{P}$, y sean dos puntos $A, B \in r$ tales que $A \neq
+B$ y $M = \operatorname{medio}[A, B]$, se tiene que
+
+$$ s = \{X \in \mathbf{P} \st d(X, A) = d(X, B)\} $$
+:::
+
+Advierta que ese conjunto es como una generalización del punto medio del
+segmento $[A, B]$, que definimos anteriormente. Es entonces evidente que una
+recta ortogonal a otra contendrá al punto medio del punto de corte de ambas,
+pero esto lo demostraremos algo más adelante.
+
+::: proof
+<!-- Pensarlo un poco. -->
+
+Lo demostraremos por el condicional contrarrecíproco. Concretamente, lo que
+deseamos demostrar es que, dada la condición $s \perp_M r$ para un $M \in
+\mathbf{P}$ y sean $A, B \in r$ tales que $A \neq B$ y $M =
+\operatorname{medio}[A, B]$, para cualquier punto $X \in \mathbf{P}
+\setminus l$ se tiene que
+
+$$ d(X, A) \neq d(X, B) $$
+
+Para $A, B \in r$ tales que $\operatorname{medio}[A, B] \in s$, 
+
+Por el punto 3 del [](#ax-p4-euclides){.nameref}, ya que $[A, B] \cap s \neq
+\emptyset$, se tiene que los puntos $A, B \in r$ estarán en semiplanos
+distintos formados por la recta $s$.
+
+Supongamos, sin pérdida de generalidad, que un $X \in \mathbf{P}$ está en el
+mismo semiplano de borde $s$ que el punto $B$. Por tanto, evidentemente, por
+lo anteror, está en el semiplano opuesto al que contiene al punto $A$.
+
+Como vimos, $[A, B]$ y $s$ tienen al menos un punto de corte. No nos
+interesa aquí si son uno o más. Tomamos uno de estos y lo designamos por
+$T$.
+
+Ya que $T \in [A, B]$, se tiene, por la [](#def-segmento){.nameref}, que
+
+$$ d(X, A) = d(X, T) + d(T, A) $$
+
+<!-- En realidad, T = M, con lo que se podría haber mencionado eso y quizás
+ahorrarnos así algo de prosa. -->
+
+pero, como por hipótesis se tiene que $s \perp r$, se da, por la
+[](#def-ortogonalidad){.nameref},
+
+$$ d(T, A) = d(T, B) $$
+
+con lo que tenemos que
+
+$$ d(X, A) = d(X, T) + d(T, B) $$
+
+Por otro lado, aplicando ahora el punto 3 de las
+[](#propied-ax-p4-separacion){.nameref}, se tiene que $[X, B] \cap s =
+\emptyset$.
+
+<!-- En lo siguiente, quizás falte algo. Lo digo por el menor o igual. -->
+
+En concreto, se tiene que $T \notin[X, B]$. Esto, junto con el punto 4 de la
+[](#def-metrica){.nameref}, nos da que
+
+$$ d(X, T) + d(T, B) > d(X, B) $$
+
+Por tanto, hemos llegado a la conclusión a la que queríamos llegar, es
+decir, a que $d(T, A) \neq d(X, B)$.
+:::
+
+::: {.theorem #th-ortog-reflexion data-label="Lema de la Ortogonalidad de la
+Reflexión"}
+Dada una recta $r$ y un punto $P \in \mathbf{P} \setminus r$, el segmento
+$[P, \sigma_r(P)]$ es perpendicular a $r$, siendo $\sigma_r$ la reflexión
+axial de eje $r$.
+:::
+
+::: proof
+Por el [](#lema-reflexion){.nameref}, se tiene que $[P, P']$ y $r$ se cortan
+en el punto
+
+$$ M = \operatorname{medio}[P, P'] $$
+
+Tomamos ahora un punto $X \in r$. Por ser $\sigma_r \in \isom{\mathbf{P}}$,
+se tiene que
+
+$$ d(X, P) = d(X', P') = d(X, P') $$
+
+ya que $X$ pertenece al eje de reflexión, con lo que se dan las condiciones
+de la [](#def-reflexion-axial){.nameref}.
+:::
+
+El teorema siguiente dice entre otras cosas que la ortogonalidad es una
+relación simétrica.
+
+::: {.theorem #th-simetria-invar-reflex data-label="Teorema de Simetría e
+Invarianza de Reflexiones"}
+En $(\mathbf{P}, d)$, sean $l$ y $r$ dos rectas que se cortan en un punto
+único $M$ y sean $\sigma_l$ y $\sigma_r$ reflexiones axiales de ejes $l$ y
+$r$, respectivamente. Se cumplen las equivalencias siguientes:
+
+$$ (1)\ l \perp r \iff (2)\ r \perp l \iff (3)\ \sigma_r(l) = l \iff (4)\
+\sigma_l(r) = r $$
+:::
+
+Las dos primeras propiedades vienen a decir que la ortogonalidad cumple la
+simetría, tal y como dijimos antes.
+
+La (3) dice que, para una recta cualquiera, su reflexión por una recta
+perpenicular la deja invariante. Ojo, esto no quiere decir que los puntos de
+$l$ se queden fijos por la reflexión, sino que de forma global la
+transformación da la misma figura que la original para este caso.
+
+::: proof
+<!-- No sé si me convence que esto sea una forma de demostrarlo todo. -->
+
+Se procede por un ciclo de implicaciones que se cierra.
+
+Veamos $(1) \implies (3)$. Sean $r$ y $l$ dos rectas perpendiculares
+cortándose en un punto $M$. Podemos definir a la recta $l$, por medio del
+[](#th-caract-recta-ortogonal){.nameref}, para dos puntos $A, B \in r$ tales
+que $M = \operatorname{medio}[A, B]$, del modo siguiente:
+
+$$ l = \{X \in \mathbf{P} \st d(X, A) = d(X, B)\} $$
+
+<!-- Quizás quite esta parte y la otra igual de después. -->
+
+<!--
+Según esto, se tiene también, en particular, lo siguiente:
+
+$$ \text{Para todo}\ X \in \mathbf{P},\ \text{si}\ X \in l,\
+\text{entonces}\ d(X, A) = d(X, B) $$
+-->
+
+Esos puntos cumplen, al ser $\sigma_r$ una isometría,
+
+$$
+  \begin{align*}
+    d(X, A) &= d(\sigma_r(X), \sigma_r(A)) \\
+    d(X, B) &= d(\sigma_r(X), \sigma_r(B))
+  \end{align*}
+$$
+
+con lo que se tiene que
+
+$$ d(\sigma_r(X), \sigma_r(A)) = d(\sigma_r(X), \sigma_r(B)) $$
+
+Pero, además, como $A, B \in r$, se tiene, por la
+[](#def-reflexion-axial){.nameref}, que
+
+$$ \sigma_r(A) = A \quad \text{y} \quad \sigma_r(B) = B $$
+
+con lo que tenemos
+
+$$ d(\sigma_r(X), A) = d(\sigma_r(X), B) $$
+
+Por tanto, tenemos que
+
+$$ \sigma_r(l) = \{X \in \mathbf{P} \st d(\sigma_r(X), A) = d(\sigma_r(X),
+B)\} $$
+
+Si se fija, como todos esos $\sigma_r(X)$ son puntos de $\mathbf{P}$, al
+igual que sucede con los $X$, esto define el mismo conjunto que $l$. Por
+tanto, se tiene que $\sigma_r(l) = l$.
+
+<!-- Quizás no lo haya demostrado del todo. Quizás, podría explicar que se
+tienen solo dos posibilidades: que $\sigma_r(X) = X$, cosa que no se puede
+dar ya que es una reflexión, TKTK. -->
+
+Veamos $(3) \implies (2)$. Sean $A', B' \in l$ dos puntos distintos tales
+que $M = \operatorname{medio}[A', B']$. Ya que $\sigma_r(l) = l$, la
+aplicación $\sigma_r$ intercambia los puntos $A'$ y $B'$, es decir,
+$\sigma_r(A') = B'$ y $\sigma_r(B') = A'$. Además, por el punto 1 de la
+[](#def-reflexion-axial){.nameref}, $\sigma_r(S) = S$ para todo $S \in r$.
+
+Sabiendo esto, tenemos, por un lado,
+
+$$
+  \begin{align*}
+    d(S, A')
+      &= d(\sigma_r(S), \sigma_r(A')) \\
+      &= d(S, \sigma_r(A')) \\
+      &= d(S, B') \\
+  \end{align*}
+$$
+
+con lo que se cumple la condición para que $r$ y $l$ sean ortogonales.
+
+No está bien hecha. TKTK.
+
+Las implicaciones $(2) \implies (4)$ y $(4) \implies (1)$ se demuestran
+haciendo los mismos argumentos anteriores solo que intercambiando los
+papeles de $l$ y $r$.
+:::
+
+<!-- Según Costa, este teorema es muy importante. -->
+
+::: {.theorem #th-ortog-a-recta-por-punto-ext data-label="Teorema de la
+Recta Ortogonal a Otra por un Punto Exterior"}
+En $(\mathbf{P}, d)$, para toda recta $r$ y todo punto $P \notin r$ existe
+una única recta $l$ pasando por $P$ ortogonal a $r$.
+:::
+
+::: proof
+Primero, vamos a demostrar la existencia.
+
+Se construye la recta utilizando una reflexión $\sigma_r$ con eje $r$. Sea
+$P' = \sigma_r(P)$. Según el [](#lema-reflexion){.nameref}, el segmento $[P,
+P']$ corta a $r$, por lo que $r_{PP'}$ corta a $r$ (quizás esto último se
+pueda referenciar TKTK).
+
+Sabiendo que $\sigma_r$ intercambia a $P$ y $P'$ y, por el
+[](#ax-p2-euclides){.nameref}, que $r_{PP'}$ es única, se tiene que
+$\sigma_r(r_{PP'}) = r_{PP'}$. Esto último es, según el
+[](#th-simetria-invar-reflex){.nameref}, equivalente a que $r_{PP'} \perp
+r$.
+
+
+<!-- TODO Continuar desde AQUÍ. -->
+
+
+
+
+
+
+Primero demostraremos la existencia. Se construye la recta utilizando una
+reflexión $\sigma_r$ con eje $r$. Sea $P' = \sigma_r(P)$ y $l$ la recta
+pasando por $P$ y $P'$. Según el lema 2.21, el segmento $[P, P']$ corta a
+$r$, por lo que $l$ corta a $r$. Sabiendo que $\sigma_r$ intercambia a $P$ y
+$P'$ y, por el [](#ax-p2-euclides){.nameref}, que la recta pasando por $P$ y
+$P'$ es única, se tiene $\sigma_r(l) = l$. Esto último es, según el teorema
+2.26, equivalente a que $l \perp r$.
+
+Ahora, vamos a por la unicidad. Si $l'$ es una recta cualquiera pasando por
+$P$ y siendo ortogonal a $r$, se tiene, por el
+[](#th-simetria-invar-reflex){.nameref}, que $\sigma_r(l') = l'$. En
+particular, se tiene que $P' = \sigma_r(P) \in l'$. Entonces, aplicando el
+[](#ax-p2-euclides){.nameref}, como por dos puntos no coincidentes pasa una
+única recta, se tiene necesariamente que $l' = l$.
+:::
+
+Esto mismo se cumple también para puntos dentro de la recta, tal y como
+demostramos un poco más adelante.
+
+::: { .corollary }
+Para toda recta $r$, la reflexión de eje $r$ del
+[](#ax-p6-euclides){.nameref} es única.
+:::
+
+::: proof
+Sean $\sigma, \widetilde{\sigma}$ dos reflexiones con eje $r$.
+Concretamente, se cumple, para todo $P \in r$, $P = \sigma(P) =
+\widetilde{\sigma}(P)$.
+
+Para el caso $P \in \mathbf{P} \backslash r$, se considera la única recta $l
+\perp r$ pasando por $P$, según el teorema anterior, y consideramos sobre
+$l$ el punto $P'$ tal que $l$ corta a $r$ en el punto medio del segmento
+$[P, P']$. Según el [](#th-simetria-invar-reflex){.nameref}, se cumplen
+$\sigma(l) = l$ y $\widetilde{\sigma}(l) = l$. Por consiguiente, $\sigma(P)
+= P'$ y $\widetilde{\sigma}(P) = P'$. Se ha demostrado así que, para todo $P
+\in \mathbf{P}$, se cumple $\sigma(P) = \widetilde{\sigma}(P)$, con lo que
+queda demostrado que la reflexión con eje $r$ es siempre única.
+:::
+
+::: {.theorem #th-ortog-a-recta-por-punto-int data-label="Teorema de la
+Recta Ortogonal a Otra por un Punto de Esta"}
+Sea $r$ una recta. Para todo $P \in r$ existe una recta $l$ única
+verificando $l \perp_P r$.
+:::
+
+::: proof
+Primero, demostraremos la existencia. Se elige en primer lugar un punto $Q$
+en $\mathbf{P} \backslash r$ y se construye una recta auxiliar $a \perp r$ y
+que pase por $Q$ sirviéndose del
+[](#th-ortog-a-recta-por-punto-ext){.nameref}.
+
+Sea $S \in a \cap r$. Si $S = P$, entonces ya tenemos la recta que
+buscábamos, concretamente, la recta $a$, es decir, $a = l$. Si $S \neq P$,
+tomamos $S' = \operatorname{medio}[S, P]$. Según el
+[](#ax-p5-euclides){.nameref}, existe una isometría $g \in
+\operatorname{Isom}(\mathbf{P})$ tal que $g(S) = P, g(S') = S', g(r) = r$.
+Sería algo así como una reflexión de los puntos de $r$ con respecto al punto
+$S'$. TKTK. Por tanto $g(a)$ pasa por $P$ y la recta $l = g(a)$ es aquella
+que se busca.
+
+Ahora, vamos a ver si se cumple la unicidad. Es una consecuencia del
+[](#th-caract-recta-ortogonal){.nameref}.
+:::
+
+<!-- Creo que me conviene adelantar esta definición. Así, puedo usarla en
+algunas demostraciones. -->
+
+::: {.corollary #cor-mediatriz data-label="Corolario de la Mediatriz"}
+En $(\mathbf{P}, d)$, Para dos puntos $A$ y $B$ siendo $A \neq B$, el
+conjunto
+
+$$ \{X \in \mathbf{P} \st d(X, A) = d(X, B)\} $$
+
+es una (única) recta. Concretamente, es la ortogonal a $r_{AB}$ que pasa por
+$\operatorname{medio}[A, B]$.
+:::
+
+::: proof
+Tenemos que demostrar que ese conjunto es la recta perpendicular a $r_{AB}$
+cortándola en $M = \operatorname{medio}[A, B]$.
+
+Partimos del conjunto anterior:
+
+$$ V = \{X \in \mathbf{P} \st d(X, A) = d(X, B)\} $$
+
+Como vemos, la forma de $V$ se asemeja a la de una recta ortogonal a
+$r_{AB}$, pero faltan por cumplirse ciertas condiciones.
+
+Al tomar la recta ortogonal a $r_{AB}$ que pase por $M$, estamos concretando
+TKTK. Además, dicha recta será única, según el
+[](#th-ortog-a-recta-por-punto-int){.nameref}.
+
+<!-- Quizás, sea más fácil si se usa el teorema de caracterización de una
+recta ortogonal. -->
+:::
+
+<!--![Mediatriz](attachment:mediatriz.png)-->
+
+::: {.deffinition #def-mediatriz data-label="Definición de Mediatriz"}
+En $(\mathbf{P}, d)$, dados dos puntos $A$ y $B$ siendo $A \neq B$, la
+(única) recta ortogonal a $[A, B]$ que pasa por $\operatorname{medio}[A, B]$
+recibe el nombre de _mediatriz_ de $A$ y $B$, y la designamos por $m_{AB}$.
+:::
+
+
+
+
+
+

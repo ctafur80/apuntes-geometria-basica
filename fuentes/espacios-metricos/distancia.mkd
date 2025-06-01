@@ -1,0 +1,943 @@
+
+
+
+### Métrica o distancia
+
+Desde el punto de vista de la etimología, el término _geometría_
+(_geometry_), que proviene del griego _γεωμετρία_, consta de _-metría_, que
+hace alusión a medir. (Etimología medir la tierra TKTK.) En Egipto, en los
+primeros tiempos de la geometría, uno de los problemas geométricos fue la
+medición de terrenos de labor que se inundaban en las crecidas del río Nilo.
+
+En la geometría actual, medir sigue siendo uno de los puntos y objetivos
+centrales, y el espacio métrico es la estructura matemática que se usa para
+medir.
+
+Como verá en esta asignatura, el concepto de _métrica_ o _distancia_, junto
+con la propiedad de _isometría_, que es básicamente la conservación de esta,
+supondrá el foco principal de casi todo lo que veamos.
+
+
+
+
+
+
+#### Definición de métrica o distancia
+
+::: { .deffinition #def-metrica data-label="Definición de Métrica (o
+Distancia)" }
+Sea $M$ un conjunto no vacío. Una función
+
+$$  d : M \times M \longrightarrow \rset  $$
+
+se llama una _métrica_ (_metric_, o _distancia_, _distance_) sobre $M$ si
+las condiciones siguientes se verifican para cualesquiera $x, y, z \in M$:
+
+1.  $d(x,x) = 0$.
+2.  $d(x,y) > 0$ cuando $x \neq y$.
+3.  $d(x,y) = d(y,x)$. (Simetría.)
+4.  $d(x,y) \leq d(x,z) + d(z,y)$. (Desigualdad triangular.)
+:::
+
+Aunque es algo evidente como consecuencia de las condiciones 1 y 2, deseo
+recalcar que de estas se tiene que $d(x, y) = 0$ si y solo si $x = y$. De
+hecho, hay quien da otra definición alternativa, en la que hace uso de ese
+enunciado. Concretamente, puede ver una en la que eliminan la condición 2 y
+la incluye poniendo como imagen (también llamada recorrido o rango) de la
+aplicación al intervalo $[0, \infty)$, en lugar de $\rset$, y añadiendo eso
+del "si y solo si $x = y$" a la condición 1. A mí me parece más elegante la
+que he usado aquí.
+
+Tenga cuidado en recordar esto que decimos: se tiene $d(x, y) = 0$ si y solo
+si $x = y$. Si se cumple todo lo demás de esta definición salvo esto, es
+decir, se tiene que $d(x, y) = 0$ para algún par de elementos $x, y \in M$
+tales que $x \neq y$, no se tratará de una métrica. En este caso, a esa
+aplicación se la calificaría de _pseudodistancia_ o _pseudométrica_. Estas
+no se estudiarán en esta asignatura.
+
+En cuanto a la notación, aunque suela pasar desapercibido, cuando ponemos
+algo como "$d(x, y)$" en realidad debería ser "$d((x, y))$" ya que la
+función toma como argumento un par ordenado, o, si lo prefiere, una 2-tupla,
+$(x, y)$, y, según la notación de función, debería incluirse dicho elemento
+entre los paréntesis que acompañan al designador de la función. Se trata,
+por tanto, de una notación algo laxa, en la que nos permitimos "colapsar"
+los dos pares de paréntesis anidados. Esto, aunque seguramente no se lo
+hayan explicado, es una regla sobre notación que se suele usar siempre; por
+ejemplo, en el cálculo vectorial. En realidad, se ampliará para cualquier
+$n$-upla.
+
+::: { .deffinition #def-espacio-metrico data-label="Definición de Espacio
+Métrico" }
+Si hay una métrica $d$ definida sobre un conjunto $M$, se dice que "(el
+conjunto) $M$ está dotado de la métrica $d$", y al par ordenado $(M, d)$ se
+le califica de _espacio métrico_ (_metric space_).
+
+En ese caso, se podría decir, alternativamente, que "el espacio $M$ está
+dotado de la métrica (o distancia) $d$".
+:::
+
+A este respecto, también es común que se use un lenguaje algo laxo y se diga
+que "$M$ es un espacio métrico", cuando se sobrentiende a qué métrica nos
+estamos refiriendo.
+
+En lugar de $d$, es también común ver otros designadores para la métrica,
+como $\delta$, $d_E$, etc.
+
+::: example
+El ejemplo paradigmático de métrica es el de la _métrica euclidiana_
+(_Euclidean metric_),[^adjetivo-euclidiano] también llamada _distancia
+euclídea_ (_Euclidean distance_), de $\rset^2$, aunque en realidad existen
+muchas y de formas muy diversas, tal y como veremos en esta asignatura. La
+métrica euclidiana de $\rset^2$ está definida por la expresión siguiente,
+donde $x = (x_1, x_2)$ e $y = (y_1, y_2)$ son dos elementos arbitrarios de
+$\rset^2$:
+
+[^adjetivo-euclidiano]: El adjetivo _euclidiana_ o _euclidiano_ TKTK.
+
+$$ d_E(x,y) = \sqrt{(x_1 - y_1)^2 + (x_2 - y_2)^2} $$
+
+Es la distancia que se suele usar comúnmente en la vida diaria, y en el
+fondo no es más que aplicar el famosísimo Teorema de Pitágoras. Por cierto,
+se tienen métricas euclidianas para cualquier conjunto $\rset^n$ siendo $n
+\in \nset^+$. También se las califica de distancias euclidianas. Es una
+extrapolación que se hace a un número arbitrario de dimensiones.
+
+Para demostrar que esa aplicación es efectivamente una métrica, simplemente
+hay que ver si se cumplen las condiciones de la [](#def-metrica){.nameref}.
+
+Supongamos que tenemos el punto (elemento) $x$ de $\rset^2$ que es $(x_1,
+x_2)$. Se tiene que
+
+$$ d_E(x, x) = \sqrt{(x_1 - x_1)^2 + (x_2 - x_2)^2} = \sqrt{0^2 + 0^2} =
+\sqrt{0} = 0 $$
+
+con lo que se cumple la propiedad (i).
+
+Para las siguientes dos condiciones, necesitamos dos puntos:
+
+$$
+\begin{align*}
+  x &= (x_1, x_2) \\
+  y &= (y_1, y_2) \\
+\end{align*}
+$$
+
+La condición (ii) es evidente que se cumple ya que tanto $(x_1 - y_1)^2$
+como $(x_2 - y_2)^2$ serán números mayores que 0, puesto que en cada uno de
+estos casos se trata de una resta de dos números distintos entre sí, cosa
+que obliga a que sea distinto de 0, y, al elevarlos al cuadrado, dará un
+número mayor que 0, necesariamente. Al ser ambos sumandos mayores que 0, su
+suma será entonces también mayor que 0. Además, como la raíz de un número
+mayor que 0 es también mayor que 0, se tiene que $d_E(x, y) > 0$ para
+cualesquiera $x, y \in \rset^2$ siendo $x \neq y$, con lo que se cumple esta
+condición.
+
+Por otro lado, se tiene que
+
+$$
+\begin{align*}
+  d_E (x, y)
+    &= \sqrt{(x_1 - y_1)^2 + (x_2 - y_2)^2} \\
+    &= \sqrt{[{-(y_1 - x_1)}]^2 + [{-(y_2 - x_2)}]^2} \\
+    &= \sqrt{(y_1 - x_1)^2 + (y_2 - x_2)^2} \\
+    &= d_E (y, x) \\
+\end{align*}
+$$
+
+con lo que se cumple la propiedad (iii). Advierta que nos hemos basado en
+que un número real y su inverso (simétrico) aditivo tienen el mismo
+cuadrado.
+
+La propiedad (iv) es más trabajosa. TKTK.
+:::
+
+Veamos ahora una métrica "extraña", o, mejor dicho, distinta a la anterior.
+
+::: example
+A la métrica siguiente, sobre $\rset^2$, la podríamos llamar "métrica
+rectangular", aunque en [@venema] la llaman "métrica _taxicab_":
+
+$$ d_R(x,y) = |x_1 - y_1| + |x_2 - y_2| $$
+
+La distancia relativamente a esta métrica está únicamente determinada por el
+alejamiento horizontal más el alejamiento vertical de los dos puntos en
+cuestión.
+
+Vamos a demostrar que efectivamente se trata de una métrica. Supongamos tres
+puntos de $\rset^2$, $x, y, z \in \rset^2$ siendo
+
+$$
+\begin{align*}
+  x &= (x_1, x_2) \\
+  y &= (y_1, y_2) \\
+  z &= (z_1, z_2) \\
+\end{align*}
+$$
+
+Por un lado, tenemos que
+
+$$
+  \begin{align*}
+    d_R(x, x) &= |x_1 - x_1| + |x_2 - x_2| \\
+              &= |0| + |0| = 0 + 0 = 0
+  \end{align*}
+$$
+
+con lo que se verifica la condición (i).
+
+Tenemos también que, para $x \neq y$,
+
+$$ d_R(x, y) = |x_1 - y_1| + |x_2 - y_2| > 0 $$
+
+cumpliéndose entonces la concición (ii). Se justifica porque, al ser los
+elementos de la resta distintos, el valor absoluto de esta será mayor que 0,
+necesariamente. Por tanto, su suma también lo será.
+
+Tenemos también que
+
+$$
+\begin{align*}
+  d_R(x, y)
+    &= |x_1 - y_1| + |x_2 - y_2| \\
+    &= |({-1})(y_1 - x_1)| + |({-1})(y_2 - x_2)| \\
+    &= |({-1})| \cdot |(y_1 - x_1)| + |({-1})| \cdot |(y_2 - x_2)| \\
+    &= |y_1 - x_1| + |y_2 - x_2| \\
+    &= d_R(y, x)
+\end{align*}
+$$
+
+con lo que se cumple la condición (iii). Advierta que hemos usado algunas
+propiedades del valor absoluto.
+
+Debería cumplirse, para la condición (iv),
+
+$$ d_R(x, z) \leq d_R(x, y) + d_R(y, z) $$
+
+Veamos por separado cómo son estas distancias:
+
+$$
+\begin{align*}
+  d_R(x, z) &= |x_1 - z_1| + |x_2 - z_2| \\
+  d_R(x, y) &= |x_1 - y_1| + |x_2 - y_2| \\
+  d_R(y, z) &= |y_1 - z_1| + |y_2 - z_2| \\
+\end{align*}
+$$
+
+Sumando estas dos últimas, tenemos
+
+$$
+\begin{align*}
+  d_R(x, y) + d_R(y, z)
+    &= (|x_1 - y_1| + |x_2 - y_2|) + (|y_1 - z_1| + |y_2 - z_2|) \\
+    &= (|x_1 - y_1| + |y_1 - z_1|) + ( |x_2 - y_2| + |y_2 - z_2|) \\
+    &\geq |x_1 - z_1| + |x_2 - z_2| \\
+    &= d_R(x, z)
+\end{align*}
+$$
+
+obteniendo así lo que deseábamos. Advierta que se ha usado la propiedad de
+la desigualdad triangular para números reales, es decir,
+
+$$
+\begin{align*}
+  |x_1 - z_1| &\leq |x_1 - y_1| + |y_1 - z_1| \\
+  |x_2 - z_2| &\leq |x_2 - y_2| + |y_2 - z_2|
+\end{align*}
+$$
+
+cosa que se da por sabida. También, al principio hemos reordenado usando las
+propiedades asociativa y conmutativa de los números reales para la suma.
+:::
+
+
+
+#### Métrica inducida
+
+::: { .theorem #teor-metrica-inducida data-label="Teorema de la Métrica
+Inducida" }
+Dado un espacio métrico $(M, d)$ y $M'$ un subconjunto no vacío de $M$, la
+restricción de la aplicación $d$ por el conjunto $M'$, $d|_{M' \times M'}$,
+es una métrica.
+:::
+
+Advierta que la aplicación restringida $d|_{M' \times M'}$ tiene el mismo
+comportamiento que la original, $d$. Es decir, tenemos
+
+$$
+  \begin{array}{rrcl}
+    d: & M \times M  & \longrightarrow & \rset \\
+       & x           & \longmapsto     & d(x)
+  \end{array}
+$$
+
+y
+
+$$
+  \begin{array}{rrcl}
+    d|_{M' \times M'}:
+      & M' \times M'  & \longrightarrow & \rset \\
+      & x             & \longmapsto     & d|_{M' \times M'}(x) = d(x)
+  \end{array}
+$$
+
+::: proof
+Básicamente, hay que demostrar que las condiciones de
+[](#def-metrica){.nameref} se "heredan" siempre para cualquier subconjunto
+$M'$ de $M$, sea cual sea la métrica $d$ del espacio métrico del que se
+parte.
+
+Por la definición de _subconjunto_, para cualesquiera $x, y, z \in M'$ se
+cumplirá también que $x, y, z \in M$. Sabiendo esto, es fácil demostrar que
+se cumple.
+:::
+
+::: { .deffinition #def-metrica-inducida data-label="Definición de Métrica
+Inducida sobre un Espacio Métrico por un Subconjunto" }
+Dado un espacio métrico $(M, d)$, a cualquier restricción $d|_{M' \times
+M'}$ de la aplicación $d$ a un subconjunto no vacío $M'$ de $M$ se le conoce
+como _métrica inducida_[^metrica-restringida] sobre $(M, d)$ por $M'$.
+:::
+
+[^metrica-restringida]: Si lo prefiere, piénselo como una métrica
+  restringida. De hecho, hay quien prefiere llamarla así.
+
+Personalmente, me gusta expresarlo con esas preposiciones, es decir, _sobre_
+el espacio métrico original $(M, d)$ y _por_ el subconjunto $M' \subseteq
+M$, pero puede que encuentre que lo expresan de otros modos, incluso en
+muchas ocasiones omitiendo partes; por ejemplo, "métrica inducida _por_ (o
+_en_) $M'$", sobrentendiendo el espacio métrico del que se parte.
+
+Siguiendo la notación usual de una restricción de una aplicación,
+tendríamos, para este caso, la aplicación inducida (o restringida) $d|_{M'
+\times M'}$. En cualquier caso, al ser una notación tan engorrosa, se suele
+preferir escribirla como $d'$ y simplemente explicar en la prosa que se
+trata de la métrica inducida sobre el espacio métrico $(M, d)$ por $M'$.
+Como verá más adelante, solemos hacer bastante uso, en diversas partes, de
+la notación con prima para hacerla más cómoda.
+
+Incluso se puede llevar un paso más allá la notación, y es común denotar a
+la métrica inducida del mismo modo que a la métrica de la que "nace". Así,
+con los datos del teorema anterior, se podría decir que $d$ es una métrica
+inducida de $M'$ sobre $(M, d)$, siendo $M' \subseteq M$. O, también, que
+$(M', d)$ es un espacio métrico, en lugar de $(M, d|_{M' \times M'})$ o
+$(M', d')$. En cualquier caso, debe ser consciente de que se trata de un
+caso de abuso de notación que nos permitimos usar por razón de comodidad.
+
+::: exercise
+Para toda sucesión (finita) de elementos $p^1, p^2, p^3, \dots, p^n$, siendo
+$n \geq 3$, en un espacio métrico $(M, \delta)$ se tiene
+
+$$ \delta(p^1, p^n) \leq \delta(p^1, p^2) + \delta(p^2, p^3) + \dots +
+\delta(p^{n-1}, p^n) $$
+
+La forma de demostrarlo se hará por el Principio de Inducción.
+
+Suponemos el caso de $n = 3$  como el caso base. Para este, tenemos
+
+$$ \delta(p^1, p^3) \leq \delta(p^1, p^2) + \delta(p^2, p^3) $$
+
+cosa que se cumple ya que no es más que la condición (iv) de la
+[](#def-metrica){.nameref}.
+
+Ahora, vamos a ver el paso inductivo. Se supone cierto para un $n$ genérico:
+
+$$ \delta(p^1, p^n) \leq \delta(p^1, p^2) + \delta(p^2, p^3) + \dots +
+\delta(p^{n-1}, p^n) $$
+
+y deseamos averiguar si se cumple entonces también para $n+1$.
+
+$$
+\begin{array}{l}
+  \displaystyle \delta(p^1, p^2) + \delta(p^2, p^3) + \dots +
+    \delta(p^{n-1}, p^n) + \delta(p^n, p^{n+1}) = \\[1ex]
+    \displaystyle \quad = [\delta(p^1, p^2) + \delta(p^2, p^3) + \dots +
+      \delta(p^{n-1}, p^n)] + \delta(p^n, p^{n+1}) \\[1ex]
+    \displaystyle \quad \geq \delta(p^1, p^n) + \delta(p^n, p^{n+1}) \geq
+      \delta(p^1, p^{n+1}) \\[1ex]
+\end{array}
+$$
+
+con lo que es evidente que también se cumple. Advierta que en la penúltima
+desigualdad hemos empleado la hipótesis de inducción, y, en la última, la
+propiedad 4 de la [](#def-metrica){.nameref}.
+:::
+
+
+
+
+
+#### Conservación de distancias e isometrías
+
+Cuando se estudia una estructura matemática, también se estudian las
+aplicaciones (también llamadas funciones) que hacen que se conserve dicha
+estructura. En el caso de los espacios métricos, las aplicaciones para las
+que se conservan las distancias son las isometrías. Bueno, en realidad no
+son lo mismo, pero casi. El concepto de _isometría_ se usará una y otra vez
+en esta asignatura. Es el más importante para nosotros.
+
+Puede pensar que una isometría es un movimiento de un cuerpo o figura. En
+realidad, no es exactamente eso, pero se le parece mucho.
+
+::: { .deffinition #def-conservacion-distancias data-label="Definición
+Conservación de Distancias (entre Dos Espacios Métricos)" }
+Sean los espacios métricos $(M, d)$ y $(M', d')$ y una aplicación con la
+forma $f: M \longrightarrow M'$. Se dice que $f$ _conserva (o preserva) las
+distancias_ entre esos dos espacios métricos si para todo $x, y \in M$ se
+cumple
+
+$$ d(x, y) = d'(f(x), f(y)) $$
+:::
+
+Como sabrá del álgebra abstracta, esto sería lo mismo que decir que la
+aplicación $f$ es un homomorfismo.
+
+Observación. Toda aplicación $f$ que conserva las distancias entre dos
+espacios métricos $(M, d)$ y $(M', d')$ es, además, inyectiva.
+
+Es fácil de demostrar. Dados dos puntos cualesquiera $x, y \in M$,
+supongamos que $f(x) = f(y)$.
+
+Se tiene que, como $f$ conserva las distancias,
+
+$$ d(x, y) = d'(f(x), f(y)) $$
+
+pero, como $d'$ es una [distancia](#def-metrica), y, por hipótesis, como
+$f(x) = f(y)$, se tiene
+
+$$ d'(f(x), f(y)) = 0 $$
+
+con lo que tenemos que
+
+$$ d(x, y) = 0 $$
+
+Aplicando otra vez la [](#def-metrica){.nameref}, se tiene que $x = y$.
+
+Para esta demostración, en lugar de haber usado la definición de _inyección_
+en la forma de su condicional contrarrecíproco, se podría haber usado en su
+forma directa.
+
+::: { .deffinition #def-isometria data-label="Definición de Isometría (entre
+Dos Espacios Métricos)" }
+Se califica de _isometría_ entre dos espacios métricos $(M, d)$ y $(M', d')$
+a cualquier aplicación $f: M \longrightarrow M'$ que conserve las distancias
+entre estos y además sea biyectiva.
+:::
+
+En realidad, en lugar de especificar que es biyectiva, podría bastar con
+decir que es sobreyectiva, puesto que, tal y como demostramos, ha de ser
+inyectiva necesariamente, al conservar distancias. No obstante, conviene
+recalcar que es biyectiva y por eso la definimos así.
+
+<!--
+Si se fija, básicamente lo que viene a decir la isometría es lo mismo que
+decir que es una aplicación para la que se conservan las distancias, ya que
+siempre podemos restringir el codominio de la aplicación a nuestro antojo
+para que coincida con su rango. Esta creo que es la razón por la que muchas
+veces ni siquiera mencionan que es biyectiva.
+
+En cuanto a la terminología, he visto que hay cierta discrepancia a veces.
+En algunos textos en inglés, he visto que definen una isometría simplemente
+como una aplicación entre dos conjuntos de espacios métricos que conserva
+las distancias. De ahí que muchas veces hablen de "isometrías biyectivas".
+Esto creo que depende también del contexto. Así, se suelen ver terminologías
+distintas en los textos de álgebra abstracta, en los que también se suele
+usar el concepto de isometría. Yo me limito a seguir la notación de
+[@costa].
+-->
+
+Desde el punto de vista del álgebra abstracta, una isometría sería un
+isomorfismo.
+
+Se pueden definir isometrías en espacios métricos, en general, como hacemos
+en esta sección, pero debe tener en cuenta que la mayoría de los espacios
+métricos tienen muy pocas isometrías.
+
+::: { .deffinition #def-espacios-isom data-label="Definición de Espacios
+Métricos Isométricos" }
+Siempre que entre dos espacios métricos exista (al menos) una isometría, se
+dice que son _espacios (métricos) isométricos_.
+:::
+
+::: exercise
+Demuestre que la rotación de un ángulo $\theta$ es una isometría para el
+espacio métrico $\rset^2$ con la distancia euclídea que vimos antes, es
+decir $(\rset^2, d_E)$.
+
+La aplicación rotación de un ángulo $\theta$ sería
+
+$$ g_\theta(x_1, x_2) = (x_1 \cos \theta - x_2 \sin \theta, x_1 \sin \theta
++ x_2 \cos \theta) $$
+
+Para que se conserven las distancias entre el espacio métrico $(\rset, d_E)$
+y sí mismo, se debe cumplir para la aplicación $g_\theta$ lo siguiente:
+
+$$ d_E(x, y) = d_E(g_\theta (x), g_\theta (y)) $$
+
+Veamos si es cierto.
+
+$$
+  \begin{align*}
+    d_E(g_\theta (x), g_\theta (y))
+    &= \sqrt{[x_1 \cos \theta - x_2 \sin \theta - (y_1 \cos \theta - y_2
+      \sin \theta)]^2 + [x_1 \sin \theta - x_2 \cos \theta - (y_1 \sin
+      \theta y_2 \cos \theta)]^2} \\
+    &= \sqrt{[\cos \theta (x_1 - y_1) + \sin \theta (y_2 - x_2)]^2 + [\sin
+      \theta (x_1 - y_1) + \cos \theta (y_2 - x_2)]^2} \\
+    &= \sqrt{\sin^2 \theta (y_2 - x_2)^2 + \cos^2 \theta (x_1 - y_1)^2 + 2
+      \sin \theta \cos \theta (x_1 - y_1)(y_2 - x_2) + \sin^2 \theta (x_1 -
+      y_1)^2 + \cos^2 \theta (y_2 - x_2)^2 + 2 \sin \theta \cos \theta (x_1
+      - y_1)(y_2 - x_2)} \\
+    &= \sqrt{\sin^2 \theta [(y_2 - x_2)^2 + (x_1 - y_1)^2] + \cos^2 \theta
+      [(x_1 - y_1)^2 + (y_2 - x_2)^2] + 2[2 \sin \theta \cos \theta (x_1
+      - y_1) (y_2 - x_2)]} \\
+    &= \sqrt{[(x_1 - y_1)^2 + (y_2 - x_2)^2](\sin^2 \theta + \cos^2 \theta)
+      + 4 \sin \theta \cos \theta (x_1 - y_1) (y_2 - x_2)} \\
+    &= \sqrt{(x_1 - y_1)^2 + (y_2 - x_2)^2 + 4 \sin \theta \cos
+      \theta (x_1 - y_1) (y_2 - x_2)} \\
+  \end{align*}
+$$
+
+
+Falta terminarlo. TKTK.
+:::
+
+Al ser la isometría un tipo de aplicación, nos podríamos preguntar por su
+inversa y su composición. Estudiándolas, vemos que cumplen algunas
+propiedades interesantes.
+
+::: { .theorem #thm-inversa-isometria data-label="Teorema de la
+Inversa de una Isometría" }
+Dados dos espacios métricos $(M, d)$ y $(M', d')$ y una isometría $f: M
+\longrightarrow M'$ entre estos, su relación inversa es una aplicación
+$f^{-1}: M' \longrightarrow M$ que es, además, una isometría entre esos dos
+espacios métricos.
+:::
+
+::: proof
+Lo primero es demostrar que la relación $f^{-1} \subseteq M' \longrightarrow
+M$ es una aplicación. Esto es consecuencia de un teorema del álgebra
+abstracta que dice que la inversa de una biyección es una biyección. Como
+$f$, al ser una isometría, es una biyección, entonces también lo será
+$f^{-1}$.
+
+Ahora, queda demostrar que en $f^{-1}$ se conservan las distancias. Tomemos
+dos elementos $u, v \in M'$. Al ser $f^{-1}$ una biyección, existen un único
+par de elementos $x, y \in M$ tales que
+
+$$
+  \begin{align*}
+    x = f^{-1}(u) \\
+    y = f^{-1}(v)
+  \end{align*}
+$$
+
+o, lo que es lo mismo,
+
+$$
+  \begin{align*}
+    u = f(x) \\
+    v = f(y)
+  \end{align*}
+$$
+
+Partimos de la condición de conservación de distancias de $f$, que ha de
+cumplir al tratarse de una isometría:
+
+$$ d(x, y) = d'(f(x), f(y)) = d'(u, v) $$
+
+Pero, por otro lado, se tiene
+
+$$ d(x, y) = d(f^{-1}(u), f^{-1}(v)) $$
+
+Uniendo ambas, tenemos
+
+$$ d'(u, v) = d(f^{-1}(u), f^{-1}(v)) $$
+
+que es la [](#def-conservacion-distancias){.nameref}; concretamente, de la
+aplicación $f^{-1}$ entre los espacios métricos $(M', d')$ y $(M, d)$.
+:::
+
+Si recuerda el álgebra abstracta, cuando tratamos las aplicaciones, en
+general, la operación más relevante sobre estas es la composición,
+normalmente representada por '$\circ$'. Supongamos que tenemos tres espacios
+métricos $(M, d)$, $(M', d')$ y $(M'', d'')$ y las isometrías $f: M
+\longrightarrow M'$ y $g: M' \longrightarrow M''$. La operación composición
+$g \circ f$ es la siguiente:
+
+$$
+\begin{array}{rrcl}
+  g \circ f:  & M & \longrightarrow & M'' \\
+              & x & \longmapsto     & (g \circ f)(x) = g(f(x))
+\end{array}
+$$
+
+Por cierto, a veces se usa una notación algo laxa y, en lugar de "$(g \circ
+f)(x)$" se pone "$g \circ f(x)$".
+
+Esta composición de isometrías es una aplicación que cumple lo siguiente.
+
+::: { .theorem #thm-composicion-isometrias data-label="Teorema de la
+Composición de Isometrías" }
+Dados tres espacios métricos $(M, d)$, $(M', d')$ y $(M'', d'')$ y dos
+isometrías $f: M \longrightarrow M'$ y $g: M' \longrightarrow M''$, la
+aplicación composición $g \circ f: M \longrightarrow M''$ es también una
+isometría entre los espacios métricos $(M, d)$ y $(M'', d'')$.
+:::
+
+::: proof
+Lo primero es darse cuenta de que, por la forma de las aplicaciones $f$ y
+$g$, $g \circ f$ será también una aplicación. La justificación es la
+siguiente. Si recuerda de cuando estudió la composición de aplicaciones,
+para que exista $g \circ f$ debe cumplirse que el dominio (o conjunto
+inicial) de $g$ debe ser un subconjunto (no necesariamente propio) del
+conjunto imagen de $f$. En este caso, ambos son el mismo conjunto $M'$, por
+lo que se cumple la condición.
+
+Además, como sabemos del álgebra abstracta, si $f$ y $g$ son aplicaciones
+biyectivas, también lo será entonces $g \circ f$.
+
+Supongamos $x, y \in M$. Tenemos, entonces,
+
+$$
+\begin{array}{l}
+ \displaystyle d''((g \circ f)(x), (g \circ f)(y))) = \\[1ex]
+   \displaystyle \quad = d''(g(f(x)), g(f(y))) \\[1ex]
+   \displaystyle \quad = d'(f(x), f(y)) \\[1ex]
+   \displaystyle \quad = d(x, y) \\[1ex]
+\end{array}
+$$
+
+No hemos hecho otra cosa que aplicar la definición de isometría en las dos
+últimas igualdades: primero, para $g$, y, después, para $f$. Por tanto, $g
+\circ f$ conserva distancias entre $M, d$ y $M'', d''$.
+:::
+
+
+
+
+#### El conjunto de isometrías de un espacio métrico
+
+Primero, vamos a aclarar cierta terminología que usaremos. Al hablar de una
+isometría $f$ cualquiera en un espacio métrico $(M, d)$ cualquiera, nos
+referimos a una isometría $f$ del espacio métrico $(M, d)$ en sí mismo, es
+decir, en $(M, d)$.
+
+::: { .deffinition #def-conjunto-isom data-label="Definición de Conjunto de
+Isometrías (de un Espacio Métrico)" }
+Dado un espacio métrico $(M, d)$, se tiene que el _conjunto de isometrías_
+de este, $\isom(M, d)$, es el conjunto de todas las isometrías $f: M
+\longrightarrow M$ de $(M, d)$ en $(M, d)$.
+:::
+
+Simbólicamente se podría expresar del modo siguiente:
+
+$$ \isom(M, d) := \{ f: M \longrightarrow M \st f \ \text{es una isometría
+de} \ (M, d) \ \text{en} \ (M, d)\} $$
+
+Por tanto, al hablar del conjunto de las isometrías de un espacio métrico se
+sobrentiende que nos referimos a las de dicho espacio métrico en sí mismo.
+
+Además, muchas veces se sobrentiende por el contexto cuál es el espacio
+métrico y es común ver, tal y como se hace en [@costa], que no ponen a la
+distancia como uno de los argumentos. Así, verá $\isom(M)$ en lugar de
+$\isom(M, d)$.
+
+Al tener esas isometrías el mismo conjunto para el dominio y la imagen, al
+conservar las distancias y ser esta biyectiva, se tendría, en general, desde
+el punto de vista del álgebra abstracta, un automorfismo.
+
+Veamos ahora algunas propiedades de los conjuntos de isometrías.
+
+::: properties
+Por los dos teoremas anteriores, se tienen las propiedades siguientes:
+
+1.  Si $f, g \in \isom(M, d)$, entonces $f \circ g \in \isom(M, d)$.
+2.  Si $f \in \isom(M, d)$, entonces $f^{-1} \in \isom(M, d)$.
+3.  $\text{id}_M \in \isom(M, d)$.
+:::
+
+Por si no la identifica, esta última aplicación, $\text{id}_M$, es la
+aplicación identidad de dominio $M$, definida como
+
+$$
+\begin{array}{rccl}
+  \text{id}_M:  & M & \longrightarrow & M \\
+                & x & \longmapsto     & \text{id}_M(x) = x
+\end{array}
+$$
+
+::: proof
+En realidad, sonfáciles de hacer estas demostraciones ya que se trataría de
+casos particulares del [](#thm-inversa-isometria){.nameref} y del
+[](#thm-composicion-isometrias){.nameref}. TKTK.
+:::
+
+El conjunto de isometrías de un espacio métrico $(M, d)$, $\isom(M, d)$,
+junto con la operación composición de isometrías, $\circ$, es, desde el
+punto de vista del álgebra abstracta, un grupo[^grupo], de ahí que sea más
+conocido como el _grupo de isometrías_ del espacio métrico $(M, d)$. Este
+grupo también se suele ver en las asignaturas de teoría de grupos y de
+álgebra abstracta, pues tiene propiedades muy interesantes.
+
+[^grupo]: El concepto de _grupo_ es una estructura algebraica y, como tal,
+  se estudia en el área de las matemáticas conocida como _álgebra
+  abstracta_. De hecho, se puede considerar, por sus propiedades y las
+  conclusiones a las que se llega al estudiarla, que es la estructura
+  algebraica más importante de todas las matemáticas.
+
+Es fácil demostrar que se cumplen las condiciones para ser un grupo. Por
+ejemplo, como sabemos del álgebra abstracta, para todas las aplicaciones, la
+operación composición cumple la propiedad asociativa. Así, para las
+isometrías, un caso particular de aplicaciones, también se cumplirá, ya que
+la propiedad asociativa es una propiedad que se "hereda" en los
+subconjuntos.
+
+El elemento neutro (también llamado _elemento identidad_) será la aplicación
+identidad $\text{id}_{M}$ mencionada antes. Esta es, tal y como se ha visto
+en la propiedad 3 anterior, una isometría y, además, se cumplen
+
+$$
+\begin{align*}
+  (\text{id}_M \circ f)(x) &= f(x) \\
+  (f \circ \text{id}_M)(x) &= f(x)
+\end{align*}
+$$
+
+cosa que también se demuestra en el álgebra abstracta.
+
+El elemento simétrico (también llamado _elemento inverso_) de la composición
+de isometrías para el conjunto de isometrías $\isom(M)$ sería, para una
+isometría $f: M \longrightarrow M$, su aplicación inversa $f^{-1}: M
+\longrightarrow M$. Recuerde que $f^{-1}$ era también una biyección.
+
+Se debe demostrar que
+
+$$
+\begin{align*}
+  (f \circ f^{-1})(x) &= \text{id}_M \\
+  (f^{-1} \circ f)(x) &= \text{id}_M
+\end{align*}
+$$
+
+Es fácil hacerlo.
+
+<!-- TODO Este ejercicio es básicamente lo mismo que el 1.5. De hecho, ese
+último es algo más completo, por lo que quizás sería mejor hacerlo aquí,
+directamente. -->
+
+::: example
+La función $\delta : \rset \times \rset \longrightarrow \rset$ definida por
+
+$$ \delta(x, y) = |x - y|, \quad \text{siendo } x, y \in \rset, $$
+
+es una métrica sobre $\rset$. Para todo $b \in \rset$, la aplicación $f :
+\rset \longrightarrow \rset$ dada por $f(x) = x + b$ es una isometría sobre
+$(\rset, \delta)$. También lo es la aplicación $h : \rset \longrightarrow
+\rset$ dada por $h(x) = {-x} + b$.
+
+Tal y como se demostrará en un ejercicio posterior, estas son las únicas
+isometrías posibles para dicho espacio métrico, $(\rset, \delta)$. Por
+tanto, $\isom(\rset)$ es el conjunto de las aplicaciones $g : \rset
+\longrightarrow \rset$ de la forma
+
+$$ g(x) = b \pm x, \quad x \in \rset $$
+
+Lo primero que haremos será demostrar que $\delta$ es una métrica sobre
+$\rset$. De hecho, se trata de la distancia euclídea en $\rset^1$ o, lo que
+es lo mismo, $\rset$. Se podría haber designado igual que antes, $d_E$.
+
+En este ejercicio, hay cierto juego con el valor absoluto. Debe recordar
+algunas de sus propiedades.
+
+<!--
+Lo primero será cercionarnos de que $\delta(x, y)$ es efectivamente, como se
+afirma, una aplicación.
+
+Creo que no es necesario, pues se dice en el enunciado. Es fácil ver que lo
+es.
+-->
+
+Ahora, pasamos a las condiciones enumeradas de la
+[](#def-metrica){.nameref}. Para la (i), se tiene que, por definición de
+valor absoluto, se cumple. Veámoslo:
+
+$$ \delta(x, x) = |x - x| = |0! = 0 $$
+
+$$ |a| = 0 \quad \text{si y solo si} \quad a = 0 $$
+
+Para cualquier par de elementos $x, y \in \rset$ siendo $x \neq y$, se
+tiene, también por la definición de valor absoluto, que
+
+$$ \delta(x, y) > 0 $$
+
+por lo que se cumple la condición (ii). Si no le convence esta explicación,
+puede ver algunos de los ejercicios anteriores, que son iguales en esta
+parte.
+
+Para la condición (iii) tenemos
+
+$$ \delta(x, y) = |x - y| = |({-1}) (y - x)| = |{-1}| \cdot |y - x| $$
+
+por una propiedad del valor absoluto. Entonces, como $|{-1}| = |1|$, tenemos
+que
+
+$$ \delta(x, y) = |y - x| = \delta(y, x) $$
+
+con lo que se cumple esa condición (la simetría).
+
+Queda por demostrar que se cumple la condición (iv), es decir, la
+desigualdad triangular.
+
+$$
+\begin{align*}
+  \delta(x, y)
+    &= |x - y| \\
+    &= |x - y + z - z| \\
+    &= |x - z + z - y| \\
+    &\leq |x - z| + |z - y| \\
+    &= \delta(x, z) + \delta(z, y)
+\end{align*}
+$$
+
+con lo que queda demostrado. Advierta que hemos usado la desigualdad
+triangular de los números reales. Quizás le parezca un poco lioso: hemos
+usado la propiedad que deseamos usar dentro de esto TKTK. En realidad, la
+hemos supuesto para la suma dentro de un valor absoluto. TKTK. No sé. Quizás
+bastaría con enunciarla, sin poner más cosas aquí. TKTK.
+
+Ahora, veamos que la función $f$ es una isometría. Primero, veremos si dicha
+aplicación es una biyección.
+
+Veamos que es inyectiva. Dados $x, y \in \rset$, tenemos
+
+$$
+  \begin{align*}
+    f(x) &= x + b \\
+    f(y) &= y + b
+  \end{align*}
+$$
+
+Entonces,
+
+$$
+  \begin{align*}
+    f(x) &= f(y) \\
+    x + b &= y + b \\
+    x &= y
+  \end{align*}
+$$
+
+con lo que se demuestra que es inyectiva. Veamos ahora si es sobreyectiva.
+
+Si $f(x) = z = x + b$, se tiene entonces que $x = z - b$. Esta función de
+$x$ variando para los valores de $z$ no presenta ningún caso conflictivo.
+Por tanto, está definida para todo $\rset$, con lo que $f$ es sobreyectiva
+necesariamente.
+
+Como es inyectiva y sobreyectiva, es entonces biyectiva.
+
+Ahora, coprobemos que es una aplicación que conserva las distancias entre
+ambos espacios métricos, es decir, entre $(\rset, \delta)$ y sí mismo.
+
+$$
+  \begin{align*}
+    \delta(x, y)  &= \delta(f(x), f(y)) \\
+    |x - y|       &= |(x + b) - (y + b)| \\
+                  &= |x + (b - b) - y| \\
+                  &= |x - y|
+  \end{align*}
+$$
+
+y, efectivamente, vemos que se cumple.
+
+Para la aplicación $h$ se haría de forma análoga. No presenta mayor
+dificultad.
+:::
+
+<!-- En realidad, este ejercicio es una extrañeza en esta asignatura.
+Tampoco hay que comerse mucho la cabeza. -->
+
+::: example
+Tal y como veremos en este ejemplo, el concepto de _distancia_ o _métrica_
+se puede usar también en la teoría de grafos (_graph theory_), adoptando
+dicho concepto una forma algo más abstracta a lo que estamos acostumbrados.
+Antes, vamos a dar una definición de los conceptos básicos de esta área de
+las matemáticas.
+
+Se considera un conjunto finito $M$ cuyos elementos se llaman _vértices_
+(_vertex_), y un conjunto finito $A$ cuyos elementos se llaman _aristas_
+(_edges_). A cada arista se le asocian dos vértices de $M$. Bajo esta
+condición, a todo par formado por un conjunto de vértices y uno de aristas,
+$G = (M, A)$, lo llamamos _grafo_ (_graph_).
+
+Si $x, y \in M$ son los dos vértices que han sido asociados a la arista $a$,
+se dice que $x$ e $y$ son los _extremos_ de la arista $a$, o,
+alternativamente, que la arista $a$ une a los vértices $x$ e $y$.
+
+En la figura siguiente, mostramos la representación de un grafo cualquiera.
+Los puntos representan a los vértices del mismo y, los segmentos uniendo a
+un par de puntos, las aristas.
+
+![Camino de longitud 6 en un grafo](./figuras/grafo.svg)
+
+Para dos vértices $p, q \in M$, un _camino_ (_path_) de $p$ a $q$ es una
+sucesión de aristas $a_1, a_2, \dots, a_l$, donde $a_1$ une $p$ a un primer
+vértice $s_1$, $a_2$ une $s_1$ a un nuevo vértice $s_2$, y así
+sucesivamente. La última arista $a_l$ une el penúltimo vértice $s_{l-1}$ a
+$q$. Es decir, se podría decir que se trata de una sucesión de aristas
+"encadenadas" o _adyacentes consecutivas_ entre $p$ y $q$.
+
+El número de aristas, $l$, se llama la _longitud_ (o _longitud
+combinatoria_) del camino. La figura anterior muestra, en una línea
+discontinua, un camino de longitud 6 que va de $p$ a $q$. Como
+particularidad, consideraremos el _camino punto_, que es el camino de
+longitud 0, o, lo que es lo mismo, un camino sin aristas. En ese caso se da
+que los extremos son el mismo punto $p$. Aunque lo contrario no tiene por
+qué ser cierto, es decir, se puede dar un camino con extremos un mismo punto
+$p$ y la longitud de este no ser 0.
+
+Supongamos ahora que en nuestro grafo $G = (M, A)$ hay para cada par de
+vértices $p, q \in M$ un camino que va de $p$ a $q$. Se dice en este caso
+que $G$ es _conexo_. Si se tiene un grafo conexo, como es el caso del de la
+figura anterior, se puede introducir una distancia (o métrica) sobre el
+mismo. Por ejemplo, tenemos, para cualesquiera $p, q \in M$, la distancia
+$\delta_G(p, q)$ definida como la longitud del camino más corto que va de
+$p$ a $q$. En el grafo de la figura anterior, se tiene que $\delta_G(p, q) =
+5$.
+
+Verifiquemos que la aplicación $\delta_G : M \times M \longrightarrow \rset$
+definida en el párrafo anterior es una métrica sobre $M$.
+
+La condición (i) de [](#def-metrica){.nameref} se cumple ya que es evidente
+que se cumple $\delta_G(p, p) = 0$, pues el camino más corto de $p$ a $p$ es
+un camino de longitud 0; es decir, que consta de 0 aristas.
+
+Se tiene también que, para todo $p, q \in M$ siendo $p \neq q$, se cumple
+$\delta_G(p, q) \geq 1$, ya que la distancia no puede ser 0, como es
+evidente, y, además, las distancias serán siempre mayores o iguales que 0.
+Por tanto, se cumple también la condición (ii).
+
+La condición (iii) (simetría) se ve también rápidamente. Si $a_1, \dots,
+a_l$ es el camino más corto que va de $p$ a $q$, entonces $a_l, a_{l-1},
+\dots, a_1$ es el camino más corto que va de $q$ a $p$, y ambos caminos
+tienen la misma longitud, como es evidente.
+
+Queda por verificar la condición (iv) (desigualdad triangular). Si $a_1,
+\dots, a_l$ es el camino de longitud mínima de $p$ a $q$, y $b_1, \dots,
+b_m$ es el camino de longitud mínima de $q$ a $r$, entonces $a_1, \dots,
+a_l, b_1, \dots, b_m$ es un camino de longitud $l + m$ de $p$ a $r$, pero
+pueden existir en $G$ caminos más cortos de $p$ a $q$. Por consiguiente,
+
+$$ \delta_G(p, r) \leq l + m = \delta_G(p, q) + \delta_G(q, r) $$
+
+Advierta que si la distancia se hubiese definido como el máximo de las
+longitudes de los caminos, en lugar del mínimo, no se cumpliría la
+desigualdad triangular y, por tanto, no se trataría de una distancia.
+Demuéstrelo.
+:::
+
+
+
+
+
+

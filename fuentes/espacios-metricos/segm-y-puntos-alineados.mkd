@@ -1,0 +1,104 @@
+
+
+
+### Segmentos y puntos alineados {#segmentos-y-puntos-alineados}
+
+::: {.deffinition #def-segmento data-label="Definición de Segmento"}
+Sea $(M, d)$ un espacio métrico. Dados cualesquiera $a, b \in M$, se llama
+_segmento_ (o _intervalo_) de _extremos_ $a$ y $b$, y se denota por $[a,
+b]$, al conjunto
+
+$$ [a, b] = \{x \in M \st d(a, b) = d(a, x) + d(x, b) \} $$
+:::
+
+<!-- Quizás, de la definición de métrica se pueda deducir que un segmento
+para dos puntos dados es una función bien definida. No me quiero meter ahí,
+de momento. -->
+
+Esta sería una definición algo más abstracta del concepto de _intervalo_ que
+ya conoce.
+
+Advierta que es un caso particular de la desigualdad triangular, una de las
+condiciones de la [](#def-metrica){.nameref}, sobre la que es natural
+preguntarse cómo sería TKTK. Se puede considerar que un segmento es un
+_triángulo degenerado_.
+
+A la distancia entre los extremos del segmento, $d(a, b)$, se la conoce como
+la _longitud_ o _medida_ del segmento. Tal y como veremos más adelante,
+muchas veces se hace uso de una notación más cómoda y un segmento lo
+representamos simplemente por aposición de sus puntos, es decir, en lugar de
+$d(a, b)$, donde $a$ y $b$ son los puntos de sus extremos, pondríamos $ab$.
+
+::: {.properties #prop-segmentos data-label="Propiedades de los Segmentos"}
+Siendo $(M, d)$ un espacio métrico, se tienen las propiedades siguientes
+para todo $a, b \in M$:
+
+1.  $[a, a] = \{a\}$.
+2.  $[a, b] = [b, a]$.
+:::
+
+![Tres puntos alineados](./figuras/tres-puntos.svg)
+
+En la primera, en vez de $\{a\}$, se suele poner directamente $a$. Por su
+parte, la segunda de estas propiedades sería la propiedad de simetría para
+los extremos de los segmentos.
+
+::: proof
+Sabiendo que $(M, d)$ es un espacio métrico, tenemos las equivalencias
+siguientes que implican la propiedad 1 anterior:
+
+<!-- TODO Pasarlo a un alignedat -->
+
+$$
+\begin{align*}
+  x \in [a, a]
+    &\iff d(a, x) + d(x, a) = d(a, a) \\
+    &\iff d(a, x) + d(a, x) = 0 \\
+    &\iff 2 \cdot d(a, x) = 0 \\
+    &\iff d(a, x) = 0 \\
+    &\iff x = a
+\end{align*}
+$$
+
+Hemos usado las propiedades 1 y 3 en la [](#def-metrica){.nameref}. Este
+resultado se puede interpretar como que, para todo $x \in [a, a]$ se tiene
+que $x = a$, que es lo mismo que decir que ese conjunto solo contiene al
+elemento $a$.
+
+La propiedad 2 se deduce de forma muy directa de la
+[](#def-segmento){.nameref} y de la condición 3 (simetría) de la
+[](#def-metrica){.nameref}.
+:::
+
+::: {.deffinition #def-puntos-alineados data-label="Definición de Tres
+Puntos Alineados"}
+En un espacio métrico, se dice que tres de sus puntos están _alineados_ si y
+solo si uno de ellos está situado sobre el segmento determinado por los
+otros dos.
+:::
+
+En forma simbólica, esto mismo se podría expresar del modo siguiente.
+Suponga que tiene los puntos $a$, $b$ y $c$ pertenecientes a un espacio
+métrico $(M, d)$. Se conseiderará que esos tres puntos están alineados si se
+da al menos una de las condiciones siguientes:
+
+$$ a \in [b, c], \quad b \in [a, c], \quad c \in [a, b] $$
+
+O, si lo prefiere, de forma más extensa, si se da una de las siguientes:
+
+$$
+  \begin{align*}
+    a &\in \{X \in M \st d(b, c) = d(b, x) + d(x, c)\} \\
+    b &\in \{X \in M \st d(a, c) = d(a, x) + d(x, c)\} \\
+    c &\in \{X \in M \st d(a, b) = d(a, x) + d(x, b)\} \\
+  \end{align*}
+$$
+
+Adiverta que la forma de colocar los extremos del segmento da igual, por la
+propiedad 2 anterior.
+
+También, debe saber que no tiene sentido hablar de dos puntos alineados.
+Estos eiempre lo están. TKTK.
+
+
+

@@ -1,0 +1,61 @@
+
+
+### Distancia
+
+En todo lo que sigue, suponemos la existencia tanto de un conjunto de
+puntos, al que llamaremos _plano euclideo_, o, simplemente, plano,
+$\mathbf{P}$, como de una aplicación
+
+$$ d : \mathbf{P} \times \mathbf{P} \longrightarrow \rset $$
+
+a la que llamamos _distancia euclidea_, o, simplemente, _distancia_, que
+será un caso particular del [concepto de distancia](#def-metrica) (o
+métrica) que vimos en el capítulo anterior. Nos encontramos, por tanto, al
+contrario del capítulo anterior, en una concreción de [espacio
+métrico](#ch-espacios-metricos), es decir, en una geometría en particular:
+la geometría euclidiana plana. Concretamente, tal y como hemos dicho,
+usaremos el modelo sintético; no el analítico.
+
+Por cierto, también es común designar al plano euclideo por $\mathbb{P}$.
+
+A los puntos de $\mathbf{P}$ los solemos designar mediante letras mayúsculas
+del alfabeto latino con tipografía en itálicas, como $A$, $B$, $X$, $Y$, ...
+Tal y como hemos explicado, se trata, desde el punto de vista de la teoría
+de conjunto, de elementos de $\mathbf{P}$. Así, nos referimos a ellos, por
+ejemplo, por $X \in \mathbf{P}$.
+
+Las propiedades que caracterizan a los planos y las distancias serán
+formuladas en los axiomas P1 a P7 que serán introducidos a lo largo de este
+capítulo. La idea subyacente es que el conjunto $\mathbf{P}$ sea una
+representación matemática de cualquier superficie plana que se extienda sin
+límites, de acuerdo con las reglas de nuestra experiencia física. Pero no es
+fácil hallar un conjunto mínimo de axiomas para llegar a explicar toda esta.
+
+::: {.axiom #ax-euclides-p1 data-label="Axioma P1"}
+El par ordenado $(\mathbf{P}, d)$ es un espacio métrico.
+:::
+
+Debido a esto, se cumplen todas las definiciones y propiedades estudiadas en
+el capítulo anterior.
+
+Como verá, los axiomas son coherentes con nuestra intuición geométrica. O
+quizás, algunos puedan parecerle algo extraños. En cualquier caso, todo
+conducirá a que al final todo este sistema axiomático se comporte de acuerdo
+a su intuición geométrica. Bueno, a la de Euclides, que es la misma que la
+suya... seguramente.
+
+Advierta que aún no hemos concretado lo que se conoce como el plano
+euclidiano, pues en este axioma encajan todo tipo de espacios métricos,
+incluso los extraños que vimos en algunos ejemplos del capítulo anterior.
+Axiomas posteriores servirán para concretar más; por ejemplo, la distancia
+de este espacio métrico, aunque no trabajaremos mucho con números.
+
+Algo que debe tener en cuenta es que, para toda esta parte del libro, es
+decir, para toda la geometría euclidiana plana, estaremos en el contexto de
+$(\mathbf{P}, d)$. Muchas veces, no lo especificaremos, suponiendo que el
+lector lo entenderá así por el contexto.
+
+
+
+
+

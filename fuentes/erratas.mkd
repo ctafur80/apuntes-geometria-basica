@@ -1,0 +1,90 @@
+
+
+
+
+## Erratas {.unnumbered}
+
+A lo largo de todo el libro, suelen dejar muchas veces un espacio entre una
+palabra y el signo de dos puntos. Por ejemplo, en la pág. 16, por el medio,
+pone "siguiente :". No referenciaré más en esta lista erratas como esta.
+
+---
+
+**pág. 13**.--- **Demostración.** "Está claro que $h \circ g$ y" <-- Parece
+que están demasiado juntos los operandos.
+
+---
+
+**pág. 15**.--- ` ``disquitos ''` --> ` ``disquitos''`
+
+---
+
+**pág. 17** (medio).--- `(Ejercicio dif'icil)` --> `(Ejercicio dif\'icil)` o
+bien `(Ejercicio difícil)`
+
+---
+
+**pág. 21**.--- `aplicaciones ...` --> `aplicaciones\ldots`
+
+---
+
+**pág. 21**.--- "caracterizan $\mathbf{P}$ y $d$" --> "caracterizan a
+$\mathbf{P}$ y $d$"
+
+---
+
+**pág. 23**.--- "**(ii)** para" --> "**(ii)** Para". Por cierto, no sé por
+qué se ponen los números en negrita.
+
+---
+
+**pág. 32** (arriba).--- "`$P '$`" --> "`$P'$`". Lo hace dos veces.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+También, hay una serie de cuestiones menores que no he incluido en la lista
+de erratas, porque en realidad no se trata de erratas. Me refiero a
+cuestiones más bien de estilo y de tipografía. Estas son más bien de gusto
+personal, aunque sí que existen convenios sobre algunas de estas.
+
+Por ejemplo, al hablar de "Geometría", estamos adoptando la regla de
+capitalizar el nombre de una disciplina científica o, más generalmente, un
+área del conocimiento. Aunque es común verlo en muchos libros, en realidad,
+el acuerdo adoptado actualmente es no capitalizarlos; con lo que sería
+preferible hablar de la "geometría".
+
+También, las asignaturas se capitalizan completamente, es decir, sería
+"Geometría Básica" y no "Geometría básica". Por cierto, tampoco se pone en
+itálicas ni entre comillas ya que no es un título.
+
+
+
+
+
+
+
+
+
+
+

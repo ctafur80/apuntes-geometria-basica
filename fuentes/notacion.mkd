@@ -1,0 +1,23 @@
+
+
+
+
+## Notación {.unnumbered}
+
+Suele usar el símbolo $\subset$ para la inclusión, no necesariamente propia.
+La notación más usual actualmente es asemejarla a las desigualdades de
+números, es decir, $\subseteq$ en general y, para el caso de subconjuntos
+propios, $\subset$.
+
+En cuanto a las notaciones con subíndices, también se podrían usar comas
+cuando constan de más de un argumento. Así, por ejemplo, la recta $r_{AB}$
+podría ser $r_{A, B}$. Es algo engorroso pero quizás sería más claro.
+
+Lo cierto es que hay veces en las que la notación se hace superengorrosa.
+Cuando se ven cosas como $r_{g(A)g(B)}$, o en el Capítulo TKTK...
+
+
+
+
+
+

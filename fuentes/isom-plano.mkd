@@ -1,0 +1,44 @@
+
+
+
+### Capítulo 3. Isometrías en el plano euclideo
+
+**pág. 47** (abajo)
+
+En la demostración del **Teorema 3.6**, faltan algunas cosas por explicar.
+Concretamente, en la segunda línea, dice:
+
+"En $X \in \mathbf{P} \setminus r$, se sigue que la recta $l \perp r$
+pasando por $X$ satisface $g(l) = l$."
+
+Pero no lo demuestra. Vamos a hacerlo aquí.
+
+Partimos de que $l \perp_P r$, es decir, $l$ es ortogonal a $r$ y su punto
+de corte es $P \in \mathbf{P}$.
+
+Como $P \in r$, se tiene, por lo que se dijo al comienzo, que $g(P) = P$.
+Por tanto, $P \in g(l)$.
+
+Por la **Observación 2.24**, se tiene que $g(l) \perp g(r)$ siendo $g(P)$ su
+punto de corte. Pero, por lo que ya sabemos, podemos también afirmar que
+$g(l) \perp r$ con $P$ como punto de corte.
+
+Entonces, como tenemos que $l \perp_P r$ y $g(l) \perp_P r$, por el
+**Teorema 2.29** tendremos que $g(l) = l$.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

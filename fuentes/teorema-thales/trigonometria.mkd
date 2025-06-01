@@ -1,0 +1,107 @@
+
+
+
+
+### Trigonometría
+
+La trigonometría es una parte de la geometría donde se estudian y relacionan
+las medidas de los elementos de los triángulos. La trigonometría origina las
+razones y las funciones trigonométricas que después aparecen en
+prácticamente todas las áreas de las matemáticas.
+
+Comenzaremos por recordar los términos catetos e hipotenusa:
+
+::: {.deffinition data-label="Deffinition de Catetos e Hipotenusa"}
+Dado un triángulo rectángulo, $\triangle\{P, A, B\}$, donde $\angle A$ es el
+ángulo recto. El lado opuesto al ángulo recto, $[P, B]$, se denomina
+hipotenusa, mientras que los lados adyacentes al ángulo recto: $[A, B]$ y
+$[P, A]$, se llaman catetos.
+:::
+
+::: {.deffinition data-label="Razones Trigonométricas"}
+Consideremos un triángulo rectángulo $\triangle\{P, A, B\}$ cuyo ángulo
+recto es $\angle A$. Se define:
+
+<!-- ![Figura 5-6 Triángulo rectángulo](attachment:figura-5-6.png) -->
+
+1.  seno del ángulo $\angle P$ como el número
+
+    $$ \sin \angle P = \frac{A B}{P B} = \frac{\text{cateto
+    opuesto}}{\text{hipotenusa}} $$
+
+2.  coseno del ángulo $\angle P$ :
+
+    $$ \cos \angle P = \frac{P A}{P B} = \frac{\text{cateto
+    adyacente}}{\text{hipotenusa}} $$
+
+3.  tangente del ángulo $\angle P$:
+
+    $$ \tan \angle P = \frac{A B}{P A} = \frac{\text{cateto
+    opuesto}}{\text{cateto adyacente}} $$
+
+4.  cotangente del ángulo $\angle P$:
+
+    $$ \cot \angle P = \frac{P A}{A B} = \frac{\text{cateto
+    adyacente}}{\text{cateto opuesto}} $$
+:::
+
+::: {.deffinition data-label="Definición de "}
+El seno, coseno, tangente y cotangente son razones trigonométricas del
+ángulo $\angle P$.
+:::
+
+Existen otras razones trigonométricas más, pero no las trataremos en este
+curso.
+
+::: {.theorem data-label="Teorema"}
+El seno, el coseno, la tangente y la cotangente de un ángulo agudo $\angle
+P$ no dependen del triángulo rectángulo $\triangle\{P, A, B\}$ usado en su
+definición. Además sólo dependen de la clase de congruencia del ángulo
+$\angle P$.
+:::
+
+::: proof
+En efecto, supongamos que los dos ángulos agudos $\angle P$ y $\angle Q$ son
+congruentes. Entonces existe una isometría $\alpha$ tal que $\alpha(P) = Q$
+y que envía el ángulo $\angle P$ al ángulo $\angle Q$. Sea $\triangle\{P, A,
+B\}$ un triángulo rectángulo de modo que $\angle P$ es uno de sus ángulos,
+$\angle A$ es el ángulo recto y $\Delta\left\{Q, A', B'\right\}$ es otro
+triángulo rectángulo con $\angle Q$ uno de sus ángulos y $\angle A'$ el
+ángulo recto. Los triángulos $\Delta\{\alpha(P), \alpha(A), \alpha(B)\}$ y
+$\Delta\left\{Q, A', B'\right\}$ tienen el vértice en común $Q$ y las
+semirrectas que son los lados de $\angle Q$, y usando si es necesario la
+reflexión sobre la bisectriz de $\angle Q$, podemos suponer que $r_{Q
+\alpha(A)} = r_{Q A'}$ y $r_{Q \alpha(B)} = r_{Q B'}$. Por ser $\alpha$
+isometría y por tanto conservar la ortogonalidad, se tiene que $r_{Q
+\alpha(A)}$ es perpendicular a $r_{\alpha(A), \alpha(B)}$ y por la elección
+de $\Delta\left\{Q, A', B'\right\}, r_{Q A'}$ es perpendicular a $r_{A'
+B'}$, entonces $r_{\alpha(A) \alpha(B)}$ y $r_{A' B'}$ son paralelas (ver
+demostración del teorema 2.31). Luego estamos en las condiciones del teorema
+de Tales y así se verifica que:
+
+$$ \frac{Q \alpha(A)}{Q A'} = \frac{Q \alpha(B)}{Q B'} $$
+
+de donde,
+
+$$ \frac{Q \alpha(A)}{Q \alpha(B)} = \frac{Q A'}{Q B'} $$
+
+luego
+
+$$ \cos \angle P = \frac{P A}{P B} = \frac{Q \alpha(A)}{Q \alpha(B)} =
+\frac{Q A'}{Q B'} = \cos \angle Q $$
+
+Para obtener sen $\angle P = \sin \angle Q$ basta utilizar el corolario 5.6.
+Para la tangente
+
+<!-- ![Figura 5-7 El coseno está bien definido](attachment:figura-5-7.png)
+-->
+
+y la cotangente se obtiene de observar que:
+
+$$ \tan \angle P = \frac{\sin \angle P}{\cos \angle P} \quad \text{y} \quad
+\cot \angle P = \frac{\cos \angle P}{\sin \angle P} $$
+:::
+
+
+
+

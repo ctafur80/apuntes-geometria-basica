@@ -1,0 +1,32 @@
+# Ejercicios
+
+**Ejercicio 5.1** Un rombo es un paralelogramo cuyos cuatro lados son congruentes. Probar que un rombo tiene simetrías que son reflexiones respecto de rectas. ¿Cuantas simetrías tiene cualquier rombo? ¿Existen rombos que tengan otras simetrías además de la media vuelta y las reflexiones?
+
+**Ejercicio 5.2** Dado un paralelogramo $(A, B, C, D)$, ¿qué tipo de isometría es $\sigma_{D} \circ \sigma_{C} \circ \sigma_{B} \circ \sigma_{A}$ ?
+
+**Ejercicio 5.3** Supongamos que los rayos solares son paralelos (dada la lejanía del sol a efectos prácticos el error que se produce al hacer esta suposición
+
+es despreciable). Supongamos que la sombra al sol de un individuo que mide 1,80 metros es 20 veces menor que la sombra de un edificio. ¿Cuál es la altura del edificio?
+
+**Ejercicio 5.4** Justificar el método de Tales usando su teorema para medir las pirámides descrito en la introducción de este capítulo.
+
+**Ejercicio 5.5** Probar que un ángulo tiene dos suplementarios. Obtener una isometría que transforma un suplementario en el otro.
+
+**Ejercicio 5.6** En la figura 5-9 $r_{P Q}$ es la bisectriz de $\angle P$. Demostrar que:
+
+![Figura 5-9 Ejercicio 5.6](attachment:figura-5-9.png)
+
+$$
+\frac{P A}{P B} = \frac{Q A}{Q B}
+$$
+
+**Ejercicio 5.7** ¿Es correcta la siguiente definición de paralelogramo?: Un paralelogramo es un cuadrilátero de modo que dos de sus lados están en rectas paralelas y los otros dos tienen la misma longitud.
+
+**Ejercicio 5.8** Probar que un paralelogramo es un rombo si y solo si sus diagonales se cortan formando un ángulo recto. ¿Es cierta la siguiente afirmación?: Si un cuadrilátero tiene las diagonales perpendiculares entonces es un rombo.
+
+# Actividades complementarias
+
+**Actividad 1.** Buscar información en Internet (Wikipedia, Mac Tutor de historia de las matemáticas de la Universidad de Saint Andrews, ...) sobre Tales de Mileto y el teorema de Tales.
+
+**Actividad 2.** Hacer una construcción con Geogebra para comprobar el Teorema de Tales.
+

@@ -1,0 +1,158 @@
+
+
+
+### Medida de ángulos
+
+Nota (Funciones trigonométricas). Las razones trigonométricas que acabamos
+de definir son aplicaciones que hacen corresponder números reales a ciertos
+objetos geométricos; los ángulos. Las funciones seno, coseno, tangente y
+cotangente que se estudian en otro tipo de cursos de matemáticas son
+aplicaciones de $\mathbb{R}$ o un subconjunto de $\mathbb{R}$ en
+$\mathbb{R}$:
+
+$$
+\begin{array}{lrrl}
+  \sin: & \mathbb{R}  & \longrightarrow & \mathbb{R} \\
+  \cos: & \mathbb{R}  & \longrightarrow & \mathbb{R} \\
+  \tan: & \mathbb{R} - \left\{\frac{\pi}{2} + k \pi \st k \in \mathbb{Z}
+    \right\} & \longrightarrow & \mathbb{R} \\
+  \cot: & \mathbb{R} - \left\{k \pi \st k \in \mathbb{Z}\right\} &
+    \longrightarrow & \mathbb{R}
+\end{array}
+$$
+
+Las funciones trigonométricas, aunque aparecen en prácticamente cualquier
+campo de las matemáticas tienen su origen en las razones trigonométricas y
+por tanto en la geometría.
+
+Las funciones inversas de las funciones trigonométricas están bien definidas
+si restringimos convenientemente su dominio y la imagen, por ejemplo:
+
+$$ \arccos: [-1, 1] \rightarrow[0, \pi] $$
+
+Vamos a utilizar el arco coseno para definir la medida de un ángulo. Antes
+de definir la medida de un ángulo necesitamos el siguiente resultado:
+
+::: {.theorem data-label="Teorema"}
+Sea $\triangle\{A, B, C\}$ un triángulo rectángulo, donde $\angle A$ es el
+ángulo recto, entonces $A C < B C$ y $A B < B C$, es decir, la medida de los
+catetos es menor que la medida de la hipotenusa.
+:::
+
+::: proof
+Vamos a probar que $A C < B C$, la otra desigualdad se demuestra de modo
+totalmente análogo.
+
+En efecto, sea $C' \in r_{A C}$ el punto tal que $A$ es el punto medio de
+$[C, C']$. Según la definición de ortogonalidad se tiene $B C = B C'$, y con
+la definición de recta (definición 2.2) y la desigualdad triangular se
+obtiene
+
+$$ 2 A C = C C' < B C + B C' = 2 B C $$
+
+Como consecuencia del teorema anterior el seno y el coseno de un ángulo
+agudo son números reales positivos menores que 1 y así se puede dar la
+siguiente definición:
+
+::: {.deffinition data-label="Medida de Ángulos Agudos"}
+Definimos medida de un ángulo agudo $\angle P$ como el número real:
+
+$$ \arccos(\cos \angle P) = \angle P $$
+:::
+
+Es muy posible que el lector reconozca que la medida del ángulo $\angle P$
+es precisamente "la medida del arco de circunferencia de radio unidad
+determinado por el ángulo $\angle P$". Sin embargo, para justificar la frase
+anterior deberíamos dar un paseo un poco largo por otros mundos matemáticos
+que en este momento nos alejaría de los objetivos del curso.
+
+::: {.theorem data-label="Teorema"}
+Si dos ángulos agudos $\angle P$ y $\angle Q$ son congruentes entonces sus
+medidas coinciden.
+:::
+
+::: proof
+Supongamos que los dos ángulos agudos $\angle P$ y $\angle Q$ son
+congruentes. Entonces sus razones trigonométricas coinciden, en particular
+$\cos \angle P = \cos \angle Q$, y como $\arccos :(0, 1] \rightarrow\left[0,
+\frac{\pi}{2}\right)$ es una aplicación, tenemos que $\angle P = \angle Q$.
+:::
+
+::: {.deffinition data-label="Ángulo Suplementario"}
+Dado un ángulo $\angle\left\{\bar{a}, \bar{b}_1\right\} = $ $\angle V$ con
+vértice $V$, un suplementario $\overline{\angle V} = \left\{\bar{a},
+\bar{b}_2\right\}$ de $\angle V$ es un ángulo que comparte con $\angle V$ un
+lado, $\bar{a}$, y $\bar{b}_1, \bar{b}_2$ son las dos semirrectas
+determinadas por el vértice $V$ en la recta b. De otra forma más corta:
+$\angle V$ y $\overline{\angle V}$ se pueden sumar y su suma es un ángulo
+llano.
+:::
+
+<!-- ![Figura 5-8 Ángulos suplementarios](attachment:figura-5-8.png) -->
+
+Observación. Dos ángulos suplementarios, o bien ambos son rectos, o bien uno
+es agudo y el otro obtuso.
+
+::: {.theorem data-label="Teorema"}
+Si dos ángulos son congruentes entonces sus suplementarios también lo son.
+:::
+
+::: proof
+Sean $\angle\left\{\bar{a}_1, \bar{b}_1\right\}$ y $\angle\left\{\bar{c}_1,
+\bar{d}_1\right\}$ dos ángulos congruentes y $\alpha$ una isometría que
+envía $\angle\left\{\bar{a}_1, \bar{b}_1\right\}$ en
+$\angle\left\{\bar{c}_1, \bar{d}_1\right\}$. Sean $\bar{a}_1, \bar{a}_2$ las
+dos semirrectas determinadas por $V$ (el vértice de $\angle\left\{\bar{a}_1,
+\bar{b}_1\right\}$ ) en $a$ (recta que contiene a $a_{1}$ ) y análogamente
+para las rectas $b$, $c$ y $d$. Sean $\angle\left\{\bar{a}_1,
+\bar{b}_2\right\}$ y $\angle\left\{\bar{c}_1, \bar{d}_2\right\}$
+suplementarios de cada uno de los ángulos considerados. Como podemos tomar
+una isometría $\alpha$ tal que $\alpha\left(\bar{a}_1\right) = \bar{c}_1$ y
+$\alpha\left(\bar{b}_1\right) = \bar{d}_1$ también se verifica que
+$\alpha\left(\bar{b}_2\right) = \bar{d}_2$, y por tanto $\alpha$ transforma
+$\angle\left\{\bar{a}_1, \bar{b}_2\right\}$ en $\angle\left\{\bar{c}_1,
+\bar{d}_2\right\}$. Para los otros suplementarios la prueba es similar.
+:::
+
+::: {.deffinition data-label="Medida y Razones de Ángulos No Agudos"}
+Sea $\angle P$ un ángulo obtuso y $\angle P$ un suplementario de $\angle P$.
+Definimos:
+
+$$ \sin \angle P = \sin \overline{\angle P}, \quad \cos \angle P = {-\cos
+\overline{\angle P}} $$
+
+El seno de un ángulo nulo es 0 y su coseno es 1; el seno de un ángulo recto
+es 1, el coseno es 0; el seno de un ángulo llano es 0 y su coseno es ${-1}$.
+
+En el caso de denominador no nulo se define:
+
+$$ \tan \angle P = \frac{\sin \angle P}{\cos \angle P}, \quad \cot \angle P
+= \frac{\cos \angle P}{\sin \angle P} $$
+
+Para un ángulo obtuso se define la medida como:
+
+$$ \angle P = \arccos (\cos \angle P) $$
+
+La medida de un ángulo nulo es 0, la medida de un ángulo recto es
+$\frac{\pi}{2}$ y la medida de un ángulo llano es $\pi$.
+:::
+
+TKTK.
+
+::: {.theorem data-label="Teorema"}
+Si dos ángulos $\angle P$ y $\angle Q$ son congruentes entonces sus medidas
+coinciden.
+:::
+
+::: proof
+Es consecuencia de 5.14 y del hecho de que si $\angle P$ y $\angle Q$ son
+dos ángulos obtusos congruentes entonces también sus suplementarios lo son
+(teorema 5.17).
+:::
+
+
+
+
+
+
+

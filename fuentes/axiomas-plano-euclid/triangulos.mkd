@@ -1,0 +1,98 @@
+
+
+### Triángulos
+
+La siguiente definición es un ejemplo de definición constructiva ya que se
+basa en figuras que hemos definido previamente.
+
+::: {.deffinition #def-triangulo data-label="Definición de Triángulo"}
+En $(\mathbf{P}, d)$, dados $P$, $Q$ y $R$ tres puntos distintos y no
+alineados. Diremos que los segmentos $[P,Q]$, $[Q,R]$ y $[R,P]$ forman el
+_triángulo_ $PQR$, cosa que designamos por $\triangle\{P, Q, R\}$.
+
+A esos tres segmentos se les califica de _lados_ del triángulo, y, a los
+puntos $P$, $Q$ y $R$, de _vértices_.
+:::
+
+<!-- FIGURA -->
+
+Advierta que esos tres puntos han de ser no alineados. Es importante.
+
+Una generalización del concepto de _triángulo_ será el _polígono_ de lados
+arbitrarios, cosa que veremos en un capítulo posterior (el 10, creo).
+
+En un triángulo cualquiera, se dice que un vértice y un lado del mismo son
+_opuestos_ si el vértice no es un extremo del lado. Así $P$ es el vértice
+opuesto al lado $[R, Q]$, y viceversa, es decir, el lado $[R, Q]$ es el
+opuesto al vértice $P$.
+
+::: {.theorem #teor-ax-pasch data-label="Teorema de Pasch"}
+En $(\mathbf{P}, d)$, dado un triángulo cualquiera $\triangle\{P, Q, R\}$.
+Para cualquier recta $r$ tal que $r \cap [P, Q] \neq \emptyset$ se cumple
+que $r \cap [Q, R] \neq \emptyset$ o que $r \cap [R, P] \neq \emptyset$, o
+ambas.
+:::
+
+<!-- FIGURA TKTK -->
+
+Viene a decir que si una recta corta a uno de los lados de un triángulo,
+entonces también cortará a otro o a los dos.
+
+::: proof
+Realizaremos una demostración por contradicción.
+
+<!-- Lo siguiente se podría hacer con lógica simbólica de forma más clara.
+-->
+
+Suponemos que esa recta $r$ que corta a $[P, Q]$ no corta a $[Q, R]$ ni a
+$[R, P]$. Entonces, por el (condicional contrarrecíproco del) punto 3 del
+[](#ax-p4-euclides){.nameref}, se tiene que $Q$ y $R$ están en el mismo
+semiplano $H_r^i$ de los dos determinados por $r$, para algún $i = 1, 2$.
+
+De igual modo sucede con el par de puntos $R$ y $P$. Ambos puntos estarán en
+el mismo semiplano, solo que no sabemos si se trata de $H_r^i$ o del otro.
+Pero, además, como en el párrafo anterior hemos afirmado que $R \in H_r^i$,
+se tendrá entonces necesariamente que $P \in H_r^i$. Es decir, los tres
+vértices $P$, $Q$ y $R$ están en $H_r^i$.
+
+Entonces, quedándonos con los puntos $P$ y $Q$, como pertenecen al mismo
+semiplano $H_r^i$, aplicando el [](#th-caracterizacion-semiplano){.nameref}
+tenemos que $[P, Q] \cap r = \emptyset$, cosa que contradice la hipótesis de
+la que partimos.
+:::
+
+<!--
+Podríamos investigar un poco más sobre este teorema y demostrar que siempre
+se cortará solo a uno de los otros dos segmentos, salvo cuando la recta $r$
+pase por uno de los vértices.
+
+Cualquier recta que pase por uno de los vértices, cortará, necesariamente, a
+los tres segmentos del triángulo.
+
+Eso es lo que entiendo yo a simple vista. Ahora, quedaría demostrarlo.
+-->
+
+Este teorema tiene una historia importante detrás, pues se utilizó en el
+siglo XIX como uno de los axiomas de la geometría euclidea plana por el
+matemático alemán Moritz Pasch (1843--1930), quien se dio cuenta de la
+necesidad de un axioma que desempeñe un papel equivalente al axioma de
+separación.
+
+En el siglo TKTK, se tenían establecidos los axiomas de la geometria
+euclidea, tanto plana como espacial. Hilbert hizo un esfuerzo por reducir
+los axiomas de esta (espacial, la más general), dejándolos en 21.
+Posteriormente, se vio que había uno que en realidad no se requería como
+axioma, sino que podía deducirse de los demás. Es el que se conocía hasta
+entonces como _axioma de Pasch_, pasando a ser, desde entonces, un teorema.
+El problema es que el calificarlo de axioma era algo bastante asentado en la
+comunidad matemática.
+
+Personalmente, creo que va siendo hora de actualizar su nombre; por eso
+prefiero llamarlo Teorema de Pasch.
+
+<!-- Creo que ese proceso que hizo Hilbert es lo que John Stillwell llama
+_reverse mathematics_. Bueno, no estoy seguro. Quizás sea otra cosa. -->
+
+
+
+

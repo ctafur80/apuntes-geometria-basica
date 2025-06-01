@@ -1,0 +1,458 @@
+
+
+
+
+## Contexto general de la asignatura {.unnumbered}
+
+Esta asignatura trata de la geometría tradicional desde un enfoque
+tradicional. Lo primero es porque se trata la **geometría euclidea**,^[creo
+que también se puede usar el adjetivo _euclidiana_] que es la primera que
+creó la humanidad, al ser la más "natural" para nuestra experiencia diaria
+física con el mundo.
+
+El mayor aporte a esta se debe al matemático Euclides de Alejandría, quien
+la compiló en el siglo III a.C. en su famosísimo libro titulado _Los
+Elementos_, donde se recogía todo el conocimiento sobre esta materia
+acumulado hasta su fecha tras ser estudiada durante varios siglos en algunas
+civilizaciones de la Antigüedad como el Antigüo Egipto y Babilonia.
+
+El gran logro de Euclides no fue únicamente hacer esa compilación, sino que
+fue a quien se le ocurrió el formalismo con el que se suele presentar el
+conocimiento matemático. Eso de presentar las matemáticas en una secuencia
+de axioma^[en su día, los llamaban _postulados_], teorema y demostración.
+_Los Elementos_ fue el primer libro en presentar de esta forma el
+conocimiento matemático. Desde entonces, este es el modo que se ha adoptado
+en todo el mundo para hacer matemáticas.
+
+En cuanto a lo del "enfoque tradicional", me refiero a que se trata del que
+se seguía en esa época. Entonces se le conocía simplemente como _geometría_,
+a secas, pero actualmente se le acompaña de adjetivos para no confundirla
+con enfoques alternativos que surgieron posteriormente y que alcanzaron
+mucha aceptación, como la geometría analítica, inventada por el matemático y
+filósofo francés René Descartes en el siglo XVII,^[e independientemente por
+Pierre de Fermat] que, aunque trata la misma geometría que la de Euclides,
+usa un enfoque distinto, basado en coordenadas y gracias a esto se puede
+hacer uso del álgebra. En muchas situaciones, este otro enfoque permite
+resolver problemas o hacer demostraciones de modo más fácil que desde la de
+Euclides.
+
+Los adjetivos que recibe ahora la geometría al estilo de Euclides son
+_sintética_, _intrínseca_, _axiomática_, _conjuntista_, etc. Otras veces,
+hay quien simplemente la llama _geometría euclidea_.
+
+Esta asignatura trata, por tanto, tal y como he mencionado, de la geometría
+sintética. Aunque la tratamos desde un enfoque mixto, es decir, que también
+hacemos uso del álgebra de los números reales, no la usamos constantemente,
+como sí se hace en el enfoque analítico de esta misma geometría.
+
+Ignora deliberadamente el álgebra, que podríamos aplicar para
+llegar más fácilmente a muchos resultados, pero estaríamos entonces en la
+geometría analítica. Aunque usemos números, no lo haremos constantemente
+como se hace en la geometría analítica. Nos basaremos principalmente en
+objetos más elementales: los conjuntos. Estaremos más "cerca" de la base de
+las matemáticas. Debido a esto, se requiere cierta base en lógica y teoría
+de conjuntos.
+
+<!-- ¿Está obsoleta actualmente la geometría sintética? -->
+
+Debe ser consciente de que ambas geometrías (sintética y analítica) son la
+misma, de ahí que me refiera a que son _enfoques_ diferentes. En @venema, en
+lugar de _enfoque_ los califican de _modelos_ (_models_). No obstante,
+también existen diversas geometrías no euclidianas, solo que no son
+intuitivas o naturales para nosotros y, debido a esto, se inventaron mucho
+más tarde. Estas otras usan una base axiomática ligeramente diferente a la
+euclidiana, cosa que produce cambios muy relevantes en el comportamiento de
+todo lo que se estudia en estas respecto a la euclidiana.
+
+De este otro tipo de geometrías, aquí tocaremos únicamente ---y por
+encima--- a la geometría hiperbólica. El conocimiento de espacios métricos
+en general y de la geometría euclidea sintética nos servirá para el estudio
+de la geometría hiperbólica, como verá.
+
+
+
+
+
+
+
+
+
+/*
+Esta geometría es algo distinta a la geometría analítica, es decir, la de
+las coordenadas. La geometría que vemos aquí hay quien la califica de
+_sintética_, _intrínseca_ o _axiomática_, pero en sus orígenes era
+simplemente _la_ geometría, ya que era la única que existía.
+
+Me refiero a la Grecia Antigua, principalmente, al compendio que hizo
+Euclides de Alejandría en su libro titulado _Los Elementos_. TKTK
+
+Al contrario de lo que sucede con la geometría analítica, en esta estamos
+muy en contacto con la teoría de conjuntos, por lo que creo que
+_conjuntista_ sería un buen calificativo, al contrario que los que mencioné
+antes.
+
+En realidad, la analítica también surge de la teoría de conjuntos, al igual
+que todo en matemáticas, pero se trata de un área de las matemáticas a un
+nivel de abstracción muy elevado y, en lugar de manipular conjuntos, emplea
+constantemente números y sus operaciones.
+
+En el fondo la geometría sintética no es muy distinta a lo que se ve en
+asignaturas de dibujo técnico en educación primaria y en secundaria, en las
+que hace demostraciones auxiliándose de regla y compás. Aquí, también
+usaremos esas herramientas, pero mediante la teoría de conjuntos.
+
+En realidad, hay que precisar y calificarla de euclidiana, ya que
+posteriormente surgieron también otras TKTK.
+
+El concepto de espacio métrico, que se explica en el capítulo 1, se podría
+considerar que pertenece a todas las geometrías. Sin embargo, como verá, el
+libro trata básicamente de la geometría euclidiana. Tiene un capítulo
+dedicado a la geometría hiperbólica pero se puede considerar una extrañeza
+y, de hecho, es algo sobre lo que normalmente no se pregunta en los
+exámenes.
+
+
+
+<!-- TODO Modelos etc. Según Venema, la geometría analítica es un modelo de
+la geometría euclidiana. -->
+
+
+
+
+
+Esta asignatura es parecida a las asignaturas de geometría de la educación
+primaria y la secundaria, excluyendo a la geometría analítica. Muchas veces,
+se incluyen esos contenidos dentro de una asignatura de dibujo técnico,
+técnicas de representación geométrica, etc.
+
+Presenta un enfoque de hacer geometría distinto al de la geometría analítica
+(_analytic geometry_), que se basa en el uso de coordenadas, y, en última
+instancia, de números y sus operaciones.
+
+En realidad, esta asignatura trata ciertos conceptos generales de la
+geometría _sintética_ (_synthetic geometry_), es decir, la geometría desde
+un punto de vista axiomático que avanza en su conocimiento por medio de
+deducciones haciendo uso de la lógica. También, hay quien la llama
+_geometría axiomática_, como se hace en @venema.
+
+Personalmente, no me convence llamarla _axiomática_, pues TKTK. En todo
+caso, la calificaría de _conjuntista_.
+
+También, se dice que es de naturaleza intrínseca. Se dice que una entidad
+matemática es intrínseca si no depende de las coordenadas desde las que se
+mida. Debido a esto, a la geometría sintética a veces se la llama _geometría
+intrínseca_.
+
+Como caso particular de geometría sintética o intrínseca, se tiene a la
+geometría euclidiana (_Euclidean geometry_), que fue la primera geometría en
+existir. Esta se presentó formalmente por el filósofo y matemático Euclides
+de Alejandría aproximadamente en el año 300 a.C. en su famosísimo libro
+titulado _Los Elementos_, aunque en realidad lo que él hizo fue
+principalmente reunir en una obra el conocimiento de geometría que se tenía
+en algunas civilizaciones como el Antiguo Egipto y Babilonia.
+
+La geometría euclidiana es un caso particular de geometría sintética.
+Existen otras geometrías que también se podrían calificar de sintéticas,
+como la geometría hiperbólica y la geometría proyectiva.
+
+Hay que aclarar que el adjetivo _sintética_ apareció después de que surgiese
+una geometría distinta a la geometría euclidiana; concretamente, la
+analítica. Antes de esto, la geometría sintética era simplemente _la_
+geometría. No estoy seguro del todo. Quizás la geometría era la euclidiana.
+
+Lo primero que veremos será el concepto de _métrica_ o _distancia_, así como
+el de espacio métrico, que surge de forma natural de este. Se trata de un
+concepto transversal a las matemáticas; es decir, es muy abstracto y aparece
+en diversas áreas de las matemáticas.
+
+Luego pasamos a centrarnos en una geometría en concreto: la geometría
+euclidiana y esto nos llevará prácticamente toda la asignatura. Se comenzará
+por la geometría en el plano, es decir, de 2 dimensiones (2D), y,
+posteriormente, se pasará a la del espacio, 3 dimensiones (3D).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+La diferencia entre la geometría de esta asignatura y la analítica está en
+que son formalismos distintos que surgen inspirados por la misma realidad
+física. Así, la geometría analítica, tal y como hemos explicado, emplea
+coordenadas y, por tanto, números, mientras que la geometría sintética se
+basa en ciertas definiciones de las que luego haremos uso. Por ejemplo, el
+concepto de punto, recta, plano, ángulo, etc. Así, esto nos permite usar la
+regla y el compás, herramientas que conocerá de las asignaturas de dibujo
+técnico.
+
+
+
+
+
+
+La geometría analítica euclidiana es como la geometría euclidiana solo que
+sustituye algunos de sus axiomas por el formalismo de los números reales.
+
+No es exactamente una simple sustitución de axiomas, sino una reformulación
+de la geometría. La geometría euclidiana clásica se funda en una serie de
+axiomas, formulados en términos de conceptos geométricos básicos como
+puntos, rectas y ángulos. En cambio, la geometría analítica introduce un
+marco algebraico y el formalismo de los números reales para representar esos
+mismos conceptos.
+
+
+Al ser una forma distinta de abordar los problemas sobre geometría, es
+posible que un estudiante de educación secundaria logre resolver problemas
+con la geometría analítica que por medio de la geometría euclidiana
+resultasen casi imposibles a un geómetra muy experimentado, como, por
+ejemplo, el mismísimo Euclides.
+
+
+
+
+
+La geometría sintética ha influido en otras geometrías más modernas, como la
+geometría proyectiva (_projective geometry_) y la geometría diferencial
+(_differential geometry_).
+
+
+
+
+<!--
+pero desde un punto de vista distinto al que suelen estar acostumbrados los
+estudiantes de la universidad. No se usarán coordenadas, como se hace en la
+geometría analítica, sino que se aborda la geometría de forma *sintética*
+(_synthetic_), que curiosamente es como se hacía en sus comienzos. Esta se
+basa en la aplicación directa de los axiomas de los que se parte.
+
+Es muy relevante hablar de un texto que fue el que asentó el conocimiento de
+la geometría hasta su época: los _Los Elementos_, del filósofo y matemático
+Euclides de Alejandría, sobre el siglo III a.C. Además de la geometría, es
+un texto enormemente relevante porque fue el primero que adoptó la forma de
+presentar el formalismo de las matemáticas que se ha seguido usando desde
+entonces. Me refiero a partir de unos axiomas (que en esa época solían
+llamar _postulados_) y deducir de estos unos teoremas, proposiciones, etc.
+
+Como seguramente sepa, el filósofo y matemático René Descartes creó en el
+siglo TKTK la geometría analítica (también conocida como geometría
+cartesiana),[^geom-analitica-fermat] que se basa en el uso de coordenadas, y
+esta alcanzo una gran aceptación y se puede decir que "desplazó" a la
+sintética. Además, en los siglos XVII y XIX la geometría perdió relevancia
+TKTK, pues las matemáticas encontraron un "filón" en el cálculo de Isaac
+Newton. Sin embargo, gracias a algunos matemáticos como TKTK Coxeter, se
+retomó el uso de la geometría TKTK.
+
+[^geom-analitica-fermat]: De forma análoga a como sucedió con el cálculo, la
+  geometría analítica también fue inventada o descubierta de forma
+  independiente por otro científico relevante en esa época. En este caso, se
+  trata de Pierre de Fermat.
+
+La geometría sintética tiene relación con lo que se conoce como las
+_técnicas de representación geométrica_, que sería como trasladar al dibujo
+en un papel esta geometría que estudiamos aquí. Sin embargo, no se
+estudiarán las técnicas para representar TKTK.
+
+Como se verá, aunque el grueso de la asignatura trata de la geometría de
+Euclides, se verán también otras de tipos distintos, como, por ejemplo, la
+hiperbólica, pero no se dedicará mucho tiempo a esto.
+-->
+
+---
+
+
+La geometría, aunque supuso, junto con la teoría de números, históricamente,
+los inicios de las matemáticas, después tuvo una época en la que se la
+relegó. TKTK.
+
+Coxeter se puede decir que la rescató. TKTK.
+
+Se suele enseñar en la educación primaria, principalmente, porque supone una
+forma de acostumbrar al alumno a hacer razonamientos matemáticos. Es decir,
+en lugar de aplicar algoritmos, que es lo que se suele hacer en las
+matemáticas de la educación primaria y secundaria, la geometría en esos
+cursos sí supone hacer matemáticas de verdad, es decir, en esta los alumnos
+sí hacen razonamientos lógico-deductivos, que es en lo que se basan en mayor
+medida las matemáticas. TKTK.
+
+Incluso en muchos grados universitarios de matemáticas se han eliminado
+asignaturas de geometría como esta. En todo caso, dan algunos de estos
+contenidos como parte de otras asignaturas TKTK.
+
+Tal y como se explica en la introducción de TKTK, este curso sirve como base
+para otros cursos de matemáticas, como los de geometría analítica, topología
+y geometría diferencial.
+
+
+
+Actualmente, la geometría sintética no es algo a lo que se le dé gran
+importancia en los currículos. De hecho, hay muchos profesores del grado
+universitario de matemáticas que son partidarios de eliminar este tipo de
+asignaturas de los planes de estudio, dejando únicamente, el contenido de
+geometría analítica.
+
+
+
+
+Vamos a hacer un repaso superficial de los contenidos de la asignatura. Se
+puede dividir en tres bloques.
+
+- _Bloque I_. Espacios métricos. De forma poco técnica, se podría definir
+  como un lugar en el que se pueden medir distancias.
+
+  En todas estas partes se estudian las aplicaciones (también llamadas
+  funciones) entre los objetos. En concreto, un tipo de aplicación muy
+  relevante son las isometrías, que son en las que se conserva algún
+  aspecto TKTK.
+
+  En realidad, esta asignatura, que consta de un solo tema, explica un
+  concepto muy general y transversal a las matemáticas: el espacio métrico
+  y la distancia. Las otras partes tratan sobre cosas más concretas.
+
+- _Bloque II_. Plano euclideo. Se estudian los axiomas de Euclides en los
+  que se sustenta la geometría euclídea para dos dimensiones. Es interesante
+  el quinto de estos axiomas, que, como veremos, tiene bastante "juego".
+
+  También se estudian las isometrías del plano euclideo, que, como hemos
+  dicho antes, serán las aplicaciones (o transformaciones) en las que se
+  preservan las distancias.
+
+  También, se estudian los ángulos, y así se pone más interesante la cosa.
+
+  También, se estudia el teorema de Tales, que es una propiedad muy
+  interesante. Este nos conduce de forma natural al estudio de las razones
+  trigonométricas, una parte muy importante de la geometría. Estas son las
+  que ya habrá estudiado en trigonometría: seno, coseno, etc. También, se
+  estudia aquí el teorema de Pitágoras; famosísimo.
+
+  Muy importante será también el capítulo dedicado a las semejanzas, que
+  son un tipo de aplicaciones. Al contrario de las isometrías, en estas
+  las distancias no se conservan, pero sí se conservan otras cosas, como,
+  por ejemplo, los ángulos. Además, como veremos, las distancias, aunque
+  no se presenven, sí se encuentran en una relación constante, a la que se
+  conoce como _razón_.
+
+  También, se estudian las circunferencias. Se estudia aquí una operación
+  relacionada con las circunferencias llamada _inversión_. Y será esta
+  operación un preámbulo para la geometría hiperbólica, que también
+  estudiaremos. Esta geometría, curiosamente, es como la geometría plana
+  salvo porque no se cumple el quinto axioma, de ahí que dijéramos antes
+  que ese axioma de bastante "juego".
+
+- _Bloque III_. Geometría en el espacio. Se comienza por el estudio de los
+  polígonos, que son figuras geométricas formadas por segmentos.
+
+  También, se verán los axiomas de la geometría tridimensional, al igual
+  que se hizo para la bidimensional. También, se estudiarán las isometrías
+  para este espacio. También, se estudiará el concepto análogo a los
+  polígonos pero para 3 dimensiones: los poliedros.
+
+
+
+
+
+Por lo que dice el tutor, esta asignatura suele costar bastante a los
+estudiantes.
+
+
+
+
+
+
+El término "analítica" en "geometría analítica" proviene de la idea de
+analizar o descomponer problemas geométricos en partes algebraicas mediante
+el uso de coordenadas y ecuaciones. Este enfoque fue desarrollado por René
+Descartes y Pierre de Fermat, simultáneamente y de forma independiente entre
+sí, quienes mostraron que se podía representar la geometría con expresiones
+algebraicas, permitiendo así "analizar" las relaciones geométricas de forma
+sistemática.
+
+Aunque hoy en día la palabra "análisis" se asocia mayormente a la rama del
+cálculo infinitesimal y el estudio de funciones, en el contexto de la
+geometría analítica se refiere a esta metodología de transformar problemas
+geométricos en problemas algebraicos. En esencia, la denominación resalta el
+método de "análisis" que permite abordar y resolver cuestiones geométricas
+utilizando herramientas del álgebra; no obstante, esto no implica una
+relación directa con el análisis matemático moderno.
+
+
+
+
+
+Existe bastante confusión sobre las formas de llamar a lo que conocemos
+previamente como _geometría_. Al final, la referencia con la que me he
+aclarado a este respecto es @venema. Tal y como explica en la pág. 19, la
+geometría analítica euclidiana es un _modelo_ (_model_) de geometría
+euclidiana (axiomática). Además de esto, también es un modelo de la
+geometría de incidencia (_incidence geometry_), siendo esta última otra
+geometría axiomática, es decir, otro sistema formal constituido por ciertas
+definiciones y axiomas.
+
+En cualquier caso, Euclides mostró la geometría de las dos formas: tanto
+como un sistema axiomático (geometría axiomática) como un modelo de este, es
+decir, la aplicación de este sistema axiomático al mundo real.
+
+Así, tenemos como ejemplos de sistemas axiomáticos a la geometría de
+incidencia y la geometría euclidiana. Estos son, como decimos, sistemas
+axiomáticos. TKTK.
+
+
+
+
+
+
+
+Al hablar de los sistemas axiomáticos, y más concretamente de la geometría
+euclidiana axiomática, surge la cuestión de si las matemáticas surgen del
+mundo real o, si por el contrario, no son más que rompecabezas que se nos
+presentan partiendo de conjuntos arbitrarios de axiomas.
+
+Evidentemente, las matemáticas suelen partir de situaciones que se nos
+presentan en el mundo real.
+
+Sobre esta cuestión, también estaría bien consultar el concepto de _reverse
+mathematics_. John Stillwell escribió un libro sobre este tipo de
+matemáticas.
+
+Se podría decir que _la_ geometría es la geometría axiomática. Luego, se
+tienen instancias de estas, es decir, casos particulares, que son
+geometrías, como la geometría euclidiana, la geometría de incidencia, la
+geometría analítica, etc. Creo que a estas, en @venema, las llaman _modelos_
+(_models_).
+
+
+
+Como ve, al estudiar la geometría axiomática se presentan cuestiones sobre
+qué es un sistema formal, paralelamente a lo que sucede al estudiar la
+teoría de conjuntos. Viene bien verlo desde estos dos puntos de vista.
+*/
+
+
+---
+
+
+La dificultad principal de esta asignatura está en que debemos demostrar,
+con las pocas herramientas de las que partimos, cosas que nos resultan
+intuitivas y naturales, por nuestra experiencia diaria con el mundo físico.
+
+Esas cosas son los axiomas y nuestro conocimiento de la lógica matemática y
+la teoría de conjuntos.
+
+
+
+---
+
+El Axioma P3 (de la Regla Graduada) en cierto modo "contamina" nuestra
+geometría, al introducir el uso de los números reales y su operación suma.
+
+
+
+
+

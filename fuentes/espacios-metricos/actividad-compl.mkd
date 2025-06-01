@@ -1,0 +1,157 @@
+
+
+
+### Ejercicios y actividad complementaria
+
+::: exercise
+Dada la aplicación $d_E : \rset^2 \times \rset^2 \longrightarrow \rset$,
+definida por:
+
+$$ d_E(x, y) = \sqrt{(x_1 - y_1)^2 + (x_2 - y_2)^2} $$
+
+demostrar que $(\rset^2, d_E)$ es un espacio métrico.
+:::
+
+::: exercise
+Sean $M$ un conjunto no vacío, y $\delta : M \times M \longrightarrow \rset$
+la función dada por
+
+$$
+\delta(a, b) =
+\begin{cases} 
+  0 & \text{si } a = b \\
+  1 & \text{si } a \neq b
+\end{cases}
+$$
+
+demostrar que $\delta$ es una métrica sobre $M$. Esta métrica se llama la
+_métrica discreta_.
+
+Veamos si se cumplen las condiciones. Suponemos $a, b, c \in M$.
+
+Tenemos que
+
+$$ \delta(a, a) = 0 $$
+
+con lo que se cumple (i).
+
+Si $a \neq b$, tenemos que
+
+$$ \delta(a, b) = 1 > 0 $$
+
+con lo que se cumple (ii).
+
+Para la propiedad (iii), veamos dos casos distintos. Por un lado, se tiene
+el caso de que $a = b$; entonces,
+
+$$ \delta(a, b) = 0 = \delta(b, a) $$
+
+El otro caso sería $a \neq b$. Se tendría
+
+$$ \delta(a, b) = 1 = \delta(b, a) $$
+
+Veamos ahora la propiedad (iv). Supongamos el caso en el que $a \neq b$, $a
+\neq c$ y $b \neq c$. Se tiene entonces que
+
+$$
+\begin{align*}
+  \delta(a, c) &= 1 \\
+  \delta(a, b) &= 1 \\
+  \delta(b, c) &= 1 \\
+\end{align*}
+$$
+
+Entonces, se cumple
+
+$$ \delta(a, c) \leq \delta(a, b) + \delta(b, c) $$
+
+pues se tendría
+
+$$ 1 \leq 1 + 1 = 2 $$
+
+Para los demás casos como, por ejemplo, $a \neq b$, $a \neq c$ y $b = c$, se
+comprobaria también fácilmente, pero lo dejamos sin demostrar.
+:::
+
+::: exercise
+Sea $(M, \delta)$ un espacio métrico. Demostrar la siguiente afirmación:
+
+Para toda terna $x, y, z \in M$, se tiene
+
+$$ |\delta(x, y) - \delta(y, z)| \leq \delta(x, z) $$
+:::
+
+::: exercise
+Sea $d_R : \rset \times \rset \longrightarrow \rset$ la aplicación definida
+por $d_R(x, y) = |x - y|$. El objetivo del ejercicio es encontrar todas las
+isometrías de $(\rset, d_R)$.
+
+a) Demostrar que $(\rset, d_R)$ es un espacio métrico.
+
+b) Demostrar que para $\sigma \in \{{-1},1\}$ y $\tau \in \rset$, la
+  aplicación $f : \rset \longrightarrow \rset$ definida por $f(x) =
+  \sigma x + \tau$ es una isometría de $(\rset, d_R)$.
+
+c) Sea $g : \rset \longrightarrow \rset$ una isometría de $(\rset, d_R)$ que
+  fija a $a$ y $b$, siendo $a \neq b$. Demostrar que $g =
+  \text{id}_{\rset}$.
+
+d) Sea $h : \rset \longrightarrow \rset$ una isometría de $(\rset, d_R)$.
+  Demostrar que existen $\sigma \in \{{-1},1\}$ y $\tau \in \rset$ tales
+  que: $$h(x) = \sigma x + \tau, \quad \text{para todo } x \in \rset.$$
+:::
+
+::: exercise
+Sean $\rset^2 = \rset \times \rset$ y las aplicaciones $d_R, \delta :
+\rset^2 \times \rset^2 \longrightarrow \rset$ siguientes:
+
+$$
+  \begin{align*}
+    d_R(a, b) &= |a_1 - b_1| + |a_2 - b_2| \\
+    \delta(a, b) &= \max(|a_1 - b_1|, |a_2 - b_2|)
+  \end{align*}
+$$
+
+donde $a = (a_1, a_2)$ y $b = (b_1, b_2) \in \rset^2$.
+
+a)  Demostrar que $d_R$ y $\delta$ son métricas sobre $\rset^2$.
+
+b)  Comprobar que $d_R$ y $\delta$ son distintas, encontrando un par $(a,
+    b)$ de $\rset^2 \times \rset^2$ para el que $d_R(a, b) \neq \delta(a,
+    b)$.
+:::
+
+::: exercise
+Sea $G = (M, A)$ el grafo siguiente,
+
+![Grafo $G$](./figuras/grafo-g.svg){ scale="80%" }
+
+consideramos la métrica $\delta_G$ que se vio en un ejercicio anterior, que
+viene dada por la longitud del camino más corto entre los dos vértices
+dados.
+
+a)  Calcular las distancias de cualquier vértice de $G$ al vértice $V$.
+b)  Encontrar un elemento de $\text{Isom}(M)$ que tenga orden 3, es decir $g
+    \in \text{Isom}(M)$ tal que $g \circ g \circ g = \operatorname{id}(M)$.
+c)  Describir los segmentos $[V, X]$ y $[V, W]$.
+:::
+
+::: exercise
+Se considera el espacio métrico $(\rset^2, d_R)$ del Ejercicio 1.6.
+
+a)  Determinar $[a, b]$, para $a, b \in \rset^2$.
+b)  Dibujar $[a, b]$ para $a = (1,1)$, $b = (3,2)$.
+:::
+
+::: { .exercise data-label="Actividad complementaria" }
+En la dirección web <http://www.uv.es/montesin/>, en el enlace "Espacios
+métricos", se descarga el programa (de uso libre) MetricasR2, que permite
+trabajar con distancias definidas en $\rset^2$. Este programa está realizado
+por los profesores de la Universidad de Valencia Ángel Montesinos y Juan
+Monterde. Entre otras cosas, permite dibujar los segmentos entre dos puntos
+de $\rset^2$ para varias distancias predefinidas. ¡A veces sorprende lo que
+puede llegar a ser un segmento!
+:::
+
+
+

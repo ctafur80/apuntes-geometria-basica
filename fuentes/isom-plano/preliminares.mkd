@@ -1,0 +1,206 @@
+
+
+
+
+### Preliminares
+
+A continuación presentamos el concepto de _invariante_, que no solo
+pertenece a la geometría, sino que se usa en todas las matemáticas y es muy
+interesante y útil para hacer definiciones. En nuestro caso en particular,
+aquí lo usaremos para hacer la distinción de los tipos de isometría que
+existen, que es la meta principal de este capítulo.
+
+::: {.deffinition #def-invariante data-label="Definición de Invariante" }
+Sea $\mathcal{M}$ un conjunto no vacío y la aplicación $\phi: \mathcal{M}
+\longrightarrow \mathcal{M}$.
+
+1.  Se dice que $P \in \mathcal{M}$ es un _punto fijo_ de $\phi$ si $\phi(P)
+    = P$.
+2.  Un subconjunto $\mathcal{D} \subseteq \mathcal{M}$ se llama un
+    _subconjunto invariante_ por $\phi$ si $\phi(\mathcal{D}) =
+    \mathcal{D}$.
+:::
+
+Advierta que en un subconjunto invariante no tienen por qué ser fijos todos
+sus puntos. Es decir, el subconjunto invariante será "fijo" de forma global,
+pero no local, es decir, en todos sus puntos.
+
+Muchas veces, se llama simplemente _invariante_ a los subconjuntos
+invariantes.
+
+Volvamos al plano euclideo. Como ya sabemos, se tiene el conjunto de las
+isometrías del plano euclidiano, $\isom(\mathbf{P}, d)$. Por teoremas y
+observaciones vistos anteriormente, todas las isometrías, es decir, todos
+los elementos de $\isom(\mathbf{P}, d)$, preservan los segmentos de recta,
+las rectas, los semiplanos y la ortogonalidad. Se preservan esos aspectos,
+es decir, un segmento se convierte, mediante una isometría de todos sus
+puntos, en otro segmento (que incluso puede coincidir).
+
+::: {.lemma #lm-isom-puntos-fijos data-label="Lema de la Isometría de dos
+Puntos Fijos"}
+Sea $g \in \operatorname{Isom}(\mathbf{P}, d)$. Si $A$ y $B$ siendo $A \neq
+B$ son dos puntos fijos de $g$, entonces todo $X \in r_{A B}$ es también un
+punto fijo de $g$.
+:::
+
+::: proof
+Tal y como sabemos por el [](#ax-p2-euclides){.nameref} y el
+[](#th-unicidad-recta-por-dos-puntos){.nameref}, por dos puntos cualesquiera
+$A$ y $B$ pasa una única recta; aquí, la designaremos por $r_{AB}$. Además,
+por el [](#th-isom-rectas){.nameref}, se tiene que $g(r_{AB})$ será una
+recta. Concretamente, esa recta contiene a $g(A)$ y $g(B)$, pero, tal y como
+hemos dicho, tenemos que $g(A) = A$ y $g(B) = B$. Por tanto, tenemos que
+
+$$ g(r_{AB}) = r_{A'B'} = r_{AB} $$
+
+<!-- TODO. Quizás, no se haga con la regla graduada. No creo que sea
+necesario. Se puede hablar de las tres posibles ubicaciones de $X$ con
+respecto a los otros dos puntos sin hablar de la regla graduada. -->
+
+Ahora, podemos aplicar el [](#ax-p3-euclides){.nameref}, y tener una
+isometría $\gamma: r_{AB} \longrightarrow \rset$ tal que, para todo par de
+puntos $X, Y \in r_{AB}$, se cumpla
+
+$$ d(X, Y) = |\gamma(X) - \gamma(Y)| $$
+
+Tomamos ahora un punto arbitrario $X \in r_{AB}$ y supongamos, sin pérdida
+de generalidad, que $\gamma(B) > \gamma(A)$. En esta situación, se tienen
+tres casos posibles:
+
+1.  $\gamma(A) < \gamma(X) < \gamma(B)$. Es decir, $X$ se encuentra entre
+    $A$ y $B$.
+2.  $\gamma(X) > \gamma(B)$ y, consecuentemente, $\gamma(X) > \gamma(A)$. Es
+    decir, $X$ está a la derecha de los otros.
+3.  $\gamma(X) < \gamma(A)$ y, consecuentemente, $\gamma(X) < \gamma(B)$. Es
+    decir, $X$ está a la izquierda de los otros.
+
+Centrémonos, de momento, en el caso 2. Tenemos
+
+$$
+  \begin{align*}
+    d(A, X) &= d(A, B) + d(B, X) \\
+    d(A, X') &= d(A, B) + d(B, X')
+  \end{align*}
+$$
+
+Operando, tenemos
+
+$$
+  \begin{align*}
+    d(A, B) &= d(A, X) - d(B, X) \\
+    d(A, B) &= d(A, X') - d(B, X')
+  \end{align*}
+$$
+
+por lo que
+
+$$ d(A, X) - d(B, X) = d(A, X') - d(B, X') $$
+
+<!-- TODO Me falta deducir este paso. -->
+
+De alguna manera, esto determina que $X' = X$, pero no llego a ver por qué.
+He probado manipulando símbolos. TKTK.
+
+Las distancias de $X$ con $A$ y con $B$ son las mismas que tienen estos
+últimos, respectivamente, con $X'$. Por tanto, se tiene necesariamente que
+$X' = X$.
+:::
+
+En la útima sección de este capítulo, se van a clasificar las isometrías.
+Para hacer una clasificación es necesario tener una noción de igualdad, o
+equivalencia. La equivalencia de isometrías será la dada por la operación
+algebraica de conjugación, tal y como se muestra en la definición siguiente.
+
+::: {.deffinition #def-conjug-isom data-label="Definición de Isometrías
+Conjugadas"}
+En $(\mathbf{P}, d)$, dadas $g, g' \in \isom(\mathbf{P}, d)$, se dice que
+$g'$ y $g$ son _conjugadas_ si existe otra isometría $h \in
+\isom(\mathbf{P}, d)$ tal que:
+
+$$ g = h g' h^{-1} $$
+:::
+
+Recuerde que esto es una forma abreviada de expresar $g = h \circ g' \circ
+h^{-1}$.
+
+Advierta que en realidad da igual el orden de las composiciones de $h$,
+pues, si en lugar de este, tomamos a su inversa, tendremos lo mismo. Por
+cierto, como las isometrías con biyecciones, tendrá una isometría inversa
+necesariamente. Por ejemplo, con $f = h^{-1}$ se tendría
+
+$$ g = h g' h^{-1} = f^{-1} g' f $$
+
+pero, al hablar en términos generales, llamarla $f$ o $h$ da igual.
+
+¿Qué quiere decir que dos isometrías $g$ y $g'$ son conjugadas? Si vemos $h$
+como un "cambio de posición de un observador", $g$ se puede obtener en
+función de $g'$ del modo siguiente: $h^{-1}$ cambia de posición el
+observador, después aplicamos $g'$ y de nuevo se vuelve a la posición
+primitiva por $h$. Así $g$ y $g'$ actúan del mismo modo salvo el cambio dado
+por $h$.
+
+El siguiente resultado, que no necesita demostración, es útil para resolver
+algunos de los ejercicios de este capítulo.
+
+::: {.theorem #th-isom-1 data-label="Teorema"}
+En $(\mathbf{P}, d)$, sean $g, g', h \in \isom(\mathbf{P}, d)$ tales que
+$g=h g' h^{-1}$, se cumple
+
+1.  Un punto $P \in \mathbf{P}$ es un punto fijo de $g$ si $y$ solo si
+    $h(P)$ es un punto fijo de $g'$.
+2.  Un subconjunto $S$ de $\mathbf{P}$ es invariante por $g$ si $y$ solo si
+    $h(S)$ es un conjunto invariante por $g'$.
+:::
+
+En realidad, el primer punto es un caso particular del segundo.
+
+<!-- Quiero demostrarlo, pero no soy capaz. -->
+
+::: proof
+Punto 1. Para demostrarlo, lo primero que vamos a ver un resultado general
+de las aplicaciones. Partiendo de
+
+$$ g = h g h^{-1} $$
+
+aplicando la propiedad asociativa, que, tal y como sabemos del álgebra
+abstracta, se cumple siempre para las aplicaciones, tenemos
+
+$$
+  \begin{align*}
+    h g' h^{-1} &= g \\
+    h^{-1} h g' h^{-1} &= h^{-1} g \\
+    (h^{-1} h) g' h^{-1} &= h^{-1} g \\
+    \operatorname{id} g' h^{-1} &= h^{-1} g \\
+    g' h^{-1} &= h^{-1} g \\
+    g' h^{-1} h &= h^{-1} g h \\
+    g' &= h^{-1} g h \\
+  \end{align*}
+$$
+
+Vamos a ver primero el sentido $\Longrightarrow$.
+
+Operando ahora para el punto $P$, tenemos
+
+$$
+  \begin{align*}
+    g'(P) &= (h^{-1} g h)(P) \\
+    (g' h)(P) &= (h^{-1} g h h)(P) \\
+    (g' h)(P) &= (h^{-1} h h)(P) \\
+    (g' h)(P) &= [(h^{-1} h) h](P) \\
+    (g' h)(P) &= h(P) \\
+  \end{align*}
+$$
+
+Advierta que hemos usado la condición $g(P) = P = \operatorname{id}(P)$.
+
+TKTK.
+
+
+
+
+:::
+
+
+
+
+

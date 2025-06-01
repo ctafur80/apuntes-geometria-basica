@@ -1,0 +1,21 @@
+
+
+
+
+### Introducción
+
+El teorema de Tales es uno de los más importantes y famosos de la geometría
+euclidiana. Es el centro y el punto de partida de muchos desarrollos y
+aplicaciones de la geometría. Se cuenta que el mismo Tales (620?--540? a.C.)
+ya utilizó este resultado para medir las pirámides usando su sombra. Le
+bastó esperar el momento del día en que su propia sombra medía exactamente
+su altura, en ese momento, también la medida de la sombra de una pirámide
+era la altura de dicha pirámide.
+
+En primer lugar ofreceremos una demostración del teorema de Tales, que como
+se observará está lejos de ser fácil. A continuación nos basaremos en el
+teorema de Tales para introducir las razones trigonométricas y para medir
+ángulos.
+
+
+

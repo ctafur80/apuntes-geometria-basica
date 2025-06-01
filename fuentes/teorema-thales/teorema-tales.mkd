@@ -1,0 +1,143 @@
+
+
+
+
+### Teorema de Tales
+
+Nota. Para simplificar utilizaremos a partir de aquí la notación:
+
+$$ d(P, Q) = P Q $$
+
+donde $P$ y $Q$ son puntos del plano. Ahora llegamos a un teorema
+fundamental de la geometría euclidiana:
+
+::: {.theorem data-label="Teorema de Tales"}
+Sea un triángulo $\triangle\{P, A, B\} y$ sean $A' \in[P, A]$ y $B' \in[P,
+B]$ dos puntos tales que las rectas $r_{A' B'}$ y $r_{A B}$ son paralelas.
+En estas condiciones se tiene que
+
+$$ \frac{P A'}{P A} = \frac{P B'}{P B} $$
+:::
+
+<!-- ![Figura 5-4 Demostración del teorema de
+Tales](attachment:figura-5-4.png) -->
+
+::: proof
+Sea $C$ el punto del plano que hace que $(P, A, B, C)$ sea un paralelogramo.
+
+Para un número $n \in \mathbb{N}$, $n \geq 2$ dividimos el lado $[P, A]$ en
+$n$ segmentos de la misma longitud tomando los puntos de división
+
+$$ P = A_0, A_1, A_2, \ldots, A_{n-1}, A_n = A $$
+
+sobre $[P, A]$ como está indicado en la figura 5-4, verificando
+
+$$ d\left(A_{k}, A_{k + 1}\right) = \frac{1}{n} \cdot d(P, A), \quad k = 0,
+\ldots, n-1 $$
+
+Repetimos este proceso dividiendo el lado $[P, C]$ de la misma manera con la
+ayuda de los puntos de división
+
+$$ P = C_0, C_1, C_2, \ldots, C_{n-1}, C_n = C $$
+
+Para $k = 0, \ldots, n$ introducimos las rectas $a_k \parallel r_{P C}$
+pasando por $A_k$ y $c_k \parallel r_{P A}$ pasando por $C_k$. Así, el
+paralelogramo $(P, A, B, C)$ se divide en $n^2$ pequeños paralelogramos como
+ilustra la figura 5-4.
+
+Para $k, l = 0, \ldots, n$, notamos $P_{k l}$ el punto de intersección de
+$a_k$ y $c_l$ y llamemos $B_k = P_{k k}, k = 0, \ldots, n$. Según la
+observación 5.3, los puntos $A_k, A_{k + 1}, P_{k + 1, l}, P_{k l}$ forman
+un paralelogramo, idem para los puntos $C_{l + 1}$, $C_{l}$, $P_{k l}$,
+$P_{k, l + 1}$. Según la observación 5.2(iii) se tiene por tanto
+
+$$ P_{k l} P_{k + 1, l} = \frac{P A}{n}, \quad P_{k l} P_{k, l + 1} =
+\frac{P C}{n}, \quad k, l = 0, \ldots, n-1 $$
+
+Consideramos ahora los puntos $B_k$. Se sabe que la reflexión central
+$\sigma_{B_k} \in$ $\operatorname{Isom}(\mathbf{P})$ envía toda recta $r$
+sobre una recta paralela a $r$ (teorema 3.13). En particular se tiene
+$\sigma_{B_k}\left(c_k\right) = c_k$. Como $P_{k-1, k} B_k = B_{k} P_{k + 1,
+k}$ se sigue que $\sigma_{B_k}\left(P_{k-1, k}\right) = P_{k + 1, k}$. La
+recta $a_{k-1}$ es enviada por tanto sobre una recta paralela a $a_{k-1}$
+pasando por $P_{k + 1, k}$. Ahora bien, $a_{k + 1}$ es una recta paralela a
+$a_{k-1}$ pasando por $P_{k + 1, k}$. Según el axioma de las paralelas se
+tiene por tanto $\sigma_{B_k}\left(a_{k-1}\right) = a_{k + 1}$. Por la misma
+razón se tiene también $\sigma_{B_k}\left(c_{k-1}\right) = c_{k + 1}$. Hemos
+demostrado así que
+
+$$ \sigma_{B_k}\left(B_{k-1}\right) = B_{k + 1}, \quad k = 1, \ldots, n-1 $$
+
+La propiedad (2) implica que los puntos $B_{k-1}$, $B_k$ y $B_{k + 1}$ están
+alineados y que $B_{k-1} B_k = B_k B_{k + 1}$. Teniendo en cuenta esto para
+$k = 1, \ldots, n-1$, llegamos a la conclusión siguiente:
+
+$$ B_{k} \in[P, B], \quad B_{k} B_{k + 1} = \frac{P B}{n}, \quad k = 0,
+\ldots, n-1 $$
+
+De la expresión anterior se tiene que
+
+$$ \frac{P A_{k}}{P A} = \frac{P B_{k}}{P B} $$
+
+en efecto, cada una de estas razones es igual a $\frac{k}{n}$. Hemos
+demostrado así el teorema de Tales para el caso en que $A'$ es de la forma
+$A_k$. Para el caso general elegimos $k$ (siempre con $n$ dado) tal que $A'
+\in\left[A_k, A_{k + 1}\right]$. Podemos suponer que $A'$ es diferente de
+$A_k$ y $A_{k + 1}$ pues de otro modo estaríamos en un caso ya abordado. La
+recta $a' = r_{A' B'}$ es paralela a $a_k$ y a $a_{k + 1}$ y separa el plano
+en dos semiplanos uno de los cuales contiene a $A_k$ y el otro a $A_{k +
+1}$. Por tanto, el punto de intersección $B'$ de $a'$ y $r_{P B}$ está
+situado sobre el segmento $\left[B_k, B_{k + 1}\right]$. Sabiendo que $A'
+\in\left[A_k, A_{k + 1}\right]$ se tiene ahora
+
+$$ \frac{P A_k}{P A} \leq \frac{P A'}{P A} \leq \frac{P A_k}{P A} +
+\frac{1}{n} $$
+
+por $(4):$
+
+$$ \frac{P B_k}{P B} \leq \frac{P A'}{P A} \leq \frac{P B_k}{P B} +
+\frac{1}{n} $$
+
+y dado que $B' \in\left[B_k, B_{k + 1}\right]$ y $B_k B_{k + 1} = \frac{P
+B}{n}$:
+
+$$ \frac{P B'}{P B}-\frac{1}{n} \leq \frac{P A'}{P A} \leq \frac{P B'}{P B}
++ \frac{1}{n} $$
+
+Ya que (5) es válido para todo $n \in \mathbb{N}-\{0\}$, el teorema queda
+así demostrado.
+:::
+
+::: {.corollary data-label="Corolario del Teorema de Tales"}
+En las condiciones del teorema se tiene:
+
+$$ \frac{P A'}{P A} = \frac{P B'}{P B} = \frac{A' B'}{A B} $$
+:::
+
+::: proof
+La igualdad $\frac{P A'}{P A} = \frac{P B'}{P B}$ resulta de aplicar el
+teorema de Tales.
+
+Sea $\tau$ una traslación paralela a la recta $r_{P B}$ y que transforma
+$B'$ en $B$. Entonces $\tau(P) \in r_{P B}$ y como $r_{A' B'} \parallel r_{A
+B}, \tau\left(A'\right) \in r_{A B}$, pues las traslaciones envían rectas a
+rectas paralelas (Ejercicio 3.1.B). Como $r_{A' \tau\left(A'\right)}
+\parallel r_{B' B} = r_{P B}$ y $A' \in[P, A]$, por el axioma de Pasch
+aplicado al triángulo $\triangle\{B, P, A\}$, $\tau\left(A'\right) \in[A,
+B]$. Como $r_{P A} \parallel r_{\tau(P) \tau\left(A'\right)}$ y
+$\tau\left(A'\right) \in[A, B]$, otra vez por el axioma de Pasch, $\tau(P)
+\in[B, P]$. Ahora aplicamos de nuevo el teorema de Tales al triángulo
+$\triangle\{B, P, A\}$ y a $\tau(P) \in[B, P], \tau\left(A'\right) \in[A,
+B]$, y el hecho de ser $\tau$ una isometría:
+
+$$ \frac{P B'}{P B} = \frac{\tau\left(B'\right) \tau(P)}{B P} =
+\frac{\tau\left(B'\right) \tau\left(A'\right)}{B A} = \frac{B' A'}{B A} $$
+:::
+
+<!-- ![Figura 5-5 Demostración de $\frac{P B'}{P B} = \frac{A' B'}{A
+B}$](attachment:figura-5-5.png) -->
+
+
+
+
+

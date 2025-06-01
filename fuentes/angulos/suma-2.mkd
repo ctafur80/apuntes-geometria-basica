@@ -1,0 +1,82 @@
+
+
+
+
+### Suma de los ángulos de un triángulo
+
+Una de las consecuencias del axioma de las paralelas es que si $a$ y $b$ son
+dos rectas paralelas entonces toda recta que corta a $a$, corta también a
+$b$.
+
+::: {.deffinition #def-angulos-alt-int data-label="Definición de Ángulos
+Alternos-Internos"}
+Sean $a$ y $b$ dos rectas paralelas y $c$ una recta que corta a $a$ en el
+punto $A$ y a $b$ en el punto $B$. Sean $\angle A$ y $\angle B$ los ángulos
+con vértices $A$ y $B$. El par de ángulos $(\angle A, \angle B)$ se dice que
+es un par de ángulos alternos-internos.
+:::
+
+<!-- ![Figura 4-16 Ángulos alternos
+internos](attachment:angulos_alternos.png) -->
+
+TKTK.
+
+::: {.theorem #th-angulos-alternos-internos data-label="Teorema de la
+Congruencia de los Ángulos Alternos-Internos"}
+Si dos ángulos forman un par de ángulos alternos internos entonces dichos
+ángulos son congruentes.
+:::
+
+::: proof
+Usaremos la terminología de la [](#def-angulos-alt-int){.nameref}. Sea $M =
+\operatorname{medio}[A, B]$. Basta con probar que la media vuelta
+$\sigma_{M}$ verifica $\sigma_{M}(\angle A) = $ $\angle B$. En efecto
+$\sigma_{M}(A) = B$ y $\sigma_{M}(c) = c$. Por otra parte $\sigma_{M}(a)$ es
+una recta paralela a $a$ que pasa por $B$, luego por el Axioma de las
+paralelas, P7, $\sigma_{M}(a) = b$, y como $\sigma_{M}$ permuta los dos
+semiplanos determinados por $c$ se tiene que $\sigma_{M}(\angle A) = \angle
+B$.
+:::
+
+Obsérvese la necesidad del uso del Axioma P7.
+
+::: {.theorem #th-suma-ang-triangulos data-label="Teorema de la Suma de los
+Ángulosd de un Triángulo"}
+La suma de los ángulos de un triángulo es un ángulo llano.
+:::
+
+::: proof
+Sea $\triangle\{P, Q, R\}$ un triángulo. Tracemos por $P$ una paralela a la
+recta que contiene al lado $[Q, R]$. Entonces $\angle Q' + \angle P + \angle
+R'$ es un ángulo llano. Como $\left(\angle Q', \angle Q\right)$ y
+$\left(\angle R', \angle R\right)$ son pares de ángulos alternos-internos
+(ver la figura 4-16), por el teorema anterior tenemos que
+
+$$ \angle Q' + \angle P + \angle R' = \angle Q + \angle P + \angle R $$
+
+es un ángulo llano.
+:::
+
+<!-- ![Figura 4-17 Suma de los ángulos de un
+triángulo](attachment:suma_angulos_triangulo.png) -->
+
+Para demostrar este teorema se usa de forma esencial el Axioma de las
+paralelas, pues se basa en el teorema 4.40. En una geometría donde no
+tuviéramos el Axioma P7 puede ser que la suma de los ángulos de un triángulo
+no sea un ángulo llano, por raro que nos pueda parecer esto.
+
+::: exercise
+En un triángulo o bien todos los ángulos son agudos o bien hay un ángulo no
+agudo (recto u obtuso) y los otros dos son agudos.
+:::
+
+::: {.deffinition data-label="Definición de "}
+Un triángulo donde todos los ángulos son agudos se llama acutángulo, un
+triángulo con un ángulo recto se llama rectángulo y un triángulo con un
+ángulo obtuso se llama obtusángulo.
+:::
+
+
+
+
+

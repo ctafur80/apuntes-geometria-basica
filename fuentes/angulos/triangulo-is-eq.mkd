@@ -1,0 +1,144 @@
+
+
+
+### Triángulos isósceles y equiláteros
+
+En un ejercicio anterior, hemos definido los tres ángulos de un triángulo,
+cada uno de ellos tiene por vértice uno de los vértices del triángulo.
+
+::: {.deffinition #def-lados-op-ang-triangulo data-label="Definición de Lado
+Opuesto a un Ángulo en un Triángulo"}
+Dado un triángulo $\Delta\{P_i, P_j, P_k\}$. El lado $[P_i, P_j]$, siendo $i
+\neq j$, y el ángulo $\angle P_k$, siendo $k \neq i$ y $k \neq j$, se dicen
+opuestos.
+:::
+
+Esta última definición nos facilita la notación.
+
+::: {.deffinition data-label="Definición de Triángulo Isósceles"}
+Un triángulo con dos lados congruentes se dice isósceles.
+:::
+
+Los triángulos isósceles tienen la siguiente propiedad de simetría.
+
+::: {.theorem data-label="Teorema"}
+Dado un triángulo isósceles $\Delta\{P, Q, R\}$, con $[P, Q]$ congruente con
+$[P, R]$, existe una reflexión $\sigma$ de modo que
+
+1.  $\sigma(P) = P$,
+2.  $\sigma(R) = Q$,
+3.  $\sigma(Q) = R$.
+
+Como $\sigma(\triangle\{P, Q, R\}) = \triangle\{P, Q, R\}$, diremos que
+$\sigma$ deja invariante a $\triangle\{P, Q, R\}$.
+:::
+
+<!-- ![Figura 4-14 Simetría de un triángulo
+isósceles](attachment:simetria_isosceles.png) -->
+
+::: proof
+La demostración es sencilla porque, tal y como vimos, esa isometría que
+buscamos es la reflexión axial de la bisectriz del ángulo $\angle P$.
+:::
+
+::: {.corollary data-label="Corolario"}
+En un triángulo isósceles $\triangle\{P, Q, R\}$ con los lados $[P, R]$ y
+$[P, Q]$ congruentes,
+
+1.  Los ángulos opuestos a los lados que son congruentes son también
+    congruentes entre si.
+2.  La mediatriz de $[Q, R]$ coincide con la bisectriz de $\angle P$.
+:::
+
+::: proof
+TKTK.
+:::
+
+::: {.deffinition data-label="Definición de Simetría de una Figura"}
+Una isometría que deja invariante una figura se llama _simetría_ de dicha
+figura.
+:::
+
+Así, por el teorema anterior todo triángulo isósceles admite una simetría
+que es una reflexión.
+
+El concepto de simetría no solo se aplica a las figuras del plano sino en
+muchos otros campos y situaciones aunque su origen es el geométrico
+presentado aquí. Las simetrías desempeñan un papel importantísimo en las
+matemáticas y en otras ciencias (ver "Una introducción a la simetría", UNED,
+Madrid 2009).
+
+::: {.deffinition data-label="Definición de Triángulo Equilátero"}
+Un triángulo equilátero es un triángulo cuyos lados son todos congruentes.
+:::
+
+Como ve, si un triángulo es equilátero, entonces también es isósceles.
+
+<!-- Categorías inclusivas y categorías exclusivas. Se puede usar la que se
+desee. -->
+
+::: {.theorem data-label="Teorema"}
+En un triángulo equilátero $\triangle\{P, Q, R\}$ hay una rotación $\rho$
+tal que $\rho(P) = Q, \rho(Q) = R, \rho(R) = P$. Como consecuencia de esto,
+en un triángulo equilátero los tres ángulos son congruentes.
+:::
+
+::: proof
+Como un triángulo equilátero es "tres veces" isósceles, existen tres
+reflexiones que son simetrías del triángulo, tomemos dos de ellas $\sigma$ y
+$\sigma'$. La rotación buscada es $\sigma \sigma'$ o $\sigma' \sigma$.
+:::
+
+::: example
+Un triángulo equilátero tiene tres simetrías que son reflexiones y dos
+simetrías que son rotaciones.
+:::
+
+Observación. Las simetrías de una figura forman un subgrupo del grupo de
+isometrías del plano que se llama el grupo de simetrías de la figura.
+
+Nota (Excursión al álgebra). Para un triángulo isósceles pero no equilátero
+el grupo de simetrías tiene dos únicos elementos: la identidad y la
+reflexión. Para un triángulo equilátero el grupo de simetrías consta de seis
+elementos: la identidad, dos rotaciones y tres reflexiones. Como se puede
+ver
+
+<!-- ![Figura 4-15 Ejes de reflexión de un triágulo
+equilátero](attachment:ejes_reflexion.png) -->
+
+En realidad, en un triángulo equilátero tenemos:
+
+  - 1 identidad,
+  - 3 reflexiones,
+  - 2 rotaciones.
+
+Cuando cogemos el grupo formado por todas las simetrías, resulta que las
+simetrías forman un subgrupo de $\isom(\mathbf{P})$. También, se tiene que
+$\operatorname{sim}(\triangle_{\text{equi}}) \simeq S_3$, es decir, el
+subgrupo de las isometrías de un triángulo equilátero es isomorfo al grupo
+de permutaciones de 3 elementos. Esto viene a decir que podemos identificar
+a cada isometría con una permutación de los tres puntos del triángulo
+equilátero, pero esto es de álgebra abstracta y no tiene por qué saberlo.
+
+En realidad, esto mismo se da para cualquier polígono regular de $n$ lados,
+pero de momento no sabemos qué son los polígonos regulares.
+
+la estructura de los dos grupos es muy distinta, es decir, con la estructura
+algebraica de los grupos de simetría se pueden distinguir ya las dos
+situaciones. Pero hay que tener cuidado, si uno se queda sólo con el grupo
+abstracto: es decir, letras y una tabla de multiplicación, en general no es
+suficiente para recuperar el tipo de simetría de la figura, se necesita algo
+más, es lo que se llama la acción del grupo sobre la figura. Por ejemplo un
+grupo de dos elementos puede ser grupo de simetrías de dos figuras, pero en
+una de ellas actuar como una media vuelta y en la otra como una reflexión.
+El concepto de acción de grupo sobre un conjunto es importantísimo no sólo
+en álgebra sino también en Geometría. Tanto es así que el matemático Félix
+Klein (1849--1925) definió geometría como el estudio de las propiedades que
+quedan invariantes cuando se define la acción de un grupo, esta idea
+permitió dar una visión uniforme a "geometrías" clásicas que se habían
+estudiado durante muchos años.
+
+
+
+
+

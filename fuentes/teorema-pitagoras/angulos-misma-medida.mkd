@@ -1,0 +1,68 @@
+
+
+
+### Dos ángulos con la misma medida son congruentes
+
+En primer lugar demostraremos que todas las medidas de ángulos entre 0 y
+$\pi$ son posibles:
+
+::: {.theorem data-label="Teorema"}
+Dado un número real $x \in[0, \pi]$, existe un ángulo $\angle V$ tal que
+$\angle V = x$.
+:::
+
+::: proof
+Si $x \in\left(0, \frac{\pi}{2}\right)$, basta construir un triángulo
+rectángulo cuyos catetos midan sen $x$ y $\cos x$. Para ello basta tomar un
+par de rectas ortogonales y aplicar el axioma de la regla graduada. Por el
+teorema de Pitágoras la hipotenusa del triángulo construido mide 1 y por
+tanto uno de los ángulos del triángulo tiene por medida $x$.
+
+Si $x \in\left(\frac{\pi}{2}, \pi\right)$, basta construir primero un ángulo
+cuya medida sea $\pi-x$ y un suplementario del ángulo construido será el
+ángulo buscado. Para $0, \frac{\pi}{2}$ y $\pi$ basta considerar un ángulo
+nulo, recto o llano respectivamente.
+
+Lo que vamos a probar a continuación es que para saber si dos ángulos son
+congruentes basta medirlos, así la medida de ángulos reduce el problema
+geométrico de saber si dos ángulos son congruentes a un problema numérico.
+:::
+
+::: {.theorem data-label="Teorema"}
+Dos ángulos $\angle P y \angle Q$ son congruentes si $y$ solo si sus medidas
+coinciden.
+:::
+
+::: proof
+En el capítulo anterior ya se demostró que si dos ángulos son congruentes
+entonces tienen la misma medida.
+
+Supongamos que $\angle P = \angle Q$ y que dicha medida está en $\left(0,
+\frac{\pi}{2}\right)$. Entonces los dos ángulos son agudos y además $\cos
+\angle P = \cos \angle Q$. Por la fórmula del Corolario 6.3 , tenemos $\cos
+^{2} \angle P + \sin^{2} \angle P = 1$ y $\cos ^{2} \angle Q + \sin^{2}
+\angle Q = 1$. Entonces sen $\angle P = \sin \angle Q$.
+
+De modo análogo a como lo hicimos en la demostración del teorema anterior,
+construimos un triángulo rectángulo $\triangle\{P, A, B\}$ de modo que
+$\angle P$ es uno de sus ángulos, $\angle A$ es el ángulo recto, tomando $P
+A = \cos \angle P, A B = \sin \angle P$ y por el teorema de Pitágoras $P B =
+1$. De modo análogo construimos $\triangle\left\{Q, A', B'\right\}$, donde
+$\angle A'$ es un ángulo recto $Q A' = \cos \angle Q = \cos \angle P = P A$
+y $Q B' = 1$.
+
+Por el axioma P5, existe una isometría $\alpha$ tal que $\alpha(P) = Q,
+\alpha(A) = A'$. Además, como $r_{A B} \perp_{A} r_{P A}$ y $r_{A' B'}
+\perp_{A'} r_{Q A'}$, entonces $\alpha\left(r_{A B}\right) = r_{A' B'}$.
+Como $A B = \sin \angle P = \sin \angle Q = A' B'$, entonces $\alpha(B) =
+B'$ o bien $\sigma_{r_{Q A'}} \circ \alpha(B) = B'$. En ambos casos los
+triángulos $\triangle\{P, A, B\}$ y $\triangle\left\{Q, A', B'\right\}$ son
+congruentes, luego los ángulos $\angle P$ y $\angle Q$ son congruentes.
+:::
+
+El caso de ángulos obtusos se deduce del hecho de que dos ángulos obtusos
+son congruentes si y solo si los suplementarios lo son.
+
+
+
+

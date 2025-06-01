@@ -1,0 +1,588 @@
+
+
+
+### Las isometrías del plano
+
+Aquí, vamos a definir las distintas clases de isometrías que existen en el
+plano euclideo. Algunas de estas se puede definir de formas diversas.
+Nosotros vamos a basar las definiciones de las más complejas en función de
+reflexiones axiales, que es también un tipo de isometría de este mismo
+espacio métrico.
+
+La razón para justificar esto se basa en un teorema muy general y "potente",
+llamado el Teorema de Cartan-Dieudonné, que viene a decir que todo
+movimiento en $\mathbb{A}^n$ se descompone como producto (composición) de a
+lo sumo $n+1$ simetrías hiperplanas. Advierta que no es un teorema sobre el
+plano euclídeo, sino un hecho general para cualquier espacio métrico.
+
+Este teorema aquí solo lo mencionamos de pasada y no vamos a demostrarlo. En
+particular, para el caso del plano euclideo, vendría a decir que toda
+isometría se descompone a lo sumo como producto de $2 + 1$ reflexiones.
+Entonces, para cualquier $f \in \isom(\mathbf{P}, d)$, se tiene que
+
+$$ f = \sigma_1 \sigma_2 \sigma_3 $$
+
+siendo $\sigma_1$, $\sigma_2$ y $\sigma_3$ reflexiones axiales.
+
+Tal y como hemos dicho, gracias a este teorema, definiremos los tipos de
+isometrías en el plano euclideo como composiciones de reflexiones axiales.
+Así, por ejemplo, la identidad, $\operatorname{id}_{\mathbf{P}}$, que, como
+ya vimos, es una isometría en este espacio métrico, tiene como puntos fijos
+a todo $\mathbf{P}$ y el número de reflexiones que la definen es 0 (advierta
+que es menor que 3).
+
+Otro caso de isometría que ya conocemos era la reflexión axial, $\sigma_r$.
+Los puntos fijos de esta son los de su eje, es decir, la recta $r$. Los
+elementos geométricos que caracterizan a esta isometría es la recta $r$.
+Evidentemente, se descompone como 1 reflexión (menor que 3).
+
+
+
+
+
+
+
+#### Reflexión axial
+
+<!-- Quizás el final sea un poco lioso. -->
+
+La construcción (geométrica) de una reflexión axial de eje una recta $r$,
+$\sigma_r$, para un punto $P$, sería tomar desde dicho punto una recta $s$
+perpendicular al eje de reflexión, $r$. Entonces, en el punto de corte de
+ambas rectas, tenemos un punto $Q \in r$. A partir de ahí, tomamos la
+distancia entre $P$ y $Q$ y movemos al punto $P$ dos veces esa distancia en
+la recta en el sentido hacia el punto $Q$.
+
+Esta construcción requiere el uso de vectores (quizás podría haber bastado
+con semirrectas TKTK), pero no hemos definido a los vectores TKTK.
+
+Es decir, básicamente hemos definido la construcción como que $f \in
+\isom(\mathbf{P}, d)$ es una reflexión axial de eje una recta $r \subseteq
+\mathbf{P}$ cuando dicha isometría es de la forma
+
+$$
+  \begin{array}{rrcl}
+    f:  & (\mathbf{P}, d) & \longrightarrow & (\mathbf{P}, d) \\
+        & P               & \longmapsto     & P + 2\overrightarrow{PQ}
+  \end{array}
+$$
+
+donde $\left(P + D(r)^{\perp}\right) \cap r = Q$, siendo $D(r)^{\perp}$ la
+dirección perpendicular a $r$.
+
+<!-- FIGURA -->
+
+En lugar de $f$ o alguna de las letras típicas, se suele emplear la notación
+con la letra sigma, $\sigma$, para las reflexiones axiales. Se suele poner
+el eje de reflexión como subíndice, $\sigma_r$.
+
+::: {.theorem #th-propiedades-reflexion data-label="Propiedades de la
+Reflexión Axial"}
+La reflexión axial de eje $r$, $\sigma_r$, tiene las propiedades siguientes,
+siendo $r$ el eje de reflexión, $X \in \mathbf{P}$ y $H^{1}$ y $H^{2}$ son
+los semiplanos determinados por $r$:
+
+1.  $\sigma_r \circ \sigma_r = \operatorname{id}_{\mathbf{P}}$.
+2.  $\sigma_r = \sigma_r^{-1}$.
+3.  $\sigma_r(X) = X$ si y solo si $X \in r$.
+4.  $\sigma_r\left(H^1\right) = H^2$ y $\sigma_r\left(H^2\right) = H^1$.
+5.  $d(X, r) = d(\sigma_r(X), r)$.
+6.  $r_{X, \sigma_r(X)} \perp r$ para todo $X \notin r$.
+:::
+
+::: proof
+Punto 1. TKTK
+
+Punto 2. Partiendo de la propiedad del punto anterior y operando,
+
+$$
+  \begin{align*}
+    \sigma_r \sigma_r &= \operatorname{id} \\
+    \sigma_r^{-1} (\sigma_r \sigma_r) &= \sigma_r^{-1} \operatorname{id} \\
+    (\sigma_r^{-1} \sigma_r) \sigma_r &= \sigma_r^{-1} \\
+    \operatorname{id} \sigma_r &= \sigma_r^{-1} \\
+    \sigma_r &= \sigma_r^{-1} \\
+  \end{align*}
+$$
+
+TKTK.
+:::
+
+::: {.theorem #th-isom-dos-puntos-fijos data-label="Teorema de la Isometría
+de Dos Puntos Fijos"}
+En $(\mathbf{P}, d)$, sea $g \in \isom(\mathbf{P}, d)$ y sea $r$ la recta
+que pasa por $A, B \in \mathbf{P}$ siendo $A \neq B$. Si $A$ y $B$ son
+puntos fijos de $g$, entonces, se tiene o bien $g = \sigma_r$ o bien $g =
+\operatorname{id}_{\mathbf{P}}$.
+:::
+
+Desde un punto de vista más abstracto, una reflexión axial es una simetría
+hiperplana, pero esto es un concepto avanzado que no se estudiará en esta
+asignatura.
+
+::: proof
+Según el [](#lm-isom-puntos-fijos){.nameref}, se tiene $g(X) = X$ para todo
+$X \in r$. Esto también implica, como caso particular, que $g(r) = r$.
+
+Por un $X \in \mathbf{P} \setminus r$ pasa, por el
+[](#th-ortog-a-recta-por-punto-ext){.nameref}, una única recta $l$ ortogonal
+a $r$.
+
+Por la observación de la [](#def-ortogonalidad){.nameref}, se tiene que
+$g(r)$ y $g(l)$ son rectas ortogonales que se cortan en $g(P)$, es decir,
+$g(r) \perp_{g(P)} g(l)$.
+
+Pero, como $P \in r$, se tiene que $g(P) = P$. Por aplicación, entonces, del
+[](#th-ortog-a-recta-por-punto-int){.nameref}, se tiene que existe una única
+recta perpendicular a $r$ por $P$, con lo que necesariamente se tendrá que
+$g(l) = l$. Por tanto, también se puede decir que $r \perp g(l)$.
+
+Ahora, como
+
+$$ d(P, X) = d(g(P), g(X)) = d(P, g(X)) $$
+
+y $g(X) \in l$, se tiene necesariamente, a simple vista, que, o bien $g(X) =
+X$, o bien $g(X) = \sigma_r(X)$, pues en la recta $l = g(l)$ solo hay dos
+puntos a una distancia dada de $P$.
+
+Al ser esta conclusión un hecho general, para cualquier punto $X \notin r$
+que tomemos, se puede afirmar que, o bien $g =
+\operatorname{id}_{\mathbf{P}}$, o bien $g = \sigma_r$.
+
+Si lo anterior no le convence, se puede demostrar haciendo uso del
+[](#ax-p3-euclides){.nameref}. Según este, tenemos una biyección $\gamma: r
+\longrightarrow \rset$ con la que tenemos
+
+$$ |\gamma(P) - \gamma(X)| = |\gamma(P) - \gamma(g(X))| $$
+
+Se tienen, por tanto, dos posibilidades. Por un lado,
+
+$$ \gamma(P) - \gamma(X) = \gamma(P) - \gamma(g(X)) $$
+
+De esto, se deduce que $g(X) = X$, con lo que estaríamos en el caso de que
+$g = \operatorname{id}_{\mathbf{P}}$.
+
+Con la otra solución posible, se tiene
+
+$$ \gamma(P) - \gamma(X) = \gamma(g(X)) - \gamma(P) $$
+
+con lo que
+
+$$ \gamma(g(X)) = 2\gamma(P) - \gamma(X) $$
+
+Si, por ejemplo, esa isometría $\gamma$ (esa "regla graduada") es la que
+tenga el 0 en $P$, se tendrá que
+
+$$ \gamma(g(X)) =  {-\gamma(X)} $$
+
+con lo que este caso representa a una reflexión axial de eje $r$, es decir,
+$g = \sigma_r$.
+:::
+
+::: {.corollary #cor-isom-3-puntos-fijos data-label="Corolario de la
+Isometría de Tres Puntos Fijos"}
+En $(\mathbf{P}, d)$, si $A_1, A_2, A_3 \in \mathbf{P}$ son puntos no
+alineados y $g$ y $h$ son isometrías para las que se verifica
+$g\left(A_i\right) = h \left(A_i\right)$ para $i = 1, 2, 3$, se cumple
+entonces que $g = h$.
+:::
+
+::: proof
+Para $i = 1, 2, 3$ se tiene que, con esa condición,
+
+$$
+  \begin{align*}
+    g(A_i) &= h(A_i) \\
+    \left(g^{-1} \circ h\right)(A_i) &= \left(g^{-1} \circ g\right)(A_i) =
+      A_i \\
+  \end{align*}
+$$
+
+Aplicando el [](#th-isom-dos-puntos-fijos){.nameref}, tenemos que, al
+cumplirse $\left(g^{-1} \circ h\right)\left(A_i\right) = A_i$ para $i = 1,
+2$ (es decir, para dos cualesquiera de esos puntos), se tiene necesariemente
+que o bien $g^{-1} \circ h = \operatorname{id}_{\mathbf{P}}$ o bien $g^{-1}
+\circ h = \sigma_{r_{A_1 A_2}}$.
+
+Como también es invariante el otro punto bajo la isometría $g^{-1} \circ h$,
+es decir, $\left(g^{-1} \circ h\right)\left(A_3\right) = A_3$, y por
+hipótesis este no está alineado con los otros dos, se tiene que no puede ser
+una reflexión axial, sino que deberá ser necesariamente una identidad, es
+decir, $g^{-1} \circ h = \operatorname{id}_{\mathbf{P}}$.
+
+Ahora, solo quedaría hacer la siguiente manipulación, apoyándonos en el
+hecho de que, como sabemos del álgebra abstracta, para cualquier aplicación
+se cumple siempre la propiedad asociativa.
+
+$$
+  \begin{align*}
+    g^{-1} \circ h &= \operatorname{id}_{\mathbf{P}} \\
+    g \circ g^{-1} \circ h &= g \circ \operatorname{id}_{\mathbf{P}} \\
+    \left(g \circ g^{-1}\right) \circ h &= g \\
+    \operatorname{id}_{\mathbf{P}} \circ h &= g \\
+    h &= g
+  \end{align*}
+$$
+:::
+
+
+
+
+#### Rotación
+
+La construcción geométrica de la rotación más intuitiva es la que
+seguramente ya conozca. Para rotar un punto $P$, necesitará un centro de
+rotación, $C$, y un ángulo de rotación, $\alpha$. Sin embargo, tal y como
+hemos dicho, aquí la definiremos en función de reflexiones axiales. Pero
+antes de esto, vamos a analizar una figura.
+
+En la figura 3-2 (TKTK) consideramos dos rectas distintas $a, b$ en
+$\mathbf{P}$. Nuestra intuición geométrica nos hace creer que hay dos
+situaciones, que son las que se presentan en las figuras TKTK y TKTK. En la
+primera, las rectas se cortan en un punto único $C$, mientras que, en la
+segunda, las rectas son paralelas y $c$ es una recta ortogonal a $a$ y a
+$b$. Vamos ahora a demostrar que efectivamente es así.
+
+<!-- ![Figura 3-2 Productos de dos
+reflexiones](attachment:productos_reflexiones.png) -->
+
+Un punto invariante por $\sigma_b \sigma_a$ es cualquier $X \in \mathrm{P}$
+tal que $(\sigma_b \sigma_a)(X) = X$. Como veremos a continuación, esto solo
+se da si $\sigma_a(X) = \sigma_b(X)$.
+
+$$
+  \begin{align*}
+    \sigma_b \sigma_a(X) &= X \\
+    \sigma_b^{-1} (\sigma_b \sigma_a)(X) &= \sigma_b^{-1}(X) \\
+    (\sigma_b^{-1} \sigma_b) \sigma_a(X) &= \sigma_b(X) \\
+    \operatorname{id} \sigma_a(X) &= \sigma_b(X) \\
+    \sigma_a(X) &= \sigma_b(X) \\
+  \end{align*}
+$$
+
+Consideremos entonces las dos posibilidades, según si $X$ pertenece o no a
+$a$. Por un lado, para $X \in a$, se tiene, por la
+[](#def-reflexion-axial){.nameref}, que $\sigma_a(X) = X$. Entonces, por la
+igualdad anterior se tiene que $\sigma_b(X) = X$, con lo que necesariamente,
+volviendo a tener en cuenta dicha definición, se tiene que $X \in b$. Es
+decir, cualquier punto que sea invariante de $\sigma_b \sigma_a$ ha de
+pertenecer a los dos ejes de rotación: $a$ y $b$.
+
+Tal y como dijimos, esas rectas (refiriéndome a los ejes $a$ y $b$) no son
+coincidentes. Si se trata de rectas secantes, ese punto de corte será uno
+solo, con lo que, en ese caso, se tiene un único punto invariante para
+$\sigma_b \sigma_a$, siendo este el punto de corte $C$ de las rectas $a$ y
+$b$.
+
+Si, por el contrario, las rectas son paralelas, no tendrán ningún punto de
+corte, con lo que, en ese caso, no existen puntos invariantes para $\sigma_b
+\sigma_a$.
+
+Como particularidad, debe notar que, para el caso $a \parallel b$, $\sigma_b
+\sigma_a$ deja invariante a cualquier recta $c$ perpendicular a ambas.
+
+<!-- TODO Aquí explica también otras cosas pero creo que son innecesarias y
+no llego a entenderlas bien.
+
+Hemos probado que en la situación de la figura de la izquierda $g$ tiene
+exactamente un punto fijo y que en la situación de la derecha $g$ no tiene
+puntos fijos. Notemos que a la derecha, $g$ deja $c$ invariante y no
+intercambia los semiplanos determinados por $c$.
+-->
+
+En base a este último ejercicio, podemos definir dos tipos de isometrías
+$\isom(\mathrm{P})$.
+
+::: {.deffinition #def-rotacion data-label="Definición de Rotación"}
+Llamamos _rotación_ (_rotation_) de centro $C$ a una isometría que tiene
+exactamente un punto fijo $C$.
+:::
+
+Las rotaciones suelen denotarse por la letra griega ro, $\rho$.
+
+::: {.theorem #th-segunda-recta-rotacion data-label="Teorema de la Segunda
+Recta para la Rotación"}
+En $(\mathrm{P}, d)$, sea $\rho$ una rotación de centro $C$. Para toda recta
+$a$ pasando por $C$ existen dos únicas rectas $b$ y $b'$ pasando por $C$
+tales que
+
+$$ \rho = \sigma_b \sigma_a = \sigma_a \sigma_{b'} $$
+:::
+
+En realidad, no existe un único par de reflexiones con la que obtener una
+rotación. Lo que sí la determina es si nos dan una de esas reflexiones.
+Según este teorema, entonces, la otra reflexión sí la podremos determinar de
+forma única. Bueno, en realidad, una por cada lado por el que se haga la
+composición de las reflexiones.
+
+::: proof
+Tomemos $P \in a \setminus \{C\}$ y consideremos la mediatriz de $[P,
+\rho(P)]$, es decir, la recta $b$ cortando el segmento $[P, \rho(P)]$
+ortogonalmente en su punto medio.
+
+Esa recta $b$ pasa necesariamente por $C$ ya que, como todos los $\rho(P)$
+están a la misma distancia de $C$, se tiene que
+
+$$ d(C, P) = d(C, \rho(P)) $$
+
+con lo que ese punto $C$ está en la mediatriz de $[P, \rho(P)]$. Por tanto,
+el producto (composición) $\sigma_b \rho$ fija a los puntos $C$ y $P$, ya
+que
+
+$$
+  \begin{align*}
+    \sigma_b \rho(P) &= \sigma_b(\rho(P)) = P \\
+    \sigma_b \rho(C) &= \sigma_b(\rho(C)) = \sigma_b(C) = C
+  \end{align*}
+$$
+
+ya que $C \in b$.
+
+Debido a esto, según el [](#th-isom-dos-puntos-fijos){.nameref}, se tiene
+que, o bien $\sigma_b \rho = \sigma_a$, o bien, $\sigma_b \rho =
+\mathrm{id}$. Advierta que el caso de la simetría sería $\sigma_a$ porque
+$C$ y $P$ están en $a$.
+
+Pero el caso $\sigma_b \rho = \operatorname{id}$ no puede darse, pues,
+aplicando las [](#th-propiedades-reflexion){.nameref}, tendríamos que
+
+$$
+  \begin{align*}
+    \sigma_b \rho &= \operatorname{id} \\
+    (\sigma_b)^{-1} \sigma_b \rho &= (\sigma_b)^{-1} \operatorname{id}a \\
+    \rho &= (\sigma_b)^{-1} \\
+    \rho &= \sigma_b
+  \end{align*}
+$$
+
+<!-- Lo siguiente no me convence como demostración. -->
+
+y sabemos que una rotación es la composición de dos reflexiones axiales; no
+de una. Solo queda entonces que $\rho = \sigma_b \sigma_a$, ya que
+
+$$
+  \begin{align*}
+    \sigma_b \rho &= \sigma_a \\
+    \sigma_b^{-1} \sigma_b \rho &= \sigma_b^{-1} \sigma_a \\
+    \rho &= \sigma_b \sigma_a
+  \end{align*}
+$$
+
+Aplicando este mismo razonamiento a $\rho^{-1}$, que, como sabemos, es
+también una rotación de centro $C$, existe una recta $b'$ tal que $\rho^{-1}
+= \sigma_{b'} \sigma_a$, y ahora aplicando un resultado del álgebra
+abstracta, tenemos:
+
+<!-- Demostrar que $\rho^{-1}$ es también una rotación con el mismo centro
+de rotación que $\rho$. -->
+
+$$
+  \begin{align*}
+    \rho
+      &= \left(\rho^{-1}\right)^{-1} \\
+      &= \left( \sigma_{b'} \sigma_a \right)^{-1} \\
+      &= (\sigma_a)^{-1} (\sigma_{b'})^{-1} \\
+      &= \sigma_a \sigma_{b'} \\
+  \end{align*}
+$$
+
+Ahora, solo quedaría demostrar que esas $\sigma_b$ y $\sigma_{b'}$ son
+únicas. Supongamos que existe también una reflexión axial $\sigma_c$ de eje
+$c$ tal que $\rho = \sigma_c \sigma_a$. Entonces, tenemos que
+
+$$
+  \begin{align*}
+    \sigma_b \sigma_a &= \sigma_c \sigma_a \\
+    \sigma_b \sigma_a \sigma_a &= \sigma_c \sigma_a \sigma_a \\
+    \sigma_b (\sigma_a \sigma_a) &= \sigma_c (\sigma_a \sigma_a) \\
+    \sigma_b \operatorname{id} &= \sigma_c \operatorname{id} \\
+    \sigma_b &= \sigma_c
+  \end{align*}
+$$
+:::
+
+
+
+
+
+#### Traslación
+
+Nos basamos en la misma construcción que para la rotación, solo que es el
+caso en el que los ejes de las reflexiones axiales son paralelos no
+coincidentes y, por tanto, no se cortan en ningún punto.
+
+<!-- TODO Copiar aquí la explicación de Gerlach sobre la construcción
+geométrica de la traslación haciendo uso de vectores. -->
+
+::: {.deffinition #def-traslacion data-label="Definición de Traslación"}
+Llamamos _traslación_ (_translation_) a una isometría que no tiene puntos
+fijos y deja invariante a la recta $c$ perpendicular TKTK (así como todas
+las rectas paralelas a $c$, ejercicio 3.1) y los dos semiplanos determinados
+por $c$ son también invariantes (lo mismo se puede decir de todos los
+semiplanos determinados por rectas paralelas a $c$).
+:::
+
+Para indicar que las rectas paralelas a $c$ son invariantes por la
+traslación diremos que es una traslación paralela a $c$.
+
+TKTK.
+
+<!-- ![Figura 3-3 Productos de dos
+rotaciones](attachment:productos_rotaciones.png) -->
+
+::: exercise
+Sea $\tau$ una traslación y $c$ una recta tal que $\tau(c) = c$.
+
+a.  Para toda recta a $\perp c$ existen rectas $b, b' \perp c$ determinadas
+    unívocamente tales que $\tau = \sigma_b \sigma_a = \sigma_a
+    \sigma_{b'}$.
+b.  Para toda recta $r \subset \mathbf{P}$ se tiene
+
+$$ \tau(r) = r \quad \iff \quad r \parallel c $$
+:::
+
+::: example
+Como aplicación del [](#th-segunda-recta-rotacion){.nameref}, determinamos
+la naturaleza de un producto de dos rotaciones. Sean $\rho_1, \rho_2$
+rotaciones de centros respectivos $C_1, C_2$. Por los puntos $C_1, C_2$ pasa
+una recta $a$, y existen rectas $b_i$ pasando por $C_i, i = 1, 2$, tales
+que $\rho_1 = \sigma_a \sigma_{b_1}, \rho_2 = \sigma_{b_2} \sigma_a$. Se
+obtiene $\rho_2 \rho_1 = \sigma_{b_2} \sigma_a \sigma_a \sigma_{b_1} =
+\sigma_{b_2} \sigma_{b_1}$. Si las rectas $b_i$ se cortan en un punto $C$,
+el producto es una rotación de centro $C$, si las rectas son paralelas el
+producto es una traslación paralela a las rectas ortogonales a $b_1$ y
+$b_2$.
+:::
+
+Observación. Estamos trabajando con el producto de isometrías, que es una
+operación en un grupo. Esta operación, al contrario de lo que sucede con
+otras operaciones habituales con números, no es conmutativa. Esto quiere
+decir que no siempre se verifica que $g h = h g$, donde $g$ y $h$ son
+isometrías del plano. Además, es más bien raro que se dé $g h = h g$.
+
+Por ejemplo tomemos dos rotaciones $\rho_1$ y $\rho_2$ cuyos centros son,
+respectivamente, $C_1$ y $C_2$. En el caso de ser $C_1 \neq C_2$, vamos a
+probar que $\rho_1 \rho_2 \neq \rho_2 \rho_1$. Si suponemos $\rho_1 \rho_2 =
+\rho_2 \rho_1$ tendríamos, $\rho_1 \rho_2\left(C_2\right) = \rho_2
+\rho_1\left(C_2\right)$. Esto implica que $\rho_1\left(C_2\right) = \rho_1
+\rho_2\left(C_2\right) = \rho_2 \rho_1\left(C_2\right)$, es decir que
+$\rho_1\left(C_2\right)$ sería un punto fijo para $\rho_2$. Sin embargo el
+único punto fijo de $\rho_2$ es $C_2$ y $C_2 \neq \rho_1\left(C_2\right)$
+(pues en caso contrario $C_2$ sería un punto fijo de $\rho_1$ y el único
+punto fijo de $\rho_1$ es $C_1$, y $C_1 \neq C_2$ por hipótesis). Luego
+$\rho_1 \rho_2 \neq \rho_2 \rho_1$, si $C_1 \neq C_2$. ¿Qué sucede si $C_1 =
+C_2$? La respuesta está en el ejercicio siguiente.
+
+::: exercise
+Sea $P \in \mathbf{P}$ y notemos $$ \mathcal{R}_P(\mathbf{P}) = \{g \in
+\operatorname{Isom}(\mathbf{P}) \mid g \text { es una rotación de centro }
+P\} \cup\{\operatorname{id}_{\mathbf{P}}\} $$
+
+a.  $\mathcal{R}_P(\mathbf{P})$ es un subgrupo de
+    $\operatorname{Isom}(\mathbf{P})$.
+b.  Si $g \in \mathcal{R}_P(\mathbf{P})$ y a es una recta pasando por $P$,
+    entonces $\sigma_a g \sigma_a = g^{-1}$.
+c.  $g h = h g$, para todo $g, h \in \mathcal{R}_P(\mathbf{P})$.
+d.  Si $g, h \in \mathcal{R}_P(\mathbf{P})$ y existe $X \in
+    \mathbf{P}-\{P\}$, tal que $g(X) = h(X)$, entonces $g = h$.
+:::
+
+::: exercise
+Sea $P \in \mathbf{P}$ y $h \in \operatorname{Isom}(\mathbf{P})$.
+
+a.  Si $g \in \mathcal{R}_P(\mathbf{P})$ entonces $h g h^{-1} \in
+    \mathcal{R}_{h(P)}(\mathbf{P})$.
+b.  Si $r \subset \mathbf{P}$ es una recta entonces $h \sigma_r h^{-1} =
+    \sigma_{h(r)}$.
+:::
+
+::: exercise
+Sean $a, b$ rectas en $\mathbf{P}$.
+
+a.  $\sigma_a \sigma_b \sigma_a = \sigma_{\sigma_{a}(b)}$.
+b.  $\sigma_a \sigma_b = \sigma_b \sigma_a$ si $y$ solamente si $a
+    \perp b$ o $a = b$.
+:::
+
+::: example
+(reflexión central). Un caso particular de rotación es el producto
+$\sigma_b \sigma_a = \sigma_P$ donde $a \perp_P b$. A la vista de
+las dos propiedades siguientes a este tipo de rotación se le llama media
+vuelta de centro $P$, o también una reflexión central.
+
+1.  $\sigma_P \circ \sigma_P = \operatorname{id}_{\mathbf{P}}$.
+2.  Para todo $X \in \mathbf{P}$, la imagen $\sigma_P(X)$ es el único
+    punto $X' \in \mathbf{P}$ verificando medio $\left[X, X'\right] = P$.
+
+Para demostrar (i) se usa el ejercicio 3.4.B :
+
+$$
+  \begin{aligned}
+    \sigma_P \sigma_P
+      &= \sigma_a \sigma_b \sigma_a \sigma_b = \sigma_a \sigma_b
+        \sigma_b \sigma_a = \\
+      &= \sigma_a \sigma_a=\operatorname{id}_{\mathbf{P}}
+  \end{aligned}
+$$
+
+::: proof
+Del punto 2. sea $X' = \sigma_P(X)$. Se tiene entonces, gracias a 1,
+$\sigma_P\left(\left[X, X'\right]\right) = \left[X', X\right] = \left[X,
+X'\right]$; por tanto $\sigma_P\left(\right.$ medio $\left.\left[X,
+X'\right]\right) = \operatorname{medio}\left[X, X'\right]$. Sabiendo que $P$
+es el único punto fijo de $\sigma_P$ se concluye que $P =
+\operatorname{medio}\left[X, X'\right]$.
+
+La propiedad 2 nos dice que $\sigma_P$ no depende de la elección de $a$ y
+$b$, es decir, la reflexión central tiene también la propiedad siguiente :
+
+Del punto 3. $\sigma_P = \sigma_{a'} \sigma_{b'}$ para cualquier par de
+rectas $a', b'$ tales que $a' \perp_P b'$.
+:::
+
+::: {.theorem data-label="Teorema"}
+La simetría puntual de una recta es siempre una recta paralela a dicha recta.
+:::
+
+::: proof
+Sea $r$ una recta y sea $s$ la (única) recta que pase por $P$ y sea
+ortogonal a $r$. Por la observación de la [](#def-ortogonalidad){.nameref},
+se tiene que $\sigma_P(r) \perp \sigma_P(s)$. Pero, como $\sigma_P(s) = s$,
+se tiene que $\sigma_P(r) \perp s$.
+
+Ahora, solo quedaría aplicar el TKTK, según el cual, como tanto $r$ como
+$\sigma_P(r)$ son ortogonales a $s$, entonces $\sigma_P(r) \parallel r$.
+:::
+
+::: exercise
+Sea $\tau \in \operatorname{Isom}(\mathbf{P})$ una traslación.
+
+a.  Para todo punto $A \in \mathbf{P}$ existen puntos $B, B' \in
+    \mathbf{P}$, únicos, tales que $\tau = \sigma_B \sigma_A =
+    \sigma_A \sigma_{B'}$.
+b.  Para toda recta $r, \tau(r) \parallel r$.
+:::
+
+
+
+
+
+
+#### Reflexión con deslizamiento
+
+Componiendo $\sigma_c$, una reflexión de eje $c$, con una traslación
+paralela a $c$ se obtiene una isometría $\varphi$ sin puntos fijos que no es
+una traslación pues permuta los dos semiplanos determinados por $c$. Una
+isometría como $\varphi$ se llama reflexión con deslizamiento. Además
+$\varphi$ deja invariante la recta $c$ y no sólo eso: $c$ es la única recta
+invariante por $\varphi$.
+
+<!-- ![Figura 3-4 Reflexión con
+deslizamiento](attachment:reflexion_deslizamiento.png) -->
+
+
+
+
+
+
+

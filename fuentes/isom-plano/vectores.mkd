@@ -1,0 +1,312 @@
+
+
+
+
+### Vectores
+
+rotaciones, o ambas traslaciones, o ambas reflexiones, o ambas reflexiones
+con deslizamiento.
+
+Nota. Las isometrías que conservan la orientación son aquellas que
+formalizan matemáticamente la idea de movimiento. Así se puede entender que
+en geometría euclidiana dos figuras son iguales si existe una isometría par
+que transforma una en la otra. La noción que nosotros utilizamos en este
+curso de equivalencia o congruencia de figuras es un poco más débil, pues
+dos figuras congruentes se pueden transformar una en otra usando isometrías
+pares o impares.
+
+
+
+
+##### Vectores y traslaciones
+
+Una reflexión sobre una recta viene determinada por la recta eje y una
+reflexión central por el punto fijo o centro. Veremos como una rotación está
+determinada por un punto y un ángulo orientado de rotación (en el capítulo
+siguiente). Para determinar completamente una traslación basta con dar un
+punto y su imagen por la traslación:
+
+::: {.theorem data-label="Teorema"}
+Dados dos puntos distintos del plano $A$ y $B$ existe una única traslación
+$\tau$, tal que $\tau(A) = B$.
+:::
+
+::: proof
+En primer lugar si $M = \operatorname{medio}[A, B], a$ es la recta
+perpendicular a $r_{A B}$ que pasa por $A$ y $m$ es la paralela a $a$ que
+pasa por $M$, la traslación $\tau = \sigma_m \circ \sigma_a$ verifica que
+$\tau(A) = \sigma_m \circ \sigma_a(A) = \sigma_m(A) = B$.
+
+Sea $\tau'$ otra traslación que verifica $\tau'(A) = B$. Por el ejercicio
+3.6, sabemos que $\tau^{-1}$ es también una traslación y que $\tau^{-1}
+\circ \tau'$ es una traslación o la identidad. Pero como $\tau^{-1} \circ
+\tau'(A) = \tau^{-1}(B) = A$, entonces $\tau^{-1} \circ \tau'$ es la
+identidad y $\tau = \tau'$.
+:::
+
+El teorema anterior nos dice que un par ordenado de puntos determina una
+única traslación, pero es importante que sepamos cuál es el punto de partida
+y cuál es el punto obtenido por traslación, de ahí que el par sea ordenado.
+Como dos puntos determinan un segmento, un par ordenado de puntos determina
+un segmento con un orden de sus extremos o dicho de otro modo con una
+orientación. Este objeto, segmento con orientación, motiva la definición de
+vector fijo:
+
+<!-- ![Figura 3-6 Vector fijo](attachment:figura-3-6.png) -->
+
+::: {.deffinition data-label="Definición de "}
+Sean $A$ y $B$ dos puntos del plano, un vector fijo $\overrightarrow{A B}$
+es el segmento $[A, B]$, donde los extremos están distinguidos: $A$ es el
+origen y $B$ es el final. Los vectores fijos de la forma $\overrightarrow{A
+A}$ se llaman vectores nulos.
+:::
+
+Dado un vector fijo $\overrightarrow{A B}$, no nulo $(A \neq B)$, llamaremos
+$\tau_{\overrightarrow{A B}}$ a la traslación $\tau_{\overrightarrow{A B}}$
+que verifica $\tau_{\overrightarrow{A B}}(A) = B$.
+
+Observación. Según el teorema anterior $\tau_{\overrightarrow{A B}} =
+\sigma_m \circ \sigma_a$, donde $a$ es la recta perpendicular a $r_{A B}$
+que pasa por $A$ y $m$, la paralela a $a$ que pasa por $M =
+\operatorname{medio}[A, B]$. También $\tau_{\overrightarrow{A B}} = \sigma_b
+\circ \sigma_m$ con $b$ la recta perpendicular a $r_{A B}$ que pasa por $B$,
+pues $\sigma_b \circ \sigma_m(A) = \sigma_b(B) = B$ (ver ejercicio 3.1).
+
+Otro medio de expresar $\tau_{\overrightarrow{A B}}$ es
+$\tau_{\overrightarrow{A B}} = \sigma_M \circ \sigma_A = \sigma_B \circ
+\sigma_M$, donde $\sigma_M$, $\sigma_A$ y $\sigma_B$ son reflexiones
+centrales cuyos centros respectivos son $M, A$ y $B$. Obsérvese que
+$\sigma_M \circ \sigma_A(A) = \sigma_M(A) = B$ y análogamente para $\sigma_B
+\circ \sigma_M$ (ver ejercicio 3.2).
+
+Un vector fijo determina una única traslación, pero hay muchos vectores
+fijos que determinan la misma. El problema que planteamos ahora es ¿cuándo
+dos vectores fijos determinan la misma traslación? Para responder a esta
+pregunta introducimos una relación de equivalencia entre vectores fijos:
+
+::: {.deffinition data-label="Definición de "}
+Dos vectores fijos $\overrightarrow{A B}$ y $\overrightarrow{C D}$ se dice
+que son equipolentes si medio $[A, D] = \operatorname{medio}[B, C]$.
+:::
+
+Observación. La definición anterior es equivalente a la siguiente:
+$\overrightarrow{A B}$ y $\overrightarrow{C D}$ son equipolentes si existe
+una media-vuelta $\sigma$ tal que $\sigma(A) = D$ y $\sigma(B) = C$, el
+centro de la media vuelta $\sigma$ es medio $[A, D] =
+\operatorname{medio}[B, C]$.
+
+<!-- ![Figura 3-7 Vectores equipolentes](attachment:figura-3-7.png) -->
+
+Si $r_{A B} \neq r_{C D}$, el hecho de ser $\overrightarrow{A B}$ y
+$\overrightarrow{C D}$ equipolentes equivale a que $(A, B, D, C)$ forman un
+cuadrilátero que se llama paralelogramo (como se definirá en el capítulo 5).
+Así la forma clásica para definir equipolencia, en el caso en que los
+vectores no estén en la misma recta, es: $\overrightarrow{A B}$ y
+$\overrightarrow{C D}$ son equipolentes si $(A, B, D, C)$ forman un
+paralelogramo.
+
+::: {.deffinition data-label="Definición de "}
+Si $\overrightarrow{A B}$ es un vector fijo, se llama vector libre
+$[\overrightarrow{A B}]$, o simplemente vector, al conjunto de vectores
+fijos equipolentes a $\overrightarrow{A B}$, es decir, un vector libre es
+una clase de equivalencia de vectores fijos por la relación de equipolencia.
+:::
+
+TKTK.
+
+::: {.theorem data-label="Teorema"}
+Dos vectores fijos no nulos $\overrightarrow{A B}$ y $\overrightarrow{C D}$
+determinan la misma traslación, es decir $\tau_{\overrightarrow{A B}} =
+\tau_{\overrightarrow{C D}}$, si y solo si $\overrightarrow{A B}$ y
+$\overrightarrow{C D}$ son equipolentes.
+:::
+
+Antes de demostrar el teorema necesitamos un par de resultados muy sencillos
+sobre isometrías. El primero es sobre reflexiones centrales:
+
+::: {.theorem data-label="Teorema"}
+Sean $P$ y $Q$ dos puntos distintos del plano.
+
+1.  $\sigma_P \circ \sigma_Q = \sigma_Q \circ \sigma_{\sigma_{Q}(P)}$.
+2.  $\sigma_P \circ \sigma_Q = \left(\sigma_Q \circ \sigma_P\right)^{-1}$
+:::
+
+::: proof
+TKTK.
+
+1.  Sea $r = r_{A B}, s_P$ la recta perpendicular a $r$ que pasa por $P$ y
+    $s_Q$ la recta perpendicular a $r$ que pasa por $Q$. Por 3.12.(iii),
+
+    $$ \sigma_P \circ \sigma_Q = \left(\sigma_{s_{P}} \circ \sigma_r\right)
+    \circ\left(\sigma_r \circ \sigma_{s_{Q}}\right) = \sigma_{s_{P}} \circ
+    \sigma_{s_{Q}} $$
+
+    y como $s_P$ y $s_Q$ son paralelas, entonces, $\sigma_P \circ \sigma_Q$
+    es una traslación. Como $Q$ y $\sigma_Q(P)$ son también puntos distintos
+    se demuestra del mismo modo que $\sigma_Q \circ \sigma_{\sigma_{Q}(P)}$
+    es una traslación.
+
+    Ahora aplicando el primer teorema de esta sección, nos basta comprobar
+    que las dos traslaciones transforman del mismo modo a un punto. Veamos
+    en quién transforman el punto $\sigma_Q(P)$ :
+
+    $$
+    \begin{aligned}
+    \sigma_Q \circ \sigma_{\sigma_Q(P)}\left(\sigma_Q(P)\right)
+      &= \sigma_Q\left(\sigma_Q(P)\right) = P \\
+    \sigma_P \circ \sigma_Q\left(\sigma_Q(P)\right)
+      &= \sigma_P(P) = P
+    \end{aligned}
+    $$
+
+2.  $\left(\sigma_P \circ \sigma_Q\right) \circ\left(\sigma_Q \circ
+    \sigma_P\right) = \sigma_P \circ\left(\sigma_Q \circ \sigma_Q\right)
+    \circ \sigma_P = \sigma_P \circ \sigma_P = \mathrm{id}_{\mathbf{P}}$.
+:::
+
+::: {.theorem data-label="Teorema"}
+Sea $\tau$ una traslación y $\sigma_P$ una media vuelta cualquiera.
+Entonces:
+
+$$ \sigma_P \circ \tau \circ \sigma_P = \tau^{-1} $$
+:::
+
+::: proof
+Sea $Q = \operatorname{medio}[P, \tau(P)]$, entonces $\tau = \sigma_Q \circ
+\sigma_P$ y $\sigma_P \circ \tau \circ \sigma_P = \sigma_P
+\circ\left(\sigma_Q \circ \sigma_P\right) \circ \sigma_P = \sigma_P \circ
+\sigma_Q$ que es $\tau^{-1}$ por el segundo apartado del teorema anterior.
+:::
+
+Vamos ahora a demostrar el teorema 3.24:
+
+::: proof
+En primer lugar supongamos que $\overrightarrow{A B}$ y $\overrightarrow{C
+D}$ son equipolentes, entonces medio $[A, D] = \operatorname{medio}[B, C]$,
+llamaremos $M = \operatorname{medio}[A, D] = $ $\operatorname{medio}[B, C]$.
+
+Sabemos que $\tau_{\overrightarrow{A B}} = \sigma_B \circ \sigma_{\text
+{medio }[A, B]}$ y como $\sigma_M \circ \sigma_M = \mathrm{id}_{\mathbf{P}}$
+:
+
+$$ \tau_{\overrightarrow{A B}} = \sigma_B \circ \sigma_{\text {medio }[A,
+B]} = \sigma_B \circ \sigma_{\text {medio }[A, B]} \circ \sigma_M \circ
+\sigma_M $$
+
+Como $\sigma_M(A) = D$ y $\sigma_M(B) = C$ tenemos que
+$\sigma_M(\operatorname{medio}[A, B]) = $ medio $[C, D]$. Aplicando dos
+veces el primer apartado del teorema 3.25 y en la última igualdad el segundo
+apartado tenemos:
+
+$$
+\begin{aligned}
+\tau_{\overrightarrow{A B}} &  = \sigma_B \circ \sigma_{\text {medio }[A, B]} \circ \sigma_M \circ \sigma_M =  \\
+&  = \sigma_B \circ \sigma_M \circ \sigma_{\text {medio }[C, D]} \circ \sigma_M =  \\
+&  = \sigma_M \circ \sigma_C \circ \sigma_{\text {medio }[C, D]} \circ \sigma_M =  \\
+&  = \sigma_M \circ \tau_{\overrightarrow{C D}}^{-1} \circ \sigma_M
+\end{aligned}
+$$
+
+Y ahora por el teorema 3.26:
+
+$$ \tau_{\overrightarrow{A B}} = \sigma_M \circ \tau_{\overrightarrow{C
+D}}^{-1} \circ \sigma_M = \tau_{\overrightarrow{C D}} $$
+
+Supongamos ahora que $\tau_{\overrightarrow{A B}} = \tau_{\overrightarrow{C
+D}} = \tau$, hemos de ver que medio $[A, D] = $ medio $[B, C]$. Para esto
+basta ver que $X = \sigma_{\text {medio }[B, C]}(A) = D$.
+
+Ahora bien, los vectores $\overrightarrow{A B}$ y $\overrightarrow{C X}$ son
+equipolentes, luego por la implicación que acabamos de demostrar:
+$\tau_{\overrightarrow{A B}} = \tau_{\overrightarrow{C X}}$ y como
+$\tau_{\overrightarrow{C D}} = \tau = \tau_{\overrightarrow{A B}}$, tenemos
+que $D = \tau_{\overrightarrow{C D}}(C) = \tau_{\overrightarrow{C X}}(C) = X
+= \sigma_{\text {medio }[B, C]}(A)$.
+:::
+
+El teorema 3.24 implica que cada traslación determina un único vector libre
+que se suele llamar vector de traslación y viceversa cada vector libre no
+nulo determina una única traslación.
+
+Como corolario al teorema anterior tenemos:
+
+::: {.corollary data-label="Corolario"}
+Sea $\tau$ una traslación para cada par de puntos $A$ y $B$ del plano, $d(A,
+\tau(A)) = d(B, \tau(B))$.
+:::
+
+::: proof
+Por el teorema 3.24 tenemos $[\overrightarrow{A \tau(A)}] =
+[\overrightarrow{B \tau(B)}]$, luego medio $[A, \tau(B)] =
+\operatorname{medio}[B, \tau(A)] = M$ y $\sigma_M(A) = \tau(B)$ y
+$\sigma_M(\tau(A)) = B$. Como $\sigma_M$ es isometría $d(A, \tau(A)) =
+d\left(\sigma_M(A), \sigma_M(\tau(A))\right) = d(\tau(B), B) = $ $d(B,
+\tau(B))$.
+:::
+
+Observación. La composición de traslaciones permite definir una operación
+entre vectores libres que es la suma de vectores, es decir si
+$\tau_{[\overrightarrow{P Q}]}{ }^\circ \tau_{[\overrightarrow{R S}]} = $
+$\tau$, el vector libre de la traslación $\tau$ es el vector suma
+$[\overrightarrow{P Q}] + [\overrightarrow{R S}]$. El lector seguramente ha
+estudiado alguna vez la relación de Chasles:
+
+$$ [\overrightarrow{P Q}] + [\overrightarrow{Q T}] = [\overrightarrow{P T}]
+$$
+
+que se verifica con la definición de suma que acabamos de sugerir. Además se
+puede definir otra operación más: el producto de un vector por un número
+(pero no lo vamos a hacer en este curso). Con estas dos operaciones se
+construye la estructura de espacio vectorial, que es fundamental en Álgebra
+Lineal. Dada la identificación entre traslaciones y vectores libres, el
+conjunto de traslaciones se puede dotar también de estructura de espacio
+vectorial y como tal es isomorfo al espacio vectorial de los vectores
+libres. La geometría afín (tal como se estudiará en la asignatura Geometrías
+Lineales) se define mediante un espacio vectorial que "actúa" como las
+traslaciones sobre un conjunto de puntos y la relación de Chasles conecta la
+operación del espacio vectorial con la composición de traslaciones.
+
+Observación. En geometría elemental se suele decir que dos vectores son
+equipolentes cuando tienen la misma dirección, la misma longitud y el mismo
+sentido. Si $\overrightarrow{A B}$ y $\overrightarrow{C D}$ son equipolentes
+y $M = \operatorname{medio}[A, D] = $ medio $[B, C]$, entonces $r_{C D} =
+\sigma_M\left(r_{A B}\right)$ y por tanto $r_A B \parallel r_{C D}$, esto
+quiere decir que tienen la "misma dirección". Por otra parte
+
+$$ d(A, B) = d\left(\sigma_M(A), \sigma_M(B)\right) = d(D, C) $$
+
+lo que quiere decir que los vectores tienen la "misma longitud". Por último
+dar una definición de lo que quiere decir "mismo sentido" es algo más
+laborioso: por ejemplo dos vectores fijos no nulos $\overrightarrow{A B}$ y
+$\overrightarrow{C D}$, con la misma dirección pero contenidos en rectas
+disjuntas, tienen el mismo sentido si los finales $B$ y $D$ están en el
+mismo semiplano de los dos determinados por $r_{A C}$, de otro modo: el
+segmento $[B, D]$ no corta a $r_{A C}$.
+
+Veamos que si $\overrightarrow{A B}$ y $\overrightarrow{C D}$ son no nulos y
+equipolentes y tales que $r_{A B} \neq$ $r_{C D}$, entonces los finales $B$
+y $D$ están en el mismo semiplano $H$ de los dos determinados por $r_{A C}$.
+En efecto, al ser $\overrightarrow{A B}$ y $\overrightarrow{C D}$
+equipolentes, medio $[A, D] = $ medio $[B, C] = M$, entonces $r_{B D} =
+\sigma_{M}\left(r_{A C}\right)$, luego $r_{A C} \parallel r_{B D}$ y $r_{A
+C} \neq r_{B D}$ (si fuera $r_{A C} = r_{B D}$ esto implicaría que $r_{A B}
+= r_{C D}$ ). Por lo tanto $[B, D]$ no corta a $r_{A C}$, luego $B$ y $D$
+están en el mismo semiplano $H$.
+
+Esta observación nos sugiere el método habitual de "construcción" del
+transformado de un punto por una traslación. Supongamos que $\tau$ es una
+traslación y $P$ un punto del plano, queremos construir $\tau(P)$ y
+suponemos que conocemos $Q$ y $\tau(Q)$. En primer lugar si $P \notin r_{Q
+\tau(Q)}$, tomamos una recta $s$ paralela a $r_{Q \tau(Q)}$ que pase por
+$P$, ahora en $s$ hay dos puntos a distancia $d(Q, \tau(Q))$. Entonces,
+$\tau(P)$ es el punto de $s$ a distancia $d(Q, \tau(Q))$ de $P$ tal que
+$\tau(Q)$ y $\tau(P)$ están en el mismo semiplano de los dos determinados
+por $r_{P Q}$. Si $P \in r_{Q \tau(Q)}$, basta primero considerar $Q' \notin
+r_{Q \tau(Q)}$, construir $\tau\left(Q'\right)$ con el método anterior y
+ahora a partir de $Q'$ y $\tau\left(Q'\right)$ conseguir $\tau(P)$, dado que
+$P \notin r_{Q' \tau\left(Q'\right)}$.
+
+
+
+
+

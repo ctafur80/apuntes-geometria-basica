@@ -1,0 +1,66 @@
+# Ejercicios
+
+**Ejercicio 6.1** Sea $\triangle\{A, B, C\}$ un triángulo. Si uno de los dos ángulos $\angle A$ o $\angle C$ es obtuso probar que el pie de la altura $P_{h, B}$ no pertence al lado opuesto $[C, A]$.
+
+**Ejercicio 6.2** Probar la fórmula del coseno para triángulos obtusángulos.
+
+**Ejercicio 6.3** Sean $\triangle\{A, B, C\} y \triangle\left\{A', B', C'\right\}$ dos triángulos:
+
+1. Si $\angle A = \angle A', A B = A' B'$ y $B C = B' C'$. ¿Se puede asegurar que los triángulos $\Delta\{A, B, C\} y \Delta\left\{A', B', C'\right\}$ son congruentes?
+2. Si $\angle A = \angle A', \angle B = \angle B' y \angle C = \angle C'$. ¿Se puede asegurar que los triángulos $\Delta\{A, B, C\} y \Delta\left\{A', B', C'\right\}$ son congruentes?
+
+**Ejercicio 6.4** Sean $\angle P y \angle Q$ dos ángulos no nulos que se puedan sumar. Probar la fórmula:
+
+$$
+\cos (\angle P + \angle Q) = \cos (\angle P) \cos (\angle Q)-\sin(\angle P) \sin(\angle Q)
+$$
+
+**Ejercicio 6.5** En un triángulo $\triangle\{A, B, C\}$ conocemos $\angle A, \angle B, \angle C$ y $A B + $ $B C + C A$ (perímetro del triángulo). Determinar $A B, B C$ y $C A$.
+
+**Ejercicio 6.6** Para un triángulo $\triangle\{A, B, C\}$ se define el área
+
+$$
+\text { área }(\triangle\{A, B, C\})
+$$
+
+como el número "base por altura partido por dos", donde la base quiere decir la longitud de un lado y la altura quiere decir la longitud de la altura que pasa por el vértice opuesto al lado considerado. Demostrar que esta definición no depende de la elección de la base (es decir del lado):
+
+$$
+\text { área }(\triangle\{A, B, C\}) = \frac{1}{2} \cdot h_{A} B C = \frac{1}{2} \cdot h_{B} C A = \frac{1}{2} \cdot h_{C} A B
+$$
+
+(Estamos haciendo el abuso de llamar $h_{A}$ a la longitud de $A P_{h, A}$, y lo mismo con $h_{B} y h_{C}$ ).
+
+**Ejercicio 6.7** Para un triángulo $\triangle\{A, B, C\}$ se considera el semiperímetro $s = \frac{1}{2}(A B + B C + C A)$. Demostrar la fórmula de Heron:
+
+$$
+\text { área }^{2}(\triangle\{A, B, C\}) = s(s-A B)(s-B C)(s-C A)
+$$
+
+**Ejercicio 6.8** En un triángulo $\triangle\{A, B, C\}$ conocemos $A B = c, B C = a y$ $C A = b$. Sea $M = \medio[B, C]$, obtener una fórmula para $A M$ en términos de a,b y c (fórmula de la mediana de Ptolomeo).
+
+**Ejercicio 6.9** ¿Cuál es la medida de los ángulos de un triángulo equilátero?
+
+**Ejercicio 6.10** Sea $\triangle\{A, B, C\}$ un triángulo acutángulo. Sea $P$ un punto en el interior de $\triangle\{A, B, C\}$. Sea $\rho$ una rotación de centro $C$ y ángulo $\pi / 3$.
+
+a. Probar que el triángulo $\triangle\{C, P, \rho(P)\}$ es equilátero y que $C P = P \rho(P)$ $y B P = \rho(B) \rho(P)$.
+b. Si $P'$ es un punto del interior de $\triangle\{A, B, C\}$ tal que $A, P', \rho\left(P'\right), \rho(B)$ están alineados, demostrar que:
+
+$$
+A P + B P + C P \geq A P' + B P' + C P'
+$$
+
+c. Sea $Q$ un punto del interior de $\triangle\{A, B, C\}$ de modo que el ángulo con vértice $Q$ del triángulo $\triangle\{A, B, Q\}$ mide $2 \pi / 3$, el ángulo con vértice $Q$ del triángulo $\triangle\{B, C, Q\}$ mide $2 \pi / 3$ y el ángulo con vértice $Q$ del triángulo $\triangle\{C, A, Q\}$ también mide $2 \pi / 3$. Probar que en este caso $A, Q, \rho(Q), \rho(B)$, o bien $B, Q, \rho(Q), \rho(A)$, están alineados.
+d. Demostrar que si $Q$ es un punto en las condiciones descritas en el apartado anterior entonces:
+
+$$
+A R + B R + C R \geq A Q + B Q + C Q
+$$
+
+para cualquier punto $R$ del interior de $\triangle\{A, B, C\} . A$ un punto $Q$ se le denomina centro de Fermat del triángulo $\triangle\{A, B, C\} y \mid$ minimiza la suma de las distancias a los vértices del triángulo.
+
+# Actividades complementarias
+
+**Actividad 1.** Buscar información en Internet sobre Pitágoras y el teorema de Pitágoras.
+
+**Actividad 2.** Buscar información en Internet sobre R. Descartes y P. de Fermat.

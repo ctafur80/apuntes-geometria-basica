@@ -1,0 +1,598 @@
+
+
+
+### Rectas
+
+En el capítulo [](#ch-espacios-metricos){.nameref} se introdujeron las
+nociones de _segmento_ y _puntos alineados_. Ahora, vamos a definir el
+concepto de _recta_, que guarda bastante relación con estos.
+
+::: {.deffinition #def-recta data-label="Definición de Recta"}
+En $(\mathbf{P}, d)$, a un subconjunto $r \subseteq \mathbf{P}$ se le llama
+_recta_ (_straight line_) si satisface las condiciones siguientes:
+
+1.  $r$ contiene (al menos) a dos puntos distintos.
+2.  Tres puntos arbitrarios de $r$ están alineados.
+3.  Dados $A, B \in r$, para todo $X \in \mathbf{P}$ alineado con $A$ y $B$
+    se tiene que $X \in r$.
+:::
+
+Advierta que hemos empleado la expresión $r \subseteq \mathbf{P}$, es decir,
+esa recta es un subconjunto de puntos del plano euclideo. Por lo tanto, se
+trata de una figura geométrica. Es la más básica, junto con los segmentos.
+Conforme avancemos, iremos centrando nuestro estudio en figuras más
+complejas: triángulos, esferas, polígonos... Pero, para subir en
+complejidad, necesitamos conocer bien las figuras básicas, pues aquellas se
+forman a partir de estas.
+
+Advierta que las condiciones 2 y 3 son lo mismo pero en sentido opuesto, con
+lo que podríamos prescindir de una de las dos si cambiando en la otra el
+condicional por un bicondicional. Aun así, me gusta dejarlas por separado en
+este caso.
+
+Me gustaría también aclarar la terminología del concepto de _recta_, ya que
+TKTK.
+
+<!-- Explicar la diferencia entre línea y recta y la confusión de términos
+en las traducciones del inglés. -->
+
+Esta definición quizás no le parezca intuitiva. O, aunque la comprenda, le
+resulte difícil de recordar y de aplicar. Quizás le tranquilice saber que
+muchas veces no se requerirá usar esta definición para trabajar con rectas.
+A veces se usarán teoremas que se apoyan sobre esta definición.
+
+<!--
+La definición anterior es bastante difícil de utilizar. Lo importante es
+saber que, en $\mathbf{P}$, y simplemente por el hecho de ser un espacio
+métrico, hay ciertos subconjuntos importantes que son las rectas, que
+definimos como acabamos de hacer aquí. Los axiomas que vamos a ir
+estableciendo en este capítulo son los que nos permitirán construir rectas y
+trabajar con ellas.
+-->
+
+<!-- Quizás llamarla inclusión de un segmento en una recta -->
+
+::: {.theorem data-label="Teorema del Segmento Incluido en una Recta"}
+Para dos puntos cualesquiera del plano euclídeo y una recta cualquiera del
+mismo, si ambos puntos pertenecen a la recta, entonces el segmento formado
+por dichos puntos estará incluido en dicha recta.
+:::
+
+Se podríe enunciad de forma más simbólica como que, dada una recta $r$ y dos
+puntos $A, B \in r$, se tiene que $[A, B] \subseteq r$.
+
+Aunque sea algo evidente, no es tan sencillo demostrarlo.
+
+::: proof
+Sabemos que $[A, B] \subseteq r$ es lo mismo que
+
+$$ \text{Para todo} \ X \in [A, B]. \ X \in r $$
+
+que es a lo que deseamos llegar.
+
+Vamos a analizar primero el caso en el que $A \neq B$. De $X \in [A, B]$ se
+deduce, por la [](#def-puntos-alineados){.nameref}, que $A$, $B$ y $X$ están
+alineados. A su vez, esto hace que se cumpla la condición 3 de la
+[](#def-recta){.nameref}. Es decir, puesto que $A \neq B$ y $A, B \in r$, se
+tiene, ya que $A$, $B$ y $X$ están alineados, que $X \in r$, que es a donde
+deseábamos llegar.
+
+El caso en el que $A = B$ se demuestra de forma trivial, por las
+[](#prop-segmentos){.nameref}. Es decir, es evidente que se cumple $[A, A]
+\subseteq r$ puesto que $[A, A] = \{A\}$ y, por hipótesis del teorema, se
+tiene que $A \in r$.
+:::
+
+::: {.axiom #ax-p2-euclides data-label="Axioma P2"}
+Se cumplen:
+
+1.  $\mathbf{P}$ contiene a tres o más puntos no alineados.
+2.  Por dos puntos de $\mathbf{P}$ que no sean el mismo pasa una recta.
+:::
+
+Además, advierta que la primera de las condiciones del axioma viene
+justificada para que una recta no baste para ser un plano euclideo. Por
+tanto, una recta es simplemente una parte de nuestro "terreno de juego"; no
+el todo.
+
+::: {.theorem #th-unicidad-recta-por-dos-puntos data-label="Teorema de la
+Unicidad de la Recta que Pasa por Dos Puntos"}
+En $(\mathbf{P}, d)$, por dos puntos pasa una única recta.
+:::
+
+Aquí, debe interpretar la parte "pasa exactamente una recta" como "hay una y
+solo una recta que los contiene", o, si lo prefiere, "existe siempre una
+recta que los contiene y, además, esa recta es única". Es decir, se podría
+considerar que una recta es una aplicación que toma como argumentos dos
+puntos de $\mathbf{P}$. Debido a esto, podemos emplear una notación que
+estipulemos para designarla. En nuestro caso, para $A, B \in \mathbf{P}$ con
+$A \neq B$, la única recta que pasa por $A$ y $B$ se denotará $r_{AB}$.
+
+::: proof
+Dadas dos rectas $r$ y $s$ y dos puntos $A, B \in \mathbf{P}$ pertenecientes
+a ambas rectas simultaneamente, por un lado se tiene que para todo $X \in
+r$, al estar $A$ y $B$ en $r$ se tiene que $X$ está alineado con $A$ y $B$.
+Entonces, aplicando el punto 3 de la [](#def-recta){.nameref}, tenemos que
+$X \in s$.
+
+Análogamente, se tiene que, si $X \in s$, entonces $X \in r$. Con estas dos
+partes, hemos demostrado que $r \subseteq s$ y $s \subseteq r$, con lo que
+se tiene que $r = s$.
+:::
+
+Advierta que, también, un segmento nos determina una única recta, ya que
+este se define por sus extremos. A la única recta que contiene a un segmento
+se la califica de la recta _soporte_ de este.
+
+El último teorema, junto con el [](#ax-p2-euclides){.nameref}, nos nos
+permite considerar o "construir" la recta que pasa por dos puntos
+diferentes. Es como si este axioma nos proporcionara como herramienta una
+regla no graduada (_straight edge_).
+
+::: {.deffinition #def-rectas-sec data-label="Definición de Rectas
+Secantes"}
+Diremos que dos rectas del plano _se cortan_, o _son secantes_, si tienen
+exactamente un punto en común.
+:::
+
+Se puede dar una definición análoga para los segmentos, o para un segmento y
+una recta. TKTK.
+
+::: {.deffinition #def-rectas-paralelas data-label="Definición de Rectas
+Paralelas"}
+A dos rectas que son iguales o que no tienen ningún punto en común se las
+califica de rectas _paralelas_. Si $a$ y $b$ son rectas paralelas, lo
+denotaremos mediante $a \parallel b$.
+:::
+
+Advierta que consideramos a dos rectas iguales también como paralelas.
+
+Por cierto, a veces verá que a las iguales se las califica,
+alternativamente, de _coincidentes_.
+
+Por cierto, la igualdad puede recibir en esta asignatura otros nombres.
+Porque... ¿qué es la igualdad? No es tan sencillo. Ya llegaremos y recordará
+esto que acaba de leer.
+
+Consideraremos que dos segmentos son paralelos si las respectivas rectas
+soporte de estos son paralelas. Y, una recta es paralela a un segmento si
+dicha recta es paralela a la recta soporte del segmento.
+
+::: {.theorem #th-rectas-sec-paralelas data-label="Teorema de las Rectas
+Secantes o Paralelas"}
+Dos rectas del plano o bien se cortan o bien son paralelas.
+:::
+
+Puede parecer algo elemental y evidente, pero demostrarlo de forma rigurosa
+no es tan sencillo. Advierta que, gracias a este teorema, descartamos casos
+como que las rectas sean, simultaneamente, secantes y coincidentes, y ni
+paralelas ni secantes.
+
+Tenga en cuenta que, aunque hemos definido los segmentos secantes y
+paralelos de forma análoga, este teorema sirve solo para rectas.
+
+::: proof
+Vamos a hacer la demostración por contradicción (reducción al absurdo).
+
+Suponemos dos rectas $r$ y $s$ que no son paralelas ni secantes. Al no ser
+paralelas, no se cumplirá la [](#def-rectas-paralelas){.nameref}, con lo que
+$r$ y $s$ no son iguales y, además, han de tener al menos un punto en común.
+
+Por si se lía con este último razonamiento, vamos a desarrollarlo haciendo
+uso de la lógica proposicional simbólica. Partimos de las proposiciones
+siguientes:
+
+$$
+  \begin{align*}
+    p &= \text{las rectas son paralelas} \\
+    m &= \text{las rectas son la misma (es decir, son coincidentes)} \\
+    x &= \text{las rectas tienen al menos un punto en común} \\
+  \end{align*}
+$$
+
+Según la [](#def-rectas-paralelas){.nameref}, se tendrá que
+
+$$ p = m \lor \neg x $$
+
+Entonces,
+
+$$ \neg p = \neg (m \lor \neg x) = \neg m \land \neg \neg x = \neg m \land x
+$$
+
+si se aplica una de las Reglas de De Morgan. Esto es lo que hemos afirmado
+como hipótesis. Por tanto, también estamos afirmando que esas rectas no son
+la misma y, además, tienen al menos un punto en común.
+
+La otra proposición de la hipótesis de partida, es decir, que las rectas no
+se cortan, impone que las rectas no tienen exactamente un punto en común.
+Por tanto, uniendo las dos hipótesis tiene que darse necesariamente que las
+rectas se corten en más de un punto. Sabiendo esto, podemos afirmar que las
+rectas se cortan en dos puntos; o quizás en más, pero eso no nos interesa
+ahora.
+
+Ahora, aplicamos el [](#ax-p2-euclides){.nameref} y tenemos que $r = s$,
+cosa que contradice la hipótesis de partida, que afirmaba que $r$ y $s$ no
+son paralelas.
+:::
+
+Otra cosa que se podría deducir es el teorema siguiente.
+
+::: {.theorem data-label="Teorema"}
+En $(\mathbf{P}, d)$, dado un segmento con extremos los puntos $A$ y $B$,
+$[A, B]$, y una recta $r$. Si se cortan $r$ y $[A, B]$, entonces también se
+cortarán $r$ y la recta soporte de $[A, B]$, $r_{AB}$.
+:::
+
+::: proof
+Si se cortan $r$ y $[A, B]$, tienen un único punto en común, es decir,
+
+$$ [A, B] \cap r = \{T\} = T $$
+
+Como demuestra la observación de la [](#def-recta){.nameref}, se tiene que
+
+$$ \text{Para todo } X \in [A, B]. \ X \in r_{AB} $$
+
+En concreto, se cumplirá para ese punto $T$, es decir, se tendrá que $T \in
+r_{AB}$, con lo que o bien $r$ y $r_{AB}$ se cortan o son coincidentes; no
+pueden ser paralelas.
+
+Esto demuestra que ese mismo $T$ está en $r_{AB}$, pero no que sea el único.
+TKTK. Ahora, aplicando el [](#th-rectas-sec-paralelas){.nameref}, si no se
+cortan, tienen que ser paralelas, pero, como tienen un punto en común,
+serían coincidentes. Pero no pueden ser coincidentes porque los demás puntos
+del segmento no están en la recta. Por tanto, solo pueden ser secantes el
+segmento y la recta. TKTK.
+:::
+
+Advierta que lo contrario no tiene por qué ser cierto. Es decir, pueden
+cortarse dos rectas pero no cortarse una de estas con un segmento de la
+otra. Esto suele ser fácil de imaginar.
+
+::: {.axiom #ax-p3-euclides data-label="Axioma P3 (de la Regla Graduada)"}
+En $(\mathbf{P}, d)$, para toda recta $r \subseteq \mathbf{P}$ existe una
+isometría $\gamma: (r, d) \longrightarrow (\rset, d')$ siendo $d'$ una
+distancia definida como, para $X, Y \in \rset$,
+
+$$ d'(X, Y) = |X - Y| $$
+:::
+
+Se demostró en un ejercicio que esa aplicación $d'$ es una distancia.
+
+Muchas veces se da la definición equivalente siguiente, que me gusta menos.
+En $(\mathbf{P}, d)$, para toda recta $r \subseteq \mathbf{P}$ existe una
+biyección $\gamma: r \longrightarrow \rset$ que verifica, para todo $X, Y
+\in r$,
+
+$$ \left|\gamma(X) - \gamma(Y)\right| = d(X, Y) $$
+
+<!--
+Creo que existen formalismos de la geometría euclidiana, más clásicos que el
+que estamos siguiendo, en los que no se incluye este axioma. Así, este es un
+formalismo algo mixto, en el que también hacemos uso de los números reales y
+de sus operaciones, pero sin llegar a depender de estos para todo, como
+sucede en la geometría analítica euclidea.
+-->
+
+Este axioma guarda algunas sutilezas que analizamos en otra parte TKTK. Por
+ejemplo, ha de tener en cuenta que, si elige una "regla graduada" (_ruler_)
+con un origen distinto, la función $\gamma$ pasa a ser otra. En realidad,
+existen infinitas biyecciones, una por cada elección del origen y sentido y
+escala que tomemos para la "regla graduada".
+
+La figura siguiente ilustra la forma práctica de establecer la biyección
+$\gamma$ con la ayuda de una regla graduada; es decir, una regla sobre la cual
+se han "marcado" los números reales.
+
+![Axioma de la regla graduada](./figuras/regla.svg)
+
+La potencia de este axioma será comprendida según avance el curso. Sobre
+todo, el hecho de utilizar los números reales tiene unas implicaciones
+geométricas profundas que serán esenciales. Debe saber que existen formas
+alternativas de presentar la geometría sintética euclidiana en la que no se
+usan números en ningún momento. TKTK.
+
+::: {.theorem #th-unic-punto-medio-segmento data-label="Teorema de la
+Unicidad del Punto Medio de un Segmento"}
+En $(\mathbf{P}, d)$, dada una recta $r$ y un segmento $[A, B]$ de extremos
+$A, B \in r$ siendo $A \neq B$, el conjunto siguiente es unitario:
+
+$$ \{X \in r \st d(X, A) = d(X, B)\} $$
+:::
+
+::: proof
+Como sabemos de los números reales, entre dos números cualesquiera, $a, b
+\in \rset$, existe un único número $m \in \rset$ a igual distancia de estos,
+siendo esa distancia la misma $d'$ del [](#ax-p3-euclides){.nameref}, es
+decir, tal que
+
+$$ |a - m| = |b - m| $$
+
+Entonces, haciendo uso de esa isometría $\gamma$ de dicho axioma, y teniendo
+en cuenta que las isometrías son biyecciones, y, por tanto, inyecciones,
+existirá un único punto $M \in r$ tal que
+
+$$ d(M, \gamma^{-1}(a)) = d(M, \gamma^{-1}(b)) = $$
+
+que es lo que deseábamos demostrar. En realidad, hemos tenido también en
+cuenta que, si $\gamma$ es una aplicación biyectiva, también lo será
+$\gamma^{-1}$, tal y como sabemos del álgebra abstracta.
+
+Si no le convence, podemos hacer más énfasis en el proceso que hace que se
+tenga un único número a igual dista de $a$ y $b$. Tenemos un valor
+desconocido $x$ que está a igual distancia $d'$ de $a$ y de $b$. entonces,
+
+$$ |x - a| = |x - b| $$
+
+Vamos a operar con esta expresión. Al tener valores absolutos, tenemos que
+ramificar las operaciones.
+
+Primer caso:
+
+$$
+  \begin{align*}
+    x - a &= x - b \\
+    a &= b
+  \end{align*}
+$$
+
+Este caso se descarta, al no decirnos nada sobre el valor de $x$.
+
+Segundo caso.
+
+$$
+  \begin{align*}
+    x - a &= {-(x - b)} \\
+    x - a &= b - x \\
+    2x &= a + b \\
+    x &= \frac{a + b}{2}
+  \end{align*}
+$$
+
+Da un valor que es único, con lo que ese número a igual distancia $d'$ de
+$a$ y $b$ es único.
+:::
+
+::: { .deffinition #def-punto-medio-segmento data-label="Definición de Punto
+Medio de un Segmento" }
+En $(\mathbf{P}, d)$, dada una recta $r$ y un segmento $[A, B]$ de extremos
+$A, B \in r$ siendo $A \neq B$, se llama _punto medio_ del segmento $[A, B]$
+al único punto definido por
+
+$$ \operatorname{medio}[A, B] = \{X \in r \st d(X, A) = d(X, B)\} $$
+:::
+
+Algo que no llegamos a considerar en esta definición es el caso de si los
+dos puntos extremos del segmento son el mismo. Advierta que, si nos
+limitásemos a dicha definición, todos los puntos servirían puesto que, por
+un lado, por un punto pasan infinitas rectas, y, por el otro, todos los
+puntos equidistan de un solo punto. Se toma el convenio de admitir que para
+un punto cualquiera $A \in \mathbf{P}$,
+
+$$ \text{medio}[A, A] = A $$
+
+::: {.theorem #th-prop-medio-segmento data-label="Teorema (Propiedades del
+Punto Medio de un Segmento)"}
+En $(\mathbf{P}, d)$, dado $[A, B]$ un segmento de extremos $A, B \in r$, y
+designando por $M$ a $\operatorname{medio}[A, B]$,
+
+1.  El punto medio de $[A, B]$ cumple la simetría, es decir,
+
+    $$ \operatorname{medio}[A, B] = \operatorname{medio}[B, A] $$
+
+2.  Se cumple
+
+    $$ d(M, A) = d(M, B) = \frac{1}{2}d(A, B) $$
+
+3.  $\operatorname{medio}[A, B] \in [A, B]$.
+
+
+4.  Existe un único $A' \in r$ tal que $B = \text{medio}[A, A']$.
+:::
+
+::: proof
+Punto 1. Es evidente al ver el predicado del conjunto que define al punto
+medio del segmento.
+
+
+Punto 2. Haciendo uso del resultado de
+[](#th-unic-punto-medio-segmento){.nameref}, podemos seguir operando
+partiendo de los datos de la demostración.
+
+$$
+  \begin{align*}
+    d(M, A)
+      &= |\gamma(M) - \gamma(A)| \\
+      &= \left| \frac{a+b}{2} - a \right| \\
+      &= \left| \frac{a+b}{2} - \frac{2a}{2} \right| \\
+      &= \left| \frac{1}{2} \cdot (b - a) \right| \\
+      &= \left|\frac{1}{2}\right| \cdot |b - a| \\
+      &= \frac{1}{2} |b - a| \\
+      &= \frac{1}{2} d(A, B)
+  \end{align*}
+$$
+
+De modo análogo, se obtendría la otra
+
+$$ d(M, B) = \frac{1}{2} d(A, B) $$
+
+Punto 3. Es consecuencia del punto anterior, ya que
+
+$$
+  \begin{align*}
+    d(A, B)
+      &= d(A, B)\left(\frac{1}{2} + \frac{1}{2}\right) \\
+      &= \frac{1}{2}d(A, B) + \frac{1}{2}d(A, B) \\
+      &= d(A, M) + d(M, B)
+  \end{align*}
+$$
+
+que encaja con la [](#def-segmento){.nameref}.
+
+Punto 4. Es bastante parecida a la de la unicidad TKTK.
+:::
+
+<!-- El ejercicio siguiente creo que es algo complicado. Creo que lo hizo
+Gerlach. -->
+
+::: exercise
+Sea $r$ una recta y sean $\gamma : r \longrightarrow \rset$ y $\gamma' : r
+\longrightarrow \rset$ dos biyecciones dadas por el
+[](#ax-p3-euclides){.nameref}. Entonces existe un $a \in \rset$ tal que
+$\gamma' \circ \gamma^{-1} : \rset \longrightarrow \rset$ es de la forma:
+
+$$ x \longmapsto a + x \quad \text{o bien} \quad x \longmapsto a - x $$
+:::
+
+::: {.deffinition #def-semirrecta data-label="Definición de Semirrecta"}
+En $(\mathbf{P}, d)$, dada una recta $r$ y un punto $P \in r$. Al tomar una
+isometría $\gamma : (r, d) \longrightarrow (\rset, d')$ dada por el
+[](#ax-p3-euclides){.nameref}, los conjuntos:
+
+$$ \{ X \in r : \gamma(X) > \gamma(P) \} \quad \text{y} \quad \{ X \in r :
+\gamma(X) < \gamma(P) \} $$
+
+reciben el nombre de _semirrectas_ en $r$ determinadas por $P$ o con
+_vértice_ $P$.
+:::
+
+<!--
+sea $r$ una recta y $P$ un punto de $r$, $P \in r$. Tomamos una biyección
+$\gamma : r \longrightarrow \rset$ dada por el [](#ax-p3-euclides){.nameref}.
+Los conjuntos:
+
+$$ \{ X \in r : \gamma(X) > \gamma(P) \} \quad \text{y} \quad \{ X \in r :
+\gamma(X) < \gamma(P) \} $$
+
+se llaman _semirrectas_ en $r$ determinadas por $P$ o con _vértice_ $P$.
+-->
+
+Dados dos puntos $S$ y $T$ de la recta $r$, decimos que están del mismo lado
+con respecto a $P$ si pertenecen a la misma semirrecta determinada por $P$.
+En caso de pertenecer a semirrectas distintas, se dice que están en lados
+contrarios.
+
+<!-- FIGURA TKTK -->
+
+También se podría usar la notación $r_\gamma^{P,1}$ y $r_\gamma^{P,2}$, para las
+dos semirrectas que se forman partiendo del punto $P$ de la recta $r$
+haciendo uso de la biyección $\gamma$.
+
+<!-- Quizás llamarla dos puntos en la misma semirrecta -->
+
+Observación. Dos puntos $X$ e $Y$ de una recta $r$ están en lados contrarios
+respecto a un punto $P \in r$, siendo $P \neq X$ y $P \neq Y$, si y solo si
+$P \in [X, Y]$.
+
+Primero, demostraremos la implicación $\Longrightarrow$.
+
+Para demostrarlo, partimos de la existencia de la isometría $\gamma : (r, d)
+\longrightarrow (\rset, d')$ dada por el [](#ax-p3-euclides){.nameref}.
+Además, suponemos, sin pérdida de generalidad, que $X \in r_\gamma^1$ e $Y
+\in r_\gamma^2$, siendo estas las semirrectas de $r$ que se forman a partir
+del punto $P \in r$ por medio de $\gamma$.
+
+Tenemos entonces
+
+$$
+  \begin{align*}
+    X &\in \{Z \in r \st \gamma(Z) > \gamma(P)\} \\
+    Y &\in \{Z \in r \st \gamma(Z) < \gamma(P)\}
+  \end{align*}
+$$
+
+con lo que se cumple que
+
+$$
+  \begin{align*}
+    \gamma(X) &> \gamma(P) \\
+    \gamma(Y) &< \gamma(P) \\
+  \end{align*}
+$$
+
+o, lo que es lo mismo,
+
+$$
+  \begin{align*}
+    \gamma(X) - \gamma(P) &> 0 \\
+    \gamma(P) - \gamma(Y) &> 0
+  \end{align*}
+$$
+
+con lo que tenemos, por el [](#ax-p3-euclides){.nameref},
+
+$$
+\begin{align*}
+  \gamma(X) - \gamma(P) &= |\gamma(X) - \gamma(P)| = d(X, P) \\
+\gamma(P) - \gamma(Y) &= |\gamma(P) - \gamma(Y)| = d(P, Y)
+\end{align*}
+$$
+
+Entonces, suponiendo, sin pérdida de generalidad, que $\gamma(X) >
+\gamma(Y)$, se tiene que
+
+$$
+\begin{align*}
+  d(X,Y)
+    &= \gamma(X) - \gamma(Y) \\
+    &= \gamma(X) + 0 - \gamma(Y) \\
+    &= \gamma(X) + \{[{-\gamma(P)}] + \gamma(P)\} - \gamma(Y) \\
+    &= [\gamma(X) - \gamma(P)] + [\gamma(P) - \gamma(Y)] \\
+    &= |\gamma(X) - \gamma(P)| + |\gamma(P) - \gamma(Y)| \\
+    &= d(X, P) + d(P, Y)
+\end{align*}
+$$
+
+pero esto no es más que la [](#def-segmento){.nameref}, con lo que se tiene
+que $P \in [X, Y]$.
+
+Ahora, hay que hacer la demostración de la implicación $\Longleftarrow$.
+
+Partimos de $P \in [X, Y]$. Entonces, se tiene que
+
+$$
+  \begin{align*}
+    d(X, Y) &= d(X, P) + d(P, Y) \\
+    |\gamma(X) - \gamma(Y)| &= |\gamma(X) - \gamma(P)| + |\gamma(P) - \gamma(Y)| \\
+  \end{align*}
+$$
+
+TKTK.
+
+Aquí solo hay dos casos posibles que cumplan esta igualdad. Por un lado,
+
+$$
+  \begin{align*}
+    \gamma(X) &> \gamma(Y) \\
+    \gamma(X) &> \gamma(P) \\
+    \gamma(P) &> \gamma(Y)
+  \end{align*}
+$$
+
+y, por el otro,
+
+$$
+  \begin{align*}
+    \gamma(X) &< \gamma(Y) \\
+    \gamma(X) &< \gamma(P) \\
+    \gamma(P) &< \gamma(Y)
+  \end{align*}
+$$
+
+TKTK.
+
+<!-- TODO Terminar la demostración. -->
+
+Si se fija, el resultado anterior viene a decir también que las semirrectas
+no dependen de la biyección $\gamma$ que hemos utilizado para definirlas, sino
+que están determinadas únicamente por la recta $r$ y el punto $P$.
+
+Entonces, se podría usar otra notación más cómoda para las semirrectas,
+como, por ejemplo, $r_1^P$ y $r_2^P$. Otras veces, por comodidad, usaremos
+una notación aún más simple y designaremos por $\bar{r}$ o $\bar{\bar{r}}$ a
+una semirrecta de una recta $r$. Esta notación se usará mucho en el capítulo
+dedicado a los ángulos, ya que estos se definen por medio de semirrectas.
+
+
+
+
+

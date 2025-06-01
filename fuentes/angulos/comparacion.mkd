@@ -1,0 +1,262 @@
+
+
+### Comparación de ángulos
+
+::: {.deffinition #def-interior-angulo data-label="Definición del Interior
+de un Ángulo"}
+Dadas dos rectas $r$ y $l$ secantes que se cortan en un punto $V$. Tomamos,
+a partir de $V$ las semirrectas $\bar{l} \subseteq l$ y $\bar{r} \subseteq
+r$. Como sabemos, en este caso el ángulo $\angle\left\{\bar{l},
+\bar{r}\right\}$ no es nulo ni llano.
+
+Sea $H_{l}^{1}$ el semiplano determinado por $l$ que contiene a $\bar{r}$ y
+$H_{r}^{1}$ el semiplano determinado por $r$ que contiene a $\bar{l}$. Se
+define _interior del ángulo_ $\angle\left\{\bar{l}, \bar{r}\right\}$ como el
+conjunto:
+
+$$ H_{l}^{1} \cap H_{r}^{1} $$
+:::
+
+<!-- ![Figura 4-8 Interior de un ángulo](attachment:interior_angulo.png) -->
+
+Obsérvese que un ángulo $\angle\left\{\bar{l}, \bar{r}\right\}$ determina
+dos regiones en el plano: lo que acabamos de definir como el interior del
+ángulo y el conjunto del plano que consiste en los puntos que no están en el
+interior de un ángulo. Esta observación es la que lleva a la definición más
+usual de ángulo, como una de las regiones del plano determinadas por un par
+de semirrectas con el mismo vértice. Con tal definición cada uno de
+"nuestros" ángulos en realidad determinaría dos ángulos: el "interior" y el
+"exterior".
+
+Nota (Convención). En la definición anterior, hemos excluido los casos en
+los que los ángulos sean nulos o llanos, es decir, cuando las rectas $r$ y
+$l$ son coincidentes. De no haberlo hecho así, se produciría una
+incoherencia en esos dos casos particulares.
+
+En cualquier caso, deseamos definir el interior de un ángulo para esos dos
+casos, por lo que estamos obligados a establecer una convención para ellos.
+
+Al ser en esos casos $r = l$, el semiplano de una de las rectas no puede
+contener a ninguna de las semirrectas de la otra.
+
+Establecemos, por tanto, el criterio de que el interior de un ángulo nulo es
+el conjunto vacío y, el de uno llano puede ser cualquiera de los dos
+semiplanos formados por la recta $r$ o $l$, ya que son coincidentes, el que
+nos apetezca, pero será solo ese.
+
+::: {.theorem data-label="Teorema de la Barra Transversal"}
+Sea $\angle\left\{\bar{l}, \bar{r}\right\}$ un ángulo que no es nulo ni
+llano y sean dos puntos $L \in \bar{l}$ y $R \in \bar{r}$. Una semirrecta
+$\bar{s}$ que tiene el mismo vértice que $\bar{l}$ y $\bar{r}$ está en el
+interior de $\angle\left\{\bar{l}, \bar{r}\right\}$ si $y$ solo si esta
+corta a $[L, R] \setminus \{L, R\}$.
+:::
+
+<!-- ![Figura 4-9 Teorema de la barra
+transversal](attachment:barra_transversal.png) -->
+
+::: proof
+Tenemos las rectas $r$ y $l$ de las que "nacen" las semirrectas $\bar{r}$ y
+$\bar{l}$, respectivamente. Estas se cortan en un punto $V$, el vértice del
+ángulo $\angle\left\{\bar{l}, \bar{r}\right\}$.
+
+Como vimos en la [](#def-interior-angulo){.nameref}, el interior de
+$\angle\left\{\bar{l}, \bar{r}\right\}$ es $H_l^1 \cap H_r^1$.
+
+Suponemos, sin pérdida de generalidad, que $R \in H_l^1$ y $L \in H_r^1$.
+
+Vamos a hacer la demostración en dos sentidos. Primero, $\Longleftarrow$.
+
+Partimos del supuesto de que $\bar{s}$ corta a $[L, R] \setminus \{L, R\}$
+en un punto $S$. Entonces $S$ está en el mismo semiplano de borde $l$ que
+$R$, es decir $S \in H_l^1$, y, por tanto, $\bar{s} \subseteq H_l^1$. Un
+razonamiento similar nos conduce a que $\bar{s} \subseteq H_r^1$.
+
+<!-- Quizás se pueda referenciar algo TKTK. Quizás, la definición de recta o
+algo sobre semirrectas. -->
+
+Por tanto, se tiene que $\bar{s} \subseteq H_l^1$ y $\bar{s} \subseteq
+H_l^1$, o, lo que es lo mismo, que $\bar{s} \subseteq H_l^1 \cap H_r^1$, que
+es lo mismo que decir que $\bar{s}$ está en el interior de
+$\angle\left\{\bar{l}, \bar{r}\right\}$.
+
+Ahora, veamos el otro sentido: $\Longrightarrow$.
+
+Partimos del supuesto de que $\bar{s}$ está en el interior de
+$\angle\left\{\bar{l}, \bar{r}\right\}$, que, como sabemos, es lo mismo que
+decir que $\bar{s} \subseteq H_l^1 \cap H_r^1$.
+
+Elegimos $L' \in l \cap H_r^2$. Por un lado, se tiene que $\left[L',
+R\right] \setminus\left\{L', R\right\} \subseteq H_l^1 \cap H_r^2$, y,
+entonces, en particular, se tiene que $\left[L', R\right]
+\setminus\left\{L', R\right\} \subseteq H_r^2$.
+
+Por otro lado, se tiene que $s \cap H_l^1 \cap H_r^2 = \bar{s} \cap H_r^2 =
+\emptyset$. Entonces, por lo anterior, se tiene que $\left[L', R\right]
+\setminus \left\{L', R\right\} \cap s = \emptyset$.
+
+<!-- Se ha usado una propiedad de la teoría de conjuntos TKTK. -->
+
+Por el [](#teor-ax-pasch){.nameref}, si $s$ corta a $[L', L]$, debe cortar
+entonces a uno de los otros dos lados del triángulo $\triangle\{L', L, R\}$,
+es decir, cortará o bien a $[L', R]$ o bien a $[L, R]$. Pero hemos visto que
+$s$ no corta a $[L', R]$, con lo que necesariamente cortará a $[L, R]$.
+:::
+
+::: {.deffinition #def-angulo-menor-que-otro data-label="Definición de
+Ángulo Menor que Otro"}
+Dados dos ángulos, $\angle\left\{\bar{a}, \bar{b}\right\}$ y
+$\angle\left\{\bar{c}, \bar{d}\right\}$, se dice que $\angle\left\{\bar{a},
+\bar{b}\right\}$ es menor que $\angle\left\{\bar{c}, \bar{d}\right\}$ (o
+bien que $\angle\left\{\bar{c}, \bar{d}\right\}$ es mayor que
+$\angle\left\{\bar{a}, \bar{b}\right\}$) si existe una isometría $g$ de modo
+que
+
+1.  $g(\bar{a}) = \bar{c}$,
+2.  $g(\bar{b})$ está en el interior de $\angle\left\{\bar{c},
+    \bar{d}\right\}$.
+:::
+
+<!-- FIGURA -->
+
+Lo normal es usar aquí la notación general de las relaciones de orden. Es
+decir, $\angle\left\{\bar{a}, \bar{b}\right\} \prec \angle\left\{\bar{c},
+\bar{d}\right\}$ indica que "$\angle\left\{\bar{a}, \bar{b}\right\}$ es
+menor que $\angle\left\{\bar{c}, \bar{d}\right\}$" y, $\angle\left\{\bar{a},
+\bar{b}\right\} \succ \angle\left\{\bar{c}, \bar{d}\right\}$, que
+"$\angle\left\{\bar{a}, \bar{b}\right\}$ es mayor que $\angle\left\{\bar{c},
+\bar{d}\right\}$".
+
+Nota (Convención). Un ángulo nulo es menor que cualquier otro ángulo no
+nulo, mientras que un ángulo llano es siempre mayor que cualquier otro
+ángulo no llano.
+
+::: {.theorem #th-rel-orden-angulos data-label="Teorema de la Relación de
+Orden de los Ángulos"}
+Sean $\angle\left\{\bar{a}, \bar{b}\right\}, \angle\left\{\bar{c},
+\bar{d}\right\}, \angle\left\{\bar{a}', \bar{b}'\right\},
+\angle\left\{\bar{c}', \bar{d}'\right\}$ cuatro ángulos. Si
+
+$$ \angle\left\{\bar{a}, \bar{b}\right\} = \angle\left\{\bar{a}',
+\bar{b}'\right\}, \quad \angle\left\{\bar{c}, \bar{d}\right\} =
+\angle\left\{\bar{c}', \bar{d}'\right\}, \quad \angle\left\{\bar{a},
+\bar{b}\right\} \prec \angle\left\{\bar{c}, \bar{d}\right\} $$
+
+entonces $\angle\left\{\bar{a}', \bar{b}'\right\} \prec
+\angle\left\{\bar{c}', \bar{d}'\right\}$.
+:::
+
+::: proof
+Vamos a hacer uso de varias isometrías:
+
+  - $g \in \isom(\mathbf{P}, d)$ tal que $g(\bar{a}) = \bar{a}'$ y
+    $g(\bar{b}) = \bar{b}'$.
+  - $h \in \isom(\mathbf{P}, d)$ tal que $h(\bar{c}) = \bar{c}'$ y
+    $h(\bar{d}) = \bar{d}'$.
+  - $f \in \isom(\mathbf{P}, d)$ tal que $f(\bar{a}) = \bar{c}$.
+
+Si ahora $f$ es la isometría tal que $f(\bar{a}) = \bar{c}$ y que
+$f(\bar{b})$ está en el interior de $\angle\left\{\bar{c}, \bar{d}\right\}$,
+se tiene que la isometría $f' = h f g^{-1}$ verifica que
+$f'\left(\bar{a}'\right) = \bar{c}'$ y que $f'\left(\bar{b}'\right)$ está en
+el interior de $\angle\left\{\bar{c}', \bar{d}'\right\}$. Con lo que
+$\angle\left\{\bar{a}', \bar{b}'\right\}$ es menor que
+$\angle\left\{\bar{c}', \bar{d}'\right\}$.
+
+<!-- No lo entiendo. -->
+:::
+
+Este último teorema lo que viene a decir es que la relación "menor que" para
+los ángulos es una relación de orden total. TKTK.
+
+::: {.theorem #th-comparacion-angulos data-label="Teorema de la Comparación
+de Ángulos"}
+Dados dos ángulos $\angle\left\{\bar{a}, \bar{b}\right\}$ y
+$\angle\left\{\bar{c}, \bar{d}\right\}$ exactamente una de las siguientes
+afirmaciones es cierta:
+
+1.  $\angle\left\{\bar{a}, \bar{b}\right\} \prec \angle\left\{\bar{c},
+    \bar{d}\right\}$,
+2.  $\angle\left\{\bar{a}, \bar{b}\right\} = \angle\left\{\bar{c},
+    \bar{d}\right\}$,
+3.  $\angle\left\{\bar{a}, \bar{b}\right\} \succ \angle\left\{\bar{c},
+    \bar{d}\right\}$.
+:::
+
+::: proof
+Tomamos un ángulo $\angle\left\{\bar{a}, \bar{b}\right\}$ con vértice $V$ y
+otro $\angle\left\{\bar{c}, \bar{d}\right\}$ con vértice $V'$. Suponemos que
+estos ángulos no son ni nulos ni llanos, pues en tales casos no hay nada que
+probar, tal y como explicamos antes.
+
+Sea $P$ un punto de $\bar{a}$ a distancia 1 de $V$ y $P'$ un punto de
+$\bar{c}$ a distancia 1 de $V'$. Por el [](#ax-p5-euclides){.nameref},
+existe una isometría $g$ tal que $g(V) = V'$ y $g(P) = P'$. Entonces
+$g(\bar{a}) = \bar{c}$.
+
+<!-- Demostrar esto último. -->
+
+Sea $H_{a}$ el semiplano determinado por $a$ que contiene a $\bar{b}$ y
+$H_{c}$ el semiplano determinado por $c$ que contiene a $\bar{d}$. O bien
+$g\left(H_{a}\right) = H_{c}$, o bien $\sigma_{c} g\left(H_{a}\right) =
+H_{c}$, pero en los dos casos existe una isometría $h$ tal que
+$h\left(H_{a}\right) = H_{c}$ y $h(\bar{a}) = \bar{c}$.
+
+<!-- No entiendo varias partes. -->
+
+Sea ahora un punto $Q$ en $\bar{b}$ a distancia 1 de $V$. Sean $H_{d}$ y
+$H_{d}'$ los dos semiplanos determinados por $d$, suponemos que $H_{d}$ es
+el semiplano que contiene a $\bar{c}$. Hay tres posibilidades: $h(Q) \in
+H_{d}, h(Q) \in d$ y $h(Q) \in H_{d}'$.
+
+Si $h(Q) \in H_{d}$, como $Q \in H_{a}$ entonces $h(Q) \in H_{c} \cap H_{d}$
+con lo cual $h(\bar{b}) \subseteq H_{c} \cap H_{d}$ y entonces
+$\angle\left\{\bar{a}, \bar{b}\right\}$ es menor que $\angle\left\{\bar{c},
+\bar{d}\right\}$.
+
+Si $h(Q) \in d$, entonces $h(b) = d$ y como $h\left(H_{a}\right) = H_{c},
+h(\bar{b}) = \bar{d}$, con lo cual $\angle\left\{\bar{a}, \bar{b}\right\}$ y
+$\angle\left\{\bar{c}, \bar{d}\right\}$ son congruentes.
+
+Finalmente supongamos que $h(Q) \in H_{d}'$. Al estar $h(Q)$ y $P'$ en
+semiplanos distintos de los dos determinados por $d$ entonces $\left[h(Q),
+P'\right]$ corta a $d$ en un punto $R$, y además $\left[R, P'\right]$ no
+corta a $h(b)$, por tanto $\left[h^{-1}(R), P\right]$ no corta a $b$, con lo
+que podemos decir que $h^{-1}(R)$ pertenece al semiplano $H_{b}$ determinado
+por $b$ y que contiene a $\bar{a}$. Como $h(Q)$ está en $H_{c}$ y $P' \in
+c$, se tiene que $R \in H_{c}$, luego $h^{-1}(R) \in H_{a}$. Luego la
+isometría $h^{-1}$ envía $R$ a $H_{a} \cap H_{b}$ y como $h^{-1}(\bar{c}) =
+\bar{a}$, se tiene que $h^{-1}(\bar{d})$ está en $H_{a} \cap H_{b}$ y el
+ángulo $\angle\left\{\bar{c}, \bar{d}\right\}$ es menor que
+$\angle\left\{\bar{a}, \bar{b}\right\}$.
+
+<!-- ![Figura 4-10 Caso $h(Q) \in H_{d}'$](attachment:caso_hq.png) -->
+
+Para demostrar que se tiene solamente una de las afirmaciones del teorema,
+queda por probar que no existe isometría $g \in
+\operatorname{Isom}(\mathbf{P})$ verificando que $g$ fija dos puntos de
+$\bar{a}$ y tal que $g(\bar{b})$ está en el interior del ángulo
+$\angle\left\{\bar{a}, \bar{b}\right\}$. Ahora bien esto último es una
+consecuencia del teorema 3.6: si $g$ fija dos puntos de $\bar{a}$ y
+$g(\bar{b}) \subseteq H_{a}$ entonces $g = \operatorname{id}_{\mathbf{P}}$.
+:::
+
+::: {.deffinition #def-ang-agudo-obtuso data-label="Definición de Ángulo
+Agudo y Ángulo Obtuso"}
+Un ángulo es agudo si es menor que un ángulo recto. Un ángulo es es obtuso
+si es mayor que un ángulo recto.
+:::
+
+<!-- ![Figura 4-11 Ángulo agudo](attachment:angulo_agudo.png) -->
+
+Observación. Por el teorema 4.22 un ángulo es o bien recto o bien agudo o
+bien obtuso. Por 4.21, si dos ángulos son congruentes o bien ambos son
+agudos o ambos son rectos o ambos son obtusos.
+
+<!-- ![Figura 4-12 Ángulo obtuso](attachment:angulo_obtuso.png) -->
+
+
+
+
+
+

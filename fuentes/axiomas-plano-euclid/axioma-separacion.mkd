@@ -1,0 +1,183 @@
+
+
+
+### Axioma de separación {#axioma-de-separación .unnumbered}
+
+Ahora, vamos a considerar un axioma de una naturaleza algo diferente a los
+anteriores. Viene a decir que, a partir de cualquier recta, podemos dividir
+al plano euclideo ($\mathbf{P}$) en dos semiplanos, es decir, en dos
+regiones parecidas al plano.
+
+::: {.axiom #ax-p4-euclides data-label="Axioma P4 (de Separación)"}
+En $(\mathbf{P}, d)$, para toda recta $r$ hay dos subconjuntos de
+$\mathbf{P}$, designados por $H^1$ y $H^2$, que verifican, para $i = 1, 2$ y
+$X, Y \in \mathbf{P}$,
+
+1.  $H^1 \cup H^2 = \mathbf{P} \setminus r$.
+2.  Si $X, Y \in H^i$, entonces $[X,Y] \subseteq H^i$.
+3.  Si $X \in H^1$ e $Y \in H^2$, entonces $[X, Y] \cap r \neq \emptyset$.
+:::
+
+<!--
+Se podía haber puesto solo la condición 2 con "si y solo si", y así
+ahorrarnos la 3. O la 3 con "si y solo si" y ahorrarnos la 2.
+
+Por la 1, se tiene ni $X$ ni $Y$ están en $r$. Por tanto, son recíprocos
+esos predicados.
+-->
+
+Esos conjuntos $H^1$ y $H^2$ formados a partir de una recta son relevantes y
+conviene por tanto darles un nombre.
+
+::: {.deffinition #def-semiplano data-label="Definición de Semiplano"}
+A los conjuntos $H^i$ siendo $i = 1, 2$, formados a partir de una recta
+según el [](#ax-p4-euclides){.nameref}, se les conoce como _semiplanos_.
+
+A la recta $r$ a partir de la cual se forman los dos semiplanos se la conoce
+como el _borde_ de los semiplanos.
+:::
+
+Veamos algunas propiedades de los semiplanos.
+
+::: {.theorem #propied-ax-p4-separacion data-label="Teorema (Propiedades de
+los Semiplanos)"}
+Al cumplirse el [](#ax-p4-euclides){.nameref}, esos conjuntos $H^i$ para $i
+= 1, 2$ cumplen lo siguiente:
+
+1.  Ninguno es vacío. Es decir, $H^i \neq \emptyset$.
+2.  Son disjuntos. Es decir, $H^1 \cap H^2 = \emptyset$.
+:::
+
+::: proof
+Punto 1. Por el [](#ax-p2-euclides){.nameref}, se tiene que $\mathbf{P}
+\setminus r \neq \emptyset$. Por tanto, para que se dé la condición 1 del
+[](#ax-p4-euclides){.nameref}, se dará que $H^1 \cup H^2 \neq \emptyset$, y,
+como sabemos por la teoría de conjuntos, para que se dé esto ha de ser no
+vacío al menos uno de $\{H^1, H^2\}$. Supongamos, sin pérdida de
+generalidad, que se trata de $H^1$.
+
+Fijémonos en un punto $A \in H^1$ y en un $B \in r$. Como consecuencia del
+[](#ax-p2-euclides){.nameref}, existe la recta $r_{AB}$ formada a partir de
+$A$ y $B$. Además, según el [](#th-prop-medio-segmento){.nameref}, sobre
+dicha recta $r_{AB}$ se encontrará un punto $C \in \mathbf{P}$ para el que
+se verifica $B = \operatorname{medio}[A, C]$.
+
+Es decir, $B \in [A, C] \cap r$, con lo que podemos afirmar que $[A, C] \cap
+r \neq \emptyset$.
+
+Debido a esto, aplicando el contrarrecíproco del punto 2 del
+[](#ax-p4-euclides){.nameref}, se tiene que $C \in H^2$.
+
+Por si no llega a comprender este último razonamiento, lo explico en
+detalle. Si se da $[A, C] \cap r \neq \emptyset$, se niega el consecuente,
+es decir, se niega que $[A, C] \subseteq H^i$. Por tanto, se dará la
+negación del antecedente, es decir, tendremos que $A$ y $C$ pertenecerán a
+semiplanos distintos. Y, como nos restringe la condición de que $A \in H^1$,
+se tendrá necesariamente que $C \in H^2$, con lo que $H^2 \neq \emptyset$.
+
+Punto 2. Lo demostraremos por contradicción. Para un $X \in \mathbf{P}$ para
+el que se cumpla $X \in H^1 \cap H^2$, se obtiene, por el punto 3 del
+[](#ax-p4-euclides){.nameref}, que $[X, X] \cap r \neq \emptyset$.
+
+Por las propiedades de la [](#def-puntos-alineados){.nameref}, se tiene que
+$[X, X] = \{X\}$. Uniendo esto con lo anterior, se tiene que $\{X\} \cap r
+\neq \emptyset$, con lo que se tendrá que $X \in r$, cosa que contradice el
+punto 1 del [](#ax-p4-euclides){.nameref}.
+:::
+
+::: {.theorem #th-caracterizacion-semiplano data-label="Teorema de la
+Caracterización de Semiplanos"}
+En $(\mathbf{P}, d)$, el conjunto
+
+$$ H^i = \{X \in \mathbf{P} \st [X, P^i] \cap r = \emptyset\} $$
+
+define al semiplano $H^i$, para $i = 1, 2$, siendo $P^i$ un punto arbitrario
+del semiplano $H^i$.
+
+<!--
+En $(\mathbf{P}, d)$, para $i = 1, 2$, dado un punto $P^i$ perteneciente a
+un semiplano $H^i$, se tiene que
+
+$$ H^i = \{X \in \mathbf{P} \st [X, P^i] \cap r = \emptyset\} $$
+-->
+:::
+
+Es otra forma de definir a los semiplanos, distinta a como se hace en el
+[](#ax-p4-euclides){.nameref}. A veces puede resultar más cómoda.
+
+::: proof
+Lo vamos a demostrar con la doble inclusión, viendo cada caso por separado.
+
+Por un lado, deseamos demostrar que
+
+$$ H^i \subseteq \{X \in \mathbf{P} \st [X, P^i] \cap r = \emptyset\} $$
+
+Dado un punto $X \in H^i$, por aplicación del punto 2 del
+[](#ax-p4-euclides){.nameref} tenemos que $[X, P^i] \subseteq H^i$.
+
+Por otro lado, del punto 1 del axioma, se tiene que $H^1 \cup H^2 =
+\mathbf{P} \setminus r$. En particular, se tiene entonces $H^1 \cup H^2
+\subseteq \mathbf{P} \setminus r$, y de esto podemos deducir que $H^i \cap r
+= \emptyset$.
+
+Resumiendo, como $H^i \cap r = \emptyset$ y $[X, P^i] \subseteq H^i$,
+aplicando la teoría de conjunto tenemos que $[X, P^i] \cap r = \emptyset$
+para cualquier $X \in H^i$.
+
+Por otro lado, deseamos demostrar que
+
+$$ \{X \in \mathbf{P} \st [X, P^i] \cap r = \emptyset\} \subseteq H^i $$
+
+Dado un $X \in \mathbf{P}$ tal que $[X, P^i] \cap r = \emptyset$, por el
+condicional contrarrecíproco del punto 3 del axioma, al no darse el
+consecuente, se dará que la negación del antecedente, es decir, que $X \in
+H^i$.
+:::
+
+Diremos que dos puntos $P$ y $Q$ están del mismo lado de $r$ si pertenecen
+al mismo semiplano determinado por $r$ y diremos que están de lados
+contrarios si cada uno pertenece a un semiplano distinto de los dos
+determinados por $r$.
+
+Ahora, veremos un método para la construcción de las semirrectas de una
+recta cualquiera sin necesidad de recurrir al [](#ax-p3-euclides){.nameref}.
+
+::: {.theorem #th-constr-semirrectas data-label="Teorema de la Construcción
+de Semirrectas"}
+En $(\mathbf{P}, d)$, sean $r$ y $s$ dos rectas que se cortan en un solo
+punto $P$ y $H^1_s, H^2_s$ los dos semiplanos determinados por $s$. Entonces
+$r \cap H^1_s$ y $r \cap H^2_s$ son precisamente las dos semirrectas
+determinadas por $P$ en $r$.
+:::
+
+<!-- FIGURA semirrectas y semiplanos TKTK -->
+
+<!-- TODO. Tengo que rehacer esta demostración. Ahora, me decanto por usar
+el axioma de la regla graduada, pero no sé si se requiere del concepto de
+distancia diferente al de $\gamma$, pues me termino liando. -->
+
+::: proof
+Para demostrar esto último, basta con comprobar que dos puntos $S$ y $T$ de
+$r$ están en la misma semirrecta de $r$ si y solo si están en el mismo
+semiplano determinado por $s$.
+
+El hecho de que $S$ y $T$ estén en la misma semirrecta equivale, por la
+observación de la [](#def-semirrecta){.nameref}, a que $P \notin [S, T]$.
+Por otro lado, por la observación de la [](#def-recta){.nameref}, como como
+$S, T \in r$, se tiene que $[S, T] \subseteq r$. Además, por hipótesis, $r$
+y $s$ se cortan en un único punto $P$.
+
+De estos tres hechos, deducimos que $[S, T]$ no corta a $s$. Si no lo ve,
+piense que de estas afirmaciones tenemos que, como mucho se dará $[S, T]
+\cap s = P$, pero es que ni siquiera eso puede ser cierto, ya que hemos
+dicho que $P \notin [S, T]$. Por tanto, $[S, T] \cap s = \emptyset$.
+
+Además, por el condicional contrarrecíproco del punto 3 del
+[](#ax-p4-euclides){.nameref}, si se da esto último, entonces $S$ y $T$
+estarán ubicados en el mismo semiplano de los dos determinados por $s$.
+:::
+
+
+
+
+

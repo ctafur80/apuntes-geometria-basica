@@ -1,0 +1,204 @@
+
+
+
+
+### Introducción a la geometría analítica del plano
+
+Uno de los grandes descubrimientos de la geometría que no se debe a los
+griegos es el de las coordenadas o la geometría analítica. Usando las
+coordenadas, los puntos se identifican con pares (en el plano) o ternas (en
+el espacio) de números. Los problemas geométricos se reducen a resolver
+problemas entre números, por ejemplo resolver ecuaciones. Desde el
+descubrimiento de las coordenadas por los ilustres franceses René Descartes
+y Pierre de Fermat (siglo XVII), las técnicas de geometría analítica han
+dado grandes resultados, pues permiten el uso de la potencia del análisis
+matemático y de álgebra lineal para resolver problemas geométricos antes
+inaccesibles. Además la geometría analítica permite la generalización del
+espacio a cualquier dimensión y proporciona el método usual de estudio de la
+geometría a partir del modelo numérico $\mathbb{R}^n$. El Teorema de
+Pitágoras es la clave para poder definir la distancia con coordenadas.
+
+En un contexto geométrico complejo, los útiles de cálculo basados sobre las
+coordenadas pueden resultar esenciales. En esta sección describiremos las
+coordenadas cartesianas del plano. Recordemos que denotamos por $\mathbf{P}$
+al conjunto de puntos del plano. Antes de nada vamos a introducir una nueva
+figura geométrica: los rectángulos.
+
+::: {.deffinition #def-rectangulo data-label="Definición de Rectángulo"}
+Un paralelogramo $(P, A, B, C)$ se llama un rectángulo si $r_{P A} \perp
+r_{P C}$.
+:::
+
+Observación. Por el teorema 2.33 tenemos que un rectángulo
+
+$$ (P, A, B, C) $$
+
+satisface también $r_{P A} \perp r_{A B} \perp r_{B C} \perp r_{C P}$.
+
+Observación (Construcción de un rectángulo). Sean $l$ y $m$ dos rectas
+cortándose ortogonalmente en un punto $P$. Para todo $A \in l \setminus
+\{P\}$ y $C \in m \setminus \{P\}$ existe un punto único $B$ tal que $(P, A,
+B, C)$ es un rectángulo. El punto $B$ se obtiene como el punto de
+intersección de las rectas $a, c$ donde $a \perp_A l$ y $c \perp_C m$.
+Obsérvese que $m$ y $a$ son paralelas, al ser ortogonales a la
+
+misma recta $l$ (ver la demostración del teorema 2.31) y $c$ es ortogonal a
+$a$ (y por tanto se cortan) por ser $a \parallel m$ y $c$ ortogonal a $m$
+(teorema 2.33).
+
+<!-- ![Figura 6-6 Un rectángulo](attachment:figura-6-6.png) -->
+
+Un sistema de coordenadas cartesianas es un par de rectas $l^1, l^2
+\subseteq \mathbf{P}$ cortándose ortogonalmente en un punto O . El punto O
+se llama origen del sistema de coordenadas, las rectas $l^1, l^2$ son sus
+ejes. (La existencia de un tal sistema está asegurada por el teorema 2.29 :
+dada una recta $l^1 \subseteq \mathbf{P}$ y un punto $\mathrm{O} \in l^1$,
+existe una recta única $l^2$ tal que $l^2 \perp l^1$ y pasando por O).
+
+Se orientan los ejes eligiendo puntos $E^k \in l^k$ con $d\left(\mathrm{O},
+E^k\right) = 1$. Según el axioma de la regla graduada (P3), existen
+aplicaciones biyectivas
+
+$$ \gamma_k: l^k \longrightarrow \mathbb{R}, \quad k = 1,2 $$
+
+con la propiedad
+
+$$ X, Y \in l^k \Longrightarrow d(X, Y) =
+\left|\gamma_k(X)-\gamma_k(Y)\right| $$
+
+El ejercicio 2.5 muestra que las aplicaciones $\gamma_k$ pueden ser elegidas
+tales que se tiene además
+
+$$ \gamma_k(\mathrm{O}) = 0, \quad \gamma_k\left(E^k\right) = 1, \quad k =
+1,2 $$
+
+No es tampoco difícil asegurarse que las condiciones (CP1-CP3) determinan
+las aplicaciones $\gamma_k$ de forma única. Observemos que para $X \in l^k$
+se tiene $\gamma_k(X) = d(\mathrm{O}, X)$ si $X$ está en la misma semirrecta
+determinada por O en $l^k$ que $E^k$ y en caso contrario $\gamma_k(X) =
+-d(\mathrm{O}, X)$. El número $\gamma_k(X)$ se llama la distancia orientada
+de O a $X$ para $X \in l^k$.
+
+El sistema de coordenadas así orientado está únicamente determinado por los
+puntos $\mathrm{O}, E^1, E^2$, y se le da el nombre " $\mathrm{O} E^1 E^2$".
+
+<!-- ![Figura 6-7 Sistema de coordenadas cartesianas en el
+plano](attachment:figura-6-7.png) -->
+
+Fijemos ahora un tal sistema de coordenadas. A todo punto del plano $A$ se
+le asocian dos números reales $a_1, a_2$ que se llaman las coordenadas
+cartesianas de $A$ (relativamente al sistema de coordenadas dado). Estas
+coordenadas están definidas por la construcción siguiente: para $k = 1, 2$,
+se traza la recta $a^k$ pasando por $A$ ortogonal a $l^k$ (teoremas 2.27,
+2.29) y determina el punto $A^k$ de intersección $a^k$ con $l^k$. Se toma
+
+$$ a_k = \gamma_k\left(A^k\right), k = 1,2 ; \quad \Gamma(A) = \left(a_1,
+a_2\right) $$
+
+(Atención: $A^k$ es un punto mientras que $a_k$ es un número real). La
+aplicación $\Gamma$ definida en (CP4) se llama la aplicación de coordenadas
+asociada al sistema de coordenadas elegido.
+
+::: {.theorem data-label="Teorema"}
+La aplicación $\Gamma: \mathbf{P} \rightarrow \mathbb{R}^2$ definida en
+(CP4) es biyectiva. Si $A, B$ son dos puntos del plano $y \Gamma(A) =
+\left(a_1, a_2\right), \Gamma(B) = \left(b_1\right.$, $b_2$ ), la distancia
+entre $A$ y $B$ satisface
+
+$$ d(A, B)^2 = \left(a_1-b_1\right)^2 + \left(a_2-b_2\right)^2 $$
+:::
+
+::: proof
+Sea $X = \left(x_1, x_2\right) \in \mathbb{R}^2$. Para $k = 1,2$,
+introducimos el punto $A^k = \gamma_k^{-1}\left(x_k\right) \in l^k$ así como
+la recta $a^k \perp l^k$ pasando por $A^k$. Siguiendo la construcción de las
+coordenadas cartesianas, un punto $P$ tiene $x_1$ por primera coordenada y
+$x_2$ por segunda coordenada si y solamente si $P \in$ $a^k, k = 1,2$. Ahora
+bien, $a^1$ y $a^2$ se cortan ortogonalmente en un solo punto
+:::
+
+(observación 6.20). Por lo tanto, existe exactamente un punto $A$ tal que
+$\Gamma(A) = X$. Se ha verificado así que $\Gamma$ es biyectiva.
+
+Vamos ahora a establecer la fórmula de la distancia entre dos puntos. Sean
+ahora $A, B$ dos puntos del plano y $\Gamma(A) = \left(a_1, a_2\right),
+\Gamma(B) = \left(b_1, b_2\right)$.
+
+Consideramos las rectas $a^1, a^2$ que pasan por $A$ y ortogonales
+respectivamente a $l^1$ y $l^2$ y las rectas $b^1$ y $b^2$ también
+ortogonales respectivamente a $l^1$, $l^2$ y que pasan por $B$. Sean $A^k$
+los puntos de intersección de $l^k$ con $a^k$ y $B^k$ los puntos de
+intersección de $l^k$ con $b^k$. Sea $C$ el punto de intersección de $a^1$
+con $b^2$.
+
+Supongamos en primer lugar que $a_1 \neq b_1$ y $a_2 \neq b_2$ y $a_1 \neq
+0, b_2 \neq 0$. Lda cuadriláteros: $\left(A^1, B^1, B, C\right),\left(A^2,
+B^2, C, A\right)$, son rectángulos (y en particular paralelogramos con lados
+opuestos de igual longitud), luego:
+
+$$ B C = A^1 B^1 \quad \text{y} \quad A C = A^2 B^2 $$
+
+Por el axioma de la regla graduada:
+
+$$ B C = A^1 B^1 =
+\left|\gamma_1\left(A^1\right)-\gamma_1\left(B^1\right)\right| =
+\left|a_1-b_1\right| $$
+
+y
+
+$$ A C = A^2 B^2 =
+\left|\gamma_2\left(A^2\right)-\gamma_2\left(B^2\right)\right| =
+\left|a_2-b_2\right| $$
+
+Aplicamos el teorema de Pitágoras al triángulo $\triangle\{A, B, C\}$ que es
+un triángulo por las condiciones $a_1 \neq b_1$ y $a_2 \neq b_2$ y
+obtenemos:
+
+$$
+\begin{aligned}
+  A B^2 &  = A C^2 + B C^2 = \left|a_1-b_1\right|^2 + \left|a_2-b_2\right|^2 \\
+  &  = \left(a_1-b_1\right)^2 + \left(a_2-b_2\right)^2
+\end{aligned}
+$$
+
+Si $a_1 = b_1$ y $a_2 \neq b_2$ y $a_1 \neq 0, b_2 \neq 0$ entonces $B = C$
+y $\left(A^2, B^2, B, A\right)$ es un rectángulo, con lo que tenemos:
+
+$$ A B = A^2 B^2 =
+\left|\gamma_2\left(A^2\right)-\gamma_2\left(B^2\right)\right| =
+\left|a_2-b_2\right| $$
+
+Por tanto:
+
+$$ A B^2 = \left(a_2-b_2\right)^2 = \left(a_1-b_1\right)^2 +
+\left(a_2-b_2\right)^2 $$
+
+De modo muy parecido se razona en el caso $a_1 \neq b_1$ y $a_2 = b_2$. Y el
+caso $a_1 = b_1$ y $a_2 = b_2$, es consecuencia de ser $\Gamma$ una
+biyección.
+
+Si $a_1 = 0$ entonces $A^2 = A$ y $B^2 = C$, con lo cual es inmediato que $A
+C = A^2 B^2$, sin necesidad de considerar el paralelogramo $\left(A^2, B^2,
+C, A\right)$ que degenera en este caso a un segmento o a un punto. El resto
+del argumento es completamente igual. Muy parecido es lo que ocurre cuando
+$b_2 = 0$.
+
+Hemos regresado al ejemplo 1.2 del Capítulo 1:
+
+::: {.corollary data-label="Corolario"}
+El espacio métrico $(\mathbf{P}, d)$ es isométrico $a\left(\mathbb{R}^2,
+d_E\right) y \Gamma$ : $\mathbf{P} \rightarrow \mathbb{R}^2$ es una
+isometría.
+:::
+
+A partir de aquí podríamos continuar nuestro estudio denadas, es decir en
+geometría analítica, pero el objetivo mantenerse dentro de los métodos
+sintéticos, que tienen sus venientes. Veremos en el capítulo 11 la
+dificultad del paso plana a la geometría espacial axiomática, en geometría
+analítica la a la geometría de la geometría la la geometría mucho más
+sencillas, basta pasar de $\mathbb{R}^2$ a $\mathbb{R}^3$.
+
+
+
+
+

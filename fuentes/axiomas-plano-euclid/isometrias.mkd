@@ -1,0 +1,340 @@
+
+
+### Isometrías
+
+Aunque este capítulo estudia en bastante profundidad las isometrías, lo
+hacemos para las figuras básicas que hemos visto hasta ahora. En un capítulo
+posterior terminaremos por estudiar los detalles de estas.
+
+Tal y como se definió en el capítulo sobre espacios métricos en general, se
+tienen también isometrías en la geometría euclidiana plana como caso
+particular. Veamos, de nuevo, la definición de isometría, pero ahora para el
+caso del plano euclideo, es decir, isometrías de $(\mathbf{P}, d)$ en
+$(\mathbf{P}, d)$.
+
+::: {.deffinition #def-isometria-pl-euclid data-label="Definición de
+Isometría en el Plano Euclideo"}
+Una isometría de $(\mathbf{P}, d)$ es una biyección $f: (\mathbf{P}, d)
+\longrightarrow (\mathbf{P}, d)$ en la que se verifica, para todo $X, Y \in
+\mathbf{P}$,
+
+$$ d(X, Y) = d(f(X), f(Y)) $$
+:::
+
+Al conjunto de todas las isometrías $f: (\mathbf{P}, d) \longrightarrow
+(\mathbf{P}, d)$ lo denotamos por $\isom(\mathbf{P}, d)$, o, simplemente,
+$\isom(\mathbf{P})$, dando por entendido a qué métrica nos referimos.
+
+Ahora, vamos a ver qué transformaciones realizan las isometrías sobre las
+figuras que conocemos.
+
+::: {.theorem #th-isom-segmentos data-label="Teorema de las Isometrías de
+Segmentos"}
+Las isometrías del plano euclideo transforman segmentos en segmentos. Es
+decir, dada una isometría $f \in \isom(\mathbf{P}, d)$ y un segmento $[X,
+Y]$, se cumple
+
+$$ f([X, Y]) = [f(X), f(Y)] $$
+:::
+
+Advierta que los transforma en segmentos de la misma longitud que los
+originales, ya que los extremos vienen determinados por dos puntos, y las
+isometrías conservan las distancias entre dos puntos cualesquiera.
+
+::: proof
+Por comodidad, vamos a designar $X' = f(X)$ e $Y' = f(Y)$.
+
+Lo primero que deberemos comprobar es que, dado que $f$ es una isometría y,
+por tanto, es una biyección, se tiene que a cualquier punto $Z \in [X, Y]$
+le corresponde un único punto $f(Z)$, o $Z'$, si lo prefiere. Lo que no
+sabemos aún es si $f(Z)$ está en $f([X, Y])$.
+
+Siguiendo con ese punto $Z \in [X, Y]$, se tiene, por la
+[](#def-segmento){.nameref}, que
+
+$$ d(X, Z) + d(Z, Y) = d(X, Y) $$
+
+Por la [](#def-isometria-pl-euclid){.nameref}, se tendrá que para $f$ se
+conservarán las distancias para todos estos pares de puntos. Aplicando esto
+a la ecuación anterior, se tiene que
+
+$$ d(X', f(Z)) + d(f(Z), Y') = d(X', Y') $$
+
+que también concuerda con la [](#def-segmento){.nameref} y podemos entonces
+afirmar que $f(Z) \in [X', Y']$.
+:::
+
+::: {.theorem #th-isom-p-medio-segmento data-label="Teorema de la Isometría
+del Punto Medio de un Segmento"}
+En $(\mathbf{P}, d)$, para cualquier $f \in \isom(\mathbf{P}, d)$ se tiene
+que, dados $X, Y \in \mathbf{P}$, se cumple
+
+$$ f(\operatorname{medio}[X, Y]) = \operatorname{medio}[f(X), f(Y)] $$
+:::
+
+::: proof
+Tenemos que
+
+$$ M = \operatorname{medio}[X, Y] $$
+
+Lo primero será advertir que, por el [](#th-isom-segmentos){.nameref}, $f(M)
+\in [X', Y']$, aunque aún no sabemos si es el punto medio.
+
+Como sabemos de las [](#th-prop-medio-segmento){.nameref}, se tiene que
+
+$$ d(M, X) = d(M, Y) = \frac{1}{2}d(X, Y) $$
+
+Por ser $f$ una isometría, se tiene que
+
+$$ d(M, X) = d(f(M), X') $$
+
+pero, aplicando lo anerior, se tiene que
+
+$$ d(f(M), X') = \frac{1}{2}d(X, Y) $$
+
+pero, también, por ser $f$ una isometría, se tiene
+
+$$ d(f(M), X') = \frac{1}{2}d(X', Y') $$
+
+Haciendo algo análogo con $Y$ se llega a que
+
+$$ d(f(M), Y') = \frac{1}{2}d(X', Y') $$
+
+con lo que queda claro que
+
+$$ d(f(M), X') = d(f(M), Y') $$
+
+estando $f(M)$ en $[X', Y']$, tal y como dijimos. Esto último es la
+definición de punto medio del segmento $[X', Y']$.
+
+$$ f(M) = \operatorname{medio}[X', Y'] $$
+
+No habría que demostrar la unicidad de dicho punto puesto que ya demostramos
+que el punto definido así es único, según el
+[](#th-unic-punto-medio-segmento){.nameref}.
+:::
+
+::: {.theorem #th-isom-puntos-alin data-label="Teorema de las Isometrías de
+los Puntos de un Segmento"}
+En $(\mathbf{P}, d)$, dada $f \in \isom(\mathbf{P}, d)$ y $A, B, X \in
+\mathbf{P}$ tales que $X \in [A, B]$, se tiene que
+
+$$ f(X) \in [f(A), f(B)] $$
+:::
+
+::: proof
+Por comodidad, vamos a usar la notación $A' = f(A)$ y $B' = f(B)$.
+
+Basándonos en el [](#th-isom-segmentos){.nameref}, tenemos que
+
+$$ f([A, B]) = [A', B'] $$
+
+con lo que, en particular, se tiene que
+
+$$ f([A, B]) \subseteq [A', B'] $$
+
+que es lo mismo que decir que
+
+$$ \text{Para todo} \ X \in [A, B]. \ f(X) \in [A', B'] $$
+
+que es lo mismo que decir que $f(X) \in [A', B']$.
+:::
+
+::: {.corollary #cor-isom-puntos-alin data-label="Corolario de las
+Isometrías de Tres Puntos Alineados"}
+En $(\mathbf{P}, d)$, dada una isometría y tres puntos alineados, los puntos
+transformados por la isometría es un conjunto de tres puntos alineados.
+:::
+
+Advierta que es una afirmación menos específica que la de
+[](#th-isom-puntos-alin){.nameref}. La demostración es una consecuencia
+directa de aquella.
+
+::: {.theorem #th-isom-rectas data-label="Teorema de las Isometrías de
+Rectas"}
+Las isometrías del plano euclideo transforman rectas en rectas. Es decir,
+dada una isometría $f$ y una recta $r_{XY}$ que contiene a los puntos $X$ e
+$Y$, se tiene que
+
+$$ f(r_{XY}) = r_{X'Y'} $$
+
+siendo $X' = f(X)$ e $Y' = f(Y)$ y $r_{X'Y'}$ la (única) recta que contiene
+a $X'$ e $Y'$.
+:::
+
+::: proof
+Tomemos el segmento $[X, Y] \subseteq r_{XY}$. Los puntos $X'$ e $Y'$
+definen una única recta $r_{X'Y'}$, según el [](#ax-p2-euclides){.nameref} y
+el [](#th-unicidad-recta-por-dos-puntos){.nameref}.
+
+Tomemos un punto arbitrario $Z \in r_{XY}$. Por la condición 2 de la
+[](#def-recta){.nameref}, se tiene que $Z$ está alineado con $X$ e $Y$.
+
+Aplicando el [](#cor-isom-puntos-alin){.nameref}, se tiene que $Z'$ está
+alineado con $X'$ e $Y'$. Ahora, aplicando la condición 3 de la
+[](#def-recta){.nameref}, tenemos que $Z' \in r_{X'Y'}$.
+:::
+
+::: {.theorem #th-isom-rectas-sec data-label="Teorema de la Isometría de Dos
+Rectas Secantes"}
+En $(\mathbf{P}, d)$, dada una isometría $f$ y dos rectas $r$ y $s$ secantes
+con punto de corte $V \in r \cap s$, se tiene que $f(r)$ y $f(s)$ son dos
+rectas también secantes y con punto de corte $f(V)$.
+:::
+
+::: proof
+Nos apoyamos en el [](#th-isom-rectas){.nameref}, con lo que tenemos que
+$f(r)$ y $f(s)$ son rectas.
+
+Es evidente que $f(V) \in f(r) \cap f(s)$, ya que, por ejemplo, si $V \in
+r$, entonces $f(V) \in f(r)$. Si $f(V) \in f(r)$ y $f(V) \in f(s)$, se tiene
+que $f(V) \in f(r) \cap f(s)$.
+
+Al tener entonces $f(r)$ y $f(s)$ al menos un punto en común, no pueden ser
+paralelas. Pero en principio podrían ser coincidentes. Veamos a continuación
+que eso tampoco es posible.
+
+Supongamos que existe, además de $f(V)$, otro punto $Z \in f(r) \cap f(s)$.
+Esto es lo mismo que afirmar que $Z \in f(r)$ y $Z \in f(s)$.
+
+Por ser $f$ una biyección, existe un punto $Z_1$ que pertenece a $r$ y a $s$
+tal que $f(Z_1) = Z$. Pero esto es un problema puesto que tenemos dos
+puntos, $V$ y $Z_1$, que pertenecen a la intersección de $r$ y $s$, cosa que
+contradice la hipótesis de partida, es decir, que las dos rectas son
+secantes.
+:::
+
+::: {.theorem #th-isom-semir data-label="Teorema de las Isometrías de
+Semirrectas"}
+En $(\mathbf{P, d})$, dada una isometría $f$ y $\bar{r}$ una de las
+semirrectas definidas a partir de una recta $r$ y un punto $V \in r$, se
+tiene que $f(\bar{r})$ es una de las semirrectas definidas por el punto
+$f(V)$ en la recta $f(r)$.
+:::
+
+::: proof
+Hay que demostrar varias cosas. Lo primero. Por un lado, según el
+[](#th-isom-rectas){.nameref} se tiene que $f(r)$ es una recta. En concreto,
+se tiene que $f(V) \in f(r)$ como consecuencia de lo anterior.
+
+Tomamos ahora dos isometrías según el [](#ax-p3-euclides){.nameref}. Estas
+son, por un lado,
+
+$$
+  \begin{array}{rrcl}
+    \gamma: & (r, d) & \longrightarrow & (\rset, d') \\
+  \end{array}
+$$
+
+siendo $d'(X, Y) = |X - Y|$, para dos elementos $X, Y \in \rset$. Por el
+otro, tenemos
+
+$$
+  \begin{array}{rrcl}
+    \rho: & (f(r), d) & \longrightarrow & (\rset, d') \\
+  \end{array}
+$$
+
+con la misma métrica que la anterior.
+
+Tal y como hemos dicho, se trata de isometrías. Por lo tanto, se cumplirá,
+para un $X \in r$,
+
+$$ d(X, V) = |\gamma(X) - \gamma(V)| $$
+
+y
+
+$$ d(f(X), f(V)) = |\rho(f(X)) - \rho(f(V))| $$
+
+<!-- Quizás hay que especificar que esto se cumple por ser $f$ una
+isometría. -->
+
+Teniendo en cuenta que $f$ es una isometría, se debe cumplir
+
+$$ d(X, V) = d(f(X), f(V)) $$
+
+con lo que, teniendo en cuenta lo anterior, tenemos
+
+$$ |\gamma(X) - \gamma(V)| = |\rho(f(X)) - \rho(f(V))| $$
+
+Para resolver esta ecuación, deberemos ver los dos casos posibles. Por un
+lado, se tiene que
+
+$$ \gamma(X) - \gamma(V) = \rho(f(X)) - \rho(f(V)) $$
+
+En este caso, para esas "reglas graduadas", todos los $X \in \bar{r}$ están
+a la derecha de $V$ y todos los $f(X)$ están a la derecha de $f(V)$.
+
+El otro caso es
+
+$$ \gamma(X) - \gamma(V) = \rho(f(V)) - \rho(f(X)) $$
+
+En este caso, para esas "reglas graduadas", todos los $X \in \bar{r}$ están
+a la derecha de $V$ y todos los $f(X)$ están a la izquierda de $f(V)$.
+
+En ambos casos se da que $\bar{r}$ y $f(\bar{r})$ son semirrectas.
+:::
+
+::: {.theorem #th-isom-semiplanos data-label="Teorema de las Isometrías de
+Semiplanos"}
+En $(\mathbf{P}, d)$, dada una isometría $f$ y dos semiplanos $H^1$ y $H^2$
+con borde la recta $r$, se tiene que $f(H^1)$ y $f(H^2)$ son los semiplanos
+con borde la recta $f(r)$.
+:::
+
+Es decir, que dos semiplanos sometidos a una isometría son, en forma global,
+los mismos semiplanos. Concretamente, pueden quedarse siendo los originales
+o bien intercambiarse; eso dependerá de la isometría en concreto.
+
+::: proof
+Lo primero que haremos será comprobar que, tal y como se afirma en el
+enunciado de este teorema, por el [](#th-isom-rectas){.nameref} se tiene que
+$r_{X'Y'} = f(r_{XY})$ es una recta.
+
+Dados dos puntos $A$ y $B$ tales que $[A, B] \cap r_{XY} = \emptyset$, se
+tiene, por el (condicional contrarrecíproco del) punto 3 del
+[](#ax-p4-euclides){.nameref}, que $A$ y $B$ están necesariamente en un
+mismo semiplano de entre los semiplanos determinados por la recta $r_{XY}$.
+
+Entonces, haciendo la aplicación a la expresión anterior,
+
+$$ [A, B] \cap r_{XY} = \emptyset $$
+
+tenemos que
+
+$$ f([A, B] \cap r_{XY}) = f(\emptyset) $$
+
+<!-- TODO Tratar de recordar y comprender estas deducciones que se basan en
+la teoría de conjuntos sobre las aplicacioes. -->
+
+Por un lado, $f(\emptyset) = \emptyset$, como es evidente, por las
+propiedades de las aplicaciones.
+
+Por el otro, se tiene que
+
+$$ f([A, B] \cap r_{XY}) = f([A, B]) \cap f(r_{XY}) $$
+
+también por las propiedades de las aplicaciones.
+
+Por tanto, tenemos que
+
+$$ [A', B'] \cap r_{X'Y'} = \emptyset $$
+
+Pero, si se fija, esto último que hemos obtenido es la caracterización de
+semiplano (es decir, el punto 3 de las
+[](#propied-ax-p4-separacion){.nameref}) para los planos con borde la recta
+$r_{X'Y'}$, con lo que podemos afirmar que todos los pares de puntos
+imágenes de dos puntos $A$ y $B$ de un mismo semiplano están en un mismo
+semiplano $f(H^i)$, para algún $i = 1, 2$.
+:::
+
+<!--
+Por cierto, aunque estemos construyendo esta teoría poco a poco, por medio
+de axiomas y definiciones, ¿por qué a estas alturas no estamos hablando de
+distancia como algo más concreto? Ya hemos explicado qué es la longitud de
+un segmento. ¿No se podría definir la distancia entre dos puntos como la
+longitud del segmento que los une?
+-->
+
+
+

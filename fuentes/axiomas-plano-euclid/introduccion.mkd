@@ -1,0 +1,65 @@
+
+
+
+### Introducción
+
+En este capítulo vamos a desarrollar la geometría euclidiana (_Euclidean
+geometry_) plana, es decir, de 2 dimensiones (2D), de forma _axiomática_;
+más adelante en el curso estudiaremos la geometría espacial, es decir
+tridimensional (3D).
+
+En lugar de estudiar espacios métricos arbitrarios, nos encontramos ahora en
+uno en concreto al que llamamos el _plano euclideo_, con una distancia
+asociada que ya veremos.
+
+Utilizaremos el lenguaje conjuntista (es decir, la teoría de conjuntos) para
+nuestro estudio de dicho espacio métrico. A sus elementos los llamaremos
+_puntos_ (_points_), las _figuras geométricas_, como rectas,
+circunferencias, triángulos, etc., son subconjuntos de los puntos del plano,
+las _distancias_ y las _isometrías_ son aplicaciones, etc.
+
+Debido a esto, un requisito para esta asignatura es haber estudiado alguna
+asignatura de lógica y teoría básica de conjuntos. A este tipo de
+asignaturas muchas veces las llaman de demostraciones TKTK.
+
+Pero, aunque quizás no sepa expresarlo en los términos en los que se hace
+aquí, usted ya conoce esta geometría. Es la que ve a diario y la que suele
+usar TKTK. Por ejemplo, cuando usted habla de la distancia entre dos puntos
+en una superficie plana, lo hace uniéndolos mediante una recta. Aquí se
+especificarán de forma rigurosa todos estos conceptos.
+
+Quizás le parezca algo extraña la forma de presentarlo. Lo hacemos mediante
+un sistema axiomático, pero esto no es raro en absoluto. Todas las teorías
+matemáticas se presentan mediante algo así. De hecho, la primera vez que se
+presentó un sistema axiomático, y que impuso el canon de cómo hacer
+matemáticas, fue cuando el matemático y filósofo de la Antigua Grecia
+Euclides de Alejandría, en el siglo III a.C., sintetizó todo el conocimiento
+de geometría hasta su época en un libro titulado _Elementos_. Incluía
+resultados no solo de su región, sino también de las zonas próximas, como
+Egipto, y de civilizaciones previas, como Babilonia. Como ve, la geometría
+es algo muy natural y que lleva estudiándose desde hace muchos años, pero
+Euclides fue el primero que la presentó de manera formal.
+
+En todo sistema axiomático, comenzamos por enunciar algunas propiedades que
+serán admitidas como principios y de las cuales deduciremos otras
+afirmaciones. En realidad, a esos principios se les llama _axiomas_, aunque
+en la época de Euclides los llamaban _postulados_. Por otro lado, las
+propiedades que sí son deducidas se llaman _teoremas_, aunque dentro de los
+teoremas existen muchas otras subclases, según el propósito de estos, y, por
+tanto, diversas formas de llamarlas: _proposición_, _lema_, _observación_,
+etc.
+
+En realidad, la decisión de cuáles son esos axiomas no es algo estático,
+sino que hay enunciados que parecen axiomas y en realidad se pueden deducir
+de estos, con lo que pasan a ser teoremas. También, hay veces en que se
+toman sistemas axiomáticos distintos para estudiar un mismo campo. Es lo que
+sucede, por ejemplo, con la geometría analítica euclidiana, que centra su
+estudio en lo mismo que la geometría sintética euclidiana pero de forma
+distinta. En este caso, tal y como se explica en [@venema], estos serían dos
+_modelos_ (_models_) de una misma geometría, la geometría euclidiana.
+
+<!-- Reverse mathematics. -->
+
+
+
+

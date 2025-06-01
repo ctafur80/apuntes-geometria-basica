@@ -1,0 +1,35 @@
+
+
+
+### Introducción
+
+<!-- ¿A qué se refiere con "fenomenológico"? -->
+
+En este capítulo estudiamos las isometrías del plano desde el punto de vista
+"fenomenológico". Una parte de este estudio está presentada bajo la forma de
+ejercicios.
+
+En cuanto a los ejercicios y demostraciones de teoremas, por acumulación de
+materia, omitiremos a menudo las referencias en las justificaciones de
+algunos pasos. Así, por ejemplo, en ocasiones usaremos teoremas vistos
+anteriormente sin hacer referencia explícita a estos.
+
+Tal y como explicamos en nuestro contacto previo con las isometrías, estas
+permiten formalizar la experiencia de _mover_ dentro de la estructura lógica
+de la geometría. Las isometrías desempeñan un papel tan importante que
+incluso se usan para definir y comparar distintos tipos de geometrías.
+
+Algo que debe saber es que todos los tipos de isometría los definiremos
+usando como base la reflexión, que es un tipo de isometría.
+
+Una notación que adoptaremos a partir de aquí será usar la notación en
+aposición para la composición de isometrías. Así, tendremos, para $g, h \in
+\isom(\mathbf{P}, d)$,
+
+$$ g h := g \circ h $$
+
+De todos modos, a veces usaremos la otra.
+
+
+
+

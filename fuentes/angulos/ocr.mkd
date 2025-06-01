@@ -1,0 +1,44 @@
+# Ejercicios
+
+**Ejercicio 4.6** En un triángulo rectángulo $\triangle\{P, Q, R\}$ con $\angle Q$ recto se tiene que $\angle P+\angle R$ es un ángulo recto.
+
+**Ejercicio 4.7** Sean $\angle\{\bar{a}, \bar{b}\} y \angle\{\bar{c}, \bar{d}\}$ dos ángulos de manera que $\bar{a}$ corta a $\bar{c} y \bar{b}$ corta a $\bar{d}$, como se muestra en la figura 4-18, y a $\perp c, b \perp d$. Entonces el ángulo $\angle\{\bar{a}, \bar{b}\}+\angle\{\bar{c}, \bar{d}\}$ es congruente a un ángulo llano.
+
+![Figura 4-18 Ángulos con lados perpendiculares](attachment:angulos_perpendiculares.png)
+
+**Ejercicio 4.8** Sea $r$ una recta que corta a otras dos a $y b$, en los puntos $A y$ $B$ respectivamente, $y$ sea $H_{r}$ uno de los semiplanos determinado por $r$ (figura 4-19). Llamaremos $\bar{a}=a \cap H_{r} y \bar{b}=b \cap H_{r}$ a las semirrectas determinadas por $H_{r}$ en a $y b$. Sea $\bar{r}_{1}$ la semirrecta de $r$ con vértice $A y$ que contiene a $B$ y $\bar{r}_{2}$ la semirrecta de $r$ con vértice $B$ y que contiene a $A$. Llamamos $\angle A=\angle\left\{\bar{r}_{1}, \bar{a}\right\} y \angle B=\angle\left\{\bar{r}_{2}, \bar{b}\right\}$. Probar que si $\angle A+\angle B$ es menor que un ángulo llano entonces las semirrectas $\bar{a} y \bar{b}$ se cortan en un punto. Este resultado lo utilizó Euclides como axioma en los Elementos y es equivalente al axioma de las paralelas, por ello se suele llamar Axioma de Euclides o Axioma V de Euclides.
+
+![Figura 4-19 Axioma de Euclides](attachment:axioma_euclides.png)
+
+**Ejercicio 4.9** Sea $\rho \in \operatorname{Isom}(\mathbf{P})$ una rotación de centro $C$, pero no una media vuelta. Sean $P_{1}$ y $P_{2}$ dos puntos del plano distintos de $C$. Sean $t_{1}=$
+
+$\triangle\left\{C, P_{1}, \rho\left(P_{1}\right)\right\}$ y $t_{2}=\triangle\left\{C, P_{2}, \rho\left(P_{2}\right)\right\}$. Probar que el ángulo $\angle_{t_{1}} C$ y el ángulo $\angle_{t_{2}} C$ son congruentes. La clase de congruencia del ángulo $\angle_{t_{1}} C$ se denomina ángulo de rotación $\angle \rho$ de $\rho$. Para la media vuelta el ángulo de rotación es el ángulo llano (observe el lector la dificultad "técnica" que nos lleva a hacer esta distinción: en este caso $C, P_{1}, \rho\left(P_{1}\right)$ no forman un triángulo!!). Obsérvese que con la definición de ángulo de rotación que hemos dado en este ejercicio, $\angle \rho y \angle \rho^{-1}$ son congruentes.
+
+**Ejercicio 4.10** Sea $\rho \in \operatorname{Isom}(\mathbf{P})$ una rotación de centro $C$. Sean $a, b$ dos rectas que pasan por $C$, tales que $\rho=\sigma_{b} \sigma_{a}$.
+
+Caso 1. Supongamos que a y b no son ortogonales. Sea c la recta ortogonal a a que pasa por $C$ y sean $\bar{a}, \bar{b}$ las semirrectas determinadas por $C$ en a $y$ $b, y$ que están en uno de los semiplanos determinados por c. El ángulo de rotación de $\rho$ es congruente a $2 \angle\{\bar{a}, \bar{b}\}$.
+
+Caso 2. Si a y b son ortogonales, $\rho=\sigma_{C}$ y el ángulo de rotación es llano.
+
+**Ejercicio 4.11** Un ángulo orientado es un ángulo donde fijamos un orden en sus lados, es decir es $\angle(\bar{r}, \bar{l})$, con $(\bar{r}, \bar{l})$ es un par ordenado. Dos ángulos orientados $\angle(\bar{r}, \bar{l}) y \angle\left(\bar{r}^{\prime}, \bar{l}^{\prime}\right)$ se dice que son congruentes (como ángulos orientados) si existe una isometría que conserva la orientación del plano $g$ modo que $g(\bar{r})=\bar{r}^{\prime}, g(\bar{l})=\bar{l}^{\prime}$. Llamaremos ángulo orientado $\dot{\bar{\angle}}(\bar{r}, \bar{l})$ a la clase de equivalencia de ángulos orientados, es decir $\dot{\bar{\angle}}(\bar{r}, \bar{l})$ es el conjunto de todos los ángulos congruentes con $\angle(\bar{r}, \bar{l})$ como ángulos orientados.
+
+A. Demostrar que si $\angle(\bar{r}, \bar{l})$ no es un ángulo nulo ni llano entonces $\vec{\angle}(\bar{r}, \bar{l})$ no es igual a $\vec{\angle}(\bar{l}, \bar{r})$.
+B. Defínase ángulo orientado de una rotación de modo que se verifique que dos rotaciones son iguales si y solo si tienen el mismo centro y el mismo ángulo orientado.
+
+**Ejercicio 4.12** Encontrar donde está el fallo de la siguiente demostración de que todos los triángulos son isósceles. (Tomado del libro "Geometrical Exercises in Paper Folding", por T. Sundara Row, Addison, Madrás, 1893).
+
+Sea $\triangle\{A, B, C\}$ un triángulo. Sea $m$ la mediatriz del lado $[B C], D=$ $[B, C] \cap m$ y $b$ la bisectriz del ángulo con vértice $A$.
+
+Caso 1: $b$ y $m$ no se cortan. Entonces $b$ es paralela a $m$ y por tanto $b$ es ortogonal a $r_{B C}$. Sea $\sigma_{b}$ la simetría con base $b$, por ser $r_{B C} \perp b$ tenemos que $\sigma_{b}\left(r_{B C}\right)=r_{B C}$ y por ser $b$ la bisectriz del ángulo $A$, se tiene que $\sigma_{b}\left(r_{A B}\right)=$ $r_{A C}$, de donde $\sigma_{b}(B)=C$, luego el triángulo es isósceles.
+
+Caso 2: $b$ y $m$ se cortan en un punto $O$. Sea s la recta perpendicular a $r_{A B}$ pasando por $O$ y $E=s \cap r_{A B}$, del mismo modo, sea $t$ la recta perpendicular a $r_{A C}$ pasando por $O$ y $F=t \cap r_{A C}$ (ver la figura 4-20). Los triángulos $\triangle\{A, O, E\} y \triangle\{A, O, F\}$ son congruentes, pues son ambos rectángulos, por ser b la bisectriz de $\angle A$ los ángulos agudos también coinciden y comparten la hipotenusa. Por otra parte los triángulos $\triangle\{O, E, B\} y \triangle\{O, F, C\}$ también son congruentes: ambos son rectángulos, por estar $O$ en la bisectriz b, se tiene que $O E=O F$ y por estar $O$ en la mediatriz $m$, se tiene que $O B=O C$. Por estas dos igualdades entre triángulos tenemos que $A E=A F$ y $E B=F C$, luego:
+
+$$
+A B=A E+E B=A F+F C=A C
+$$
+
+![Figura 4-20 Figura para la "demostración" de que todo triángulo es isósceles](attachment:demostracion_isosceles.png)
+
+# Actividades complementarias
+
+**Actividad.** Usando la herramienta de medición de ángulos de geogebra comprobar sobre ejemplos que la suma de los ángulos de un triángulo es un llano. Primero hacer un ejemplo y después moverlo utilizando la herramienta "Elige y mueve".

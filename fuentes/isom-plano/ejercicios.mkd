@@ -1,0 +1,39 @@
+
+
+
+### Ejercicios
+
+::: exercise
+Sea $\tau \in \operatorname{Isom}(\mathbf{P})$ una traslación $y \rho \in
+\mathcal{R}_{C}(\mathbf{P}) \backslash\left\{i d_{\mathbf{P}}\right\}$ una
+rotación de centro $C$.
+
+a.  Probar que $\tau \rho=\rho_{1} y \rho \tau=\rho_{2}$ son rotaciones.
+b.  Sea $C$, el punto fijo de $\rho, y P \in \mathbf{P} \backslash C$.
+    Suponemos conocidos $\tau(C) y$ $\tau \rho(P)$. Construir $C^{\prime}$
+    el punto fijo de $\tau \rho$.
+:::
+
+::: exercise
+Sea $\tau \in \operatorname{Isom}(\mathbf{P})$ una traslación $y \sigma \in
+\operatorname{Isom}(\mathbf{P})$, una reflexión.
+
+a.  Probar que $\tau \sigma$ es una reflexión o una reflexión con
+    deslizamiento.
+b.  Estudiar en que casos $\tau \sigma$ es una reflexión y en cuales es una
+    reflexión con deslizamiento.
+c.  Determinar cuando se tiene $\tau \sigma=\sigma \tau$.
+:::
+
+::: exercise
+Probar que si $\rho$ es una rotación que transforma cada recta en otra
+paralela, entonces $\rho$ es una media vuelta.
+:::
+
+::: exercise
+(Actividad complementaria). Investigar y usar sobre ejemplos las
+herramientas que corresponden a isometrías del plano en geogebra.
+:::
+
+
+

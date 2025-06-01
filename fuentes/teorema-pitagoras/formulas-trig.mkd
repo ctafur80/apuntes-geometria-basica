@@ -1,0 +1,321 @@
+
+
+
+
+### Fórmulas trigonométricas y sus consecuencias
+
+Con el teorema de Pitágoras y las razones trigonométricas es posible
+estudiar y resolver los problemas que se plantean sobre triángulos
+rectángulos. Vamos a acabar este capítulo estableciendo dos fórmulas que son
+las herramientas fundamentales para el estudio de triángulos en general.
+Antes de nada vamos a establecer algunos resultados para estudiar un
+triángulo general a partir de triángulos rectángulos.
+
+::: {.deffinition data-label="Definición de "}
+Sea $\triangle\{A, B, C\}$ un triángulo, sea $h_{A}$ la recta ortogonal a
+$r_{B C}$ y que pasa por $A$, el punto $P_{h, A}$ de corte de $h_{A}$ con
+$r_{B C}$ se llama pie de la altura desde $A$ para el triángulo $\Delta\{A,
+B, C\}$ y el segmento $\left[A, P_{h, A}\right]$ se llama la altura del
+triángulo $\triangle\{A, B, C\}$ desde $A$ (la recta $h_{A}$ se llama la
+recta altura desde A). De modo análoga se define $h_{B}, P_{h, B}, h_{C},
+P_{h, C}$.
+:::
+
+<!-- ![Figura 6-3 Pie de altura](attachment:figura-6-3.png) -->
+
+TKTK.
+
+::: {.theorem data-label="Teorema"}
+Sea $\triangle\{A, B, C\}$ un triángulo donde $\angle A$ y $\angle C$ son
+agudos, entonces $P_{h, B} \in[C, A]$. Si uno de los dos ángulos $\angle A$
+o $\angle C$ es obtuso entonces $P_{h, B} \notin[C, A]$.
+:::
+
+::: proof
+Sean $d_{A}$ y $d_{C}$ rectas perpendiculares a $r_{C A}$ y que pasan
+respectivamente por $A$ y $C$. Sea $H_{A}$ el semiplano determinado por
+$d_{A}$ y que contiene al vértice $C$ y $H_{C}$ el semiplano determinado por
+$d_{C}$ y que contiene al vértice $A$. Por la propia definición de $H_{A}$ y
+$H_{C}$ se tiene que $[C, A] = \left(r_{C A} \cap H_{A} \cap H_{C}\right)
+\cup\{A, C\}$.
+
+Por ser $\angle A$ agudo $B \in H_{A}$ y por ser $\angle C$ agudo $B \in
+H_{C}$. Por tanto $B \in H_{A} \cap H_{C}$. La recta altura $h_{B}$ desde
+$B$ es paralela a $d_{A}$ y $d_{C}$, por tanto $h_{B}$ está completamente
+contenida en $H_{A} \cap H_{C}$. Como $h_{B}$ corta a $r_{C A}$ en $P_{h,
+B}$ se tiene que $P_{h, B} \in r_{C A} \cap H_{A} \cap H_{C} \subset[C, A]$.
+:::
+
+<!-- ![Figura 6-4 Pie de altura en el lado
+opuesto](attachment:figura-6-4.png) -->
+
+El caso en que alguno de los ángulos $\angle A \circ \angle C$ es obtuso lo
+dejamos como ejercicio.
+
+::: {.theorem data-label="Teorema (Fórmula del Coseno)"}
+Sea $\triangle\{A, B, C\}$ un triángulo, entonces se verifica la siguiente
+fórmula:
+
+$$ B C^{2} = A B^{2} + C A^{2}-2 A B \cdot C A \cos \angle A $$
+:::
+
+::: proof
+Haremos la demostración para el caso en que $\triangle\{A, B, C\}$ es un
+triángulo acutángulo dejando como ejercicio el caso en que $\triangle\{A, B,
+C\}$ sea un triángulo obtusángulo.
+
+Sea $P_{h, B}$ el pie de la altura desde $B$ del triángulo $\triangle\{A, B,
+C\}$, por el teorema 6.7, $P_{h, B} \in[C, A]$ y se forman dos triángulos
+rectángulos: $\triangle\left\{P_{h B}, B, C\right\}$ y $\triangle\left\{A,
+B, P_{h B}\right\}$ y se verifica:
+
+$$ C A = C P_{h B} + P_{h B} A $$
+
+(véase la Figura 6-3)
+
+Por el teorema de Pitágoras tenemos:
+
+$$ A B^{2} = P_{h, B} A^{2} + B P_{h, B}^{2} \text { y } B C^{2} = C P_{h,
+B}^{2} + P_{h, B} B^{2} $$
+
+De la primera igualdad resulta:
+
+$$ B P_{h, B}^{2} = A B^{2}-P_{h, B} A^{2} $$
+
+y sustituyendo en la segunda:
+
+$$ B C^{2} = C P_{h, B}^{2} + A B^{2}-P_{h, B} A^{2} $$
+
+<!-- Hacer bien la referencia esa con el asterisco. -->
+
+de donde por $\left(^{*}\right)$ :
+
+$$
+\begin{align*}
+  B C^{2}
+    &= \left(C A-P_{h, B} A\right)^{2} + A B^{2}-P_{h, B} A^{2} \\
+    &= A B^{2} + C A^{2}-2 C A \cdot P_{h, B} A
+\end{align*}
+$$
+
+Como $A P_{h, B} = A B \cos \angle A$, se tiene:
+
+$$ B C^{2} = A B^{2} + C A^{2}-2 A B \cdot C A \cos \angle A $$
+:::
+
+::: {.corollary data-label="Corolario Recíproco del Teorema de Pitágoras"}
+Dado un triángulo $\Delta\{A, B, C\}$, si se verifica $B C^2 = A B^2 + A
+C^2$ entonces el triángulo es rectángulo $y \angle A$ es un ángulo recto.
+:::
+
+::: proof
+Por el teorema del coseno $\cos \angle A = 0$ y por el teorema 6.5 $\angle
+A$ es un ángulo recto.
+:::
+
+::: {.theorem data-label="Teorema (Fórmula de los Senos)"}
+Sea $\triangle\{A, B, C\}$ un triángulo, entonces se verifican las
+siguientes igualdades:
+
+$$ \frac{A B}{\sin \angle C} = \frac{B C}{\sin \angle A} = \frac{C A}{\sin
+\angle B} $$
+:::
+
+::: proof
+Supongamos que $\triangle\{A, B, C\}$ es un triángulo acutángulo. Sea $P_{h,
+B}$ el pie de la altura del triángulo $\triangle\{A, B, C\}$ desde $B$.
+Entonces:
+
+$$ B P_{h, B} = B C \sin \angle C \text { y } B P_{h, B} = A B \sin \angle A
+$$
+
+(Véase de nuevo la figura 6-3) Si el triángulo es obtusángulo las fórmulas
+anteriores son también ciertas gracias a que para un ángulo y su
+suplementario la razón se no coincide.
+
+Luego $B C \sin \angle C = A B \sin \angle A$, por tanto:
+
+$$ \frac{A B}{\sin \angle C} = \frac{B C}{\sin \angle A} $$
+
+La otra igualdad se puede obtener usando $P_{h, A}$ o $P_{h, C}$.
+:::
+
+::: {.theorem data-label="Teorema"}
+TKTK.
+
+1.  En un triángulo donde se conoce la medida de uno de los ángulos $y$ de
+    los lados adyacentes a tal ángulo se pueden calcular las medidas de
+    todos los ángulos y lados del triángulo.
+2.  En un triángulo donde se conoce las medidas de todos los lados se pueden
+    calcular las medidas de todos los ángulos del triángulo.
+3.  En un triángulo donde se conoce la medida de un lado $y$ dos ángulos se
+    pueden calcular las medidas de todos los ángulos y lados del triángulo.
+:::
+
+::: proof
+La demostración es una aplicación de los teoremas anteriores que dejamos al
+lector.
+:::
+
+::: {.corollary data-label="Corolario (Criterio de Congruencia de
+Triángulos)"}
+Dados dos tria gulos $\triangle\{A, B, C\} y \triangle\left\{A', B',
+C'\right\}$, si se verifica una de las siguientes condiciones:
+
+1.  $\angle A = \angle A', A B = A' B', A C = A' C'$, criterio LAL
+    (lado-ángulo-lado)
+2.  $A B = A' B', B C = B' C', C A = C' A'$, criterio LLL (lado-lado-lado)
+3.  $\angle A = \angle A', \angle B = \angle B', A B = A' B'$, criterio ALA
+    (ángulo-lado-ángulo) entonces existe una isometría $\eta$ tal que
+    $\eta(A) = A', \eta(B) = B', \eta(C) = C' y$ por tanto los triángulos
+    $\triangle\{A, B, C\} y \triangle\left\{A', B', C'\right\}$ son
+    congruentes.
+:::
+
+::: proof
+Supongamos que $\angle A = \angle A', A B = A' B', A C = A' C'$. Dado que
+$\angle A = \angle A'$, existe una isometría $\eta$ tal que $\eta(\angle A)
+= \angle A'$, además, y como ya se observó en la nota 4.10 , usando la
+reflexión por la bisectriz del ángulo, se puede suponer que $\eta$ envíe el
+lado de $\angle A$ que contiene a $[A, B]$ sobre el lado de $\angle A'$ que
+contiene a $\left[A', B'\right]$. Como $A B = A' B'$, entonces $\eta(B)
+\longrightarrow B'$ y como $A C = A' C', \eta(C) = C'$.
+
+En el caso 2, aplicando 2 del teorema 6.11, se obtiene que estamos también
+en las condiciones del caso 1. De modo similar para el caso 3.
+:::
+
+Nota. El hecho de que dos triángulos sean congruentes no implica que podamos
+"mover" uno sobre el otro sin "salir" del plano, esto se podría hacer si la
+isometría que lleva un triángulo a otro fuera par. Para conseguir criterios
+de igualdad usando isometrías pares se tendría que definir orientación para
+triángulos.
+
+::: {.corollary data-label="Corolario (Fórmulas Trigonométricas para la
+Suma)"}
+Sean $\angle P y$ $\angle Q$ dos ángulos no nulos que se puedan sumar.
+Entonces:
+
+$$
+\begin{aligned}
+& \sin(\angle P + \angle Q) = \sin(\angle P) \cos (\angle Q) + \cos (\angle P) \sin(\angle Q) \\
+& \cos (\angle P + \angle Q) = \cos (\angle P) \cos (\angle Q)-\sin(\angle P) \sin(\angle Q)
+\end{aligned}
+$$
+:::
+
+::: proof
+Vamos a demostrar la primera fórmula y en el caso en que los ángulos $\angle
+P$ y $\angle Q$ sean ambos agudos. Sean $P'$ y $Q'$ dos puntos en una recta
+$r$. Consideramos ahora una isometría $\alpha$ que envíe $P$ sobre $P'$ y
+uno de los lados de $\angle P$ sobre la semirrecta determinada por $P'$ en
+$r$ que contiene al segmento $\left[P', Q'\right]$. Sea $\bar{s}$ la imagen
+por $\alpha$ del otro lado de $\angle P$. Del mismo modo sea $\beta$ una
+isometría que envía $Q$ sobre $Q'$, uno de los lados de $\beta(\angle Q)$
+sobre la semirrecta determinada por $Q'$ en $r$ que contiene al segmento
+$\left[P', Q'\right]$ y que el otro lado de $\beta(\angle Q), \bar{t}$, esté
+en el mismo semiplano, determinado por $r_{P' Q'}$, que $\bar{s}$. Por el
+axioma V de Euclides (Ejercicio 4.7), como la suma $\angle P + \angle Q$ es
+menor que un llano, las dos semirrectas $\bar{s}$ y $\bar{t}$ se cortan en
+un punto $R$. El triángulo $\Delta\left\{P', Q', R\right\}$ tiene los
+ángulos $\angle P', \angle Q'$ congruentes a $\angle P$ y $\angle Q$, y el
+ángulo $\angle R$ congruente al suplementario de $\angle P + \angle Q$.
+
+Considerando el triángulo $\Delta\left\{P', Q', R\right\}$ y por el teorema
+6.7 , podemos formar los triángulos rectángulos:
+
+$$ \Delta\left\{P_{h, R}, R, P'\right\}, \Delta\left\{Q', R, P_{h,
+R}\right\} $$
+:::
+
+<!-- ![Figura 6-5 Corolario 6.14](attachment:figura-6-5.png) -->
+
+Sabiendo que $P' Q' = P' P_{h, R} + P_{h, R} Q'$, tenemos:
+
+$$ P' Q' = P' R \cos (\angle P) + Q' R \cos (\angle Q) $$
+
+Por la fórmula de los senos para $\Delta\left\{P', Q', R\right\}$, teorema
+6.10 , tenemos que:
+
+$$ P' R = \frac{P' Q'}{\sin(\angle R)} \sin(\angle Q) \quad \text{y} \quad
+Q' R = \frac{P' Q'}{\sin(\angle R)} \sin(\angle P) $$
+
+Sustituyendo en $\left(^{*}\right)$ se tiene:
+
+$$ P' Q' = \frac{P' Q'}{\sin(\angle R)} \sin(\angle Q) \cos (\angle P) +
+\frac{P' Q'}{\sin(\angle R)} \sin(\angle P) \cos (\angle Q) $$
+
+Dividiendo por $P' Q'$ y multiplicando por $\sin(\angle R)$ : $\sin(\angle P
++ \angle Q) = \sin(\angle R) = \sin(\angle P) \cos (\angle Q) + \cos (\angle
+P) \sin(\angle Q)$. Si uno de los ángulos $\angle P, \angle Q$, por ejemplo
+$\angle P$, no es agido pero la suma $\angle P + \angle Q$ es inferior a un
+ángulo llano, entonces o bien $P_{h, R}$ coincide con $P'$ o bien $P_{h, R}$
+está en el exterior de $\left[P', Q'\right]$. En los dos casos la ecuación
+(*) continúa válida pues $\cos \angle P \leq 0$. La prueba es entonces la
+misma que para un ángulo agudo.
+
+El caso en que $\angle P + \angle Q$ sea llano se obtiene inmediatamente por
+ser $\angle P$ y $\angle Q$ suplementarios.
+
+La segunda fórmula se deja como ejercicio.
+
+::: {.corollary data-label="Corolario"}
+Sean $\angle P$ y $\angle Q$ dos ángulos que se puedan sumar, entonces la
+medida de la suma de dichos dos ángulos coincide con la suma de las medidas.
+En símbolos:
+
+$$ \measuredangle(\angle P + \angle Q) = \measuredangle P + \measuredangle Q
+$$
+:::
+
+::: proof
+Sean $\angle P$ y $\angle Q$ dos ángulos que se pueden sumar, entonces por
+el corolario anterior:
+
+$$ \cos (\angle P + \angle Q) = \cos (\angle P) \cos (\angle Q)-\sin(\angle
+P) \sin(\angle Q) $$
+
+Por otro lado tenemos que se verifica la siguiente fórmula para la función
+seno:
+
+$$ \cos (\measuredangle P + \measuredangle Q) = \cos (\measuredangle P) \cos
+(\measuredangle Q)-\sin(\measuredangle P) \sin(\measuredangle Q) $$
+
+Como se verifica que:
+
+$$
+\begin{aligned}
+& \sin(\angle P) = \sin(\measuredangle P), \cos (\angle P) = \cos (\measuredangle P) \mathrm{y} \\
+& \sin(\angle Q) = \sin(\measuredangle Q), \cos (\angle Q) = \cos (\measuredangle Q)
+\end{aligned}
+$$
+
+se tiene entonces:
+
+$$ \cos (\angle P + \angle Q) = \cos (\measuredangle P + \measuredangle Q)
+$$
+
+Luego:
+
+$$ \measuredangle(\angle P + \angle Q) = \measuredangle P + \measuredangle Q
+$$
+:::
+
+::: {.corollary data-label="Corolario"}
+Sea $\angle V$ un ángulo y $n$ un número entero, de modp que tiene sentido
+considerar el ángulo $n \angle V$. Entonces: $\measuredangle(n \angle V) = n
+\cdot \measuredangle V$.
+:::
+
+Nota. El corolario anterior da el método práctico de medida de ángulos
+utilizado por ejemplo en las figuras que se dibujan con lápiz y papel. En
+este caso se considera un ángulo, $\angle V$, que es la unidad de medida, de
+mod que $90 \angle V$ es un ángulo recto, y se dice que este ángulo mide "un
+grad". A continuación, y usando un transportador de ángulos, se observa el
+múltiplo entero de $\angle V$ que más se aproxima al ángulo que queremos
+medir, por ejemplo $n \angle V$, y damos a dicho ángulo la medida aproximada
+de $n$ grados.
+
+
+
+

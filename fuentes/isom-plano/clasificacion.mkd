@@ -1,0 +1,93 @@
+
+
+
+
+
+### Clasificación de las isometrías del plano
+
+Con el ejemplo 3.14 hemos recorrido todos los tipos posibles de isometrías
+del plano:
+
+::: {.theorem #th-clasif-isom-plano data-label="Clasificación de las
+Isometrías en el Plano"}
+Una isometría del plano $g \in \operatorname{Isom}(\mathbf{P})
+\backslash\left\{\mathrm{id}_{\mathbf{P}}\right\}$ es una rotación, una
+traslación, una reflexión o una reflexión con deslizamiento.
+:::
+
+::: proof
+Según el teorema 3.6, una isometría teniendo al menos dos puntos fijos es o
+bien la identidad o bien una reflexión. Una isometría teniendo exactamente
+un punto fijo es, por definición, una rotación. Sea ahora $g$ una isometría
+sin puntos fijos. Elegimos un punto $P$ y sean
+
+$$ M = \operatorname{medio}[P, g(P)], \quad h = \sigma_{M} \circ g $$
+
+Ya que $h$ fija el punto $P$ hay dos posibilidades : 1) $h$ es una rotación
+de centro $P$; 2) $h$ es una reflexión cuyo eje $a$ es una recta que pasa
+por $P$. En el caso 1), $g=\sigma_{M} \circ h$ es un producto de dos
+rotaciones y como no tiene puntos fijos es una traslación (ejemplo 3.10). En
+el caso 2), consideramos la recta $l \perp a$ pasando por $M$, y la recta $m
+\perp l$ pasando por $M$, lo que nos lleva a la descomposición $g=\sigma_{M}
+\sigma_{a}=\sigma_{m} \sigma_{l} \sigma_{a}=\sigma_{m} \sigma_{a}
+\sigma_{l}$ (ejercicio 3.4). Como $\sigma_{m} \sigma_{a}$ es una traslación
+paralela a $l, g$ es una reflexión con deslizamiento.
+
+Nota. $\operatorname{id}_{\mathbf{P}}$ se puede considerar un tipo
+particular de traslación.
+:::
+
+::: exercise
+TKTK.
+
+![Figura 3-5 El caso 2)](attachment:caso_2.png)
+
+(i) El conjunto de las traslaciones es un subgrupo de $\isom(P)$.
+(ii) El conjunto de las rotaciones $y$ de las traslaciones es un subgrupo de
+  $\isom(\mathbf{P})$.
+(iii) Sea $g=\sigma_{a_{1}} \sigma_{a_{2}} \dots \sigma_{a_{n}}$ un producto
+  de $n$ reflexiones. El número $n$ es par si y solamente si $g$ es una
+  rotación, una traslación o $\operatorname{id}_{\mathbf{P}}$.
+
+Una de las conclusiones del teorema 3.15 es que todo $g \in
+\isom(\mathbf{P})$ es un producto de reflexiones. El ejercicio 3.6 nos dice
+que para un $g$ dado el número de reflexiones en que se expresa como
+producto es siempre par, o siempre impar. En el primer caso se dice que $g$
+es par o que conserva la orientación, en el segundo caso se dice que $g$ es
+impar o que invierte la orientación.
+
+La tabla siguiente resume la clasificación de las isometrías del plano
+euclidiano que hemos obtenido:
+
+|       | con puntos fijos  | sin puntos fijos            |
+|:------|:------------------|:----------------------------|
+| par   | rotación          | traslación                  |
+| impar | reflexión         | reflexión con deslizamiento |
+
+::: {.theorem data-label="Teorema"}
+Si $g$ y $g^{\prime}$ son dos isometrías conjugadas, $g$ es par si y sólo si
+$g^{\prime}$ lo es.
+:::
+
+::: proof
+Supongamos que $g=h g^{\prime} h^{-1}$ y que $h=\sigma_{b_{1}}
+\sigma_{b_{2}} \cdots \sigma_{b_{m}}$. Si $g^{\prime}=\sigma_{a_{1}}
+\sigma_{a_{2}} \cdots \sigma_{a_{n}}$, tenemos:
+
+$$ g = h g^{\prime} h^{-1} = \sigma_{b_{1}} \sigma_{b_{2}} \cdots
+\sigma_{b_{m}} \sigma_{a_{1}} \sigma_{a_{2}} \cdots \sigma_{a_{n}}
+\sigma_{b_{m}} \cdots \sigma_{b_{2}} \sigma_{b_{1}} $$
+
+Es decir, $g$ se expresa como producto de $n+2 m$ reflexiones. Luego $g$ y
+$g^{\prime}$ tienen la misma paridad.
+
+Como consecuencia del teorema anterior, del teorema 3.4 y del cuadro 3.1 ,
+tenemos que si dos isometrías son conjugadas entonces o ambas son
+rotaciones, o ambas traslaciones, o ambas reflexiones, o ambas reflexiones
+con deslizamiento.
+:::
+
+
+
+
+

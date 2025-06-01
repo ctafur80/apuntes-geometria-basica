@@ -1,0 +1,216 @@
+
+
+
+### Igualdad de ángulos
+
+Ahora, ponemos nuestro foco en la comparación de ángulos. Para esto, lo
+primero que haremos será establecer la igualdad. En realidad, a la vista de
+la [](#def-angulo){.nameref}, lo siguiente no será una igualdad completa,
+sino lo que se conoce por congruencia, pero a efectos prácticos será algo
+así como una igualdad de ángulos. Serán "iguales" según algún aspecto
+relevante.[^igualdad-equipolencia-vect]
+
+[^igualdad-equipolencia-vect]: Sería algo similar a lo que sucede con los
+vectores de la física, con la relación de equipolencia. A efectos prácticos,
+se puede considerar que dos vectores equipolentes son el mismo.
+
+::: {.deffinition #def-congruencia-angulos data-label="Definición de
+Congruencia de Ángulos"}
+Dos ángulos $\angle\left\{\bar{r}, \bar{s}\right\}$ y
+$\angle\left\{\bar{r}', \bar{s}'\right\}$ se dice que son congruentes si
+existe una isometría $g$ de modo que $g\left\{\bar{r}, \bar{s}\right\} =
+\left\{\bar{r}', \bar{s}'\right\}$.
+:::
+
+Esta generalización permite ampliar la definición de ángulo como la clase de
+congruencia (que es una equivalencia) de un representante de clase
+cualquiera, es decir, de un ángulo concreto de entre todos esos congruentes.
+
+<!--
+Quizás, detenerme en la demostración de por qué es una clase de
+equivalencia.
+
+  - Reflexiva. Un ángulo es congruente a sí mismo porque la aplicación
+    identidad TKTK.
+  - Simétrica. Se cumple porque, al ser la isom una biyección, existe la
+    isometría simétrica (inversa).
+  - Transitiva. La composición de una biyección dos veces, $f \circ f$, da
+    una función biyectiva.
+-->
+
+Normalmente, se utilizará la notación $\angle A = \angle B$ para expresar
+"$\angle A$ congruente a $\angle B$".
+
+Observación. Dados dos ángulos $\angle\left\{\bar{r}, \bar{s}\right\}$ y
+$\angle\left\{\bar{r}', \bar{s}'\right\}$ con vértices $V$ y $V'$,
+respectivamente, y una isometría $g$ tal que $g\left\{\bar{r},
+\bar{s}\right\} = \left\{\bar{r}', \bar{s}'\right\}$, se tiene que $g(V) =
+V'$.
+
+Para demostrar esto, podemos basarnos en el
+[](#th-isom-rectas-sec){.nameref}.
+
+::: example
+Dos ángulos llanos son siempre congruentes. También dos ángulos nulos.
+
+Para la demostración del caso de los ángulos nulos, es muy sencillo, pues la
+aplicación identidad $\operatorname{id}_{\mathbf{P}}$, o, por comodidad,
+simplemente $\operatorname{id}$, nos sirve como isometría para esta
+transformación. Recuerde que la aplicación identidad es una isometría, tal y
+como vimos.
+
+Si tenemos $r = s$ y $\bar{r} = \bar{s}$, entonces, para todo $X \in
+\bar{r}$, se tiene que
+
+$$ \operatorname{id}(X) = X \in \bar{s} $$
+
+Para el caso del ángulo llano, la isometría que existe es la reflexión
+puntual en la recta $r$ con centro de reflexión el punto $V$. TKTK.
+
+<!-- TODO Quizás, hacer la definición de reflexión puntual en el mismo sitio
+en el que hice la de la reflexión axial. -->
+:::
+
+<!--
+Al tener una isometría $g$ entre dos ángulos $\angle\{\bar{r}, \bar{s}\}$ y
+$\angle\left\{\bar{r}', \bar{s}'\right\}$, es decir, $\angle\left\{\bar{r}',
+\bar{s}'\right\} = \angle\left\{g(\bar{r}), g(\bar{s})\right\}$, lo primero
+que podemos ver es que, si $r$ y $s$, las rectas de las que "nacen" esas
+semirrectas $\bar{r}$ y $\bar{s}$, son secantes, también lo serán $g(r)$ y
+$g(s)$, por TKTK.
+
+Para el caso particular de que $r$ y $s$ sean coincidentes, TKTK.
+-->
+
+Si tenemos una isometría $g$, necesariamente se derá, ya que, como sabemos,
+las rectas se transforman en rectas y las semirrectas en semirrectas, que
+
+  - $g(\bar{r}) = \bar{r}'$ y $g(\bar{l}) = \bar{l}'$, o bien
+  - $g(\bar{r}) = \bar{l}'$ y $g(\bar{l}) = \bar{r}'$.
+
+Además, tal y como vimos antes, se puede demostrar que $g(V)$ es el vértice
+del ángulo $\left\{\bar{r}', \bar{l}'\right\}$. TKTK.
+
+::: example
+(Bisectriz de un ángulo). Consideremos un par de rectas no coincidentes $a,
+b$ que se cortan en un punto $V$. Sean $\bar{a}, \bar{\bar{a}}$ y $\bar{b},
+\bar{\bar{b}}$ las semirrectas determinadas por $V$ en las rectas $a$ y $b$.
+Consideremos el ángulo $\angle\left\{\bar{a}, \bar{b}\right\}$ y elijamos
+puntos $A \in \bar{a}$ y $B \in \bar{b}$ a igual distancia de $V$, es decir,
+$d(V, A) = d(V, B)$. Por cierto, esas distancias son mayores que 0 ya que
+$V$ no pertenece al ángulo, aunque sea su vértice.
+
+Por el [](#th-ortog-a-recta-por-punto-int){.nameref}, existe una única recta
+$l$ ortogonal a $r_{A B}$ pasando por el punto medio del segmento $[A, B]$.
+Esta recta, por el [](#th-caract-recta-ortogonal){.nameref}, es igual al
+conjunto de puntos equidistantes de los puntos $A$ y $B$, es decir
+
+$$ l = \{X \in \mathbf{P} \st d(X, A) = d(X, B)\} $$
+
+Por tanto, en particular, dicha recta pasa por $V$, pues, tal y como hemos
+dicho, se cumple $d(V, A) = d(V, B)$.
+
+Si se fija, hemos construido así una recta $l$ con la que tenemos ahora los
+ángulos $\angle\{\bar{a}, \bar{l}\}$ y $\angle\{\bar{b}, \bar{l}\}$ que
+tienen una simetría axial respecto de $l$, siendo $\bar{l}$ la semirrecta de
+$l$ formada a partir del punto $V$; concretamente, la que corta a $[A, B]$
+por su punto medio, tal y como vimos.
+
+En particular, tenemos
+
+$$ \sigma_l(A) = B, \quad \sigma_l\left(\bar{a}\right) = \bar{b}, \quad
+\sigma_l(B) = A, \quad \sigma_l\left(\bar{b}\right) = \bar{a}, \quad
+\sigma_l\left(\bar{l}\right) = \bar{l} $$
+
+Recuerde que la simetría axial es una isometría. Por tanto, los ángulos
+$\angle\left\{\bar{a}, \bar{l}\right\}$ y $\angle\left\{\bar{b},
+\bar{l}\right\}$ son congruentes. Esta recta se llama _bisectriz_ del ángulo
+$\angle\left\{\bar{a}, \bar{b}\right\}$.
+
+<!-- ![Figura 4-4 Una bisectriz de $\angle\left\{\bar{a}_1,
+\bar{b}_1\right\}$](attachment:bisectriz.png) -->
+
+Obsérvese que la bisectriz del ángulo $\angle\left\{\bar{\bar{a}},
+\bar{b}\right\}$ es una recta $m$ distinta de $l$ y que también verifica que
+$\sigma_m(a) = b$ y $\sigma_m(b) = a$.
+:::
+
+<!--
+Nota. Ahora podemos afirmar que los ángulos $\angle\left\{\bar{a},
+\bar{b}\right\}$ y $\angle\left\{\bar{a}', \bar{b}'\right\}$ son congruentes
+si y solo si existe una isometría $h$ tal que $h(\bar{a})=\bar{a}'$ y
+$h(\bar{b}) = \bar{b}'$.
+
+En efecto, si $l$ es la bisectriz de $\angle\left\{\bar{a}, \bar{b}\right\}$
+y $g$ es una isometría tal que $g(\bar{a}) = \bar{b}'$ y $g(\bar{b}) =
+\bar{a}'$, basta componer con $\sigma_l$ para obtener $h$.
+-->
+
+::: {.theorem data-label="Teorema de los Ángulos Opuestos por un Vértice"}
+Consideremos un par de rectas $a$ y $b$ secantes que se cortan en un punto
+$V$. Sean las semirrectas formadas sobre estas rectas a partir del punto
+$V$: $\bar{a}$, $\bar{\bar{a}}$, $V$: $\bar{b}$ y $\bar{\bar{b}}$. Se cumple
+
+$$ \angle\left\{\bar{a}, \bar{b}\right\} = \angle\left\{\bar{\bar{a}},
+\bar{\bar{b}}\right\} $$
+:::
+
+::: proof
+Sea $m$ la bisectriz de $\angle\left\{\bar{\bar{a}}, \bar{b}\right\}$.
+Entonces la reflexión axial $\sigma_m$ da la congruencia entre
+$\angle\left\{\bar{a}, \bar{b}\right\}$ y $\angle\left\{\bar{\bar{a}},
+\bar{\bar{b}}\right\}$ ya que $\sigma_m\left(\bar{a}\right) = \bar{\bar{b}}$
+y $\sigma_m\left(\bar{b}\right) = \bar{\bar{a}}$.
+
+Alternativamente, se podría haber usado la simetría puntual respecto a $V$.
+:::
+
+En la situación anterior, decimos que los ángulos $\angle\left\{\bar{a},
+\bar{b}\right\}$ y $\angle\left\{\bar{\bar{a}}, \bar{\bar{b}}\right\}$ son
+ángulos _opuestos por el vértice_ $V$.
+
+::: {.theorem #th-angulos-rectas-ortog data-label="Teorema de Ángulos de
+Rectas Ortogonales"}
+Sean $l \perp_{V} r$ y $l' \perp_{V'} r'$. Supongamos que $\bar{l}$ y
+$\bar{r}$ son semirrectas con vértice $V$ contenidas respectivamente en $l$
+y $r$. Del mismo modo sean $\bar{l}'$ y $\bar{r}'$ semirrectas con vértice
+$V'$ contenidas en $l'$ y $r'$. Se cumple que
+
+$$ \angle\left\{\bar{l}, \bar{r}\right\} = \angle\left\{\bar{l}',
+\bar{r}'\right\} $$
+:::
+
+::: proof
+Sea $P \in \bar{l}$ tal que $d(P, V) = 1$ y $P' \in \bar{l}'$ tal que
+$d\left(P', V'\right) = 1$ (se construyen aplicando el
+[](#ax-p3-euclides){.nameref}). Por el [](#ax-p5-euclides){.nameref} existe
+una isometría $g$ de modo que $g(V) = V'$ y $g(P) = P'$. Entonces, como por
+dos puntos pasa una única recta, se tiene que $g(l) = l'$.
+
+De esto, también podemos deducir que $g\left(\bar{l}\right) = \bar{l}'$.
+
+<!-- TODO En realidad, está hecha la demostración muy por encima. -->
+
+Por el teorema 2.29 y la observación 2.24 además $g(r) = r'$, por tanto o
+bien $g(\bar{r}) = \bar{r}'$ o bien $\sigma_{l'} \circ g(\bar{r}) =
+\bar{r}'$, con lo cual los ángulos $\angle\left\{\bar{l}, \bar{r}\right\}$ y
+$\angle\left\{\bar{l}', \bar{r}'\right\}$ son congruentes.
+
+<!-- TODO Volver con esto cuando tenga tiempo. -->
+:::
+
+::: {.deffinition data-label="Definición de Ángulo Recto"}
+Si $l \perp_{V} r$ y $\bar{l}$ y $\bar{r}$ son semirrectas con vértice $V$
+contenidas respectivamente en $l$ y $r$, se dice que $\angle\left\{\bar{l},
+\bar{r}\right\}$ es un _ángulo recto_.
+:::
+
+Por el teorema anterior todos los ángulos rectos son congruentes.
+
+<!-- ![Figura 4-7 Ángulo recto](attachment:angulo_recto.png) -->
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+
+
+
+### Suma de ángulos
+
+::: {.deffinition #def-suma-angulos data-label="Definición de Suma de
+Ángulos"}
+Sea $\angle\{\bar{a}, \bar{c}\}$ un ángulo con vértice $V$ y $\bar{b}$ una
+semirrecta de vértice $V$ en el interior de $\angle\{\bar{a}, \bar{c}\}$. En
+este caso decimos que el ángulo $\angle\{\bar{a}, \bar{c}\}$ es la suma de
+los ángulos $\angle\{\bar{a}, \bar{b}\}$ y $\angle\{\bar{b}, \bar{c}\}$,
+cosa que designamos por:
+
+$$ \angle\{\bar{a}, \bar{c}\} = \angle\{\bar{a}, \bar{b}\} + \angle\{\bar{b},
+\bar{c}\} $$
+:::
+
+Advierta que, aunque se use la misma notación que con la suma de números, en
+realidad es distinta. Esta, en principio, no trata de números. Lo único que
+dice es que existe en el interior de $\angle\{\bar{a}, \bar{c}\}$ una
+semirrecta $\bar{b}$ TKTK.
+
+::: exercise
+Probar que si $\angle\{\bar{a}, \bar{b}\}$ es congruente $a
+\angle\left\{\bar{a}', \bar{b}'\right\} y \angle\{\bar{b}, \bar{c}\}$ es
+congruente $a \angle\left\{\bar{b}', \bar{c}'\right\} y$ además $\bar{a},
+\bar{b}, \bar{c}$ (y también $\bar{a}', \bar{b}', \bar{c}'$ ) están en las
+condiciones de la definición 4.25, entonces $\angle\{\bar{a}, \bar{b}\} +
+\angle\{\bar{b}, \bar{c}\}$ es congruente $a$ $\angle\left\{\bar{a}',
+\bar{b}'\right\} + \angle\left\{\bar{b}', \bar{c}'\right\}$.
+:::
+
+::: {.deffinition #def-suma-angulos-vertices data-label="Definición de Suma
+de Ángulos de Vértices"}
+Para tres ángulos $\angle U$, $\angle V$ y $\angle W$ decimos que $\angle V$
+es equivalente a la suma de $\angle U$ y $\angle W$, y escribimos
+
+$$ \angle V = \angle U + \angle W $$
+
+si existe una descomposición de $\angle V = \angle\{\bar{a}, \bar{c}\}$
+
+$$ \angle\{\bar{a}, \bar{c}\} = \angle\{\bar{a}, \bar{b}\} +
+\angle\{\bar{b}, \bar{c}\} $$
+
+tal que $\angle\{\bar{a}, \bar{b}\}$ es congruente a $\angle U$ y
+$\angle\{\bar{b}, \bar{c}\}$ es congruente a $\angle W$.
+:::
+
+<!-- ![Figura 4-13 Suma de ángulos](attachment:suma_angulos.png) -->
+
+El ejercicio 4.2 muestra que la clase de congruencia de $\angle U + \angle
+W$ está determinada unívocamente por las clases de congruencia de $\angle U$
+y de $\angle W$. La ecuación $\angle V = \angle U + \angle W$ puede por
+tanto ser leida como "la clase de congruencia de $\angle V$ es igual a la
+suma de las clases de congruencia de $\angle U$ y de $\angle W$". Nosotros
+utilizaremos las dos interpretaciones y diremos simplemente que $\angle V$
+es la suma de $\angle U$ y $\angle W$. Con esta interpretación, también
+tiene sentido hacer $\angle W + \angle W$, y se designa por $2 \angle W$,
+llamándosele el doble del ángulo $\angle W$.
+
+::: exercise
+Sea $\angle U = \angle V + \angle W$ y $\angle U' = \angle W + \angle V$.
+Probar que $\angle U$ y $\angle U'$ son congruentes.
+:::
+
+::: {.deffinition #def-suma-arb-angulos data-label="Definición de Suma
+Arbitraria de Ángulos"}
+Sean $\angle U$ un ángulo que es suma de otros dos, es decir, $\angle U =
+\angle V + \angle W$, y, a su vez, $\angle W = \angle S + \angle T$,
+entonces decimos que $\angle U$ es la suma de los tres ángulos $\angle V$,
+$\angle S$ y $\angle T$, y escribiremos:
+
+$$ \angle U = \angle V + \angle S + \angle T $$
+
+De igual modo se define la suma de un número arbitrario (finito) de ángulos:
+
+$$ \angle U = \angle U_{1} + \ldots + \angle U_r $$
+
+para un $r \in \nset^+$.
+:::
+
+La definición anterior conlleva la comprobación siguiente.
+
+::: exercise
+Probar que si $\angle U = (\angle V + \angle S) + \angle T$ y $\angle U' =
+\angle V + (\angle S + \angle T)$, entonces $\angle U = \angle U'$.
+:::
+
+
+
+
+

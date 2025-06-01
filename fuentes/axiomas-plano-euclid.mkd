@@ -1,0 +1,105 @@
+
+
+
+### Capítulo 2. Axiomas del plano euclideo
+
+**pág. 24**.--- En la **Observación 2.4**. Para mí, para demostrar la
+unicidad se necesita también hacer uso del punto (ii) de la definición de
+recta.
+
+---
+
+**pág. 24**.--- **Nota 2.5**. Al ser única, la recta ya sería una aplicación
+y por tanto se puede usar la notación $r_{AB}$.
+
+---
+
+**pág. 24**.--- **Teorema 2.7**. En la demostración creo que hay un problema
+de lógica. En realidad, también habría que demostrar que no se puede dar que
+ni se cortan ni son paralelas.
+
+Es decir, lo que dice el teorema es que se da un operador disyunción
+excluyente; en las ciencias de la computación y la electrónica digital se le
+conoce más como _o_-exclusiva. Entonces, se deberían demostrar esas dos
+cosas.
+
+---
+
+**pág. 25**.--- El Axioma P3 (de la Regla Graduada) tamibén puede expresarse
+como que $\gamma : (r, d) \longrightarrow (\mathbb{R}, d_{\mathbb{R}})$ es
+una isometría. Recuerde que $d_{\mathbb{R}}$ se definió anteriormente como
+
+$$ d_{\mathbb{R}} (x, y) = |x - y| $$
+
+Esto concuerda con que, como se demostró en el Capítulo 1, que
+$d_{\mathbb{R}}$ es una distancia.
+
+Advierta que $(r, d)$ es un espacio métrico inducido de $(\mathbf{P}, d)$.
+
+---
+
+**pág. 26**.--- La parte que queda por completar del punto medio de un
+segmento, que sería cuando los extremos coinciden, se podría dar por
+convenio pero también puede ser una consecuencia de la definición. Esto
+dependerá de la definición que se dé del punto medio de un segmento.
+
+Si se hubiera dado en base a los puntos del segmento, en lugar de a los
+puntos de la (única) recta que los contiene, todo tendría más sentido, y no
+habría que hacer uso en este caso una excepción.
+
+---
+
+**pág. 27**.--- Aunque podría parecerle que las demostraciones de la
+**Observación 2.10** y del **Teorena 2.12** están incompletas porque se
+hacen en uno solo de los dos condicionales, en realidad, si se fija, está
+usando símbolos de bicondicional, con lo que podría ir también de delante
+hacia atrás en la demostración.
+
+Creo que el libro, aunque está muy bien, es muy "telegráfico". No estaría
+mal que diese algunas explicaciones más en algunas partes.
+
+---
+
+**pág. 27**.--- Demostración del punto (6) del **Teorema 2.12**. En
+realidad, la última implicación se justifica, además de por el punto (ii),
+por el (i).
+
+---
+
+**pág. 31**.--- En la demosrtación del **Teorema 2.18**, no se llega a
+explicar el paso
+
+$$ [X, Y] \cap r_{AB} = \emptyset \quad \iff \quad g([X, Y]) \cap g(r_{AB})
+= \emptyset $$
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

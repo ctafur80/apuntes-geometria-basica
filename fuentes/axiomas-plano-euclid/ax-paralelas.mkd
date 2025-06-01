@@ -1,0 +1,126 @@
+
+
+
+### El axioma de las paralelas
+
+Este axioma es el famoso quinto axioma de Euclides. Recuerde que aquí
+estamos usando un formalismo algo distinto, con lo que la numeración que
+usamos es distinta.
+
+Para terminar la lista de los axiomas presentamos aquí el axioma de las
+paralelas (P7). Antes de enunciarlo, vamos a proponer un ejercicio en el
+cual vamos a plantear dos preguntas de naturaleza bastante similar. Una de
+ellas resulta fácil de resolver, sin embargo la otra es raramente difícil.
+
+::: exercise
+Se consideran dos rectas $a, b$ que se cortan en un punto $P$. Sobre estas
+rectas se marcan tres puntos $A, B, C$ distintos de $P$ y a igual distancia
+$\delta>0$ de $P$, como en la figura 2-10, con $A, C \in a$ tal que $P =
+\operatorname{medio}[A, C]$, y $B \in$ b. Se trazan las mediatrices $m_{A
+B}$ y $m_{B C}$ de los segmentos $[A, B]$ y $[B, C]$, respectivamente. Como
+$P$ está a igual distancia de los tres puntos $A, B$ y $C$, las rectas $m_{A
+B}$ y $m_{B C}$ pasan por $P$, ya que todos los puntos de $m_{AB}$
+equidistan de $A$ y $B$ y todos los de $m_{BC}$ lo hacen de $B$ y $C$, con
+lo que el punto de intersección de ambas será el punto que equidista de los
+tres puntos $A$, $B$ y $C$, que, como sabemos, es $C$.
+
+He aquí las dos preguntas:
+
+a.  Demostrar que $m_{A B} \perp m_{B C}$;
+b.  Demostrar que $r_{A B} \perp r_{B C}$.
+
+Después de haber encontrado una de las dos demostraciones pedidas, el lector
+deberá interrumpir sus esfuerzos pues le falta una herramienta indispensable
+para conseguir la otra.
+
+Recordemos que dos rectas $a, b$ son paralelas y se nota $a \parallel b$ si
+se tiene $a = b$ o bien $a \cap b = \emptyset$.
+:::
+
+<!-- ![Figura 2-10](attachment://figura-2-10.png) -->
+
+::: {.theorem data-label="Teorema"}
+Para toda recta $a \subseteq \mathbf{P}$ y todo punto $P \in \mathbf{P}$
+existe una recta $b$ pasando por $P$ tal que $b \parallel a$.
+:::
+
+<!-- ![Figura 2-11](attachment://figura-2-11.png) -->
+
+::: proof
+Primero, consideraremos el caso en el que $P \notin a$.
+
+Por el [](#th-ortog-a-recta-por-punto-ext){.nameref}, existe una recta $l$
+siendo $l \perp a$ pasando por $P$ y, a su vez, existe una recta $b$ siendo
+$b \perp l$ pasando por $P$, por el
+[](#th-ortog-a-recta-por-punto-int){.nameref}.
+
+Para esto, se tiene que $a \cap b = \emptyset$, pues, de otro modo, $a$ y
+$b$ son rectas distintas ortogonales a $l$ pasando por el mismo punto, en
+contradicción con la parte de unicidad del
+[](#th-ortog-a-recta-por-punto-ext){.nameref}. De donde $b \parallel a$.
+:::
+
+Parece "geométricamente evidente" que la recta $b$ en el teorema precedente
+es única, pero la prueba de la unicidad no hay modo de encontrarla. Añadimos
+ahora un nuevo axioma a nuestra lista.
+
+::: {.axiom #ax-p7-eucides data-label="Axioma P7 (de las Paralelas)"}
+Para toda recta $r$ y todo punto $P$ de $\mathbf{P}$ existe solamente una
+recta paralela a $r$ pasando por $P$.
+:::
+
+Una primera consecuencia de este axioma es que para las rectas en
+$\mathbf{P}$ la propiedad de ser paralelas es una relación de equivalencia:
+
+::: {.theorem}
+Sean $a$, $b$ y $c$ rectas en $\mathbf{P}$, entonces se tiene:
+
+1.  $a \parallel a$.
+2.  Si $a \parallel b$, entonces $b \parallel a$.
+3.  Si $a \parallel b$ y $b \parallel c$, entonces $a \parallel c$.
+:::
+
+::: proof
+Las propiedades 1 y 2 son ciertas por definición.
+
+Para la 3, se puede ver que el condicional contrarrecíproco de esta
+propiedad es verdadero haciendo uso del [](#ax-p7-eucides){.nameref}. Si $a$
+no fuera paralela a $c$ entonces $a$ y $c$ se cortarían en un punto único
+$P$. Se tendría entonces dos rectas distintas $a$ y $c$ pasando por $P$ y
+paralelas a $b$.
+:::
+
+Disponiendo ahora de la unicidad de las rectas paralelas, según el
+[](#ax-p7-euclides){.nameref}, la demostración que nos faltaba en el
+ejercicio anterior se convierte ahora en accesible. He aquí la clave:
+
+::: {.theorem data-label="Teorema"}
+Dadas, en $(\mathbf{P}, d)$, dos rectas paralelas $a$ y $b$, para todo $A
+\in a$ la única recta $l$ perpendicular a $a$ pasando por $A$ es ortogonal a
+$b$.
+:::
+
+::: proof
+Dado un punto $B \in b$, consideramos la recta $b^{\prime} \perp l$ pasando
+por $B$ (ver figura 2-12). Las rectas $b^{\prime}$ y $a$ son paralelas (ver
+demostración del teorema 2.31). Según el axioma P7 se tiene por tanto
+$b^{\prime}=b$. De donde $l \perp b$.
+:::
+
+<!-- ![Figura 2-12](attachment://figura-2-12.png) -->
+
+En los capítulos siguientes, se constatará que con los axiomas del P1 al P7
+se tiene todo en la mano para desarrollar la geometría euclidiana.
+
+El [](#ax-p7-euclides){.nameref} es uno de los axiomas del formalismo
+presentado en su día por Euclides en su libro _Elementos_, solo que con un
+enunciado distinto pero equivalente. El lugar en que aparece en dicha obra
+ha llevado a los estudiosos del tema a pensar que el propio Euclides dudó
+sobre su independencia del resto de axiomas, es decir, de si podía ser
+demostrado a partir de los demás axiomas y, por lo tanto, si era o no era
+necesario. Descubrir si la sospecha de Euclides era fundada se convirtió en
+uno de los problemas más famosos e importantes de la geometría. En este
+curso daremos la respuesta en el capítulo 9 TKTK.
+
+
+

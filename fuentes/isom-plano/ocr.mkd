@@ -1,0 +1,234 @@
+
+
+## Isometrías del plano
+
+## Introducción
+
+En este capítulo, estudiamos las isometrías del plano desde el punto de vista "fenomenológico". Una parte de este estudio está presentada bajo la forma de ejercicios. Los teoremas demostrados en los capítulos precedentes serán utilizados sin ser siempre citados.
+
+Las isometrías permiten formalizar la experiencia de "mover" dentro de la estructura lógica de la geometría. Las isometrías desempeñan un papel tan importante que incluso se usan para definir y comparar distintos tipos de geometrías.
+
+## Preliminares
+
+Los conceptos siguientes (muy generales) desempeñarán un papel central para distinguir los diferentes tipos de isometrías:
+
+**Definición 3.1** Sea $\mathcal{M}$ un conjunto no vacío $y \phi: \mathcal{M} \rightarrow \mathcal{M}$ una aplicación.
+(i) Se dice que $P \in \mathcal{M}$ es un punto fijo de $\phi$ si $\phi(P)=P$.
+(ii) Un subconjunto $\mathcal{D} \subset \mathcal{M}$ se llama un subconjunto invariante por $\phi$ si $\phi(\mathcal{D})=\mathcal{D}$.
+
+Volvamos al plano euclidiano $\mathbf{P}$ y sea $\operatorname{Isom}(\mathbf{P})$ el conjunto de sus isometrías:
+
+$$
+\operatorname{Isom}(\mathbf{P})=\{g \mid g \text { es una isometría } g: \mathbf{P} \rightarrow \mathbf{P}\}
+$$
+
+Por el teorema 2.18 y la observación 2.24, las isometrías de Isom(P) preservan los segmentos de recta, las rectas, los semiplanos y la ortogonalidad.
+
+Utilizaremos también la propiedad siguiente:
+**Lema 3.2** Sea $g \in \operatorname{Isom}(\mathbf{P})$. Si $A \neq B$ son dos puntos fijos de $g$, entonces todo $X \in r_{A B}$ es también un punto fijo de $g$.
+
+**Demostración.** Es una consecuencia del hecho que $g\left(r_{A B}\right)=r_{g(A) g(B)}=$ $r_{A B}$ y que la posición de un punto $X \in r_{A B}$ está únicamente determinada por las dos distancias $d(X, A)$ y $d(X, B)$ (ver ejercicio 2.6).
+
+En todo lo que sigue utilizaremos, de vez en cuando, la notación $g \circ h=g h$.
+En la útima sección de este capítulo se van a clasificar las isometrías. Para hacer una clasificación es necesario tener una noción de igualdad, o equivalencia. La equivalencia de isometrías será la dada por la operación algebraica de conjugación:
+
+**Definición 3.3** Sean $g, g^{\prime}$ isometrías, $g^{\prime}$ y $g$ son conjugadas si existe otra isometría $h \in \operatorname{Isom}(\mathbf{P})$ tal que:
+
+$$
+g=h g^{\prime} h^{-1}
+$$
+
+¿Qué quiere decir que dos isometrías $g$ y $g^{\prime}$ son conjugadas? Si vemos $h$ como un "cambio de posición de un observador", $g$ se puede obtener en función de $g^{\prime}$ del siguiente modo: $h^{-1}$ cambia de posición el observador, después aplicamos $g^{\prime}$ y de nuevo se vuelve a la posición primitiva por $h$. Así $g$ y $g^{\prime}$ actúan del mismo modo salvo el cambio dado por $h$.
+
+El siguiente resultado, que no necesita demostración, es útil para resolver algunos de los ejercicios de este capítulo:
+
+**Teorema 3.4** Sean $g, g^{\prime}$ dos isometrías conjugadas: $g=h g^{\prime} h^{-1}$, con $h \in$ Isom(P). Entonces:
+(i) Un punto $P \in \mathbf{P}$, es un punto fijo de $g$ si $y$ solo si $h(P)$ es un punto fijo de $g^{\prime}$.
+(ii) Un subconjunto $S$ de $\mathbf{P}$, es invariante por $g$ si $y$ solo si $h(S)$ es un conjunto invariante por $g^{\prime}$.
+
+# Las isometrías del plano
+
+En el siguiente ejemplo se recuerdan las propiedades esenciales de las reflexiones:
+
+**Ejemplo 3.5 (reflexión de eje $r$ )** Sea $r \subset \mathbf{P}$ una recta.
+
+![Figura 3-1 Reflexión](attachment:reflexion.png)
+
+La isometría $\sigma_{r}: \mathbf{P} \rightarrow \mathbf{P}$ tiene las propiedades siguientes, donde $X \in \mathbf{P}$ y $H^{1}, H^{2}$ son los semiplanos determinados por $r$ :
+(i) $\sigma_{r} \circ \sigma_{r}=\operatorname{id}_{\mathbf{P}}$;
+(ii) $\sigma_{r}(X)=X \Longleftrightarrow X \in r$;
+(iii) $\sigma_{r}\left(H^{1}\right)=H^{2}, \sigma_{r}\left(H^{2}\right)=H^{1}$;
+
+(iv) $X$ y $\sigma_{r}(X)$ se encuentran sobre una recta ortogonal a $r$ a igual distancia del punto de intersección.
+
+Una isometría de $\operatorname{Isom}(\mathbf{P})$ con estas propiedades está únicamente determinada por $r$ y en el capítulo anterior se llamó reflexión de eje $r$.
+
+**Teorema 3.6** Sea $g \in \operatorname{Isom}(\mathbf{P})$ y sea $r$ la recta pasando por dos puntos distintos $A, B \in \mathbf{P}$. Si $A, B$ son puntos fijos de $g$, entonces o bien $g=\sigma_{r} o$ bien $g=\operatorname{id}_{\mathbf{P}}$.
+
+**Demostración.** Según el lema 3.2, se tiene $g(X)=X$, para todo $X \in r$. Para $X \in \mathbf{P} \backslash r$ se sigue que la recta $l \perp r$ pasando por $X$ satisface $g(l)=l$. Por consiguiente, $g(X)$ es uno de los dos puntos siguientes: $X$ o $\sigma_{r}(X)$. Ya que la imagen de un semiplano es un semiplano se concluye que o bien $g(X)=X$ para todos $\operatorname{los} X \in \mathbf{P}$, o bien $g(X)=\sigma_{r}(X)$ para todos $\operatorname{los} X \in \mathbf{P}$.
+
+**Corolario 3.7** Si $A^{1}, A^{2}, A^{3} \in \mathbf{P}$ son puntos no alineados $y g, h \in \operatorname{Isom}(\mathbf{P})$ son dos isometrías verificando $g\left(A^{i}\right)=h\left(A^{i}\right), i=1,2,3$, entonces $g=h$.
+
+**Demostración.** Se tiene que $g^{-1} \circ h\left(A^{i}\right)=A^{i}, i=1,2,3$. Como $g^{-1} \circ h\left(A^{i}\right)=$ $A^{i}, i=1,2$, el teorema 3.6 nos dice $g^{-1} \circ h=i d_{\mathbf{P}}$ o bien $g^{-1} \circ h=\sigma_{r_{A^{1}, A^{2}}}$. Como además $g^{-1} \circ h\left(A^{3}\right)=A^{3}$, entonces $g^{-1} \circ h=i d_{\mathbf{P}}$. Componiendo con $g$ los dos miembros de la igualdad anterior tenemos que $g=h$.
+
+Con las reflexiones se pueden construir otros tipos de isometrías.
+**Ejemplo 3.8 (rotación y traslación)** En la figura 3-2 consideramos dos rectas distintas $a, b$ en $\mathbf{P}$; en la figura de la izquierda, las rectas se cortan en un punto único $C$, en la figura de la derecha las rectas son paralelas, $c$ es una recta ortogonal a las rectas $a$ y $b$. En los dos casos efectuamos el producto $g=\sigma_{b} \circ \sigma_{a}$ y buscamos sus puntos fijos. Como $\sigma_{b} \circ \sigma_{b}=\mathrm{id}_{\mathbf{P}}$, se tiene
+
+$$
+\sigma_{b} \circ \sigma_{a}(X)=X \Longleftrightarrow \sigma_{a}(X)=\sigma_{b}(X)
+$$
+
+Vamos a estudiar cuando se verifica:
+
+$$
+\sigma_{a}(X)=\sigma_{b}(X)
+$$
+
+Para $X \in a$ la igualdad anterior se verifica si y sólo si estamos en el caso de la figura de la izquierda con $X=C$. Para $X \notin a$ la ecuación se verifica si y solamente si $a$ es la recta ortogonal al segmento $\left[X, \sigma_{b}(X)\right]$ pasando por
+
+![Figura 3-2 Productos de dos reflexiones](attachment:productos_reflexiones.png)
+
+su punto medio. Ahora bien, esta última recta es $b$. Hemos probado que en la situación de la figura de la izquierda $g$ tiene exactamente un punto fijo y que en la situación de la derecha $g$ no tiene puntos fijos. Notemos que a la derecha, $g$ deja $c$ invariante y no intercambia los semiplanos determinados por $c$.
+
+Llamamos rotación de centro $C$ a una isometría de $\operatorname{Isom}(\mathbf{P})$ que tiene exactamente un punto fijo $C$. Llamamos traslación una isometría de Isom(P) que no tiene puntos fijos y deja la recta $c$ invariante (así como todas las rectas paralelas a $c$, ejercicio 3.1) y los dos semiplanos determinados por $c$ son también invariantes (lo mismo se puede decir de todos los semiplanos determinados por rectas paralelas a $c$ ). Para indicar que las rectas paralelas a $c$ son invariantes por la traslación diremos que es una traslación paralela a c.
+
+**Teorema 3.9** Sea $\rho \in \operatorname{Isom}(\mathbf{P})$ una rotación de centro $C$. Para toda recta a pasando por $C$ existen dos rectas $b, b^{\prime}$ pasando por $C$, únicas, tales que $\rho=\sigma_{b} \sigma_{a}=\sigma_{a} \sigma_{b^{\prime}}$.
+
+**Demostración.** Tomemos $P \in a \backslash\{C\}$ y consideremos la recta $b$ cortando el segmento $[P, \rho(P)]$ ortogonalmente en su punto medio. Entonces $b$ pasa por $C$, pues $d(C, P)=d(C, \rho(P))$. Por consiguiente, el producto $\sigma_{b} \rho$ fija $C$ y $P$, y no hay más que dos posibilidades: o bien $\sigma_{b} \rho=\sigma_{a}$ o bien $\sigma_{b} \rho=\mathrm{id}_{\mathbf{P}}$ (teorema 3.6). Pero el segundo caso está excluido pues implicaría $\rho=\sigma_{b}$. De ahí $\rho=\sigma_{b} \sigma_{a}$.
+
+Aplicando lo que acabamos de demostrar a $\rho^{-1}$ (que también es una rotación de centro $C$ ), tenemos que existe $b^{\prime}$ de modo que $\rho^{-1}=\sigma_{b^{\prime}} \sigma_{a}$, y
+
+ahora, por las propiedades de las inversas de las aplicaciones, se verifica:
+
+$$
+\rho=\left(\rho^{-1}\right)^{-1}=\left(\sigma_{b^{\prime}} \sigma_{a}\right)^{-1}=\left(\sigma_{a}\right)^{-1}\left(\sigma_{b^{\prime}}\right)^{-1}=\sigma_{a} \sigma_{b^{\prime}}
+$$
+
+En cuanto a la unicidad de $b$ (respectivamente $b^{\prime}$ ) : si $\sigma_{b} \sigma_{a}=\sigma_{c} \sigma_{a}$, entonces, multiplicando por la derecha por $\sigma_{a}$, tenemos $\sigma_{b}=\sigma_{c}$ y por tanto $b=c$.
+
+![Figura 3-3 Productos de dos rotaciones](attachment:productos_rotaciones.png)
+
+**Ejercicio 3.1** Sea $\tau \in \operatorname{Isom}(\mathbf{P})$ una traslación $y c \subset \mathbf{P}$ una recta tal que $\tau(c)=c$.
+A. Para toda recta a $\perp c$ existen rectas $b, b^{\prime} \perp c$, únicamente determinadas, tales que $\tau=\sigma_{b} \sigma_{a}=\sigma_{a} \sigma_{b^{\prime}}$.
+B. Para toda recta $r \subset \mathbf{P}$ se tiene
+
+$$
+\tau(r)=r \Longleftrightarrow r \text { es paralela a } c
+$$
+
+**Ejemplo 3.10** Como aplicación del teorema 3.9 determinamos la naturaleza de un producto de dos rotaciones. Sean $\rho_{1}, \rho_{2}$ rotaciones de centros respectivos $C_{1}, C_{2}$. Por los puntos $C_{1}, C_{2}$ pasa una recta $a$, y existen rectas $b_{i}$ pasando por $C_{i}, i=1,2$, tales que $\rho_{1}=\sigma_{a} \sigma_{b_{1}}, \rho_{2}=\sigma_{b_{2}} \sigma_{a}$. Se obtiene $\rho_{2} \rho_{1}=\sigma_{b_{2}} \sigma_{a} \sigma_{a} \sigma_{b_{1}}=\sigma_{b_{2}} \sigma_{b_{1}}$. Si las rectas $b_{i}$ se cortan en un punto $C$, el producto es una rotación de centro $C$, si las rectas son paralelas el producto es una traslación paralela a las rectas ortogonales a $b_{1}$ y $b_{2}$.
+
+**Observación 3.11** Estamos trabajando con el producto de isometrías, que es una operación en un grupo. Esta operación, al contrario de lo que sucede con otras operaciones habituales con números, no es conmutativa. Esto quiere
+
+decir que no siempre se verifica que $g h=h g$, donde $g$ y $h$ son isometrías del plano. Además, es más bien raro que se dé $g h=h g$.
+
+Por ejemplo tomemos dos rotaciones $\rho_{1}$ y $\rho_{2}$ cuyos centros son, respectivamente, $C_{1}$ y $C_{2}$. En el caso de ser $C_{1} \neq C_{2}$, vamos a probar que $\rho_{1} \rho_{2} \neq \rho_{2} \rho_{1}$. Si suponemos $\rho_{1} \rho_{2}=\rho_{2} \rho_{1}$ tendríamos, $\rho_{1} \rho_{2}\left(C_{2}\right)=\rho_{2} \rho_{1}\left(C_{2}\right)$. Esto implica que $\rho_{1}\left(C_{2}\right)=\rho_{1} \rho_{2}\left(C_{2}\right)=\rho_{2} \rho_{1}\left(C_{2}\right)$, es decir que $\rho_{1}\left(C_{2}\right)$ sería un punto fijo para $\rho_{2}$. Sin embargo el único punto fijo de $\rho_{2}$ es $C_{2}$ y $C_{2} \neq \rho_{1}\left(C_{2}\right)$ (pues en caso contrario $C_{2}$ sería un punto fijo de $\rho_{1}$ y el único punto fijo de $\rho_{1}$ es $C_{1}$, y $C_{1} \neq C_{2}$ por hipótesis). Luego $\rho_{1} \rho_{2} \neq \rho_{2} \rho_{1}$, si $C_{1} \neq C_{2}$.
+¿Qué sucede si $C_{1}=C_{2}$ ?, la respuesta está en el siguiente ejercicio:
+**Ejercicio 3.2** Sea $P \in \mathbf{P}$ y notemos
+
+$$
+\mathcal{R}_{P}(\mathbf{P})=\{g \in \operatorname{Isom}(\mathbf{P}) \mid g \text { es una rotación de centro } P\} \cup\{\operatorname{id}_{\mathbf{P}}\}
+$$
+
+A. $\mathcal{R}_{P}(\mathbf{P})$ es un subgrupo de $\operatorname{Isom}(\mathbf{P})$.
+B. Si $g \in \mathcal{R}_{P}(\mathbf{P})$ y a es una recta pasando por $P$, entonces $\sigma_{a} g \sigma_{a}=g^{-1}$.
+C. $g h=h g$, para todo $g, h \in \mathcal{R}_{P}(\mathbf{P})$.
+D. Si $g, h \in \mathcal{R}_{P}(\mathbf{P})$ y existe $X \in \mathbf{P}-\{P\}$, tal que $g(X)=h(X)$, entonces $g=h$.
+
+**Ejercicio 3.3** Sea $P \in \mathbf{P}$ y $h \in \operatorname{Isom}(\mathbf{P})$.
+A. Si $g \in \mathcal{R}_{P}(\mathbf{P})$ entonces $h g h^{-1} \in \mathcal{R}_{h(P)}(\mathbf{P})$.
+B. Si $r \subset \mathbf{P}$ es una recta entonces $h \sigma_{r} h^{-1}=\sigma_{h(r)}$.
+
+**Ejercicio 3.4** Sean $a, b$ rectas en $\mathbf{P}$.
+A. $\sigma_{a} \sigma_{b} \sigma_{a}=\sigma_{\sigma_{a}(b)}$.
+B. $\sigma_{a} \sigma_{b}=\sigma_{b} \sigma_{a}$ si $y$ solamente si $a \perp b$ o $a=b$.
+
+**Ejemplo 3.12 (reflexión central)** Un caso particular de rotación es el producto $\sigma_{b} \sigma_{a}=\sigma_{P}$ donde $a \perp_{P} b$. A la vista de las dos propiedades siguientes a este tipo de rotación se le llama media vuelta de centro $P$, o también una reflexión central.
+
+(i) $\sigma_{P} \circ \sigma_{P}=\operatorname{id}_{\mathbf{P}}$.
+(ii) Para todo $X \in \mathbf{P}$, la imagen $\sigma_{P}(X)$ es el único punto $X^{\prime} \in \mathbf{P}$ verificando medio $\left[X, X^{\prime}\right]=P$.
+
+Para demostrar (i) se usa el ejercicio 3.4.B :
+
+$$
+\begin{aligned}
+\sigma_{P} \sigma_{P} & =\sigma_{a} \sigma_{b} \sigma_{a} \sigma_{b}=\sigma_{a} \sigma_{b} \sigma_{b} \sigma_{a}= \\
+& =\sigma_{a} \sigma_{a}=\operatorname{id}_{\mathbf{P}}
+\end{aligned}
+$$
+
+**Demostración de (ii):** sea $X^{\prime}=\sigma_{P}(X)$. Se tiene entonces, gracias a (i), $\sigma_{P}\left(\left[X, X^{\prime}\right]\right)=\left[X^{\prime}, X\right]=\left[X, X^{\prime}\right]$; por tanto $\sigma_{P}\left(\right.$ medio $\left.\left[X, X^{\prime}\right]\right)=\operatorname{medio}\left[X, X^{\prime}\right]$. Sabiendo que $P$ es el único punto fijo de $\sigma_{P}$ se concluye que $P=\operatorname{medio}\left[X, X^{\prime}\right]$.
+
+La propiedad (ii) nos dice que $\sigma_{P}$ no depende de la elección de $a$ y $b$, es decir, la reflexión central tiene también la propiedad siguiente :
+(iii) $\sigma_{P}=\sigma_{a^{\prime}} \sigma_{b^{\prime}}$ para cualquier par de rectas $a^{\prime}, b^{\prime}$ tales que $a^{\prime} \perp_{P} b^{\prime}$.
+
+**Teorema 3.13** Para toda recta $r$ las rectas $r$ y $\sigma_{P}(r)$ son paralelas.
+**Demostración.** Sea $r$ una recta y sea $s$ la recta que pase por $P$ y sea ortogonal a $r$ (teoremas 2.27 y 2.28 del capítulo anterior). Entonces $\sigma_{P}(s)=s$ y además $\sigma_{P}(r)$ es ortogonal a $s$ (Observación 2.24). Como $r$ y $\sigma_{P}(r)$ son ortogonales a $s$, tienen que ser paralelas por la unicidad en el teorema 2.27.
+
+**Ejercicio 3.5** Sea $\tau \in \operatorname{Isom}(\mathbf{P})$ una traslación.
+A. Para todo punto $A \in \mathbf{P}$ existen puntos $B, B^{\prime} \in \mathbf{P}$, únicos, tales que $\tau=\sigma_{B} \sigma_{A}=\sigma_{A} \sigma_{B^{\prime}}$.
+B. Para toda recta $r, \tau(r) \| r$.
+
+**Ejemplo 3.14 (Reflexión con deslizamiento)** Componiendo $\sigma_{c}$, una reflexión de eje $c$, con una traslación paralela a $c$ se obtiene una isometría $\varphi$ sin puntos fijos que no es una traslación pues permuta los dos semiplanos determinados por $c$. Una isometría como $\varphi$ se llama reflexión con deslizamiento. Además $\varphi$ deja invariante la recta $c$ y no sólo eso: $c$ es la única recta invariante por $\varphi$.
+
+![Figura 3-4 Reflexión con deslizamiento](attachment:reflexion_deslizamiento.png)
+
+# Clasificación de las isometrías del plano
+
+Con el ejemplo 3.14 hemos recorrido todos los tipos posibles de isometrías del plano :
+
+**Teorema 3.15 (Clasificación de las isometrías)** Una isometría del plano $g \in \operatorname{Isom}(\mathbf{P}) \backslash\left\{\mathrm{id}_{\mathbf{P}}\right\}$ es una rotación, una traslación, una reflexión o una reflexión con deslizamiento.
+
+**Demostración.** Según el teorema 3.6, una isometría teniendo al menos dos puntos fijos es o bien la identidad o bien una reflexión. Una isometría teniendo exactamente un punto fijo es, por definición, una rotación. Sea ahora $g$ una isometría sin puntos fijos. Elegimos un punto $P$ y sean
+
+$$
+M=\operatorname{medio}[P, g(P)], \quad h=\sigma_{M} \circ g
+$$
+
+Ya que $h$ fija el punto $P$ hay dos posibilidades : 1) $h$ es una rotación de centro $P$; 2) $h$ es una reflexión cuyo eje $a$ es una recta que pasa por $P$. En el caso 1), $g=\sigma_{M} \circ h$ es un producto de dos rotaciones y como no tiene puntos fijos es una traslación (ejemplo 3.10). En el caso 2), consideramos la recta $l \perp a$ pasando por $M$, y la recta $m \perp l$ pasando por $M$, lo que nos lleva a la descomposición $g=\sigma_{M} \sigma_{a}=\sigma_{m} \sigma_{l} \sigma_{a}=\sigma_{m} \sigma_{a} \sigma_{l}$ (ejercicio 3.4). Como $\sigma_{m} \sigma_{a}$ es una traslación paralela a $l, g$ es una reflexión con deslizamiento.
+
+**Nota 3.16** $\mathrm{id}_{\mathbf{P}}$ se puede considerar un tipo particular de traslación.
+**Ejercicio 3.6** (i) El conjunto de las traslaciones es un subgrupo de Isom(P).
+(ii) El conjunto de las rotaciones $y$ de las traslaciones es un subgrupo de $\operatorname{Isom}(\mathbf{P})$.
+
+![Figura 3-5 El caso 2)](attachment:caso_2.png)
+
+(iii) Sea $g=\sigma_{a_{1}} \sigma_{a_{2}} \cdots \sigma_{a_{n}}$ un producto de $n$ reflexiones. El número $n$ es par si y solamente si $g$ es una rotación, una traslación o idp.
+
+Una de las conclusiones del teorema 3.15 es que todo $g \in \operatorname{Isom}(\mathbf{P})$ es un producto de reflexiones. El ejercicio 3.6 nos dice que para un $g$ dado el número de reflexiones en que se expresa como producto es siempre par, o siempre impar. En el primer caso se dice que $g$ es par o que conserva la orientación, en el segundo caso se dice que $g$ es impar o que invierte la orientación.
+
+La tabla siguiente resume la clasificación de las isometrías del plano euclidiano que hemos obtenido :
+
+|  | con puntos fijos | sin puntos fijos |
+| :-- | :-- | :-- |
+| par | rotación | traslación |
+| impar | reflexión | reflexión con deslizamiento |
+
+**Teorema 3.17** Si $g$ y $g^{\prime}$ son dos isometrías conjugadas, $g$ es par si y sólo si $g^{\prime}$ lo es.
+
+**Demostración.** Supongamos que $g=h g^{\prime} h^{-1}$ y que $h=\sigma_{b_{1}} \sigma_{b_{2}} \cdots \sigma_{b_{m}}$. Si $g^{\prime}=\sigma_{a_{1}} \sigma_{a_{2}} \cdots \sigma_{a_{n}}$, tenemos:
+
+$$
+g=h g^{\prime} h^{-1}=\sigma_{b_{1}} \sigma_{b_{2}} \cdots \sigma_{b_{m}} \sigma_{a_{1}} \sigma_{a_{2}} \cdots \sigma_{a_{n}} \sigma_{b_{m}} \cdots \sigma_{b_{2}} \sigma_{b_{1}}
+$$
+
+Es decir, $g$ se expresa como producto de $n+2 m$ reflexiones. Luego $g$ y $g^{\prime}$ tienen la misma paridad.
+
+Como consecuencia del teorema anterior, del teorema 3.4 y del cuadro 3.1 , tenemos que si dos isometrías son conjugadas entonces o ambas son rotaciones, o ambas traslaciones, o ambas reflexiones, o ambas reflexiones con deslizamiento.
+
+# Ejercicios
+
+**Ejercicio 3.7** Sea $\tau \in \operatorname{Isom}(\mathbf{P})$ una traslación $y \rho \in \mathcal{R}_{C}(\mathbf{P}) \backslash\left\{i d_{\mathbf{P}}\right\}$ una rotación de centro $C$.
+A. Probar que $\tau \rho=\rho_{1} y \rho \tau=\rho_{2}$ son rotaciones.
+B. Sea $C$, el punto fijo de $\rho, y P \in \mathbf{P} \backslash C$. Suponemos conocidos $\tau(C) y$ $\tau \rho(P)$. Construir $C^{\prime}$ el punto fijo de $\tau \rho$.
+
+**Ejercicio 3.8** Sea $\tau \in \operatorname{Isom}(\mathbf{P})$ una traslación $y \sigma \in \operatorname{Isom}(\mathbf{P})$, una reflexión.
+A. Probar que $\tau \sigma$ es una reflexión o una reflexión con deslizamiento.
+B. Estudiar en que casos $\tau \sigma$ es una reflexión y en cuales es una reflexión con deslizamiento.
+C. Determinar cuando se tiene $\tau \sigma=\sigma \tau$.
+
+**Ejercicio 3.9** Probar que si $\rho$ es una rotación que transforma cada recta en otra paralela, entonces $\rho$ es una media vuelta.
+
+## Actividad complementaria
+
+**Actividad.** Investigar y usar sobre ejemplos las herramientas que corresponden a isometrías del plano en geogebra.
