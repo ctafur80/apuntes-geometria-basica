@@ -1,40 +1,45 @@
 
 
-
-
 { pkgs ? import <nixpkgs> {} }:
 
 let
-    project_name = "apuntes de la asignatura Geometría Básica de la UNED";
+    project_name = "pruebas de la asignatura de programación en Python del MIT";
     message = "Entorno para ${project_name}.";
 in
     pkgs.mkShell {
+        # packages = with pkgs; [
+        #     (python3.withPackages (python-pkgs: with python-pkgs; [
+        #         flask
+
+        #         tkinter
+        #         # click
+        #         # jinja2
+        #         # itsdangerous
+        #         # markupsafe
+        #         # werkzeug
+        #     ]))
+        # ];
+
+
         buildInputs = with pkgs; [
-            pandoc
-            gnumake
-
-            haskellPackages.pandoc-crossref
-            # haskellPackages.pandoc-csv2table
-
-            asymptote
-
-
-            texliveMedium
+            typst
+            typstyle
+            tinymist
+            # tree-sitter-grammars.tree-sitter-typst
 
             git
-            bash-completion
-            gawk
-            gnugrep
-            starship
+
+            uutils-coreutils
+
+            # bash-completion
+            # gawk
+            # gnugrep
         ];
+
+
         shellHook = ''
-            echo ${message}
-            eval "$(starship init bash)"
+            export PS1=\\n\[' \u at \h (env. MIT Python Course) ...$(echo ''${PWD#/Users/ctafur/}) '\]'\n< '
+            echo "" ; echo ${message}
             alias ls="ls --color"
         '';
-}
-
-
-
-
-
+    }

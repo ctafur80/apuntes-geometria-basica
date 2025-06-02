@@ -56,6 +56,6 @@
         "type": "FilterCompleted",
         "verbosity": "INFO",
         "path": "citeproc",
-        "milliseconds": "31"
+        "milliseconds": "32"
     }
 ]
