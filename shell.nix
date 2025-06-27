@@ -29,17 +29,22 @@ in
 
             git
 
-            uutils-coreutils
+            pandoc
 
-            # bash-completion
-            # gawk
-            # gnugrep
+            bash-completion
+            gawk
+            gnugrep
+            starship
         ];
 
 
         shellHook = ''
-            export PS1=\\n\[' \u at \h (env. MIT Python Course) ...$(echo ''${PWD#/Users/ctafur/}) '\]'\n< '
-            echo "" ; echo ${message}
+            echo ${message}
+            eval "$(starship init bash)"
             alias ls="ls --color"
         '';
     }
+
+
+
+
