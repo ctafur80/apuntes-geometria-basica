@@ -1,6 +1,6 @@
 
 
-#import "./typst-maths-book-template/main-template.typ": *
+#import "../typst-maths-book-template/main-template.typ": *
 
 
 

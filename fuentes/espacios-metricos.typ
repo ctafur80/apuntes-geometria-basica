@@ -1,5 +1,5 @@
 
-#import "./typst-maths-book-template/main-template.typ": *
+#import "../typst-maths-book-template/main-template.typ": *
 
 
 
@@ -17,7 +17,7 @@ todos en este capítulo porque de hacerlo sería enorme en relación a los
 demás. Se ha optado por ir introduciendo los conceptos no tan de golpe.
 
 
-#hrule
+
 
 
 *pág. 11*. *Definición 1.1*. Personalmente, me gusta más la definición
@@ -40,7 +40,7 @@ por punto. En cualquier caso, a mí me parece más elegante la que presento
 aquí.
 
 
-#hrule
+
 
 
 *pág. 11*. *Ejemplo 1.2*. No llega a demostrar, ni aquí ni en el *Ejercicio
@@ -84,7 +84,7 @@ $ d_E (x, y)
   &= sqrt((y_1 - x_1)^2 + (y_2 - x_2)^2) \
   &= d_E (y, x) $
 
-#hrule
+
 
 
 
@@ -109,7 +109,7 @@ mientras que
 $ delta \|_(M' times M') :  && M' times M' & arrow.r.long     && bb(R)\
                             && x, y        & arrow.r.bar.long && delta_(\|_(M' times M')) (x, y) = delta (x, y) $
 
-#hrule
+
 
 
 
@@ -122,7 +122,7 @@ Y, de hecho, usa esta notación un poco después. En el fondo, la que usa el
 libro se refiere de forma implícita a esta. En su definición se entiende de
 forma tácita cuáles son las métricas en cada uno de los conjuntos.
 
-#hrule
+
 
 
 
@@ -151,7 +151,7 @@ $h(g(x)) in M''$.
 Además, al ser biyectivas son inyectivas y esto hace que ese elemento $x in
 M$ sea único, condición que también se requiere aquí.
 
-#hrule
+
 
 
 
@@ -159,28 +159,28 @@ En la *Definición 1.8*, también se puede usar una notación más explícita, a
 igual que sucede con lo que dijimos antes sobre la definición de isometría.
 En este caso, sería $"Isom"(M, delta)$.
 
-#hrule
+
 
 
 
 Al final de la página. Las propiedades 1 y 2 son casos particulares del
 Teorema 1.7. Por su parte, la demostración del punto 3 es trivial.
 
-#hrule
+
 
 
 
 *Nota 1.9*. También se la puede llamar #emph[grupo de isometrías] $(M,
 delta)$.
 
-#hrule
+
 
 
 
 Demostración de que las isometrías con la composición cumplen las
 propiedades de grupo TKTK.
 
-#hrule
+
 
 
 
@@ -190,14 +190,14 @@ $ delta_G = "Distancia máxima entre" p med "y" med q $
 
 no es una métrica.
 
-#hrule
+
 
 
 
 *Definición. 1.12*. Además de llamarlo "segmento de extremos $a$ y $b$"
 también se le suele llamar "segmento $a$ $b$".
 
-#hrule
+
 
 
 
@@ -205,7 +205,7 @@ En la definición de puntos alineados se podría explicar también que esto
 está relacionado con el concepto de _recta_, que se define en el capítulo
 siguiente.
 
-#hrule
+
 
 
 
