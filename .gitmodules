@@ -1,3 +1,6 @@
 [submodule "ajustes-pandoc"]
 	path = ajustes-pandoc
 	url = https://github.com/ctafur80/ajustes-pandoc.git
+[submodule "typst-maths-book-template"]
+	path = typst-maths-book-template
+	url = git@github.com:ctafur80/typst-maths-book-template.git
