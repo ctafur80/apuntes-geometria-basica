@@ -1,7 +1,6 @@
 
 
-#import "ajustes-typst/templ-book.typ": *
-// #import "ajustes-typst/math-envs.typ": *
+#import "./typst-maths-book-template/main-template.typ": *
 
 
 
@@ -54,10 +53,8 @@
 
 // ----------------------------------------------------------------------------
 
-#[ #set heading(numbering: none)
-= Introducción
+#heading(level: 1, numbering: none)[Introducción]
 #include("fuentes/introduccion.typ")
-]
 
 
 
@@ -71,7 +68,7 @@
 
 
 // #set par(justify: false)
-#bibliography("bibliografia.yml")
+#bibliography("./bibliografia.yml")
 
 
 

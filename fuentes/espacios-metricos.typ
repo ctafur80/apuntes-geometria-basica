@@ -1,6 +1,5 @@
 
-
-#import "../ajustes-typst/templ-book.typ": *
+#import "./typst-maths-book-template/main-template.typ": *
 
 
 
