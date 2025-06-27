@@ -53,9 +53,10 @@
 
 // ----------------------------------------------------------------------------
 
-#heading(level: 1, numbering: none)[Introducción]
-#include("fuentes/introduccion.typ")
+#set heading(level: 1, numbering: none)
 
+= Introducción
+#include("fuentes/introduccion.typ")
 
 
 = Capítulo 1. Espacios métricos
@@ -63,12 +64,18 @@
 #include("fuentes/espacios-metricos.typ")
 
 
+= Capítulo 2. Axiomas del plano euclideo
+<ch-axiomas-plano-euclideo>
+#include("fuentes/ax-plano-euclideo.typ")
+
+
+
 
 
 
 
 // #set par(justify: false)
-#bibliography("./bibliografia.yml")
+#bibliography("./bibliografia.yml", style: "chicago-author-date")
 
 
 

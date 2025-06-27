@@ -23,21 +23,23 @@ demás. Se ha optado por ir introduciendo los conceptos no tan de golpe.
 *pág. 11*. *Definición 1.1*. Personalmente, me gusta más la definición
 siguiente del concepto de _métrica_ o _distancia_.
 
-Una aplicación $d: bold(P) times bold(P) arrow.r.long bb(R)^+ union {0}$ es
-una distancia o métrica si, para cualesquiera $x, y, z in bold(P)$, se
-cumplen:
+#deffinition[Métrica o Distancia][
+  Una aplicación $d: bold(P) times bold(P) arrow.r.long bb(R)^+ union {0}$
+  es una distancia o métrica si, para cualesquiera $x, y, z in bold(P)$, se
+  cumplen:
 
-#[ #set enum(numbering: "(i)")
-+ $d (x, y) = 0$ si y solo si $x = y$.
-+ $d (x, y) = d (y, x)$. (Simetría.)
-+ $d (x, y) lt.eq d(x, z) + d(z, y)$. (Desigualdad triangular.)
-]
+  #[ #set enum(numbering: "(i)")
+  + $d (x, y) = 0$ si y solo si $x = y$.
+  + $d (x, y) = d (y, x)$. (Simetría.)
+  + $d (x, y) lt.eq d(x, z) + d(z, y)$. (Desigualdad triangular.)
+  ]
+] <def-metrica>
 
-La definición que dan en costa establece primero un codominio y luego hace
-una corrección de este en el punto (i). Quizás lo hace para que sea más
-cómodo usar esa definición en las demostraciones y ejercicios, al ir punto
-por punto. En cualquier caso, a mí me parece más elegante la que presento
-aquí.
+La definición que dan en @costa establece como codominio a todo $bb(R)$ y
+luego hace una corrección de este en el punto (i). Quizás lo hace para que
+sea más cómodo usar esa definición en las demostraciones y ejercicios, al ir
+punto por punto. En cualquier caso, a mí me parece más elegante la que
+presento aquí.
 
 
 
@@ -45,6 +47,9 @@ aquí.
 
 *pág. 11*. *Ejemplo 1.2*. No llega a demostrar, ni aquí ni en el *Ejercicio
 1.2*, los dos primeros puntos. Aunque sea fácil, vamos a hacerlo aquí.
+
+Vamos a usar las coordenadas de un modo distinto al que se usan en este caso
+en el libro. Usaremos las que está acostumbrado TKTK.
 
 Lo primero será ver que $bb(R)^2$ es no vacío, cosa que sabemos
 perfectamente, por tratarse de un conjunto que conocemos. Por ejemplo,
@@ -102,12 +107,12 @@ La nueva función se comporta del mismo modo que la vieja, solo que en un
 dominio más restringido.
 
 $ delta : && M times M & arrow.r.long     && bb(R) \
-          && x, y      & arrow.r.bar.long && delta (x, y) $
+          && (x, y)    & arrow.r.bar.long && delta (x, y) $
 
 mientras que
 
 $ delta \|_(M' times M') :  && M' times M' & arrow.r.long     && bb(R)\
-                            && x, y        & arrow.r.bar.long && delta_(\|_(M' times M')) (x, y) = delta (x, y) $
+                            && (x, y)      & arrow.r.bar.long && delta_(\|_(M' times M')) (x, y) = delta (x, y) $
 
 
 
@@ -118,9 +123,10 @@ _isometría_, podríamos definirla como
 
 $ g : med (M, delta) arrow.r.long (M', delta') $
 
-Y, de hecho, usa esta notación un poco después. En el fondo, la que usa el
-libro se refiere de forma implícita a esta. En su definición se entiende de
-forma tácita cuáles son las métricas en cada uno de los conjuntos.
+Y, de hecho, en @costa se usa esta notación un poco después. En el fondo, la
+que usa el libro se refiere de forma implícita a esta. En su definición se
+entiende de forma tácita cuáles son las métricas en cada uno de los
+conjuntos.
 
 
 
@@ -141,7 +147,7 @@ esa composición de aplicaciones, es decir, $h circle.stroked.tiny g$. Lo
 primero que se debe cumplir para que $h circle.stroked.tiny g$ sea una
 aplicación es que
 
-$ "Dom"(h) = "Im"(g) $
+$ "Im"(g) subset.eq "Dom"(h) $
 
 En la parte que demuestra que conservan las distancias, se están suponiendo
 algunas cosas que se cumplen por ser $g^(- 1)$ y $h circle.stroked.tiny g$
@@ -156,8 +162,8 @@ M$ sea único, condición que también se requiere aquí.
 
 
 En la *Definición 1.8*, también se puede usar una notación más explícita, al
-igual que sucede con lo que dijimos antes sobre la definición de isometría.
-En este caso, sería $"Isom"(M, delta)$.
+igual que sucede con lo que dijimos antes sobre la definición de
+_isometría_. En este caso, sería $"Isom"(M, delta)$.
 
 
 
@@ -188,7 +194,8 @@ propiedades de grupo TKTK.
 
 $ delta_G = "Distancia máxima entre" p med "y" med q $
 
-no es una métrica.
+no es una métrica. Una razón es que, puede darse $delta(x, x) > 0$ para
+algún $x in G$.
 
 
 
