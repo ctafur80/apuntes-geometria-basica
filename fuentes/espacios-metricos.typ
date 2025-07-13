@@ -25,8 +25,8 @@ siguiente del concepto de _métrica_ o _distancia_.
 
 #deffinition[Métrica o Distancia][
   Una aplicación $d: bold(P) times bold(P) arrow.r.long bb(R)^+ union {0}$
-  es una distancia o métrica si, para cualesquiera $x, y, z in bold(P)$, se
-  cumplen:
+  es una distancia o métrica si para cualesquiera $x, y, z in bold(P)$ se
+  cumple:
 
   #[ #set enum(numbering: "(i)")
   + $d (x, y) = 0$ si y solo si $x = y$.
@@ -41,6 +41,13 @@ sea más cómodo usar esa definición en las demostraciones y ejercicios, al ir
 punto por punto. En cualquier caso, a mí me parece más elegante la que
 presento aquí.
 
+Lo único es que, con la mía, hay que tener cuidado para ciertas cosas. Por
+ejemplo, para demostrar el paso que si $d (x, y) = 0$ entonces $x = y$.
+Conviene hacerlo con el condicional contrarrecíproco, que sería lo mismo que
+en la definición de @costa.
+
+
+
 
 
 
@@ -48,25 +55,31 @@ presento aquí.
 *pág. 11*. *Ejemplo 1.2*. No llega a demostrar, ni aquí ni en el *Ejercicio
 1.2*, los dos primeros puntos. Aunque sea fácil, vamos a hacerlo aquí.
 
-Vamos a usar las coordenadas de un modo distinto al que se usan en este caso
-en el libro. Usaremos las que está acostumbrado TKTK.
+Advierta que las coordenadas que se usan en este ejercicio son distintas a
+las que está acostumbrado. Normalmente, se usan coordenadas del tipo
+
+$ u = (x_1, y_1), quad v = (x_2, y_2) $
+
+en lugar de
+
+$ x = (x_1, x_2), quad y = (y_1, y_2) $
 
 Lo primero será ver que $bb(R)^2$ es no vacío, cosa que sabemos
 perfectamente, por tratarse de un conjunto que conocemos. Por ejemplo,
 contiene al elemento $(0, 0)$.
 
-Advierta que estamos usando una notación distinta a la que solemos usar para
-$bb(R)^2$. Lo normal habría sido usar algo como
+Luego, se debe comprobar que el rango de la función $d_E$ se encuentra en
+$bb(R)^ union {0}$. Esto es fácil de ver por la fórmula de la función pues
+todo lo que esté elevado al cuadrado producirá un valor mayor o igual que
+$0$. La suma de esos valores será también mayor o igual que $0$ y, a su vez,
+la raíz cuadrada de esto será también mayor o igual que $0$.
 
-$ u = (x_1, y_1), quad v = (x_2, y_2) $
+Del punto (i), es trivial ver que si $x = y$ entonces $d_E (x, y) = 0$, con
+una argumentación similar a la anterior. Más complicado es el otro
+condicional, es decir, que de $d_E (x, y) = 0$ se deduce que $x = y$. Es más
+cómodo hacerlo mediante su condicional contrarrecíproco.
 
-pero aquí seguiremos con la misma con la que han planteado el ejemplo.
-
-Comprobemos que se cumplen las dos primeras condiciones de la
-
-
-Punto 1.
-
+/*
 $ d_E (x, x) = sqrt((x_1 - x_1)^2 + (x_2 - x_2)^2) = sqrt(0^2 + 0^2) =
 sqrt(0) = 0 $
 
@@ -79,29 +92,24 @@ Si $x eq.not y$, tenemos una de las tres situaciones siguientes:
 En cualquiera de los casos, habrá, para algún $i = 1, 2$, un $x_i - y_i
 eq.not 0$ y, por tanto, un $(x_i - y_i)^2 > 0$. Por tanto, en esos tres
 casos, se tiene que $d_E (x, y) > 0$.
+*/
 
-Punto 2.
+Punto (ii).
 
 $ d_E (x, y)
   &= sqrt((x_1 - y_1)^2 + (x_2 - y_2)^2) \
-  &= sqrt((- 1)^2 (x_1 - y_1)^2 + (- 1)^2 (x_2 - y_2)^2) \
-  &= sqrt(\[ (- 1) (x_1 - y_1) \]^2 + \[ (- 1) (x_2 - y_2) \]^2) \
+  &= sqrt((-1)^2 (x_1 - y_1)^2 + (-1)^2 (x_2 - y_2)^2) \
+  &= sqrt([(-1) (x_1 - y_1)]^2 + [(-1) (x_2 - y_2)]^2) \
   &= sqrt((y_1 - x_1)^2 + (y_2 - x_2)^2) \
   &= d_E (y, x) $
 
-
-
-
-
 La métrica inducida es lo mismo que el concepto de restricción de una
-aplicación, solo que para espacios métricos. Esto se estudia en asignaturas
-de lógica y teoría de conjuntos.
+aplicación, solo que para espacios métricos. Si no conoce este concepto,
+este se estudia en asignaturas de lógica y teoría de conjuntos.
 
-Dado un conjunto $M'$ tal que $M' subset.eq M$, la restricción de la
-aplicación $delta$ a $M' times M'$ es la métrica inducida.
-
-En cuanto a la notación, se pueden usar cosas como $delta \|_(M' times M')$.
-Suele ser usual usar esa notación para la restricción de las aplicaciones.
+En cuanto a la notación, se podría usar también la notación usual para la
+restricción de una aplicación, que en este caso sería algo como $delta |_(M'
+times M')$.
 
 La nueva función se comporta del mismo modo que la vieja, solo que en un
 dominio más restringido.
@@ -111,8 +119,11 @@ $ delta : && M times M & arrow.r.long     && bb(R) \
 
 mientras que
 
-$ delta \|_(M' times M') :  && M' times M' & arrow.r.long     && bb(R)\
-                            && (x, y)      & arrow.r.bar.long && delta_(\|_(M' times M')) (x, y) = delta (x, y) $
+$ delta |_(M' times M') :
+    && M' times M' & arrow.r.long
+      && bb(R) \
+    && (x, y)      & arrow.r.bar.long
+      && delta |_(M' times M') (x, y) = delta (x, y) $
 
 
 
