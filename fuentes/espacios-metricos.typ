@@ -11,9 +11,11 @@ de todo el libro, con la excepción de una pequeña incursión que hacemos en
 la geometría hiperbólica en el Capítulo 9.
 
 En los capítulos de la geometría euclidiana, algunos de los conceptos que se
-dan son también generales para todas las geometrías, pero no se presentan
-todos en este capítulo porque de hacerlo sería enorme en relación a los
-demás. Se ha optado por ir introduciendo los conceptos no tan de golpe.
+dan son también generales para todas las geometrías y, por tanto, se podrían
+haber presentado en este capítulo, perfectamente. Sin embargo, se ha optado
+por dispersar en distintos capítulos las definiciones relativas a los
+espacios métricos (es decir, generales para cualquier geometría), para que
+resulte más "digerible" para el lector.
 
 
 Algo que debe tener en cuenta es que, en este capítulo, algunos de los
@@ -24,13 +26,13 @@ mismo como ejercicios.
 
 
 
-*pág. 11*. *Definición 1.1*. Personalmente, me gusta más la definición
-siguiente del concepto de _métrica_ o _distancia_.
+*pág. 11*. *Definición 1.1*. En lo que respecta a la definición de _métrica_
+o _distancia_, me gusta más la siguiente, ya que me parece más "elegante".
 
 #deffinition[Métrica o Distancia][
-  Una aplicación $d: bold(P) times bold(P) arrow.r.long bb(R)^+ union {0}$
-  es una distancia o métrica si para cualesquiera $x, y, z in bold(P)$ se
-  cumple:
+  Dado un conjunto $bold(P)$ no vacío, una _métrica_ o _distancia_ es toda
+  aplicación $d: bold(P) times bold(P) arrow.r.long bb(R)^+ union {0}$ en la
+  que para cualesquiera $x, y, z in bold(P)$ se cumple:
 
   #[ #set enum(numbering: "(i)")
   + $d (x, y) = 0$ si y solo si $x = y$.
@@ -40,10 +42,9 @@ siguiente del concepto de _métrica_ o _distancia_.
 ] <def-metrica>
 
 La definición que dan en @costa establece como codominio a todo $bb(R)$ y
-luego hace una corrección de este en el punto (i). Quizás lo hace para que
-sea más cómodo usar esa definición en las demostraciones y ejercicios, al ir
-punto por punto. En cualquier caso, a mí me parece más elegante la que
-presento aquí.
+luego hace una corrección de este en el punto (i). Quizás se deba a que
+resulta más cómoda si se desea comprobar punto por punto, en los ejercicios,
+demostraciones, etc.
 
 Lo único es que, con la mía, hay que tener cuidado para ciertas cosas. Por
 ejemplo, para demostrar el paso que si $d (x, y) = 0$ entonces $x = y$.
@@ -73,7 +74,7 @@ perfectamente, por tratarse de un conjunto que conocemos. Por ejemplo,
 contiene al elemento $(0, 0)$.
 
 Luego, se debe comprobar que el rango de la función $d_E$ se encuentra en
-$bb(R)^ union {0}$. Esto es fácil de ver por la fórmula de la función pues
+$bb(R)^+ union {0}$. Esto es fácil de ver por la fórmula de la función pues
 todo lo que esté elevado al cuadrado producirá un valor mayor o igual que
 $0$. La suma de esos valores será también mayor o igual que $0$ y, a su vez,
 la raíz cuadrada de esto será también mayor o igual que $0$.
@@ -81,7 +82,21 @@ la raíz cuadrada de esto será también mayor o igual que $0$.
 Del punto (i), es trivial ver que si $x = y$ entonces $d_E (x, y) = 0$, con
 una argumentación similar a la anterior. Más complicado es el otro
 condicional, es decir, que de $d_E (x, y) = 0$ se deduce que $x = y$. Es más
-cómodo hacerlo mediante su condicional contrarrecíproco.
+cómodo hacerlo mediante su condicional contrarrecíproco, es decir, que de $x
+eq.not y$ se deduce que $d_E (x, y) eq.not 0$. Habría que ver los tres casos
+posibles en los que $x eq.not y$:
+
++ $x_1 eq.not y_1$, $x_2 eq.not y_2$.
++ $x_1 eq.not y_1$, $x_2 = y_2$.
++ $x_1 = y_1$, $x_2 eq.not y_2$.
+
+En todos y cada uno de estos casos, se tiene que alguna de las
+subexpresiones $(x_i - y_i)^2$ para $i = 1, 2$ será mayor que $0$. Entonces,
+en cualquier caso, se tendrá que alguna de estas contribuye con un valor
+mayor estricto que $0$; la otra, como poco, con $0$. La suma será entonces
+mayor estricto que $0$ y su raíz, evidentemente, será también mayor estricto
+que $0$.
+
 
 /*
 $ d_E (x, x) = sqrt((x_1 - x_1)^2 + (x_2 - x_2)^2) = sqrt(0^2 + 0^2) =
@@ -102,18 +117,19 @@ Punto (ii).
 
 $ d_E (x, y)
   &= sqrt((x_1 - y_1)^2 + (x_2 - y_2)^2) \
+  &= sqrt(1 (x_1 - y_1)^2 + 1 (x_2 - y_2)^2) \
   &= sqrt((-1)^2 (x_1 - y_1)^2 + (-1)^2 (x_2 - y_2)^2) \
   &= sqrt([(-1) (x_1 - y_1)]^2 + [(-1) (x_2 - y_2)]^2) \
   &= sqrt((y_1 - x_1)^2 + (y_2 - x_2)^2) \
   &= d_E (y, x) $
 
-La métrica inducida es lo mismo que el concepto de restricción de una
+La *métrica inducida* es lo mismo que el concepto de _restricción_ de una
 aplicación, solo que para espacios métricos. Si no conoce este concepto,
 este se estudia en asignaturas de lógica y teoría de conjuntos.
 
 En cuanto a la notación, se podría usar también la notación usual para la
 restricción de una aplicación, que en este caso sería algo como $delta |_(M'
-times M')$.
+times M')$, para $M' subset.eq M$.
 
 La nueva función se comporta del mismo modo que la vieja, solo que en un
 dominio más restringido.
@@ -205,7 +221,7 @@ Es fácil de demostrar que se trata de un grupo. La propiedad asociativa (la
 primera que menciona) se cumple por cumplirse para todas las aplicaciones.
 La del elemento neutro (la segunda) es la propiedad identidad mencionada en
 el punto 3 de las propiedades anteriores. La del elemento simétrico (la
-tercera) es también sencilla: se tiene que la simétrica de una isometríe
+tercera) es también sencilla: se tiene que la simétrica de una isometría
 será su aplicación inversa (o, lo que es lo mismo, su simétrica respecto a
 la composición).
 
@@ -220,21 +236,21 @@ Algo interesante es demostrar también por qué la aplicación
 
 $ delta_G = "Distancia máxima entre" p med "y" med q $
 
-no es una métrica. Una razón es que, puede darse $delta (x, x) > 0$ para
+no es una métrica. Una razón es que puede darse $delta (x, x) > 0$ para
 algún $x in G$.
 
 
 
 
 
-*Definición. 1.12*. Además de llamarlo "segmento de extremos $a$ y $b$"
+*Definición. 1.12*. Además de llamarlo "segmento de extremos $a$ y $b$",
 también se le suele llamar "segmento $a$ $b$".
 
 
 
 
 
-En la definición de puntos alineados se podría explicar también que esto
+En la definición de _puntos alineados_, se podría explicar también que esto
 está relacionado con el concepto de _recta_, que se define en el capítulo
 siguiente.
 
