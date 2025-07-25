@@ -76,26 +76,25 @@ contiene al elemento $(0, 0)$.
 Luego, se debe comprobar que el rango de la función $d_E$ se encuentra en
 $bb(R)^+ union {0}$. Esto es fácil de ver por la fórmula de la función pues
 todo lo que esté elevado al cuadrado producirá un valor mayor o igual que
-$0$. La suma de esos valores será también mayor o igual que $0$ y, a su vez,
-la raíz cuadrada de esto será también mayor o igual que $0$.
+$0$. La suma de esos valores también lo será y, a su vez, la raíz cuadrada
+de este.
 
 Del punto (i), es trivial ver que si $x = y$ entonces $d_E (x, y) = 0$, con
 una argumentación similar a la anterior. Más complicado es el otro
 condicional, es decir, que de $d_E (x, y) = 0$ se deduce que $x = y$. Es más
 cómodo hacerlo mediante su condicional contrarrecíproco, es decir, que de $x
 eq.not y$ se deduce que $d_E (x, y) eq.not 0$. Habría que ver los tres casos
-posibles en los que $x eq.not y$:
+posibles en los que se da el antecedente, es decir, $x eq.not y$:
 
 + $x_1 eq.not y_1$, $x_2 eq.not y_2$.
 + $x_1 eq.not y_1$, $x_2 = y_2$.
 + $x_1 = y_1$, $x_2 eq.not y_2$.
 
-En todos y cada uno de estos casos, se tiene que alguna de las
-subexpresiones $(x_i - y_i)^2$ para $i = 1, 2$ será mayor que $0$. Entonces,
-en cualquier caso, se tendrá que alguna de estas contribuye con un valor
-mayor estricto que $0$; la otra, como poco, con $0$. La suma será entonces
-mayor estricto que $0$ y su raíz, evidentemente, será también mayor estricto
-que $0$.
+En todos y cada uno de estos casos, se tiene que al menos una de las
+subexpresiones $(x_i - y_i)^2$ para $i = 1, 2$ será mayor estricto que $0$.
+Entonces, en cualquier caso, se tendrá que alguna de estas contribuye con un
+valor mayor estricto que $0$; la otra, como poco, con $0$. La suma será
+entonces mayor estricto que $0$ y su raíz, evidentemente, también lo será.
 
 
 /*
@@ -123,6 +122,11 @@ $ d_E (x, y)
   &= sqrt((y_1 - x_1)^2 + (y_2 - x_2)^2) \
   &= d_E (y, x) $
 
+En cuanto al *Ejemplo 1.3*, lo más relevante está en que nos podemos basar
+en la desigualdad triangular en $(bb(R), +)$ para demostrar que se cumple el
+punto 3 en la definición de _métrica_. Esta se da como conocimiento básico,
+es decir, como prerrequisito.
+
 La *métrica inducida* es lo mismo que el concepto de _restricción_ de una
 aplicación, solo que para espacios métricos. Si no conoce este concepto,
 este se estudia en asignaturas de lógica y teoría de conjuntos.
@@ -145,6 +149,9 @@ $ delta |_(M' times M') :
     && (x, y)      & arrow.r.bar.long
       && delta |_(M' times M') (x, y) = delta (x, y) $
 
+En cuanto a la demostración del Teorema de la Métrica Inducida, creo que
+también se debería comentar que ninguna de las propiedades de la definición
+de _métrica_ es del tipo _closure_.
 
 
 
@@ -159,40 +166,41 @@ Y, de hecho, en @costa se usa esta notación un poco después, en la
 implícita a esta. En su definición se entiende de forma tácita cuáles son
 las métricas en cada uno de los conjuntos.
 
-En cuanto a la demostración de que una restricción a $M' times M'$ de la
-aplicación métrica $delta$ es también una métrica, creo que faltaría decir
-que las propiedades de la definición de métrica ninguna es del tipo
-_closure_.
 
 
 
 
-*Teorema 1.7*. En la demostración, hace uso de algunos resultados de la
-teoría de conjuntos. Puede consultarlo, entre otras referencias, en
-// @pineda
-(pág. 104-105). Concretamente, el 3.59 (de Caracterización de una Aplicación
-Biyectiva) y 3.60.
+*Teorema 1.7*. En la demostración, creo que obvia demasiados puntos.
+Básicamente, solo muestra las transformaciones que conducen a la
+conservación de distancias en estas nuevas relaciones, pero se deja todo lo
+relacionado con la teoría de conjuntos. Los hechos que faltan se basan en
+algunos resultados sobre las aplicaciones. Puede consultarlos en pineda
+(TKTK) (pág. 104-105). Concretamente, el 3.59 (de Caracterización de una
+Aplicación Biyectiva) y 3.60.
 
-Al comienzo, se dice que $h circle.stroked.tiny g$ y $g^(- 1)$ son
-biyectivas, pero no se da nada de información. Concretamente, esto es
-consecuencia de que tanto $g$ como $h$ son aplicaciones biyectivas.
+Veamos primero la demostración de la inversa, $g^(-1)$. La relación inversa
+de $g$ será una aplicación biyectiva, al serlo también $g$. Además, se
+tienen
 
-Además, tampoco menciona que se dan las condiciones para que se pueda dar
-esa composición de aplicaciones, es decir, $h circle.stroked.tiny g$. Lo
-primero que se debe cumplir para que $h circle.stroked.tiny g$ sea una
-aplicación es que
+$ g^(-1) compose g &= "id"_M \
+  g compose g^(-1) &= "id"_(M') $
 
-$ "Im"(g) subset.eq "Dom"(h) $
+Esta última es la que se usa en la parte en la que demuestra que se
+conservan las distancias. Pero debería explicarse también que, al ser
+$g^(-1)$ una aplicación biyectiva, los valores tanto de $g^(-1) (u)$ como de
+$g^(-1) (v)$ son únicos por la inyectividad, y, además, el rango de valores
+que producen abarcan a todo $M$, por la suprayectividad.
 
-En la parte que demuestra que conservan las distancias, se están suponiendo
-algunas cosas que se cumplen por ser $g^(- 1)$ y $h circle.stroked.tiny g$
-aplicaciones biyectivas. Por ejemplo, que existe un $x in M$ tal que
-$h(g(x)) in M''$.
+Ahora, pasemos a la demostración de la composición. Lo primero, sería ver si
+tiene sentido la composición de esas dos aplicaciones, $h compose g$. Como
+sabemos, debe darse que $"Im"(g) subset.eq "Dom"(h)$. En este caso, se
+cumple, ya que tenemos que $"Im"(g) = "Dom"(h)$.
 
-Además, al ser biyectivas son inyectivas y esto hace que ese elemento $x in
-M$ sea único, condición que también se requiere aquí; o que lo sean $u$ y
-$v$.
-
+También, debería explicarse que, al ser tanto $g$ como $h$ biyectivas, se
+tiene que $h compose g$ será también biyectiva, con lo que todo valor $x in
+M$ producirá un único valor de $M''$ por $h compose g$ (por la
+inyectividad), y los valores producidos abarcarán a todo $M''$ (por la
+suprayectividad).
 
 
 
@@ -212,18 +220,25 @@ Teorema 1.7. Por su parte, la demostración del punto 3 es trivial.
 
 
 
-*Nota 1.9*. En este caso, la operación interna sería la composición de
-aplicaciónes. Al cumplir las propiedades de grupo, que se mencionan en el
-texto, también se le suele llamar _grupo de isometrías_ $(M, delta)$, y
-también se suele ver en asignaturas de álgebra abstracta.
+*Nota 1.9*. Viene a decir que la estructura $("Isom"(M, delta), compose)$ es
+un grupo, siendo $compose$ la composición de aplicaciones. Se le suele
+llamar también _grupo de isometrías_ $("Isom"(M, delta), compose)$, o,
+abreviadamente, $(M, delta)$.
 
-Es fácil de demostrar que se trata de un grupo. La propiedad asociativa (la
-primera que menciona) se cumple por cumplirse para todas las aplicaciones.
-La del elemento neutro (la segunda) es la propiedad identidad mencionada en
-el punto 3 de las propiedades anteriores. La del elemento simétrico (la
-tercera) es también sencilla: se tiene que la simétrica de una isometría
-será su aplicación inversa (o, lo que es lo mismo, su simétrica respecto a
-la composición).
+Es fácil demostrar que se cumplen esas tres propiedades que la hacen un
+grupo. La propiedad asociativa (la primera que menciona) se cumple por
+cumplirse esta, en general, para todas las aplicaciones. La del elemento
+neutro (la segunda) es la propiedad identidad mencionada en el punto 3 de
+las propiedades anteriores. La del elemento simétrico (la tercera) es
+también sencilla: se tiene que la simétrica de una isometría será su
+aplicación inversa (o, lo que es lo mismo, su simétrica respecto a la
+composición).
+
+Muchas veces, en lugar del operador '$compose$' se usa uno análogo al de la
+multiplicación de números, es decir, '$dot.op$' o la notación en aposición.
+De hecho, a la composición de aplicaciones muchas veces se la llama también
+_producto_, de ahí que también se ponga '$1$' por '$"id"$', como aparece en
+el texto.
 
 
 
@@ -248,11 +263,33 @@ también se le suele llamar "segmento $a$ $b$".
 
 
 
-
-
 En la definición de _puntos alineados_, se podría explicar también que esto
 está relacionado con el concepto de _recta_, que se define en el capítulo
 siguiente.
+
+
+
+La demostración del punto (i) de la *Ovservación 1.13* es, en su estructura,
+similar a muchas otras que aparecen a lo largo de todo el texto. Debe tener
+en cuenta que esos bicondicionales sirven para ir en los dos sentidos; es
+decir, en esta demostración en concreto, si la leemos de izquierda a derecha
+estaremos demostrando que $[a, a] subset.eq {a}$. Si se va en el otro
+sentido, que ${a} subset.eq [a, a]$.
+
+
+
+*Ejercicio 1.3*. Debe tener cuidado con la demostración de la desigualdad
+triangular:
+
+$ delta (a, b) lt.eq delta (a, c) + delta (c, b) $
+
+De las $8$ formas de combinar las igualdades o negaciones de estas, los
+casos siguientes no se pueden dar por incompatibilidad de TKTK:
+
++ $a = b$, $a = c$ y $b eq.not c$.
++ $a = b$, $a eq.not c$ y $b = c$.
++ $a eq.not b$, $a = c$ y $b = c$.
+
 
 
 
@@ -260,12 +297,36 @@ siguiente.
 
 *Ejercicio 1.5*. Este es el ejercicio más relevante de este capítulo. Tiene
 cierta relación con algo que se verá en el capítulo dedicado a las
-isometrías. El apartado que me parece más difícil de comprender es el D. Lo
-pongo a continuación a mi manera.
+isometrías. El apartado que me parece más difícil de comprender es el D.
+Pero primero haré una aclaración sobre el C.
 
-Lo primero que hace es demostrar un resultado general para este espacio
-métrico, $(bb(R), d_(bb(R)))$. Concretamente, que si dos de sus isometrías
-cumplen
+Punto C. Con las condiciones del problema hasta este apartado, se llega
+fácilmente a las igualdades siguientes:
+
+$ |g(x) - g(a)| &= |x - a| \
+  |g(x) - g(b)| &= |x - b| $
+
+Se podrían manipular y llegar al resultado, pero en el texto se resuelve de
+un modo más elegante.
+
+La primera de las expresiones anteriores es equivalente a
+
+$ sqrt((g(x) - g(a))^2) = sqrt((x - a)^2) $
+
+Nos centraremos solo en esta; la segunda se manipularía de forma análoga.
+
+Como esas raíces son positivas, podemos elevar al cuadrado ambas partes de
+la igualdad y no obtendremos múltiples resultados. Tenemos entonces que
+
+$ (g(x) - g(a))^2 = (x - a)^2 $
+
+A partir de aquí, se puede hacer la manipulación que se muestra en el texto.
+Advierta que en algún punto se hacen las sustituciones $g(a) = a$ y $g(b) =
+b$.
+
+Punto D. Lo primero que hace es demostrar un resultado general para este
+espacio métrico, $(bb(R), d_(bb(R)))$. Concretamente, que si dos de sus
+isometrías cumplen
 
 $ f_1 (0) = f_2 (0), quad f_1 (1) = f_2 (1) $
 
@@ -308,10 +369,10 @@ $ f_1 compose g = f_1 compose "id"_(bb(R)) = f_1 $
 con lo que tenemos que $f_1 = f_2$.
 
 Terminada la demostración de este resultado, pasamos a ver ahora que, para
-una isometría $g(x) = sigma (x) + tau$ siendo $sigma in {-1, 1}$ y $tau in
+una isometría $g(x) = sigma x + tau$ siendo $sigma in {-1, 1}$ y $tau in
 bb(R)$, se cumplirá que $g(0) = h(0)$ y $g(1) = h(1)$ para una isometría
 cualquiera $h$ en $(bb(R), d_(bb(R)))$, con lo que podremos concluir que
-ambas isometrías son la misma, por lo dicho antes.
+ambas isometrías son la misma, como consecuencia del resultado anterior.
 
 Primero, recordar que, como se vio en el punto A de este mismo ejercicio,
 esa función $g$ es una isometría de $(bb(R), d_(bb(R)))$.
@@ -319,7 +380,7 @@ esa función $g$ es una isometría de $(bb(R), d_(bb(R)))$.
 Tal y como vamos a ver ahora, basta con tomar la siguiente definición de
 $g$:
 
-$ g(x) = [h(1) - h(0)] + h(0) $
+$ g(x) = [h(1) - h(0)] x + h(0) $
 
 Esto se debe a que deseamos, por un lado, que $g(0) = h(0)$. Para que se dé
 esto, debe cumplirse lo siguiente:
