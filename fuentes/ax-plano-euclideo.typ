@@ -28,13 +28,29 @@ En cualquier caso, el enfoque sintético presentado aquí no llega a ser
 "puro", pues hacemos uso de números reales y sus operaciones, tal y como se
 muestra en el Axioma 3 de Euclides (de la Regla Graduada). TKTK.
 
-// TODO Definir _lugar geométrico_. Estos son conjuntos.
+Lo primero que debe saber es que los elementos de este espacio métrico (el
+plano euclideo) reciben el nombre de _puntos_ (_points_), y se usa la
+notación de los elementos para estos, es decir, cosas como $X in bold(P)$.
+Otros conjuntos más complejos de elementos reciben, en general, la
+designación de _figuras_ (_figures_). Evidentemente, verá cosas como $r
+subset.eq bb(P)$ para las figuras.
+
+De forma más general, a cualquier agrupación en el plano euclidiano, ya sea
+una figura o un punto, o nada, a veces recibe la designación de _lugar
+geométrico_ (_locus_).
 
 En la definición de _recta_ (pág. 23), el punto (i) se incluye para que un
-punto no cumpla las condiciones para ser una recta.
+conjunto formado por un único punto no cumpla las condiciones para ser una
+recta.
 
 Algo similar sucede con el punto (i) del Axioma P2 (pág. 24). De no
 incluirlo, una recta podría ser todo el plano euclideo, $bold(P)$.
+
+Se podría enunciar de forma menos simbólica ---y, por tanto, más prosaica---
+la *Observación 2.3*.
+
+Si los extremos de un segmento pertenecen a una recta, entonces todo el
+segmento es parte de esta.
 
 Me gustaría poner aquí la demostración de la *Observación 2.4* (pág. 24)
 sobre que en el punto (ii) del Axioma $bold(P)$2 no se requiere decir que
@@ -50,31 +66,50 @@ puede poner en un teorema aparte.
   alineados.
 
   Considerando ahora que, tal y como dijimos, $A, B in s$, por el punto
-  (iii) de la Definición de Recta tenemos que. como $A$, $B$ y $X$ están
+  (iii) de la Definición de Recta tenemos que, como $A$, $B$ y $X$ están
   alineados, se da que $X in s$. Entonces, tenemos que $r subset.eq s$.
 
   De forma análoga, llegamos a demosrtar que $s subset.eq r$. Uniendo ambas,
   tenemos que $r = s$.
 ]
 
+Advierta que del punto (ii) del Axioma $bold(P)$2 se deduce inmediatamente
+que la recta que contiene a un segmento es única. Esta afirmación quizás se
+podría poner en forma de corolario.
+
 En lo que respecta a la *Definición 2.6* (de Rectas Secantes y Paralelas),
-advierta que se admite que también se califica de paralelas a dos rectas
+advierta que se admite que también se califica de _paralelas_ a dos rectas
 coincidentes.
 
-// TODO Quizás, incluir un corolario sobre la unicidad de la recta que
-// contiene a un segmento.
+En cuanto al *Teorema 2.7*, creo que adolece de no hacer incapié en que esa
+_o_ (disyunción) es exclusiva en este caso; y no inclusiva, como suele ser
+habitual en matemáticas si no se especifica nada a este respecto.
 
-En cuanto al *Teorema 2.7*, creo que no llega a explicar bien cómo es este.
-Algo que es fundamental es resaltar que esa disyunción (esa _o_) es
-exclusiva, y no inclusiva.
+Además, la demostración que da no llega a convencerme. Entre otras cosas,
+faltaría por demostrar que no se puede dar el caso que no sean secantes ni
+paralelas simultáneamente.
 
-Para la demostración, quizás se debería hacer un mayor uso de la teoría de
-conjuntos.
+En cualquier caso, tengo claro, por el uso que hace posteriormente de este
+teorema en algunas demostraciones, que se trata de una _o_ exclusiva. Yo lo
+enunciaría del modo siguiente.
 
-Además, creo que falta una parte por demostrar. Demuestra que no se puede
-dar que no se corten ni sean paralelas, simultáneamente. También creo que se
-debería demostrar que no se puede dar que sean secantes y paralelas
-simultáneamente.
+#theorem[de las Posiciones Relativas de Dos Rectas][
+  Dos rectas únicamente pueden o bien cortarse o bien ser paralelas, pero no
+  pueden ser simultáneamente ambas cosas ni no darse una de estas dos
+  opciones.
+]
+
+/*
+#theorem[de las Posiciones Relativas de Dos Rectas][
+  Dos rectas tienen únicamente tres posiciones relativas entre sí: no se
+  tocan en ningún punto (paralelas no coincidentes), se tocan en un único
+  punto (secantes) o son la misma (paralelas y coincidentes). No pueden
+  tener en común dos puntos, ni tres, etc.
+]
+*/
+
+Para la demostración del teorema a mi manera, prefiero hacer un uso más
+explícito de la lógica y la teoría de conjuntos.
 
 #proof[
   Tenemos que demostrar que no se puede dar ninguno de los dos casos
@@ -115,17 +150,15 @@ simultáneamente.
   se dé una de las dos proposiciones que une esta, bastaría para que fuese
   cierta la proposición global.
 
-  Primero, $q and m$. Por un lado, $q$ implica que existe un $X in r$ tal
-  que $X in.not s$, pero esto se contradice con $m$ ya que esta última dice,
-  entre otras cosas, que, para todo $X in r$, $X in s$.
+  Primero, $q and m$. Por un lado, $q$ impone ---entre otras cosas--- que
+  existe un $X in r$ tal que $X in.not s$, pero esto se contradice con $m$
+  ya que esta última dice ---entre otras cosas--- que, para todo $X in r$,
+  $X in s$.
 
-  Por la parte de $q and p$, tenemos que
+  Por la parte de $q and p$ es evidente que se contradicen y, por tanto, da
+  falso como resultado.
 
-  $ X = r inter s = emptyset $
-
-  pero esto contradice que $X eq.not emptyset$.
-
-  Por tanto, al ser ambas falsas, aun cuando estén unidas por una conectiva
+  Por tanto, al ser ambas falsas, aun cuando estén unidas por una
   disyunción, la proposición general será siempre falsa.
 
   Caso 2. Nuestra hipótesis es que $r$ y $s$ no se cortan ni son paralelas.
@@ -133,32 +166,29 @@ simultáneamente.
   TKTK.
 ]
 
-Si no nos fijamos tanto en los calificativos de las rectas, este teorema
-viene a decir que en el plano euclideo solo hay tres posiciones relativas de
-dos rectas:
-
-+ Ningún punto en común. Es decir, $r inter s = emptyset$.
-+ Un solo punto en común. Es decir, existe un único $X in bb(P)$ siendo $X
-  eq.not emptyset$ tal que $r inter s = X$.
-+ Son coincidentes. Es decir, $r = s$.
-
-No pueden tener únicamente dos puntos en común, ni tres, etc.
+O sea, este teorema viene a decir que dos rectas tienen únicamente tres
+posiciones relativas entre sí: no se tocan en ningún punto (paralelas no
+coincidentes), se tocan en un único punto (secantes) o son la misma
+(paralelas y coincidentes). No pueden tener en común dos puntos, ni tres,
+etc.
 
 También, se podría hablar sobre las posiciones relativas de una recta y un
 segmento. Aquí, sí que hay más casos posibles de sus posiciones relativas:
 se cortan, lo contiene, son paralelos, ni se cortan ni son paralelos, etc.
 
 Consideraremos que dos segmentos son paralelos si las respectivas rectas
-soporte de estos son paralelas. Y, una recta es paralela a un segmento si
+soporte de estos son paralelas. Y una recta es paralela a un segmento si
 dicha recta es paralela a la recta soporte de dicho segmento.
 
-Concretamente, se pueden tener dos segmentos que no se corten y que además
-no sean paralelos, cosa que, según el th-rectas-sec-paralelas, no puede
-suceder con las rectas.
+Una diferencia con respecto a las posiciones relativas de dos rectas es que
+se pueden tener dos segmentos que no se corten y que además no sean
+paralelos, cosa que, según el teorema anterior sobre las posiciones
+relativas de las rectas, no puede suceder con las rectas.
 
-Otra cosa que se podría deducir es el teorema siguiente.
+Una vez que se han presentado los conceptos de rectas secantes y paralelas,
+se puede deducir una consecuencia directa de la *Observación 2.3*.
 
-#theorem[][
+#corollary[][
   En $(bold(P), d)$, dado un segmento con extremos los puntos $A$ y $B$,
   $[A, B]$, siendo estos no coincidentes, y una recta $r$. Si se cortan $r$
   y $[A, B]$, entonces también se cortarán $r$ y la recta soporte de $[A,
@@ -216,37 +246,72 @@ Ha de tener en cuenta que en realidad existen muchas de esas isometrías
 $gamma$; es decir, muchas "reglas graduadas". Están todas sobre la recta
 $r$, pero es como si, para cada posición de medida $0$ de la "regla
 graduada" (_ruler_), se tuviese una isometría distinta. E incluso se doblará
-el número teniendo en cuenta que podemos cambiar el sentido de la "regla".
-Advierta también que estas "reglas" son algo especiales pues, al contrario
-de lo que sucede normalmente, en estas se tienen marcados también números
-negativos.
+el número de isometrías posibles al tener en cuenta que podemos cambiar el
+sentido de la "regla". Advierta también que estas "reglas" son algo
+especiales, pues tienen también marcados números negativos.
 
-Por cierto, si se fija, $(r, d)$ es un espacio métrico inducido de $bold(P),
-d$ ya que $r subset.eq bold(P)$. (Vea @costa[p. 12] Teorema 1.4.)
+Por cierto, si se fija, $(r, d)$ es un espacio métrico inducido (*Teorema
+1.4*) de $bold(P), d$ ya que $r subset.eq bold(P)$.
 
-En la demostración del punto (i) de la *Observación 2.8*, aunque no lo
-mencione, hace uso en varios puntos de que $gamma$ es una biyección y, por
-tanto, también una inyección.
+En cuanto al punto (i) de la *Observación 2.8*, se incluyen tanto un teorma
+como una definición. Sería la definición del punto medio de un segmento.
+Para esta se requiere de demostrar que dicho punto es único para cada
+segmento.
 
-También, deshecha una de las conclusiones a las que nos lleva
+En esta demostración, aunque no lo mencione, hace uso en varios puntos de
+que $gamma$ es una biyección y, por tanto, también una inyección. Por
+ejemplo, esto justifica que de $A eq.not B$ se tenga que $a eq.not b$.
 
-$ |t - a| = |t - b| $
+Me gustaría explicar también cómo se puede llegar al último paso de la
+primera expresión matemática que presenta.
 
-pues nos condice a $a = b$, y, como $gamma$ es biyectiva, esto conduce a su
-vez a que $A = B$, caso que hemos excluido por hipótesis.
+$ |t - a| = |t - b| \
+  sqrt((t - a)^2) = sqrt((t - b)^2) \
+  (t - a)^2 = (t - b)^2 \
+  t^2 + a^2 - 2 t a =  t^2 + b^2 - 2 t b \
+  a^2 - 2 t a =  b^2 - 2 t b \
+  a^2 - b^2 = 2 t a - 2 t b \
+  (a + b)(a - b) = 2 t (a - b) \
+  a + b = 2 t \
+  t = (a + b) / 2 $
 
-También, al tener un único valor para $t$, se tendrá un único $X$, como dice
-el "teorema".
+Al ser $gamma$ una biyección, el valor $gamma^(-1) ((a+b)/2)$ es único, y lo
+designamos por $M$.
 
-De hecho, esta demostración nos conduce también a una conclusión que no se
-presenta en el enunciado del "teorema": que
+Alternativamente, la manipulación algebraica anterior se podría haber hecho
+viendo los dos casos a los que nos conducen los valores absolutos y
+descartando uno que veríamos que no tiene sentido en este caso.
 
-$ 1/2 d(A, B) = d(M, A) = d(M, B) $
+La demostración del punto (ii) es muy parecida a la del punto (i). Por
+ejemplo, usando las designaciones
 
-Presento a continuación la demostración del punto (ii).
+$ gamma (A') = x, quad gamma (A) = a, quad gamma (B) = b $
 
+deseamos demostrar que existe un único $A' in r$ para el que se cumple
+
+$ d(B, A) = d(B, A') $
+
+Al ser $gamma$ una isometría, se cumple que
+
+$ d(B, A)   &= d'(gamma (B), gamma (A)) = |b - a| \
+  d(B, A')  &= d'(gamma (B), gamma (A')) = |b - x| $
+
+con lo que se tiene que
+
+$ |b - a| &= |b - x| $
+
+Mediante manipulaciones algebraicas similares a las del punto (i), se llega
+a
+
+$ x = 2b - a $
+
+con lo que $A' = gamma^(-1) (2b - a)$ será único.
+
+A partir de esto, es fácil demostrar que $B = "medio"[A, A']$.
+
+/*
 #proof[
-  Deseamos demostrar que existe un $A' in r$ tal que
+  Deseamos demostrar que existe un único $A' in r$ tal que
 
   $ d(B, A) = d(B, A') $
 
@@ -254,8 +319,8 @@ Presento a continuación la demostración del punto (ii).
 
   $ gamma (A') = x, quad gamma (A) = a, quad gamma (B) = b $
 
-  ya que vamos a usar la isometría $gamma$ del ax-p3-euclides. Al ser una
-  isometría, se cumple que
+  ya que vamos a usar la isometría $gamma$ del Axioma $bold(P)$3 de
+  Euclides. Al ser una isometría, se cumple que
 
   $ d(B, A)   &= d'(gamma (B), gamma (A)) = |b - a| \
     d(B, A')  &= d'(gamma (B), gamma (A')) = |b - x| $
@@ -283,36 +348,43 @@ Presento a continuación la demostración del punto (ii).
 
   Entonces,
 
-  $ d(B, A') & = |b - x| = |b - (2b - a)| = |a - b| = d(A, B) = d(B, A) $
+  $ d(B, A') &= |b - x| = |b - (2b - a)| = |a - b| = d(A, B) = d(B, A) $
 
   con lo que $B = "medio"[A, A']$ tal y como deseábamos demostrar.
 ]
+*/
 
-Una diferencia que debe tener en cuenta entre los conceptos de _segmento_ y
-_recta_ es que, aunque ambos se pueden definir en base a dos puntos no
-coincidentes, la relación solo es inyectiva en el caso de los segmentos. Es
-decir, hay varios pares de puntos que definen a una misma recta; cosa que no
-sucede para los segmentos.
+En esta definición, se debe hacer cierta puntualización para analizar el
+caso extremo en el que los extremos sean el mismo punto, es decir, para
+definir $"medio"[A, A]$ para un $A in bold(P)$.
 
-Entonces, el concepto de _punto medio_ de dos puntos (pág. 25, *Observación
-2.8* punto (i)) es lo mismo que el punto medio de un segmento; el segmento
-con extremos esos dos puntos.
+No basta con definirlo como el punto equidistante de los extremos, en la
+recta $r$, pues, en este caso extremo, esto es algo que se cumpla para todos
+los puntos de $r$. Hay que tener también en cuenta que ese pundo debe
+encontrarse en el segmento; en este caso, en $[A, A]$. Esto nos conduce a
+una única solución:
 
-Esto me hace creer que, alternativamente a la definición que se da de _punto
-medio_ de dos puntos, que se basa en la (única) recta que pasa por ambos
-puntos, sería mejor definirlo en base al segmento de extremos dichos puntos.
-Esto nos permitiría que el caso en el que los extremos coinciden no tuviese
-que definirse mediante una excepción (pág. 26).
+$ "medio"[A, A] = A $
+
+ya que el único punto en $[A, A]$ es el propio $A$. Al hacerlo así, no tiene
+por qué establecerse esta igualdad por convenio, como se hace en el texto.
+
+Por cierto, una diferencia que debe tener en cuenta entre los conceptos de
+_segmento_ y _recta_ es que, aunque ambos se pueden definir en base a dos
+puntos no coincidentes, la relación solo es inyectiva en el caso de los
+segmentos. Es decir, hay varios pares de puntos que definen a una misma
+recta; cosa que no sucede para los segmentos.
 
 En lo que respecta a la definición de _semirrecta_ (pág. 26), advierta que
 el punto que se usa para hacer esa separación no se encuentra en ninguna de
 las dos semirrectas.
 
+/*
 Advierta que la demostración de la *Observación 2.10* se hace con signos de
 equivalencia, '$arrow.l.r.long.double$', por lo que sirve para las dos
 demostraciones que se desean hacer, es decir, en los dos sentidos. Esto lo
 hace en muchas de las demostraciones del texto.
-
+*/
 
 
 
