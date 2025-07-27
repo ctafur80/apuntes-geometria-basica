@@ -386,10 +386,48 @@ demostraciones que se desean hacer, es decir, en los dos sentidos. Esto lo
 hace en muchas de las demostraciones del texto.
 */
 
+En lo que respecta a los semiplanos, que se presentan en el Axioma
+$bold(P)$4, antes de pasar a ver sus propiedades, presentadas en el *Teorema
+2.12*, hay un resultado que me gustaría presentar y que se deduce
+directamente de este y que se usa en muchas demostraciones. Sería
+básicamente el recíproco del punto (3) de este.
 
+#theorem[][
+  Dados $X, Y in bold(P) without r$ siendo $X eq.not Y$. Si $[X, Y] inter r
+  eq.not emptyset$, entonces $X$ e $Y$ se encuentran en semiplanos
+  distintos.
+]
 
+Este teorema se enuncia al final de la demostración de la propiedad (4),
+pero no lo demuestran.
 
+#proof[
+  De $[X, Y] inter r eq.not emptyset$ se tiene que existe un punto $U in r$
+  tal que $U in [X, Y]$. Al encontrarse en $r$, se tiene que $U in.not H^1$
+  y $U in.not H^2$. De esto se tiene que $[X, Y] subset.eq.not H^i$ para $i
+  = 1, 2$. Entonces, por el (condicional contrarrecíproco del) punto (2) del
+  Axioma $bold(P)$4, se tiene que $X$ e $Y$ se encuentran en semiplanos
+  distintos.
+]
 
+Veamos algunas observaciones de las propiedades de los semiplanos. En la
+(4), el primer paso se justifica concretamente por el punto (i) del Axioma
+$bold(P)$2.
+
+// Quizás lo siguiente no haga falta.
+
+Creo que se debería justificar que $C in bold(P) without r$. Para esto,
+usaríamos el Teorema de las Posiciones Relativas de Dos Rectas. Como $A in
+bold(P) without r$ y $B in r$, se tiene que $C in bold(P) without r$ ya que
+$r$ y la única recta que pasa por $A$ y $B$ son secantes, según este
+teorema.
+
+La propiedad (6) sería como un teorema de caracterización de los semiplanos.
+En cuanto a su demostración, advierta que, tal y como hemos comentado
+anteriormente, esos bicondicionales permiten ir en las dos direcciones en la
+demostración. Por tanto, en esta ---aunque quizás no lo parezca--- se están
+demostrando las dos inclusiones de la igualdad que se desea demostrar;
+$subset.eq$ y $supset.eq$.
 
 
 
