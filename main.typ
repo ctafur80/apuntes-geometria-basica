@@ -73,7 +73,6 @@
 
 
 
-
 // #set par(justify: false)
 #bibliography("./bibliografia.yml", style: "chicago-author-date")
 
