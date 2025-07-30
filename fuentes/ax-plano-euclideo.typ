@@ -1,4 +1,5 @@
 
+
 #import "../typst-maths-book-template/main-template.typ": *
 
 
@@ -428,3 +429,6 @@ anteriormente, esos bicondicionales permiten ir en las dos direcciones en la
 demostración. Por tanto, en esta ---aunque quizás no lo parezca--- se están
 demostrando las dos inclusiones de la igualdad que se desea demostrar;
 $subset.eq$ y $supset.eq$.
+
+
+
