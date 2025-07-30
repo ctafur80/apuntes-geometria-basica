@@ -396,9 +396,3 @@ la fórmula que hemos dado para $g(x)$.
 
 Por cierto, advierta que $|h(1) - h(0)| = 1$ por ser $h$ una isometría. Por
 tanto, $sigma in {-1, 1}$.
-
-
-
-
-
-

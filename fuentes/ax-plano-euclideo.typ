@@ -33,7 +33,7 @@ plano euclideo) reciben el nombre de _puntos_ (_points_), y se usa la
 notación de los elementos para estos, es decir, cosas como $X in bold(P)$.
 Otros conjuntos más complejos de elementos reciben, en general, la
 designación de _figuras_ (_figures_). Evidentemente, verá cosas como $r
-subset.eq bb(P)$ para las figuras.
+subset.eq bold(P)$ para las figuras.
 
 De forma más general, a cualquier agrupación en el plano euclidiano, ya sea
 una figura o un punto, o nada, a veces recibe la designación de _lugar
@@ -428,14 +428,3 @@ anteriormente, esos bicondicionales permiten ir en las dos direcciones en la
 demostración. Por tanto, en esta ---aunque quizás no lo parezca--- se están
 demostrando las dos inclusiones de la igualdad que se desea demostrar;
 $subset.eq$ y $supset.eq$.
-
-
-
-
-
-
-
-
-
-
-
