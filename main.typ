@@ -53,7 +53,7 @@
 
 // ----------------------------------------------------------------------------
 
-#set heading(level: 1, numbering: none)
+// #set heading(level: 1, numbering: none)
 
 = Introducción
 #include("fuentes/introduccion.typ")

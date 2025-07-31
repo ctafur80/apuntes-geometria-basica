@@ -127,9 +127,16 @@ en la desigualdad triangular en $(bb(R), +)$ para demostrar que se cumple el
 punto 3 en la definición de _métrica_. Esta se da como conocimiento básico,
 es decir, como prerrequisito.
 
-La *métrica inducida* es lo mismo que el concepto de _restricción_ de una
-aplicación, solo que para espacios métricos. Si no conoce este concepto,
-este se estudia en asignaturas de lógica y teoría de conjuntos.
+Aunque el *Teorema 1.4* (de la Métrica Inducida, pág. 12) pueda parecer más
+bien una definición, en realidad lo que viene a explicar es que la
+restricción del dominio de un espacio métrico es siempre un espacio métrico.
+A este se le suele llamar _espacio métrico inducido_, y, a esa métrica,
+_métrica inducida_. También se podía haber optado por llamarlo _espacio
+métrico restringido_.
+
+Para entender esto, además de conocer el concepto de _espacio métrico_, debe
+saber qué es una _restricción_ de una aplicación, cosa que se estudia
+normalmente en asignaturas de lógica y teoría de conjuntos.
 
 En cuanto a la notación, se podría usar también la notación usual para la
 restricción de una aplicación, que en este caso sería algo como $delta |_(M'
@@ -149,9 +156,9 @@ $ delta |_(M' times M') :
     && (x, y)      & arrow.r.bar.long
       && delta |_(M' times M') (x, y) = delta (x, y) $
 
-En cuanto a la demostración del Teorema de la Métrica Inducida, creo que
-también se debería comentar que ninguna de las propiedades de la definición
-de _métrica_ es del tipo _closure_.
+En la demostración de este teorema, creo que, por hacerla más completa,
+quizás se debería comentar también que que ninguna de las propiedades de la
+definición de _métrica_ es del tipo _closure_.
 
 
 
@@ -265,7 +272,8 @@ también se le suele llamar "segmento $a$ $b$".
 
 En la definición de _puntos alineados_, se podría explicar también que esto
 está relacionado con el concepto de _recta_, que se define en el capítulo
-siguiente.
+siguiente. Si tres elementos están alineados, también se dice que son
+_colineales_.
 
 
 
